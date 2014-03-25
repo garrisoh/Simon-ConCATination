@@ -1,6 +1,13 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
+/** Interface type identifiers */
+typedef enum {
+    InterfaceKeyboard,
+    InterfaceMouse,
+    InterfaceLEAP,
+} InterfaceType;
+
 /** Sound type identifiers */
 typedef enum {
     SoundTypeOff,
