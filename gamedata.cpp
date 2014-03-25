@@ -8,7 +8,7 @@ GameData::GameData(int color, int sound, int interface, bool record)
     this->record = record;
 }
 
-std::vector<int> GameData::getQuadrants() {
+std::vector<Quadrant> GameData::getQuadrants() {
     /**
      * @brief Returns the list of computer-generated quadrants, for lighting up the board
      * @return Complete quadrant list
@@ -16,7 +16,7 @@ std::vector<int> GameData::getQuadrants() {
     return quadrants;
 }
 
-void GameData::setColor(int color) {
+void GameData::setColor(ColorType color) {
     /**
      * @brief Sets the color mode
      * @param color Color mode, from enum
@@ -24,7 +24,7 @@ void GameData::setColor(int color) {
     this->color = color;
 }
 
-int GameData::getColor() {
+ColorType GameData::getColor() {
     /**
      * @brief Returns the color mode
      * @return The current color mode
@@ -32,7 +32,7 @@ int GameData::getColor() {
     return color;
 }
 
-void GameData::setSound(int sound) {
+void GameData::setSound(SoundType sound) {
     /**
      * @brief Sets the sound mode
      * @param sound Sound mode, from enum
@@ -40,7 +40,7 @@ void GameData::setSound(int sound) {
     this->sound = sound;
 }
 
-int GameData::getSound() {
+SoundType GameData::getSound() {
     /**
      * @brief Returns the sound mode
      * @return The current sound mode

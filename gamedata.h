@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include "InterfaceManagers/globals.h";
 
 class GameData
 {
@@ -18,7 +19,7 @@ private:
 
 public:
     GameData(int color, int sound, int interface, bool record);
-    ~GameData(g);
+    ~GameData();
     std::vector<int> getQuadrants();
     void setColor(int color);
     int getColor();

@@ -6,6 +6,7 @@
 #include <fstream>
 #include <string>
 #include "gamedata.h"
+#include "InterfaceManagers/globals.h";
 
 class TrialData
 {
@@ -24,9 +25,9 @@ public:
     ~TrialData();
 
     static TrialData* getCurrentTrial();
-    void newTrial();
+    static void newTrial();
 
-    &GameData getGame();
+    GameData& getGame();
 
     void setPID(std::string pid);
     void setGender(bool gender);

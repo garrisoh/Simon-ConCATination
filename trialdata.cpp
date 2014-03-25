@@ -17,7 +17,7 @@ TrialData::~TrialData() {
 
 }
 
-static TrialData* TrialData::getCurrentTrial() {
+TrialData* TrialData::getCurrentTrial() {
     /**
      * @brief Grabs a copy of the currently active trialData.
      * @return A reference to the active TrialData
@@ -35,10 +35,11 @@ void TrialData::newTrial() {
     for (std::vector<GameData>::iterator game = games.begin(); game != games.end(); game++) {
         td->games.push_back(GameData(&game));
     }
+    delete TrialData::currentTrial;
     TrialData::currentTrial = td;
 }
 
-&GameData TrialData::getGame(int index) {
+GameData& TrialData::getGame(int index) {
     /**
      * @brief Fetch a game from the internal list.
      * @return A reference to the game
