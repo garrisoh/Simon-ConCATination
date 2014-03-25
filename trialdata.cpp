@@ -114,7 +114,7 @@ ErrorType TrialData::writeCSV() {
      */
 
     std::ofstream writer;
-    writer.open(outFile, std::ios::app);
+    writer.open(outFile.c_str(), std::ofstream::out | std::ofstream::app);
     if (writer.fail()) 
         return ErrorTypeFileNotFound; //Error opening file. Not found / permission denied. TODO: Add real error code.
 
