@@ -1,4 +1,5 @@
 Simon-ConCATination
 ===================
 
-Lafayette College Software Engineering course project
+Our simon is the best simon.
+
