@@ -1,11 +1,18 @@
 #include "gamedata.h"
 
-GameData::GameData(int color, int sound, int interface, bool record)
+GameData::GameData(ColorType color, SoundType sound, InterfaceType interface, bool record)
 {
     this->color = color;
     this->sound = sound;
     this->interface = interface;
     this->record = record;
+}
+
+GameData::GameData(const GameData &copy) {
+    this->color = copy.color;
+    this->sound = copy.sound;
+    this->interface = copy.interface;
+    this->record = copy.record;
 }
 
 std::vector<Quadrant> GameData::getQuadrants() {
@@ -73,9 +80,10 @@ std::string GameData::toCSV() {
     csv += quadrants.size();
     csv += ',';
     //TODO: Incompletely defined spec.
+    return "";
 }
 
-void GameData::addQuadrant(int quadrant) {
+void GameData::addQuadrant(Quadrant quadrant) {
     /**
      * @brief Adds a quadrant to the computer-generated list
      * @param quadrant Quadrant ID
@@ -83,7 +91,7 @@ void GameData::addQuadrant(int quadrant) {
     quadrants.push_back(quadrant);
 }
 
-void GameData::addUserQuadrant(int quadrant) {
+void GameData::addUserQuadrant(Quadrant quadrant) {
     /**
      * @brief Adds a quadrant to the user-generated list. This is compared to the computer one and reported to Nees.
      * @param quadrant Quadrant ID

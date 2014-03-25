@@ -6,7 +6,7 @@
 #include <fstream>
 #include <string>
 #include "gamedata.h"
-#include "InterfaceManagers/globals.h";
+#include "InterfaceManagers/globals.h"
 
 class TrialData
 {
@@ -27,7 +27,7 @@ public:
     static TrialData* getCurrentTrial();
     static void newTrial();
 
-    GameData& getGame();
+    GameData& getGame(int index);
 
     void setPID(std::string pid);
     void setGender(bool gender);
@@ -39,7 +39,7 @@ public:
     void swapGames(int index1, int index2);
     void removeGame(int index);
 
-    int writeCSV();
+    ErrorType writeCSV();
 };
 
 #endif // TRIALDATA_H

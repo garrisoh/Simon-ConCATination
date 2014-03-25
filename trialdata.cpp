@@ -32,8 +32,10 @@ void TrialData::newTrial() {
     TrialData* td = new TrialData();
 
     //Rebuild game listing using copy constructors.
-    for (std::vector<GameData>::iterator game = games.begin(); game != games.end(); game++) {
-        td->games.push_back(GameData(&game));
+    std::vector<GameData>::iterator game;
+    std::vector<GameData> games = TrialData::currentTrial->games;
+    for (game = games.begin(); game != games.end(); game++) {
+        td->games.push_back(GameData(*game));
     }
     delete TrialData::currentTrial;
     TrialData::currentTrial = td;
@@ -84,7 +86,7 @@ void TrialData::addGame() {
     /**
      * @brief Appends a game to the list of games to be played.
      */
-    this->games.push_back(new GameData(0, 0, 0, true));
+    this->games.push_back(GameData(ColorTypeOn, SoundTypeRegular, InterfaceMouse, true));
 }
 
 void TrialData::swapGames(int index1, int index2) {
@@ -102,22 +104,23 @@ void TrialData::removeGame(int index) {
      * @brief Removes a game from the running list
      * @param index The index of the game to remove
      */
-    delete *games[index];
     this->games.erase(games.begin()+index);
 }
 
-int TrialData::writeCSV() {
+ErrorType TrialData::writeCSV() {
     /**
      * @brief Writes all current games out to memory.
      * @return Whether the write was successful.
      */
 
     std::ofstream writer;
-    writer.open(outFile, ios::app);
-    if (writer.fail()) return 1; //Error opening file. Not found / permission denied. TODO: Add real error code.
+    writer.open(outFile, std::ios::app);
+    if (writer.fail()) 
+        return ErrorTypeFileNotFound; //Error opening file. Not found / permission denied. TODO: Add real error code.
+
     //Print header
     if (true) { //TODO: Test if file exists / is empty. Write header if it's empty.
-        writer << "Participant ID, Age, Gender, Total Quadrants, Total Time, Quadrants, Times"
+        writer << "Participant ID, Age, Gender, Total Quadrants, Total Time, Quadrants, Times";
     }
     for (std::vector<GameData>::iterator game = games.begin(); game != games.end(); game++) {
         //Print demographics (Male == True, for now.)
@@ -127,4 +130,5 @@ int TrialData::writeCSV() {
     }
 
     writer.close();
+    return ErrorTypeOk;
 }
