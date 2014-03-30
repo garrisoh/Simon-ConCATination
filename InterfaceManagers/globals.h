@@ -31,7 +31,7 @@ typedef enum {
     QuadrantBottomLeft,
     QuadrantBottomRight,
     QuadrantNone // unhover all
-} Quadrant;
+} QuadrantID;
 
 /** Input device event types */
 typedef enum {

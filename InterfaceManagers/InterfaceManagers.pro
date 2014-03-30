@@ -17,7 +17,8 @@ SOURCES += \
     main.cpp \
     simonui.cpp \
     mousemanager.cpp \
-    leapmanager.cpp
+    leapmanager.cpp \
+    Quadrant.cpp
 
 HEADERS += \
     inputmanager.h \
@@ -28,11 +29,18 @@ HEADERS += \
     mousemanager.h \
     leapmanager.h \
     Leap.h \
-    LeapMath.h
+    LeapMath.h \
+    Quadrant.h
 
 FORMS += \
-    simonui.ui
+    simonui.ui \
+    Quadrant.ui
 
 macx {
     LIBS += /Users/hgarriso/Documents/Coding/CS205/Simon/InterfaceManagers/libLeap.dylib
 }
+
+unix:!macx: LIBS += -L$$PWD/ -lLeap
+
+INCLUDEPATH += $$PWD/
+DEPENDPATH += $$PWD/

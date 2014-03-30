@@ -18,7 +18,7 @@ public:
     bool eventFilter(QObject *target, QEvent *event);
 private:
     /** Helper method for determining the quadrant pressed */
-    Quadrant findQuadrant(int x, int y);
+	QuadrantID findQuadrant(int x, int y);
 };
 
 #endif // MOUSEMANAGER_H

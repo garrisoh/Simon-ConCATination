@@ -20,7 +20,7 @@ private:
     /** Controller instance */
     Leap::Controller controller;
     /** Helper method for determining quadrant pressed */
-    Quadrant getQuadrant(const Leap::Frame &f);
+	QuadrantID getQuadrant(const Leap::Frame &f);
 };
 
 #endif // LEAPMANAGER_H

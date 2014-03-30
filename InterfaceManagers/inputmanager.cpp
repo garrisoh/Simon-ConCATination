@@ -13,7 +13,7 @@ void InputManager::removeObserver(EventListener *observer)
     observers.remove(observer);
 }
 
-void InputManager::notifyObservers(Quadrant q, EventType e)
+void InputManager::notifyObservers(QuadrantID q, EventType e)
 {
     // iterate through and call onEvent for each listener
     std::list<EventListener *>::iterator it;

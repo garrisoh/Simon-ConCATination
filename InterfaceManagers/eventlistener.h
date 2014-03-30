@@ -11,7 +11,7 @@ public:
     /** Virtual destructor */
     virtual ~EventListener() {}
     /** Fired when an event occurs with an input device */
-    virtual void onEvent(Quadrant q, EventType e) {}
+	virtual void onEvent(QuadrantID q, EventType e) {}
 };
 
 #endif // EVENTLISTENER_H

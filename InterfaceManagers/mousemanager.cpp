@@ -35,13 +35,13 @@ bool MouseManager::eventFilter(QObject *target, QEvent *event)
     // get quadrant from coordinates
     QMouseEvent *me = (QMouseEvent *)event;
     // TODO: Make sure quadrant handles touch up outside appropriately (release a different quadrant)
-    Quadrant q = findQuadrant(me->x(), me->y());
+	QuadrantID q = findQuadrant(me->x(), me->y());
     notifyObservers(q, e);
     return true;
 }
 
 // TODO: How to calculate coordinates or quadrant? Need radii, x and y limits
-Quadrant MouseManager::findQuadrant(int x, int y)
+QuadrantID MouseManager::findQuadrant(int x, int y)
 {
     return QuadrantNone;
 }

@@ -1,0 +1,4 @@
+*~
+*.o
+build-InterfaceManagers-Desktop-Debug/
+*.pro.user

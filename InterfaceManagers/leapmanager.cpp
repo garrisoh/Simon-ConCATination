@@ -30,7 +30,7 @@ void LeapManager::onFrame(const Leap::Controller &controller)
     }
 
     // get quadrant from frame
-    Quadrant q = getQuadrant(f);
+	QuadrantID q = getQuadrant(f);
 
     // get gestures
     Leap::GestureList g = f.gestures();
@@ -49,14 +49,14 @@ void LeapManager::onFrame(const Leap::Controller &controller)
     notifyObservers(q, e);
 }
 
-Quadrant LeapManager::getQuadrant(const Leap::Frame &f)
+QuadrantID LeapManager::getQuadrant(const Leap::Frame &f)
 {
     // get normalized hand position (wrt field of interaction) for rightmost hand
     Leap::InteractionBox box = f.interactionBox();
     Leap::Vector normalizedPosition = box.normalizePoint(f.hands().rightmost().palmPosition());
 
     // determine quadrant from normalized position (0 is min, 1 is max)
-    Quadrant q = QuadrantNone;
+	QuadrantID q = QuadrantNone;
     if (normalizedPosition.x < 0.5 && normalizedPosition.y >= 0.5) {
         q = QuadrantTopLeft;
     } else if (normalizedPosition.x < 0.5 && normalizedPosition.y < 0.5) {

@@ -23,7 +23,7 @@ bool KeyboardManager::eventFilter(QObject *target, QEvent *event)
         QKeyEvent *keyEvent = (QKeyEvent *)event;
 
         // determine quadrant pressed
-        Quadrant q;
+		QuadrantID q;
         switch (keyEvent->key()) {
         case Qt::Key_J:
             q = QuadrantBottomLeft;
