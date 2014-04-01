@@ -1,4 +1,5 @@
 #include "simongame.h"
+
 #include "../globals.h"
 #include "../UI/simonui.h"
 
@@ -9,6 +10,9 @@
 
 #include <cstdlib>
 #include <QThread>
+#include <QMessageBox>
+#include <QSpacerItem>
+#include <QLayout>
 
 // speed in beeps per sec
 #define PLAYBACK_SPEED_INCREMENT    1
@@ -25,6 +29,7 @@ SimonGame::SimonGame(GameData *gameData)
     currQuadrantIndex = 0;
     state = GameStatePlayback;
     watchdog = new QTimer();
+    watchdog->setSingleShot(true);
 
     // connect timeout slot
     QObject::connect(watchdog, SIGNAL(timeout), this, SLOT(onTimeout));
@@ -46,7 +51,7 @@ SimonGame::SimonGame(GameData *gameData)
 
     // add this and the ui as observers
     device->addObserver(this);
-    device->addObserver(SimonUI::getMainWindow());
+    device->addObserver(&SimonUI::getMainWindow());
 
     // seed random
     srand(time(NULL));
@@ -56,13 +61,29 @@ SimonGame::~SimonGame()
 {
     // remove event listeners, delete device
     device->removeObserver(this);
-    device->removeObserver(SimonUI::getMainWindow());
+    device->removeObserver(&SimonUI::getMainWindow());
     delete device;
     delete watchdog;
 }
 
 void SimonGame::start()
 {
+    // alert user to what variables are on/off
+    QMessageBox message;
+    message.setText("              New Game              ");
+    QString text = tr("This game will use the %s as input, with %s and %s.\n");
+    text = text.arg(description(gameData->getInterface()));
+    text = text.arg(description(gameData->getColor()));
+    text = text.arg(description(gameData->getSound()));
+
+    if (!gameData->getRecord()) {
+        text.append("\nThis game is a demo.\n");
+    }
+
+    message.setInformativeText(text);
+    message.exec();
+
+    // begin game
     addQuadrant();
     playLights();
 }
@@ -85,13 +106,15 @@ void SimonGame::onEvent(QuadrantID q, EventType e)
 
     static time_t prevTime = time(NULL);
 
-    // record elapsed time
-    time_t currTime = time(NULL);
-    gameData->addTime((float)(currTime - prevTime)); // TODO: pass time in millisec?
-    prevTime = currTime;
+    if (gameData->getRecord()) {
+        // record elapsed time
+        time_t currTime = time(NULL);
+        gameData->addUserTime((float)(currTime - prevTime)/1000.0);
+        prevTime = currTime;
 
-    // record quadrant pressed
-    gameData->addUserQuadrant(q);
+        // record quadrant pressed
+        gameData->addUserQuadrant(q);
+    }
 
     // check if an error occurred
     if (q != gameData->getQuadrants()[currQuadrantIndex]) {
@@ -102,7 +125,7 @@ void SimonGame::onEvent(QuadrantID q, EventType e)
     currQuadrantIndex++;
 
     // check if user has finished sequence
-    if (currQuadrantIndex == gameData->getQuadrants().size())
+    if (currQuadrantIndex == (int)gameData->getQuadrants().size())
     {
         // increment speed, reset counter
         speed += PLAYBACK_SPEED_INCREMENT;
@@ -126,11 +149,11 @@ void SimonGame::playLights()
 {
     state = GameStatePlayback;
 
-    for (int i = 0; i < gameData->getQuadrants().size(); i++) {
+    for (int i = 0; i < (int)gameData->getQuadrants().size(); i++) {
         // TODO: Make this click the quadrant
-        SimonUI::pressQuadrant(gameData->getQuadrants()[i]);
+        SimonUI::getMainWindow().pressQuadrant(gameData->getQuadrants()[i]);
 
-        if (i == gameData->getQuadrants().size()) {
+        if (i == (int)gameData->getQuadrants().size()) {
             break;
         }
 
@@ -147,11 +170,21 @@ void SimonGame::playLights()
 void SimonGame::onTimeout()
 {
     state = GameStateTimeout;
-    // TODO: display timout prompt
+
+    // display timout prompt
+    QMessageBox message;
+    message.setText("           Try Again              ");
+    message.setInformativeText("Time is up.  Try again.\n");
+    message.exec();
 }
 
 void SimonGame::wrongQuadrant()
 {
     state = GameStateError;
-    // TODO: display "try again" prompt
+
+    // display "try again" prompt
+    QMessageBox message;
+    message.setText("           Try Again              ");
+    message.setInformativeText("Wrong quadrant pressed.\n");
+    message.exec();
 }

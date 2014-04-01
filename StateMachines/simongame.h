@@ -18,11 +18,12 @@ typedef enum {
 /** A state machine class that manages the run loop
  *  for a single game.
  */
-class SimonGame : public EventListener, public QObject
+class SimonGame : public QObject, public EventListener
 {
     Q_OBJECT
 
 public:
+    SimonGame() {}
     /** Constructor - takes a GameData instance
      *  representing the current game configuration
      */
@@ -42,7 +43,7 @@ private:
     /** The game data instance */
     GameData *gameData;
     /** Input device */
-    InputManager *device; // TODO: added this
+    InputManager *device;
     /** Watchdog timer */
     QTimer *watchdog;
     /** Current game state */
@@ -56,8 +57,6 @@ private:
     void addQuadrant();
     /** Replays the light sequence */
     void playLights();
-    /** Records a user press */
-    void recordPress(); // TODO: Parameters??  Is this necessary??
     /** Called if the user hits the wrong quadrant */
     void wrongQuadrant();
 };

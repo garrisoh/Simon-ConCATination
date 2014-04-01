@@ -15,7 +15,7 @@ KeyboardManager::~KeyboardManager()
     SimonUI::getMainWindow().removeEventFilter(this);
 }
 
-bool KeyboardManager::eventFilter(QObject *target, QEvent *event)
+bool KeyboardManager::eventFilter(QObject*, QEvent *event)
 {
     // only respond to keyboard events (press or release)
     if (event->type() == QEvent::KeyPress || event->type() == QEvent::KeyRelease) {

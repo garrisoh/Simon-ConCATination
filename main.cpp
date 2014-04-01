@@ -6,6 +6,11 @@
 #include <QApplication>
 #include "UI/trialsettingsdialog.h"
 
+#include <iostream>
+#include <QObject>
+#include <QTimer>
+#include "StateMachines/simongame.h"
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -21,5 +26,9 @@ int main(int argc, char *argv[])
 
     TrialSettingsDialog w2;
     w2.show();
-    return a.exec();
+
+    int status = a.exec();
+    delete im;
+    delete im2;
+    return status;
 }
