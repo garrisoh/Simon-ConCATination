@@ -68,11 +68,22 @@ SimonGame::~SimonGame()
 
 void SimonGame::start()
 {
-    // TODO: Alert user to what variables are on/off
+    // alert user to what variables are on/off
     QMessageBox message;
     message.setText("              New Game              ");
-    message.setInformativeText("This game will use the <blank> as input, with color <blank> and <blank> sound.");
+    QString text = tr("This game will use the %s as input, with %s and %s.\n");
+    text.arg(description(gameData->getInterface()));
+    text.arg(description(gameData->getColor()));
+    text.arg(description(gameData->getSound()));
 
+    if (!gameData->getRecord()) {
+        text.append("\nThis game is a demo.\n");
+    }
+
+    message.setInformativeText(text);
+    message.exec();
+
+    // begin game
     addQuadrant();
     playLights();
 }
@@ -95,13 +106,15 @@ void SimonGame::onEvent(QuadrantID q, EventType e)
 
     static time_t prevTime = time(NULL);
 
-    // record elapsed time
-    time_t currTime = time(NULL);
-    gameData->addUserTime((float)(currTime - prevTime)); // TODO: pass time in millisec? sec?
-    prevTime = currTime;
+    if (gameData->getRecord()) {
+        // record elapsed time
+        time_t currTime = time(NULL);
+        gameData->addUserTime((float)(currTime - prevTime)/1000.0);
+        prevTime = currTime;
 
-    // record quadrant pressed
-    gameData->addUserQuadrant(q);
+        // record quadrant pressed
+        gameData->addUserQuadrant(q);
+    }
 
     // check if an error occurred
     if (q != gameData->getQuadrants()[currQuadrantIndex]) {

@@ -22,7 +22,8 @@ SOURCES += \
     UI/trialsettingswindow.cpp \
     DataModel/trialdata.cpp \
     DataModel/gamedata.cpp \
-    StateMachines/simongame.cpp
+    StateMachines/simongame.cpp \
+    globals.cpp
 
 HEADERS += \
     globals.h \

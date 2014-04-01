@@ -27,12 +27,6 @@ int main(int argc, char *argv[])
     TrialSettingsWindow w2;
     w2.show();
 
-    QTimer t;
-    SimonGame g;
-    t.setSingleShot(true);
-    QObject::connect(&t, SIGNAL(timeout()), &g, SLOT(onTimeout()));
-    t.start(1 * 1000);
-
     int status = a.exec();
     delete im;
     delete im2;

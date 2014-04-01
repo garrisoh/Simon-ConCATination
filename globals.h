@@ -3,21 +3,21 @@
 
 /** Interface type identifiers */
 typedef enum {
-    InterfaceKeyboard,
+    InterfaceKeyboard = 0,
     InterfaceMouse,
     InterfaceLEAP,
 } InterfaceType;
 
 /** Sound type identifiers */
 typedef enum {
-    SoundTypeOff,
+    SoundTypeOff = 10,
     SoundTypeRegular,
     SoundType3D
 }  SoundType;
 
 /** Color type identifiers */
 typedef enum {
-    ColorTypeOn,
+    ColorTypeOn = 20,
     ColorTypeGrayscale,
     ColorTypeBlackWhite
 } ColorType;
@@ -26,7 +26,7 @@ typedef enum {
 // each quadrant should have an identifier property
 // also, name of quadrant class?? QuadrantWidget?
 typedef enum {
-    QuadrantTopLeft,
+    QuadrantTopLeft = 30,
     QuadrantTopRight,
     QuadrantBottomLeft,
     QuadrantBottomRight,
@@ -35,7 +35,7 @@ typedef enum {
 
 /** Input device event types */
 typedef enum {
-    EventTypeHover,
+    EventTypeHover = 40,
     EventTypePressed,
     EventTypeRelease,
     EventTypeClicked
@@ -43,11 +43,14 @@ typedef enum {
 
 /** Error type identifiers */
 typedef enum {
-    ErrorTypeOk,
+    ErrorTypeOk = 50,
     ErrorTypeFileNotFound,
     ErrorTypeUndefined, // mystery error
     // add your errors here when you run into them
     // just make sure it doesn’t already exist
 } ErrorType;
+
+/** Returns a string description of the specified identifier */
+extern const char* description(int identifier);
 
 #endif // GLOBALS_H
