@@ -15,7 +15,7 @@ public:
     /** Destructor */
     ~KeyboardManager();
     /** Called when an event occurs on the main ui */
-    bool eventFilter(QObject *target, QEvent *event);
+    bool eventFilter(QObject *, QEvent *event);
 };
 
 #endif // KEYBOARDMANAGER_H

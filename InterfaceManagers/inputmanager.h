@@ -15,8 +15,11 @@ public:
     virtual void addObserver(EventListener *observer);
     /** Remove an EventListener as an observer */
     virtual void removeObserver(EventListener *observer);
+
+protected:
     /** Notify all observers of an event */
 	virtual void notifyObservers(QuadrantID q, EventType e);
+
 private:
     std::list<EventListener *> observers;
 };
