@@ -5,7 +5,7 @@
 #ifndef TRIALSETTINGSSCREEN_H
 #define TRIALSETTINGSSCREEN_H
 
-
+GameModel model;
 
 TrialSettingsWindow::TrialSettingsWindow()
 {
@@ -107,6 +107,7 @@ void TrialSettingsWindow::setupUi(QMainWindow *MainWindow)
        gameTableView->setFrameShape(QFrame::StyledPanel);
        gameTableView->setFrameShadow(QFrame::Sunken);
        gameTableView->setMidLineWidth(9);
+       gameTableView->setModel(model.createModel(gameTableView));
 
        //connect(btn, SIGNAL(clicked()), SLOT(setFilter()));
        //m_model.append(Vehicle("Volvo", "240", "SQL8941"));
