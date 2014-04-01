@@ -13,14 +13,14 @@ private:
     InterfaceType interface;
     bool record;
 
-    std::vector<Quadrant> quadrants;
-    std::vector<Quadrant> userQuadrants;
+    std::vector<QuadrantID> quadrants;
+    std::vector<QuadrantID> userQuadrants;
     std::vector<float> userTimes;
 
 public:
     GameData(ColorType color, SoundType sound, InterfaceType interface, bool record);
     GameData(const GameData &copy);
-    std::vector<Quadrant> getQuadrants();
+    std::vector<QuadrantID> getQuadrants();
     void setColor(ColorType color);
     ColorType getColor();
     void setSound(SoundType sound);
@@ -32,8 +32,8 @@ public:
 
     std::string toCSV();
 
-    void addQuadrant(Quadrant quadrant);
-    void addUserQuadrant(Quadrant quadrant);
+    void addQuadrant(QuadrantID quadrant);
+    void addUserQuadrant(QuadrantID quadrant);
     void addTime(float time); //What's this for?
     void addUserTime(float time);
 };

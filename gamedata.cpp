@@ -15,7 +15,7 @@ GameData::GameData(const GameData &copy) {
     this->record = copy.record;
 }
 
-std::vector<Quadrant> GameData::getQuadrants() {
+std::vector<QuadrantID> GameData::getQuadrants() {
     /**
      * @brief Returns the list of computer-generated quadrants, for lighting up the board
      * @return Complete quadrant list
@@ -83,7 +83,7 @@ std::string GameData::toCSV() {
     return "";
 }
 
-void GameData::addQuadrant(Quadrant quadrant) {
+void GameData::addQuadrant(QuadrantID quadrant) {
     /**
      * @brief Adds a quadrant to the computer-generated list
      * @param quadrant Quadrant ID
@@ -91,7 +91,7 @@ void GameData::addQuadrant(Quadrant quadrant) {
     quadrants.push_back(quadrant);
 }
 
-void GameData::addUserQuadrant(Quadrant quadrant) {
+void GameData::addUserQuadrant(QuadrantID quadrant) {
     /**
      * @brief Adds a quadrant to the user-generated list. This is compared to the computer one and reported to Nees.
      * @param quadrant Quadrant ID

@@ -37,10 +37,12 @@ FORMS += \
     Quadrant.ui
 
 macx {
-    LIBS += /Users/hgarriso/Documents/Coding/CS205/Simon/InterfaceManagers/libLeap.dylib
+    LEAP_LIB.files = $$PWD/libLeap.dylib
+    LEAP_LIB.path = Contents/MacOS
+    QMAKE_BUNDLE_DATA += LEAP_LIB
 }
 
-unix:!macx: LIBS += -L$$PWD/ -lLeap
+unix: LIBS += -L$$PWD/ -lLeap
 
 INCLUDEPATH += $$PWD/
 DEPENDPATH += $$PWD/
