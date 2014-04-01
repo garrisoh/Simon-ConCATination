@@ -72,9 +72,9 @@ void SimonGame::start()
     QMessageBox message;
     message.setText("              New Game              ");
     QString text = tr("This game will use the %s as input, with %s and %s.\n");
-    text.arg(description(gameData->getInterface()));
-    text.arg(description(gameData->getColor()));
-    text.arg(description(gameData->getSound()));
+    text = text.arg(description(gameData->getInterface()));
+    text = text.arg(description(gameData->getColor()));
+    text = text.arg(description(gameData->getSound()));
 
     if (!gameData->getRecord()) {
         text.append("\nThis game is a demo.\n");
