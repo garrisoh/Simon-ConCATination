@@ -21,7 +21,6 @@
 #include <QtWidgets/QWidget>
 #include <QAbstractTableModel>
 #include <QSortFilterProxyModel>
-#include "gamemodel.h"
 
 class TrialSettingsWindow : public QMainWindow
 {

@@ -17,8 +17,6 @@ SOURCES += \
     InterfaceManagers/keyboardmanager.cpp \
     InterfaceManagers/leapmanager.cpp \
     InterfaceManagers/mousemanager.cpp \
-    UI/game.cpp \
-    UI/gamemodel.cpp \
     UI/Quadrant.cpp \
     UI/simonui.cpp \
     UI/trialsettingswindow.cpp \

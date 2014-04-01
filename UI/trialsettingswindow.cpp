@@ -1,11 +1,9 @@
-#include "trialsettingswindow.h"
-//#include "ui_trialsettingswindow.h"
+#include <QStandardItemModel>
 
+#include "trialsettingswindow.h"
 
 #ifndef TRIALSETTINGSSCREEN_H
 #define TRIALSETTINGSSCREEN_H
-
-GameModel model;
 
 TrialSettingsWindow::TrialSettingsWindow()
 {
@@ -107,8 +105,31 @@ void TrialSettingsWindow::setupUi(QMainWindow *MainWindow)
        gameTableView->setFrameShape(QFrame::StyledPanel);
        gameTableView->setFrameShadow(QFrame::Sunken);
        gameTableView->setMidLineWidth(9);
-       gameTableView->setModel(model.createModel(gameTableView));
 
+       //dummy model for now
+       QStandardItemModel *model = new QStandardItemModel(8,4,this); //2 Rows and 3 Columns
+       model->setHorizontalHeaderItem(0, new QStandardItem(QString("Participant ID")));
+       model->setHorizontalHeaderItem(1, new QStandardItem(QString("Sound Type")));
+       model->setHorizontalHeaderItem(2, new QStandardItem(QString("Color Type")));
+       model->setHorizontalHeaderItem(3, new QStandardItem(QString("Input Type")));
+
+       gameTableView->setModel(model); //set our dummy model
+
+       //populate dummy model
+       model->setItem(0,0, new QStandardItem(QString("001")));
+       model->setItem(0,1, new QStandardItem(QString("3D (Surround)")));
+       model->setItem(0,2, new QStandardItem(QString("Color")));
+       model->setItem(0,3, new QStandardItem(QString("Leap Controller")));
+       model->setItem(1,0, new QStandardItem(QString("001")));
+       model->setItem(1,1, new QStandardItem(QString("No Sound")));
+       model->setItem(1,2, new QStandardItem(QString("No Color")));
+       model->setItem(1,3, new QStandardItem(QString("Leap Controller")));
+       model->setItem(2,0, new QStandardItem(QString("001")));
+       model->setItem(2,1, new QStandardItem(QString("Mono")));
+       model->setItem(2,2, new QStandardItem(QString("No Color")));
+       model->setItem(2,3, new QStandardItem(QString("Keyboard")));
+
+       //@TODO my model needs to adapt this later
        //connect(btn, SIGNAL(clicked()), SLOT(setFilter()));
        //m_model.append(Vehicle("Volvo", "240", "SQL8941"));
        //m_model.append(Vehicle("Volvo", "850"));
