@@ -71,6 +71,16 @@ bool GameData::getRecord() {
     return record;
 }
 
+void GameData::setInterfaceType(InterfaceType interface)
+{
+    this->interface = interface;
+}
+
+InterfaceType GameData::getInterface()
+{
+    return interface;
+}
+
 std::string GameData::toCSV() {
     /**
      * @brief Exports all collected data as a CSV string
@@ -97,10 +107,6 @@ void GameData::addUserQuadrant(QuadrantID quadrant) {
      * @param quadrant Quadrant ID
      */
     userQuadrants.push_back(quadrant);
-}
-
-void GameData::addTime(float time){
-    //What's this for?
 }
 
 void GameData::addUserTime(float time) {

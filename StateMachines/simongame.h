@@ -18,11 +18,12 @@ typedef enum {
 /** A state machine class that manages the run loop
  *  for a single game.
  */
-class SimonGame : public EventListener, public QObject
+class SimonGame : public QObject, public EventListener
 {
     Q_OBJECT
 
 public:
+    SimonGame() {}
     /** Constructor - takes a GameData instance
      *  representing the current game configuration
      */

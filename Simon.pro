@@ -23,7 +23,8 @@ SOURCES += \
     UI/simonui.cpp \
     UI/trialsettingswindow.cpp \
     DataModel/trialdata.cpp \
-    DataModel/gamedata.cpp
+    DataModel/gamedata.cpp \
+    StateMachines/simongame.cpp
 
 HEADERS += \
     globals.h \
@@ -31,13 +32,15 @@ HEADERS += \
     InterfaceManagers/keyboardmanager.h \
     InterfaceManagers/leapmanager.h \
     InterfaceManagers/mousemanager.h \
+    InterfaceManagers/eventlistener.h \
     UI/game.h \
     UI/gamemodel.h \
     UI/Quadrant.h \
     UI/simonui.h \
     UI/trialsettingswindow.h \
     DataModel/trialdata.h \
-    DataModel/gamedata.h
+    DataModel/gamedata.h \
+    StateMachines/simongame.h
 
 FORMS += \
     UI/Quadrant.ui \

@@ -34,7 +34,6 @@ public:
 
     void addQuadrant(QuadrantID quadrant);
     void addUserQuadrant(QuadrantID quadrant);
-    void addTime(float time); //What's this for?
     void addUserTime(float time);
 };
 
