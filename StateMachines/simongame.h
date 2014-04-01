@@ -1,7 +1,7 @@
 #ifndef SIMONGAME_H
 #define SIMONGAME_H
 
-#include "../gamedata.h"
+#include "../DataModel/gamedata.h"
 #include "../InterfaceManagers/eventlistener.h"
 #include "../InterfaceManagers/inputmanager.h"
 

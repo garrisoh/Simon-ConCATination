@@ -6,7 +6,7 @@
 #include <fstream>
 #include <string>
 #include "gamedata.h"
-#include "InterfaceManagers/globals.h"
+#include "../globals.h"
 
 class TrialData
 {

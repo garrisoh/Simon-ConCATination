@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <string>
-#include "InterfaceManagers/globals.h"
+#include "../globals.h"
 
 class GameData
 {

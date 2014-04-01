@@ -2,7 +2,7 @@
 #define KEYBOARDMANAGER_H
 
 #include "inputmanager.h"
-#include "globals.h"
+#include "../globals.h"
 #include <QObject>
 #include <QEvent>
 

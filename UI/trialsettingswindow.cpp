@@ -1,5 +1,5 @@
 #include "trialsettingswindow.h"
-#include "ui_trialsettingswindow.h"
+//#include "ui_trialsettingswindow.h"
 
 
 #ifndef TRIALSETTINGSSCREEN_H

@@ -1,5 +1,5 @@
 #include <QtGui>
-#include "InterfaceManagers/globals.h"
+#include "../globals.h"
 #include "game.h"
 
 class GameModel : public QStandardItemModel {

@@ -1,6 +1,6 @@
 #include "simongame.h"
-#include "../InterfaceManagers/globals.h"
-#include "../InterfaceManagers/simonui.h"
+#include "../globals.h"
+#include "../UI/simonui.h"
 
 // interface managers
 #include "../InterfaceManagers/keyboardmanager.h"

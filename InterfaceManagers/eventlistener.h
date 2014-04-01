@@ -1,7 +1,7 @@
 #ifndef EVENTLISTENER_H
 #define EVENTLISTENER_H
 
-#include "globals.h"
+#include "../globals.h"
 #include <iostream>
 
 /** An abstract class for event listeners */

@@ -1,8 +1,8 @@
 #ifndef SIMONUI_H
 #define SIMONUI_H
 
-#include "eventlistener.h"
-#include "globals.h"
+#include "../InterfaceManagers/eventlistener.h"
+#include "../globals.h"
 #include <QMainWindow>
 
 namespace Ui {

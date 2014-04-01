@@ -2,7 +2,7 @@
 #define INPUTMANAGER_H
 
 #include "eventlistener.h"
-#include "globals.h"
+#include "../globals.h"
 #include <list>
 
 /** An abstract class for input devices */

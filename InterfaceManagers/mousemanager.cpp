@@ -1,5 +1,5 @@
 #include "mousemanager.h"
-#include "simonui.h"
+#include "../UI/simonui.h"
 #include <QMouseEvent>
 
 MouseManager::MouseManager()

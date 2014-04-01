@@ -1,6 +1,6 @@
 #include "keyboardmanager.h"
-#include "simonui.h"
-#include "globals.h"
+#include "../UI/simonui.h"
+#include "../globals.h"
 #include <QKeyEvent>
 
 KeyboardManager::KeyboardManager()

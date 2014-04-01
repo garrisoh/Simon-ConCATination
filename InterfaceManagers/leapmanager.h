@@ -3,7 +3,7 @@
 
 #include "inputmanager.h"
 #include "Leap.h"
-#include "globals.h"
+#include "../globals.h"
 
 /** Leap listener class for handling input from leap sensor */
 class LeapManager : public InputManager, public Leap::Listener
