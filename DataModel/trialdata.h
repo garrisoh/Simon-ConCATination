@@ -36,6 +36,7 @@ public:
     void setOutFile(std::string outFile);
 
     void addGame();
+    void addGame(GameData gd);
     void swapGames(int index1, int index2);
     void removeGame(int index);
 

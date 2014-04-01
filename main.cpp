@@ -4,7 +4,7 @@
 #include "UI/simonui.h"
 #include "InterfaceManagers/eventlistener.h"
 #include <QApplication>
-#include "UI/trialsettingswindow.h"
+#include "UI/trialsettingsdialog.h"
 
 int main(int argc, char *argv[])
 {
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     InputManager *im2 = new LeapManager;
     im2->addObserver(&w);
 
-    TrialSettingsWindow w2;
+    TrialSettingsDialog w2;
     w2.show();
     return a.exec();
 }
