@@ -28,8 +28,8 @@ public:
     /** Implements EventListener.  Called on input events */
 	void onEvent(QuadrantID q, EventType e);
 
-	/// Discard current quadrants, create new ones
-	void setVariables(int color, int sound);
+    // Discard current quadrants, create new ones
+    void setVariables(ColorType color, SoundType sound);
 
 	void pressQuadrant(QuadrantID q);
 	void unpressQuadrant(QuadrantID q);

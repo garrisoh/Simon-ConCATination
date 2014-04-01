@@ -23,7 +23,6 @@ class SimonGame : public QObject, public EventListener
     Q_OBJECT
 
 public:
-    SimonGame() {}
     /** Constructor - takes a GameData instance
      *  representing the current game configuration
      */

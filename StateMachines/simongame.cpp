@@ -49,6 +49,9 @@ SimonGame::SimonGame(GameData *gameData)
         break;
     }
 
+    // Configure SimonUI (color, sound)
+    SimonUI::getMainWindow().setVariables(gameData->getColor(), gameData->getSound());
+
     // add this and the ui as observers
     device->addObserver(this);
     device->addObserver(&SimonUI::getMainWindow());

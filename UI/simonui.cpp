@@ -61,24 +61,24 @@ void SimonUI::onEvent(QuadrantID q, EventType e)
 		if (q != QuadrantNone)
 		{
             ui->label->setText(s + "Hovered");
-			_quadrants[q]->hover();
+            _quadrants[q - QuadrantTopLeft]->hover();
 		}
         break;
     case EventTypePressed:
         // set bottom label on press
         ui->label_2->setText(s + "Pressed");
-		_quadrants[q]->press();
+        _quadrants[q - QuadrantTopLeft]->press();
         break;
     case EventTypeRelease:
         // set bottom label on release
         ui->label_2->setText(s + "Released");
-		_quadrants[q]->unpress();
+        _quadrants[q - QuadrantTopLeft]->unpress();
         break;
     case EventTypeClicked:
         // set bottom label on click
         ui->label_2->setText(s + "Clicked");
-		_quadrants[q]->press();
-		_quadrants[q]->unpress();
+        _quadrants[q - QuadrantTopLeft]->press();
+        _quadrants[q - QuadrantTopLeft]->unpress();
         break;
     default:
         break;
@@ -102,6 +102,9 @@ void SimonUI::unhoverQuadrant(QuadrantID q) {
 	_quadrants[q]->unhover();
 }
 
+void SimonUI::setVariables(ColorType color, SoundType sound)
+{
 
+}
 
 
