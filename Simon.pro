@@ -17,8 +17,6 @@ SOURCES += \
     InterfaceManagers/keyboardmanager.cpp \
     InterfaceManagers/leapmanager.cpp \
     InterfaceManagers/mousemanager.cpp \
-    UI/game.cpp \
-    UI/gamemodel.cpp \
     UI/Quadrant.cpp \
     UI/simonui.cpp \
     UI/trialsettingswindow.cpp \
@@ -31,8 +29,6 @@ HEADERS += \
     InterfaceManagers/keyboardmanager.h \
     InterfaceManagers/leapmanager.h \
     InterfaceManagers/mousemanager.h \
-    UI/game.h \
-    UI/gamemodel.h \
     UI/Quadrant.h \
     UI/simonui.h \
     UI/trialsettingswindow.h \
