@@ -19,11 +19,16 @@ SOURCES += \
     InterfaceManagers/mousemanager.cpp \
     UI/Quadrant.cpp \
     UI/simonui.cpp \
-    UI/trialsettingswindow.cpp \
     DataModel/trialdata.cpp \
     DataModel/gamedata.cpp \
+<<<<<<< HEAD
+    UI/trialsettingsdialog.cpp \
+    UI/trialsettingscontroller.cpp \
+    UI/trialsettingsmodel.cpp
+=======
     StateMachines/simongame.cpp \
     globals.cpp
+>>>>>>> 3209f4513edfb9f352200592e1823ceeac103ccb
 
 HEADERS += \
     globals.h \
@@ -36,14 +41,20 @@ HEADERS += \
     UI/gamemodel.h \
     UI/Quadrant.h \
     UI/simonui.h \
-    UI/trialsettingswindow.h \
     DataModel/trialdata.h \
     DataModel/gamedata.h \
+<<<<<<< HEAD
+    UI/trialsettingsdialog.h \
+    UI/trialsettingscontroller.h \
+    UI/trialsettingsmodel.h
+=======
     StateMachines/simongame.h
+>>>>>>> 3209f4513edfb9f352200592e1823ceeac103ccb
 
 FORMS += \
     UI/Quadrant.ui \
-    UI/simonui.ui
+    UI/simonui.ui \
+    UI/trialsettingsdialog.ui
 
 macx {
     LEAP_LIB.files = $$PWD/InterfaceManagers/libLeap.dylib

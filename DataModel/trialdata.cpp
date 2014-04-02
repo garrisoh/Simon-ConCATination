@@ -89,6 +89,13 @@ void TrialData::addGame() {
     this->games.push_back(GameData(ColorTypeOn, SoundTypeRegular, InterfaceMouse, true));
 }
 
+void TrialData::addGame(GameData gd) {
+    /**
+     * @brief Appends a CUSTOM game to the list of games to be played.
+     */
+    this->games.push_back(gd);
+}
+
 void TrialData::swapGames(int index1, int index2) {
     /**
      * @brief Swap Games in a list by index.
