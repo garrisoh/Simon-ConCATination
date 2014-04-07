@@ -27,8 +27,9 @@ public:
     static TrialData* getCurrentTrial();
     static void newTrial();
 
-    GameData& getGame(int index);
-
+    GameData* getGame(int index);
+	int getNumberGames();
+	
     void setPID(std::string pid);
     void setGender(bool gender);
     void setAge(int age);
