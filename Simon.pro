@@ -22,8 +22,7 @@ SOURCES += \
     DataModel/trialdata.cpp \
     DataModel/gamedata.cpp \
     UI/trialsettingsdialog.cpp \
-    UI/trialsettingscontroller.cpp \
-    UI/trialsettingsmodel.cpp
+    UI/trialsettingsmodel.cpp \
     StateMachines/simongame.cpp \
     globals.cpp
 
@@ -41,8 +40,7 @@ HEADERS += \
     DataModel/trialdata.h \
     DataModel/gamedata.h \
     UI/trialsettingsdialog.h \
-    UI/trialsettingscontroller.h \
-    UI/trialsettingsmodel.h
+    UI/trialsettingsmodel.h \
     StateMachines/simongame.h
 
 FORMS += \

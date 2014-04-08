@@ -111,6 +111,6 @@ void SimonUI::setVariables(ColorType color, SoundType sound)
 
 void SimonUI::releaseQuadrants() {
 	for (int i = 0; i < 4; i++) {
-		_quadrants[q].unpress();
+        _quadrants[i]->unpress();
 	}
 }
