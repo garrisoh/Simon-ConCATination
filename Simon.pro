@@ -12,6 +12,7 @@ TARGET = Simon
 TEMPLATE = app
 
 SOURCES += \
+    globals.cpp \
     main.cpp \
     InterfaceManagers/inputmanager.cpp \
     InterfaceManagers/keyboardmanager.cpp \
@@ -23,9 +24,9 @@ SOURCES += \
     DataModel/gamedata.cpp \
     UI/trialsettingsdialog.cpp \
     UI/trialsettingscontroller.cpp \
-    UI/trialsettingsmodel.cpp
+    UI/trialsettingsmodel.cpp \
+    UI/passdialog.cpp
     StateMachines/simongame.cpp \
-    globals.cpp
 
 HEADERS += \
     globals.h \
@@ -42,13 +43,15 @@ HEADERS += \
     DataModel/gamedata.h \
     UI/trialsettingsdialog.h \
     UI/trialsettingscontroller.h \
-    UI/trialsettingsmodel.h
+    UI/trialsettingsmodel.h \
+    UI/passdialog.h
     StateMachines/simongame.h
 
 FORMS += \
     UI/Quadrant.ui \
     UI/simonui.ui \
-    UI/trialsettingsdialog.ui
+    UI/trialsettingsdialog.ui \
+    UI/passdialog.ui
 
 macx {
     LEAP_LIB.files = $$PWD/InterfaceManagers/libLeap.dylib

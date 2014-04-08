@@ -5,6 +5,7 @@
 #include "InterfaceManagers/eventlistener.h"
 #include <QApplication>
 #include "UI/trialsettingsdialog.h"
+#include "UI/passdialog.h"
 
 #include <iostream>
 #include <QObject>
@@ -21,14 +22,17 @@ int main(int argc, char *argv[])
     InputManager *im = new KeyboardManager;
     im->addObserver(&w);
 
-    InputManager *im2 = new LeapManager;
+    PassDialog d;
+    d.exec();
+
+    /*InputManager *im2 = new LeapManager;
     im2->addObserver(&w);
 
     TrialSettingsDialog w2;
-    w2.show();
+    w2.show();*/
 
     int status = a.exec();
     delete im;
-    delete im2;
+    //delete im2;
     return status;
 }
