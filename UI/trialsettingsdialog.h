@@ -21,9 +21,11 @@ public:
     //model
     TrialSettingsModel* model;
 
+    //int cuz i need it
+    int selectedRow; //makes up and down buttons work
+
     //getters
     QString getParticipantID();
-    QString getName();
     QString getAge();
     QString getGender();
     QString getColorString();
@@ -33,7 +35,6 @@ public:
 
     //setters
     void setParticipantID(QString text);
-    void setName(QString text);
     void setAge(QString text);
     void setGender(QString text);
     void setColor(QString text);
@@ -48,6 +49,10 @@ private slots:
     void on_gameTableView_clicked(const QModelIndex &index);
 
     void on_startButton_2_clicked();
+
+    void on_upButton_clicked();
+
+    void on_downButton_clicked();
 
 private:
     Ui::TrialSettingsDialog *ui;
