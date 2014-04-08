@@ -44,9 +44,9 @@ HEADERS += \
     StateMachines/simongame.h
 
 FORMS += \
-    UI/Quadrant.ui \
     UI/simonui.ui \
-    UI/trialsettingsdialog.ui
+    UI/trialsettingsdialog.ui \
+    UI/Quadrant.ui
 
 macx {
     LEAP_LIB.files = $$PWD/InterfaceManagers/libLeap.dylib
@@ -58,3 +58,6 @@ unix: LIBS += -L$$PWD/InterfaceManagers/ -lLeap
 
 INCLUDEPATH += $$PWD/
 DEPENDPATH += $$PWD/
+
+RESOURCES += \
+    UI/Resources.qrc

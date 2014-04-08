@@ -16,10 +16,28 @@ SimonUI::SimonUI(QWidget *parent) :
 	_quadrants[2] = ui->quadrantBottomLeft;
 	_quadrants[3] = ui->quadrantBottomRight;
 
-	_quadrants[0]->setColor(Qt::green);
-	_quadrants[1]->setColor(Qt::red);
-	_quadrants[2]->setColor(Qt::yellow);
-	_quadrants[3]->setColor(Qt::blue);
+	//_quadrants[0]->setColor(Qt::green);
+	//_quadrants[1]->setColor(Qt::red);
+	//_quadrants[2]->setColor(Qt::yellow);
+	//_quadrants[3]->setColor(Qt::blue);
+/*
+	_quadrants[0]->label->setPixmap(QPixmap::fromImage(QImage("../Simon-ConCATination/SimonTopLeft.png")));
+	_quadrants[1]->label->setPixmap(QPixmap::fromImage(QImage("../Simon-ConCATination/SimonTopRight.png")));
+	_quadrants[2]->label->setPixmap(QPixmap::fromImage(QImage("../Simon-ConCATination/SimonBottomLeft.png")));
+	_quadrants[3]->label->setPixmap(QPixmap::fromImage(QImage("../Simon-ConCATination/SimonBottomRight.png")));
+	*/
+
+	_quadrants[0]->setImage("../Simon-ConCATination/SimonTopLeft.png");
+	_quadrants[1]->setImage("../Simon-ConCATination/SimonTopRight.png");
+	_quadrants[2]->setImage("../Simon-ConCATination/SimonBottomLeft.png");
+	_quadrants[3]->setImage("../Simon-ConCATination/SimonBottomRight.png");
+
+	//ui->label->setPixmap(QPixmap::fromImage(QImage("test.png")));
+	//ui->label->setPixmap(QPixmap::fromImage(QImage("../Simon-ConCATination/Simon.png")));
+	//ui->label->show();
+
+
+	update();
 }
 
 SimonUI::~SimonUI()
