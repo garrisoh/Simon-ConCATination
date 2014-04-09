@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Quadrant</class>
  <widget class="QWidget" name="Quadrant">
+  <property name="enabled">
+   <bool>false</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -16,11 +19,11 @@
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
-  <property name="styleSheet">
-   <string notr="true">QWidget {
-background-color: red;
-}</string>
-  </property>
+  <widget class="QLabel" name="label">
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

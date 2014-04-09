@@ -94,7 +94,7 @@ void TrialSettingsModel::start(std::string pid, std::string ag, std::string gndr
     data->setGender(gender);
 
     //array to hold tableview data
-    QString tableData[currentRow + 1][3];
+    QString (*tableData)[3] = new QString[currentRow + 1][3];
 
     //fill array
     for(int i = 0; i < currentRow; i++)

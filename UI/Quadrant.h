@@ -28,6 +28,7 @@ public:
 	void unpress();
 
 	void setColor(int color);
+	void setImage(std::string filename);
 
 };
 

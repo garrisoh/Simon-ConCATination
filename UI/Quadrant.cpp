@@ -121,3 +121,9 @@ void Quadrant::setColor(int color)
 
 	this->setStyleSheet(QString::fromUtf8(newStyleSheet.c_str()));
 }
+
+void Quadrant::setImage(std::string filename)
+{
+	_widget->label->setPixmap(QPixmap::fromImage(QImage(filename.c_str())));
+}
+
