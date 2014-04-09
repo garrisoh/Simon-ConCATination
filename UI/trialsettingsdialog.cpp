@@ -22,19 +22,11 @@ TrialSettingsDialog::~TrialSettingsDialog()
 
 }
 
-
 //getters
 QString TrialSettingsDialog::getParticipantID()
 {
 
     return ui->pidEdit->text();
-
-}
-
-QString TrialSettingsDialog::getName()
-{
-
-    return ui->nameEdit->text();
 
 }
 
@@ -89,13 +81,6 @@ void TrialSettingsDialog::setParticipantID(QString text)
 
 }
 
-void TrialSettingsDialog::setName(QString text)
-{
-
-    ui->nameEdit->setText(text);
-
-}
-
 void TrialSettingsDialog::setAge(QString text)
 {
 
@@ -145,17 +130,20 @@ void TrialSettingsDialog::on_removeButton_2_clicked()
 {
 
     //let model do the work
-    model->removeGame();
+    model->removeGame(selectedRow);
+    selectedRow = -1;
 
 }
 
 //called when item is clicked
 void TrialSettingsDialog::on_gameTableView_clicked(const QModelIndex &index)
 {
-    int clickedRow = index.row();
-    setColor(model->getItemAt(clickedRow, 0));
-    setSound(model->getItemAt(clickedRow, 1));
-    setInterface(model->getItemAt(clickedRow, 2));
+
+    selectedRow = index.row();
+
+    setColor(model->getItemAt(selectedRow, 0));
+    setSound(model->getItemAt(selectedRow, 1));
+    setInterface(model->getItemAt(selectedRow, 2));
 
 }
 
@@ -165,9 +153,10 @@ void TrialSettingsDialog::on_startButton_2_clicked()
 
     //check if all fields are filled in
     QString compareTo = QString("");
-    if(getParticipantID() == compareTo || getName() == compareTo || getAge() == compareTo)
+    if(getParticipantID() == compareTo || getAge() == compareTo)
     {
 
+        //not all fields are filled in
         QMessageBox* msgBox = new QMessageBox();
         msgBox->setText("Error! One or more fields are blank!");
         msgBox->exec();
@@ -177,9 +166,39 @@ void TrialSettingsDialog::on_startButton_2_clicked()
     } else
     {
 
-        model->start(getParticipantID().toStdString(), getName().toStdString(),
+        model->start(getParticipantID().toStdString(),
                      getAge().toStdString(), getGender().toStdString());
 
     }
 
 }
+
+//when up button is pressed
+void TrialSettingsDialog::on_upButton_clicked()
+{
+
+    //verify boundaries
+    if (selectedRow <= 0) return;
+
+    //swap the rows
+    model->swapRows(selectedRow, selectedRow - 1);
+    selectedRow--;
+    getTableView()->selectRow(selectedRow);
+
+}
+
+//when down button is pressed
+void TrialSettingsDialog::on_downButton_clicked()
+{
+
+    //verify boundaries
+    if (selectedRow == -1) return;
+    if (selectedRow >= model->getRowCount() - 1) return;
+
+    //swap the rows
+    model->swapRows(selectedRow, selectedRow + 1);
+    selectedRow++;
+    getTableView()->selectRow(selectedRow);
+
+}
+
