@@ -41,13 +41,21 @@ void TrialData::newTrial() {
     TrialData::currentTrial = td;
 }
 
-GameData& TrialData::getGame(int index) {
+GameData* TrialData::getGame(int index) {
     /**
      * @brief Fetch a game from the internal list.
      * @return A reference to the game
      * @param index The array index of the game to fetch.
      */
-    return this->games[index];
+    return &this->games[index];
+}
+
+int TrialData::getNumberGames() {
+	/** 
+	 * @brief The number of games in the internal game array.
+	 * @return Number of games in the array.
+	 */
+	return this->games.size();
 }
 
 void TrialData::setPID(std::string pid) {

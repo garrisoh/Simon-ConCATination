@@ -23,9 +23,8 @@ SOURCES += \
     DataModel/trialdata.cpp \
     DataModel/gamedata.cpp \
     UI/trialsettingsdialog.cpp \
-    UI/trialsettingscontroller.cpp \
     UI/trialsettingsmodel.cpp \
-    UI/passdialog.cpp
+    UI/passdialog.cpp \
     StateMachines/simongame.cpp \
 
 HEADERS += \
@@ -42,10 +41,9 @@ HEADERS += \
     DataModel/trialdata.h \
     DataModel/gamedata.h \
     UI/trialsettingsdialog.h \
-    UI/trialsettingscontroller.h \
     UI/trialsettingsmodel.h \
-    UI/passdialog.h
-    StateMachines/simongame.h
+    UI/passdialog.h \
+    StateMachines/simongame.h \
 
 FORMS += \
     UI/Quadrant.ui \

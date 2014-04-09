@@ -33,7 +33,7 @@ SimonGame::SimonGame(GameData *gameData)
 
     // connect timeout slot
     QObject::connect(watchdog, SIGNAL(timeout), this, SLOT(onTimeout));
-
+	
     // create the appropriate interface manager
     switch (gameData->getInterface()) {
     case InterfaceKeyboard:

@@ -39,6 +39,7 @@ public:
 private:
 	Ui::SimonUI *ui;	/// Class created from simonui.ui
 	Quadrant** _quadrants;
+	void releaseQuadrants();
 };
 
 #endif // SIMONUI_H
