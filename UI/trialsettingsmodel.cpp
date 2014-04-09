@@ -69,8 +69,8 @@ void TrialSettingsModel::removeGame(int row)
         } else
         {
 
-        tableModel->removeRows(row, 1);
-        currentRow--;
+            tableModel->removeRows(row, 1);
+            currentRow--;
 
         }
 
@@ -222,24 +222,29 @@ void TrialSettingsModel::readGames()
     //open input stream
     in_stream.open(".settings.config");
 
-    //read in name date all that crap
-    while(!in_stream.eof())
-    {
+    //set password
+    std::getline(in_stream, line);
+    password = line;
 
-        //read in text
-        in_stream >> line;
+    //read in name date all that crap
+    while(std::getline(in_stream, line))
+    {
 
         //split by comma delimiter
         tempDataVector = split(line, ',');
 
         //fill table view
-        //addGame(QString(string(tempDataVector[0]), QString(tempDataVector[0]), QString(tempDataVector[0]));
-
+        QString qString1 = QString::fromStdString(tempDataVector[0]);
+        QString qString2 = QString::fromStdString(tempDataVector[1]);
+        QString qString3 = QString::fromStdString(tempDataVector[2]);
+        std::cout << "5" << std::endl;
+        addGame(qString1, qString2, qString3);
+        i++;
     }
 
     //close input stream
     in_stream.close();
-
+    std::cout << i << std::endl;
 }
 
 std::vector<std::string> &TrialSettingsModel::split(const std::string &s, char delim, std::vector<std::string> &elems) {

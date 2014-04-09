@@ -30,9 +30,11 @@ public:
     void readGames();
     std::vector<std::string> &split(const std::string &s, char delim, std::vector<std::string> &elems);
     std::vector<std::string> split(const std::string &s, char delim);
+    
 private:
     int currentRow;
     int currentCol;
+    std::string password; //stores the password
     TrialData* data; //trialdata singleton object
     QTableView* tableView; //view so we can use its getters and setters
     QStandardItemModel* tableModel; //model for holding games in table
