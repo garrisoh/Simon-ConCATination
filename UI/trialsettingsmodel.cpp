@@ -11,6 +11,7 @@ TrialSettingsModel::TrialSettingsModel(QTableView* view)
     //init variables
     int currentCol = 0;
     int currentRow = 0;
+    demoMode = false;
 
     //init table view
     tableView = view;
@@ -264,6 +265,21 @@ std::vector<std::string> TrialSettingsModel::split(const std::string &s, char de
     std::vector<std::string> elems;
     split(s, delim, elems);
     return elems;
+
+}
+
+void TrialSettingsModel::setDemoMode(bool md)
+{
+
+    demoMode = md;
+
+}
+
+void TrialSettingsModel::setSaveLocation(std::string loc)
+{
+
+    saveLocation = loc;
+    std::cout << saveLocation << std::endl;
 
 }
 

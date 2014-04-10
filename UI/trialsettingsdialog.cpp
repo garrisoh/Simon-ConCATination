@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <QMessageBox>
+#include <QFileDialog>
 #include "trialsettingsdialog.h"
 #include "ui_trialsettingsdialog.h"
 
@@ -202,3 +203,35 @@ void TrialSettingsDialog::on_downButton_clicked()
 
 }
 
+
+//called when checkbox is checked or unchecked
+void TrialSettingsDialog::on_checkBox_stateChanged(int arg1)
+{
+    //not checked
+    if (arg1 < 1)
+    {
+
+        //set models demoMode to false
+        model->setDemoMode(false);
+
+    }
+    //checkbox is checked
+    else
+    {
+
+        model->setDemoMode(true);
+
+    }
+
+}
+
+
+//called when save
+void TrialSettingsDialog::on_pushButton_clicked()
+{
+
+    QString fileName = QFileDialog::getSaveFileName(this,
+        tr("Save CSV File As..."), "", tr("Comma Delimited Files (*.csv *.txt)"));
+    model->setSaveLocation(fileName.toStdString());
+
+}

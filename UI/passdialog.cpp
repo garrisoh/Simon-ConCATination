@@ -1,6 +1,5 @@
 #include "passdialog.h"
-#include "ui_Passdialog.h"
-
+#include"passdialog.h"
 #include <QMessageBox>
 
 PassDialog::PassDialog(QWidget *parent) :

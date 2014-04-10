@@ -4,6 +4,9 @@
 #
 #-------------------------------------------------
 
+#Whoever keeps adding files please remember if it is not
+#The last item it needs a backslash at the end, thanks!
+
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -24,7 +27,6 @@ SOURCES += \
     DataModel/gamedata.cpp \
     UI/trialsettingsdialog.cpp \
     UI/trialsettingsmodel.cpp \
-    UI/passdialog.cpp \
     StateMachines/simongame.cpp \
 
 HEADERS += \
@@ -42,14 +44,12 @@ HEADERS += \
     DataModel/gamedata.h \
     UI/trialsettingsdialog.h \
     UI/trialsettingsmodel.h \
-    UI/passdialog.h \
     StateMachines/simongame.h \
 
 FORMS += \
     UI/simonui.ui \
     UI/trialsettingsdialog.ui \
     UI/Quadrant.ui
-    UI/passdialog.ui
 
 macx {
     LEAP_LIB.files = $$PWD/InterfaceManagers/libLeap.dylib
@@ -62,5 +62,3 @@ unix: LIBS += -L$$PWD/InterfaceManagers/ -lLeap
 INCLUDEPATH += $$PWD/
 DEPENDPATH += $$PWD/
 
-RESOURCES += \
-    UI/Resources.qrc
