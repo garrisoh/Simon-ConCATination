@@ -9,9 +9,10 @@ TrialSettingsModel::TrialSettingsModel(QTableView* view)
 {
 
     //init variables
-    int currentCol = 0;
-    int currentRow = 0;
+    currentCol = 0;
+    currentRow = 0;
     demoMode = false;
+    saveLocation = "";
 
     //init table view
     tableView = view;
@@ -20,15 +21,21 @@ TrialSettingsModel::TrialSettingsModel(QTableView* view)
     tableModel->setHeaderData(1, Qt::Horizontal, QString("Sound"));
     tableModel->setHeaderData(2, Qt::Horizontal, QString("Interface"));
 
-    //set table view
+    //set table view model
     tableView->setModel(tableModel);
-    //tableView->setDragEnabled(true);
-    tableView->setDragDropMode(QAbstractItemView::InternalMove);
 
     //get trialdata object
     data = TrialData::getCurrentTrial();
 
     readGames();
+
+}
+
+TrialSettingsModel::~TrialSettingsModel()
+{
+
+    delete tableModel;
+    delete tableView;
 
 }
 
@@ -152,13 +159,16 @@ void TrialSettingsModel::start(std::string pid, std::string ag, std::string gndr
 
         //now create gamedata object
         GameData tempGameData(ct, st, it, true);
+        std::cout << "Created GameData Object" << std::endl;
 
         //add game to trial
         data->addGame(tempGameData);
-
-        writeGames(pid, ag, gndr);
+        std::cout << "Added it to trialData" << std::endl << std::endl;
 
     }
+
+    //now write games to file
+    writeGames(pid, ag, gndr);
 
 }
 
@@ -218,7 +228,6 @@ void TrialSettingsModel::readGames()
     std::ifstream in_stream;
     std::string line;
     std::vector<std::string> tempDataVector;
-    int i = 0;
 
     //open input stream
     in_stream.open(".settings.config");
@@ -238,14 +247,13 @@ void TrialSettingsModel::readGames()
         QString qString1 = QString::fromStdString(tempDataVector[0]);
         QString qString2 = QString::fromStdString(tempDataVector[1]);
         QString qString3 = QString::fromStdString(tempDataVector[2]);
-        std::cout << "5" << std::endl;
         addGame(qString1, qString2, qString3);
-        i++;
+
     }
 
     //close input stream
     in_stream.close();
-    std::cout << i << std::endl;
+
 }
 
 std::vector<std::string> &TrialSettingsModel::split(const std::string &s, char delim, std::vector<std::string> &elems) {
@@ -280,6 +288,13 @@ void TrialSettingsModel::setSaveLocation(std::string loc)
 
     saveLocation = loc;
     std::cout << saveLocation << std::endl;
+
+}
+
+std::string TrialSettingsModel::getSaveLocation()
+{
+
+    return saveLocation;
 
 }
 

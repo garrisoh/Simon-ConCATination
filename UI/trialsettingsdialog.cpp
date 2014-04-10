@@ -154,12 +154,12 @@ void TrialSettingsDialog::on_startButton_2_clicked()
 
     //check if all fields are filled in
     QString compareTo = QString("");
-    if(getParticipantID() == compareTo || getAge() == compareTo)
+    if(getParticipantID() == compareTo || getAge() == compareTo || model->getSaveLocation() == "")
     {
 
         //not all fields are filled in
         QMessageBox* msgBox = new QMessageBox();
-        msgBox->setText("Error! One or more fields are blank!");
+        msgBox->setText("Error! A field is blank or you did not select a save location.");
         msgBox->exec();
         delete msgBox;
         return;
@@ -167,8 +167,12 @@ void TrialSettingsDialog::on_startButton_2_clicked()
     } else
     {
 
+        //let the model do the work
         model->start(getParticipantID().toStdString(),
                      getAge().toStdString(), getGender().toStdString());
+
+        //close
+        this->done(0);
 
     }
 
@@ -203,16 +207,17 @@ void TrialSettingsDialog::on_downButton_clicked()
 
 }
 
-
 //called when checkbox is checked or unchecked
 void TrialSettingsDialog::on_checkBox_stateChanged(int arg1)
 {
+
     //not checked
     if (arg1 < 1)
     {
 
         //set models demoMode to false
         model->setDemoMode(false);
+        std::cout << "demo mode is a myth" << std::endl;
 
     }
     //checkbox is checked
@@ -220,6 +225,7 @@ void TrialSettingsDialog::on_checkBox_stateChanged(int arg1)
     {
 
         model->setDemoMode(true);
+        std::cout << "demo mode is a fact" << std::endl;
 
     }
 
