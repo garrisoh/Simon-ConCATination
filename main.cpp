@@ -1,6 +1,7 @@
 #include "InterfaceManagers/inputmanager.h"
 #include "InterfaceManagers/keyboardmanager.h"
 #include "InterfaceManagers/leapmanager.h"
+#include "InterfaceManagers/mousemanager.h"
 #include "UI/simonui.h"
 #include "InterfaceManagers/eventlistener.h"
 #include <QApplication>
@@ -25,13 +26,18 @@ int main(int argc, char *argv[])
     //PassDialog d;
     //d.exec();
 
-    InputManager *im2 = new LeapManager;
-    im2->addObserver(&w);
+    //InputManager *im2 = new LeapManager;
+    //im2->addObserver(&w);
 
-    TrialSettingsDialog w2;
-    w2.show();
+    InputManager *im3 = new MouseManager;
+    im3->addObserver(&w);
+
+    //TrialSettingsDialog w2;
+    //w2.show();
 
     int status = a.exec();
-    delete im2;
+    delete im;
+    delete im3;
+    //delete im2;
     return status;
 }

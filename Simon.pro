@@ -28,6 +28,7 @@ SOURCES += \
     UI/trialsettingsdialog.cpp \
     UI/trialsettingsmodel.cpp \
     StateMachines/simongame.cpp \
+    UI/passdialog.cpp
 
 HEADERS += \
     globals.h \
@@ -45,11 +46,13 @@ HEADERS += \
     UI/trialsettingsdialog.h \
     UI/trialsettingsmodel.h \
     StateMachines/simongame.h \
+    UI/passdialog.h
 
 FORMS += \
     UI/simonui.ui \
     UI/trialsettingsdialog.ui \
-    UI/Quadrant.ui
+    UI/Quadrant.ui \
+    UI/passdialog.ui
 
 macx {
     LEAP_LIB.files = $$PWD/InterfaceManagers/libLeap.dylib
