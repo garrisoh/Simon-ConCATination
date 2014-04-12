@@ -38,7 +38,7 @@ bool MouseManager::eventFilter(QObject *target, QEvent *event)
     // get quadrant from coordinates
     QMouseEvent *me = (QMouseEvent *)event;
     // TODO: Make sure quadrant handles touch up outside appropriately (release a different quadrant)
-	QuadrantID q = findQuadrant(me->x(), me->y());
+    QuadrantID q = findQuadrant(me->x(), me->y());
     notifyObservers(q, e);
     return true;
 }
@@ -58,8 +58,8 @@ QuadrantID MouseManager::findQuadrant(int x, int y)
     // multiply each by -1 to flip coord system (+y is down) and add centerY as offset to center vertically on screen
     // centerX is subtracted from x to center horizontally on the screen
     float topUpperSemiCircEqn = centerY - sqrtf(SQR(bigCircleRad) - SQR((x - centerX)));
-    float bottomUpperSemiCircEqn = centerY - sqrtf(SQR(smallCircleRad) - SQR((x - centerX)));
-    float topLowerSemiCircEqn = centerY + sqrtf(SQR(smallCircleRad) - SQR((x - centerX)));
+    float bottomUpperSemiCircEqn = centerY + sqrtf(SQR(smallCircleRad) - SQR((x - centerX)));
+    float topLowerSemiCircEqn = centerY - sqrtf(SQR(smallCircleRad) - SQR((x - centerX)));
     float bottomLowerSemiCircEqn = centerY + sqrtf(SQR(bigCircleRad) - SQR((x - centerX)));
 
     // prevent nan when |x| > small circle radius
@@ -71,6 +71,8 @@ QuadrantID MouseManager::findQuadrant(int x, int y)
     bool bottom = y > centerY + lineWidth/2 && bottomLowerSemiCircEqn > y && y > bottomUpperSemiCircEqn;
     bool left = x < centerX - lineWidth/2;
     bool right = x > centerX + lineWidth/2;
+
+    //std::cout << topLowerSemiCircEqn << std::endl;
 
     // return the appropriate quadrant
     if (top && right) {
