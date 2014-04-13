@@ -7,6 +7,7 @@
 #include <QApplication>
 #include "UI/trialsettingsdialog.h"
 #include "UI/passdialog.h"
+#include "UI/changepassdialog.h"
 
 #include <iostream>
 #include <QObject>
@@ -23,8 +24,10 @@ int main(int argc, char *argv[])
     InputManager *im = new KeyboardManager;
     im->addObserver(&w);
 
-    //PassDialog d;
-    //d.exec();
+    ChangePassDialog *d = new ChangePassDialog;
+    d->setTitle("Is anyone out there?");
+    d->setSubtitle("Bueller... Bueller...");
+    d->exec();
 
     //InputManager *im2 = new LeapManager;
     //im2->addObserver(&w);

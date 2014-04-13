@@ -35,7 +35,7 @@ void PassDialog::on_pushButton_clicked()
 
 bool PassDialog::verifyPassword()
 {
-    // TODO: Read from config file
+    // TODO: Read from config file -> where is the file?
     return ui->lineEdit->text() == "hi";
 }
 
