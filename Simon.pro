@@ -14,6 +14,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = Simon
 TEMPLATE = app
 
+RESOURCES += UI/Resources.qrc
+
 SOURCES += \
     globals.cpp \
     main.cpp \

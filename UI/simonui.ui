@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>600</width>
     <height>600</height>
    </rect>
   </property>
@@ -20,6 +20,9 @@
     </item>
     <item row="2" column="0">
      <widget class="Quadrant" name="quadrantTopLeft" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="autoFillBackground">
        <bool>true</bool>
       </property>
@@ -27,27 +30,16 @@
     </item>
     <item row="4" column="0">
      <widget class="Quadrant" name="quadrantBottomLeft" native="true">
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
       <property name="autoFillBackground">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="Quadrant" name="quadrantTopRight" native="true">
-      <widget class="QGraphicsView" name="graphicsView">
-       <property name="geometry">
-        <rect>
-         <x>-360</x>
-         <y>-30</y>
-         <width>750</width>
-         <height>496</height>
-        </rect>
-       </property>
-       <property name="interactive">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </widget>
+     <widget class="Quadrant" name="quadrantTopRight" native="true"/>
     </item>
     <item row="7" column="1">
      <widget class="QLabel" name="label_2">
@@ -76,7 +68,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>600</width>
      <height>25</height>
     </rect>
    </property>

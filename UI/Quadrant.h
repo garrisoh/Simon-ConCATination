@@ -17,6 +17,8 @@ private:
 	//Sound* onClick;
 	Ui::Quadrant* _widget;	// UI component, defined in Quadrant.ui
 	int _color;
+	QPixmap _litImage;
+	QPixmap _unlitImage;
 
 public:
 	//Quadrant(Color color, Sound sound);
@@ -28,7 +30,9 @@ public:
 	void unpress();
 
 	void setColor(int color);
-	void setImage(std::string filename);
+	//void setImage(std::string filename);
+
+	void setImages(std::string unpressedFilename, std::string pressedFilename);
 
 };
 

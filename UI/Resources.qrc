@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/../Simon-ConCATination">
-        <file>test.png</file>
+    <qresource prefix="/../Simon-ConCATination/UI/Images">
+        <file>Images/test.png</file>
     </qresource>
 </RCC>

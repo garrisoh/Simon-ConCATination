@@ -19,7 +19,7 @@ Quadrant::Quadrant(QWidget *parent) :
 void Quadrant::hover() {
 	std::cout << "Quadrant hover" << std::endl;
 
-	switch(_color)
+	/*switch(_color)
 	{
 	case Qt::red:
 		setColor(Qt::darkRed);
@@ -42,15 +42,16 @@ void Quadrant::hover() {
 	case Qt::darkYellow:
 		break;
 	default:
-		std::cout << "Error: Could not identify current color" << _color << std::endl;
-	}
+		std::cout << "Error: Could not identify current color " << _color << std::endl;
+	}*/
 
 
 }
 
 void Quadrant::unhover() {
 	std::cout << "Quadrant unhover" << std::endl;
-	switch(_color)
+
+	/*switch(_color)
 	{
 	case Qt::red:
 		break;
@@ -74,15 +75,17 @@ void Quadrant::unhover() {
 		break;
 	default:
 		std::cout << "Error. Could not identify current color " << _color << std::endl;
-	}
+	}*/
 }
 
 void Quadrant::press() {
 	std::cout << "Quadrant press" << std::endl;
+	_widget->label->setPixmap(_litImage);
 }
 
 void Quadrant::unpress() {
 	std::cout << "Quadrant unpress" << std::endl;
+	_widget->label->setPixmap(_unlitImage);
 }
 
 void Quadrant::setColor(int color)
@@ -121,9 +124,16 @@ void Quadrant::setColor(int color)
 
 	this->setStyleSheet(QString::fromUtf8(newStyleSheet.c_str()));
 }
-
+/*
 void Quadrant::setImage(std::string filename)
 {
 	_widget->label->setPixmap(QPixmap::fromImage(QImage(filename.c_str())));
+}*/
+
+void Quadrant::setImages(std::string unlitFilename, std::string litFilename)
+{
+	_unlitImage = QPixmap::fromImage(QImage(unlitFilename.c_str()));
+	_litImage = QPixmap::fromImage(QImage(litFilename.c_str()));
+	_widget->label->setPixmap(_unlitImage);
 }
 
