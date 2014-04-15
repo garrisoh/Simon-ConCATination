@@ -6,6 +6,8 @@ void SimonController::start() {
     for (int i = 0; i < td->getNumberGames(); i++) {
         startGame(td->getGame(i));
 	}
+        TrialData::getCurrentTrial->writeCSV();
+        donePrompt();
 }
 
 void SimonController::startGame(GameData* gameData) {

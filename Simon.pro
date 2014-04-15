@@ -23,7 +23,6 @@ SOURCES += \
     InterfaceManagers/keyboardmanager.cpp \
     InterfaceManagers/leapmanager.cpp \
     InterfaceManagers/mousemanager.cpp \
-    UI/Quadrant.cpp \
     UI/simonui.cpp \
     DataModel/trialdata.cpp \
     DataModel/gamedata.cpp \
@@ -57,7 +56,6 @@ HEADERS += \
 FORMS += \
     UI/simonui.ui \
     UI/trialsettingsdialog.ui \
-    UI/Quadrant.ui \
     UI/passdialog.ui \
     UI/changepassdialog.ui
 
