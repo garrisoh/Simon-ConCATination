@@ -31,7 +31,8 @@ SOURCES += \
     UI/trialsettingsmodel.cpp \
     StateMachines/simongame.cpp \
     UI/passdialog.cpp \
-    UI/changepassdialog.cpp
+    UI/changepassdialog.cpp \
+    StateMachines/simoncontroller.cpp
 
 HEADERS += \
     globals.h \
@@ -50,7 +51,8 @@ HEADERS += \
     UI/trialsettingsmodel.h \
     StateMachines/simongame.h \
     UI/passdialog.h \
-    UI/changepassdialog.h
+    UI/changepassdialog.h \
+    StateMachines/simoncontroller.h
 
 FORMS += \
     UI/simonui.ui \

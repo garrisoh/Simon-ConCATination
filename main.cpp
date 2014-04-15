@@ -2,23 +2,19 @@
 #include "InterfaceManagers/keyboardmanager.h"
 #include "InterfaceManagers/leapmanager.h"
 #include "InterfaceManagers/mousemanager.h"
-#include "UI/simonui.h"
 #include "InterfaceManagers/eventlistener.h"
-#include <QApplication>
-#include "UI/trialsettingsdialog.h"
-#include "UI/passdialog.h"
-#include "UI/changepassdialog.h"
-
-#include <iostream>
-#include <QObject>
-#include <QTimer>
+#include "StateMachines/simoncontroller.h"
 #include "StateMachines/simongame.h"
+#include "UI/simonui.h"
+#include "UI/trialsettingsdialog.h"
+#include "UI/changepassdialog.h"
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    // keyboard test
+    /*// keyboard test
     SimonUI &w = SimonUI::getMainWindow();
     w.show();
     InputManager *im = new KeyboardManager;
@@ -42,5 +38,24 @@ int main(int argc, char *argv[])
     delete im;
     delete im3;
     delete im2;
-    return status;
+    return status;*/
+
+    SimonUI &ui = SimonUI::getMainWindow();
+    ui.show();
+
+    InputManager *mouse = new MouseManager();
+    mouse->addObserver(&ui);
+
+    ChangePassDialog passNewDialog;
+    passNewDialog.setTitle("Welcome");
+    passNewDialog.setSubtitle("Please enter a new administrator password.");
+    passNewDialog.exec();
+
+    TrialSettingsDialog settings;
+    settings.exec();
+
+    SimonController controller;
+    controller.start();
+
+    return a.exec();
 }

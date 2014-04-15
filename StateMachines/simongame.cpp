@@ -14,6 +14,8 @@
 #include <QSpacerItem>
 #include <QLayout>
 
+#include <iostream>
+
 // speed in beeps per sec
 #define PLAYBACK_SPEED_INCREMENT    1
 #define PLAYBACK_SPEED_INITIAL      1
@@ -73,8 +75,11 @@ void SimonGame::start()
 {
     // alert user to what variables are on/off
     QMessageBox message;
+
+    std::cout << description(gameData->getInterface()) << std::endl;
+
     message.setText("              New Game              ");
-    QString text = tr("This game will use the %s as input, with %s and %s.\n");
+    QString text = tr("This game will use the %0 as input, with %1 and %2.\n");
     text = text.arg(description(gameData->getInterface()));
     text = text.arg(description(gameData->getColor()));
     text = text.arg(description(gameData->getSound()));
@@ -89,6 +94,11 @@ void SimonGame::start()
     // begin game
     addQuadrant();
     playLights();
+}
+
+SimonGame::GameState SimonGame::getState()
+{
+    return state;
 }
 
 void SimonGame::onEvent(QuadrantID q, EventType e)

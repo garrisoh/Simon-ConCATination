@@ -1,19 +1,29 @@
 #include "simoncontroller.h"
+#include "../UI/passdialog.h"
 
 void SimonController::start() {
 	TrialData* td = TrialData::getCurrentTrial();
-	for (int i = 0; i < td->getNumberTrials(); i++) {
-		startGame(td->getGame(i);
+    for (int i = 0; i < td->getNumberGames(); i++) {
+        startGame(td->getGame(i));
 	}
 }
 
 void SimonController::startGame(GameData* gameData) {
 	//Set variables in the UI
 	//Setup the state machine to run simon proper.
-	SimonGame simongame(gameData);
+    SimonGame simonGame(gameData);
 	simonGame.start();
+
+    // wait for game to finish
+    while (simonGame.getState() == SimonGame::GameStatePlaying || simonGame.getState() == SimonGame::GameStatePlayback) {
+    }
 }
 
 void SimonController::donePrompt() {
-	//TODO: Haley, how would you do a passworded thingey?
+    TrialData::getCurrentTrial()->writeCSV();
+
+    PassDialog dialog;
+    dialog.setTitle("Trial finished.");
+    dialog.setSubtitle("Enter administrator password to continue.");
+    dialog.exec();
 }

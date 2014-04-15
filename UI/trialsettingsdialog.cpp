@@ -172,8 +172,7 @@ void TrialSettingsDialog::on_startButton_2_clicked()
                      getAge().toStdString(), getGender().toStdString());
 
         //close
-        this->done(0);
-
+        accept();
     }
 
 }
