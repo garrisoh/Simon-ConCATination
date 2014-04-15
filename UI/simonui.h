@@ -9,8 +9,6 @@ namespace Ui {
 	class SimonUI;	/// Class created from simonui.ui
 }
 
-class Quadrant;
-
 /** A driver class to be used for testing the input managers */
 class SimonUI : public QMainWindow, public EventListener
 {
@@ -31,6 +29,7 @@ public:
     // Discard current quadrants, create new ones
     void setVariables(ColorType color, SoundType sound);
 
+	// For playback
 	void pressQuadrant(QuadrantID q);
 	void unpressQuadrant(QuadrantID q);
 	void hoverQuadrant(QuadrantID q);
@@ -38,8 +37,21 @@ public:
 
 private:
 	Ui::SimonUI *ui;	/// Class created from simonui.ui
-	Quadrant** _quadrants;
+	QPixmap _normalImage;
+	QPixmap _bottomLeftLit;
+	QPixmap _bottomLeftHover;
+	QPixmap _bottomRightLit;
+	QPixmap _bottomRightHover;
+	QPixmap _topLeftLit;
+	QPixmap _topLeftHover;
+	QPixmap _topRightLit;
+	QPixmap _topRightHover;
+
+	QPixmap** _litImages;
+	QPixmap** _hoveredImages;
+
 	void releaseQuadrants();
+	void setImage(QPixmap* image);
 };
 
 #endif // SIMONUI_H

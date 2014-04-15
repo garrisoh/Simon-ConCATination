@@ -24,7 +24,6 @@ typedef enum {
 
 /** Quadrant identifiers */
 // each quadrant should have an identifier property
-// also, name of quadrant class?? QuadrantWidget?
 typedef enum {
     QuadrantTopLeft = 30,
     QuadrantTopRight,
