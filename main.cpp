@@ -29,8 +29,8 @@ int main(int argc, char *argv[])
     d->setSubtitle("Bueller... Bueller...");
     d->exec();
 
-    //InputManager *im2 = new LeapManager;
-    //im2->addObserver(&w);
+    InputManager *im2 = new LeapManager;
+    im2->addObserver(&w);
 
     InputManager *im3 = new MouseManager;
     im3->addObserver(&w);
@@ -41,6 +41,6 @@ int main(int argc, char *argv[])
     int status = a.exec();
     delete im;
     delete im3;
-    //delete im2;
+    delete im2;
     return status;
 }
