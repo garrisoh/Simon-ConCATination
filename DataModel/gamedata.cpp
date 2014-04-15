@@ -89,8 +89,16 @@ std::string GameData::toCSV() {
     std::string csv = "";
     csv += quadrants.size();
     csv += ',';
-    //TODO: Incompletely defined spec.
-    return "";
+    for (int i = 0; i<quadrants.size(); i++) {
+       switch (quadrants[i]) {
+           case (QuadrantTopLeft):     csv += "0"; break;
+           case (QuadrantTopRight):    csv += "1"; break;
+           case (QuadrantBottomLeft):  csv += "2"; break;
+           case (QuadrantBottomRight): csv += "3"; break;
+       }
+    }
+    csv += "\r\n";
+    return csv;
 }
 
 void GameData::addQuadrant(QuadrantID quadrant) {

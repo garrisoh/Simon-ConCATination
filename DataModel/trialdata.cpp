@@ -128,19 +128,32 @@ ErrorType TrialData::writeCSV() {
      * @return Whether the write was successful.
      */
 
+    //Check if the file exists on disk by trying to read it. 
+    //If the read fails, open as a new file and write the header.
+
+    std::ifstream checkExist;
+    bool fileExists = true;
+
+    checkExist.open(outFile.c_str());
+    if (checkExist.fail()) fileExists = false;
+    checkExist.close();
+
     std::ofstream writer;
     writer.open(outFile.c_str(), std::ofstream::out | std::ofstream::app);
     if (writer.fail()) 
-        return ErrorTypeFileNotFound; //Error opening file. Not found / permission denied. TODO: Add real error code.
+        return ErrorTypeFileNotFound; 
 
     //Print header
-    if (true) { //TODO: Test if file exists / is empty. Write header if it's empty.
-        writer << "Participant ID, Age, Gender, Total Quadrants, Total Time, Quadrants, Times";
+    if (fileExists) { //Write header if file doesn't yet exist.
+        writer << "Participant ID, Age, Gender, Score, Quadrants";
     }
+
+    //Write the games to disk.
     for (std::vector<GameData>::iterator game = games.begin(); game != games.end(); game++) {
-        //Print demographics (Male == True, for now.)
-        writer << participantID << ',' << age << ',' << (gender ? 'M' : 'F') << ',';
-        //Print game stats
+        //Print demographics (Female == True, for now.)
+        writer << participantID << ',' << age << ',' << (gender ? 'F' : 'M') << ',';
+
+        //Print game stats; includes an endline.
         writer << (game->toCSV());
     }
 
