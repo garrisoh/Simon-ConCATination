@@ -9,8 +9,7 @@ void SimonController::start() {
 }
 
 void SimonController::startGame(GameData* gameData) {
-	//Set variables in the UI
-	//Setup the state machine to run simon proper.
+    //make current simon game static to prevent deallocation during asynchronous game play
     static SimonGame *simonGame = NULL;
 
     if (simonGame) {

@@ -16,13 +16,14 @@
 #include <QLayout>
 
 #include <iostream>
+#include <QApplication>
 
 // speed in beeps per sec
-#define PLAYBACK_SPEED_INCREMENT    1
-#define PLAYBACK_SPEED_INITIAL      1
+#define PLAYBACK_SPEED_INCREMENT    0.25
+#define PLAYBACK_SPEED_INITIAL      0.25
 
 // length of timeout in seconds
-#define TIMEOUT_DURATION            3
+#define TIMEOUT_DURATION            5
 
 SimonGame::SimonGame(GameData *gameData, SimonController *controller)
 {
@@ -154,7 +155,6 @@ void SimonGame::onEvent(QuadrantID q, EventType e)
 void SimonGame::addQuadrant()
 {
     QuadrantID q = (QuadrantID)(rand() % 4 + QuadrantTopLeft);
-    std::cout << (q == QuadrantBottomLeft) << q << QuadrantBottomLeft << std::endl;
     gameData->addQuadrant(q);
 }
 
@@ -163,19 +163,24 @@ void SimonGame::playLights()
     state = GameStatePlayback;
 
     for (int i = 0; i < (int)gameData->getQuadrants().size(); i++) {
-        // TODO: Make this click the quadrant
+        // Press quadrant
         SimonUI::getMainWindow().pressQuadrant(gameData->getQuadrants()[i]);
 
         if (i == (int)gameData->getQuadrants().size()) {
             break;
         }
 
-        // delay between beeps
-        QThread::currentThread()->msleep(1000/speed);
-        //SimonUI::getMainWindow().pressQuadrant(QuadrantNone);
+        // tell qt to process queued events (ie, refresh the display) before this method finishes
+        // wait half the time before turning off quadrant (50:50 duty cycle)
+        qApp->processEvents();
+        QThread::currentThread()->msleep(1000/(2*speed));
+        SimonUI::getMainWindow().pressQuadrant(QuadrantNone);
+
+        // wait for next quadrant
+        qApp->processEvents();
+        QThread::currentThread()->msleep(1000/(2*speed));
     }
 
-    std::cout << "Playback done" << std::endl;
     state = GameStatePlaying;
 
     // start timer
