@@ -166,10 +166,6 @@ void SimonGame::playLights()
         // Press quadrant
         SimonUI::getMainWindow().pressQuadrant(gameData->getQuadrants()[i]);
 
-        if (i == (int)gameData->getQuadrants().size()) {
-            break;
-        }
-
         // tell qt to process queued events (ie, refresh the display) before this method finishes
         // wait half the time before turning off quadrant (50:50 duty cycle)
         qApp->processEvents();

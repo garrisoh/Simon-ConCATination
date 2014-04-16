@@ -8,9 +8,6 @@ TrialData::TrialData()
     this->gender = false;
     this->age = 0;
     this->participantID = "";
-
-    //Create a Game to start with.
-    this->addGame();
 }
 
 TrialData::~TrialData() {
