@@ -79,6 +79,11 @@ void SimonUI::onEvent(QuadrantID q, EventType e)
 
 
 void SimonUI::pressQuadrant(QuadrantID q) {
+    // for playback
+    if (q == QuadrantNone) {
+        setImage(&_normalImage);
+        return;
+    }
 	setImage(_litImages[q - QuadrantTopLeft]);
 }
 

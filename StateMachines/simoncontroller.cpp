@@ -11,8 +11,14 @@ void SimonController::start() {
 void SimonController::startGame(GameData* gameData) {
 	//Set variables in the UI
 	//Setup the state machine to run simon proper.
-    SimonGame simonGame(gameData, this);
-	simonGame.start();
+    static SimonGame *simonGame = NULL;
+
+    if (simonGame) {
+        delete simonGame;
+    }
+
+    simonGame = new SimonGame(gameData, this);
+    simonGame->start();
 }
 
 void SimonController::nextGame()

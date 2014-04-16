@@ -17,36 +17,16 @@ int main(int argc, char *argv[])
     SimonUI &ui = SimonUI::getMainWindow();
     ui.show();
 
-    InputManager *mouse = new MouseManager();
-    mouse->addObserver(&ui);
-
-    InputManager *leap = new LeapManager();
-    leap->addObserver(&ui);
-
-    InputManager *keyboard = new KeyboardManager();
-    keyboard->addObserver(&ui);
-
-    ChangePassDialog passNewDialog;
+    /*ChangePassDialog passNewDialog;
     passNewDialog.setTitle("Welcome");
     passNewDialog.setSubtitle("Please enter a new administrator password.");
-    passNewDialog.exec();
+    passNewDialog.exec();*/
 
     TrialSettingsDialog settings;
     settings.exec();
 
-    /*
-    // TODO: number of games is wrong
-    std::cout << TrialData::getCurrentTrial()->getNumberGames() << std::endl;
-
-    // second game is valid, means trialsettingsscreen is creating extra games
-    GameData *g = TrialData::getCurrentTrial()->getGame(0);
-    std::cout << description(g->getColor()) << description(g->getInterface()) << description(g->getSound()) << std::endl;
-    g = TrialData::getCurrentTrial()->getGame(1);
-    std::cout << description(g->getColor()) << description(g->getInterface()) << description(g->getSound()) << std::endl;
-
-    // this still needs some work
     SimonController c;
-    c.start();*/
+    c.start();
 
     return a.exec();
 }

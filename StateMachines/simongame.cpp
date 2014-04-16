@@ -153,7 +153,9 @@ void SimonGame::onEvent(QuadrantID q, EventType e)
 
 void SimonGame::addQuadrant()
 {
-    gameData->addQuadrant((QuadrantID)(rand() % 4));
+    QuadrantID q = (QuadrantID)(rand() % 4 + QuadrantTopLeft);
+    std::cout << (q == QuadrantBottomLeft) << q << QuadrantBottomLeft << std::endl;
+    gameData->addQuadrant(q);
 }
 
 void SimonGame::playLights()
@@ -170,8 +172,10 @@ void SimonGame::playLights()
 
         // delay between beeps
         QThread::currentThread()->msleep(1000/speed);
+        //SimonUI::getMainWindow().pressQuadrant(QuadrantNone);
     }
 
+    std::cout << "Playback done" << std::endl;
     state = GameStatePlaying;
 
     // start timer
