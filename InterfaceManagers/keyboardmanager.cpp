@@ -22,6 +22,11 @@ bool KeyboardManager::eventFilter(QObject*, QEvent *event)
         // if a key event, cast to key event
         QKeyEvent *keyEvent = (QKeyEvent *)event;
 
+        // keep track of the last pressed quadrant to avoid sending press multiple times
+        // for the same key being held down
+        // this provides a smoother animation
+        static QuadrantID lastPressed = QuadrantNone;
+
         // determine quadrant pressed
 		QuadrantID q;
         switch (keyEvent->key()) {
@@ -55,9 +60,14 @@ bool KeyboardManager::eventFilter(QObject*, QEvent *event)
             return false;
         }
 
-        // notify observers
-        notifyObservers(q, e);
-        return true;
+        // notify observers if we are not pressing the same key for a long time
+        if (e == EventTypeRelease || q != lastPressed) {
+            notifyObservers(q, e);
+            return true;
+        }
+
+        lastPressed = q;
+        return false;
     }
 
     // not a key event, don't respond to event

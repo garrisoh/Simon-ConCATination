@@ -1,3 +1,13 @@
 <RCC>
-    <qresource prefix="/../Simon-ConCATination/UI/Images"/>
+    <qresource prefix="/">
+        <file>Images/SimonBottomLeftHover.png</file>
+        <file>Images/SimonBottomLeftLit.png</file>
+        <file>Images/SimonBottomRightHover.png</file>
+        <file>Images/SimonBottomRightLit.png</file>
+        <file>Images/SimonNoneLit.png</file>
+        <file>Images/SimonTopLeftHover.png</file>
+        <file>Images/SimonTopLeftLit.png</file>
+        <file>Images/SimonTopRightHover.png</file>
+        <file>Images/SimonTopRightLit.png</file>
+    </qresource>
 </RCC>

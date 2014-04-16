@@ -33,7 +33,7 @@ public:
 	void pressQuadrant(QuadrantID q);
 	void unpressQuadrant(QuadrantID q);
 	void hoverQuadrant(QuadrantID q);
-	void unhoverQuadrant(QuadrantID q);
+    void unhoverQuadrant(QuadrantID q);
 
 private:
 	Ui::SimonUI *ui;	/// Class created from simonui.ui
@@ -51,7 +51,7 @@ private:
 	QPixmap** _hoveredImages;
 
 	void releaseQuadrants();
-	void setImage(QPixmap* image);
+    void setImage(QPixmap* image);
 };
 
 #endif // SIMONUI_H

@@ -1,5 +1,7 @@
 #include "changepassdialog.h"
 #include "ui_changepassdialog.h"
+#include <QMessageBox>
+#include <QCloseEvent>
 
 ChangePassDialog::ChangePassDialog(QWidget *parent) :
     QDialog(parent),
@@ -33,4 +35,28 @@ void ChangePassDialog::setTitle(QString title)
 void ChangePassDialog::setSubtitle(QString subtitle)
 {
     ui->label_2->setText(subtitle);
+}
+
+// TODO: Only do this for first screen, not change pass screen
+void ChangePassDialog::closeEvent(QCloseEvent *event)
+{
+    // display warning message
+    QMessageBox msgBox;
+    msgBox.setText("Closing this window will close the application\nAre you sure you want to continue?");
+    msgBox.setStandardButtons(QMessageBox::Close | QMessageBox::Cancel);
+    msgBox.setDefaultButton(QMessageBox::Close);
+    int result = msgBox.exec();
+    switch (result) {
+        case QMessageBox::Close:
+            // close application
+            exit(0);
+            break;
+        case QMessageBox::Cancel:
+            // cancel
+            event->ignore();
+            break;
+        default:
+            QDialog::closeEvent(event);
+            break;
+    }
 }

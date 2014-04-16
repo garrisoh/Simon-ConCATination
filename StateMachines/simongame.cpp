@@ -2,6 +2,7 @@
 
 #include "../globals.h"
 #include "../UI/simonui.h"
+#include "./simongame.h"
 
 // interface managers
 #include "../InterfaceManagers/keyboardmanager.h"
@@ -23,9 +24,10 @@
 // length of timeout in seconds
 #define TIMEOUT_DURATION            3
 
-SimonGame::SimonGame(GameData *gameData)
+SimonGame::SimonGame(GameData *gameData, SimonController *controller)
 {
     // initialize ivars
+    this->controller = controller;
     this->gameData = gameData;
     speed = 1;
     currQuadrantIndex = 0;
@@ -34,7 +36,10 @@ SimonGame::SimonGame(GameData *gameData)
     watchdog->setSingleShot(true);
 
     // connect timeout slot
-    QObject::connect(watchdog, SIGNAL(timeout), this, SLOT(onTimeout));
+    QObject::connect(watchdog, SIGNAL(timeout()), this, SLOT(onTimeout()));
+
+    // connect next game slot
+    QObject::connect(this, SIGNAL(gameOver()), this->controller, SLOT(nextGame()));
 	
     // create the appropriate interface manager
     switch (gameData->getInterface()) {
@@ -76,8 +81,6 @@ void SimonGame::start()
     // alert user to what variables are on/off
     QMessageBox message;
 
-    std::cout << description(gameData->getInterface()) << std::endl;
-
     message.setText("              New Game              ");
     QString text = tr("This game will use the %0 as input, with %1 and %2.\n");
     text = text.arg(description(gameData->getInterface()));
@@ -94,11 +97,6 @@ void SimonGame::start()
     // begin game
     addQuadrant();
     playLights();
-}
-
-SimonGame::GameState SimonGame::getState()
-{
-    return state;
 }
 
 void SimonGame::onEvent(QuadrantID q, EventType e)
@@ -189,6 +187,8 @@ void SimonGame::onTimeout()
     message.setText("           Try Again              ");
     message.setInformativeText("Time is up.  Try again.\n");
     message.exec();
+
+    emit gameOver();
 }
 
 void SimonGame::wrongQuadrant()
@@ -200,4 +200,6 @@ void SimonGame::wrongQuadrant()
     message.setText("           Try Again              ");
     message.setInformativeText("Wrong quadrant pressed.\n");
     message.exec();
+
+    emit gameOver();
 }

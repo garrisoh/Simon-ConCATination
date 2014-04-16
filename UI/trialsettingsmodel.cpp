@@ -134,10 +134,7 @@ void TrialSettingsModel::start(std::string pid, std::string ag, std::string gndr
         }
 
         //figure out what sound type
-        if(tableData[i][1] == QString("3D (Surround)"))
-        {
-            st = SoundType3D;
-        } else if(tableData[i][1] == QString("No Sound"))
+        if(tableData[i][1] == QString("No Sound"))
         {
             st = SoundTypeOff;
         } else
@@ -163,7 +160,6 @@ void TrialSettingsModel::start(std::string pid, std::string ag, std::string gndr
 
         //add game to trial
         data->addGame(tempGameData);
-        std::cout << "Added it to trialData" << std::endl << std::endl;
 
     }
 

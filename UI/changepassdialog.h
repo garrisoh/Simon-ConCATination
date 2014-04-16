@@ -20,6 +20,10 @@ public:
     /** Set dialog subtitle */
     void setSubtitle(QString subtitle);
 
+protected:
+    /** Called when close button is pressed */
+    void closeEvent(QCloseEvent *event);
+
 private slots:
     void on_pushButton_clicked();
 

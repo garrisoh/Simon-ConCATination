@@ -63,6 +63,8 @@ macx {
     LEAP_LIB.files = $$PWD/InterfaceManagers/libLeap.dylib
     LEAP_LIB.path = Contents/MacOS
     QMAKE_BUNDLE_DATA += LEAP_LIB
+
+    ICON = UI/Images/Simon.icns
 }
 
 unix: LIBS += -L$$PWD/InterfaceManagers/ -lLeap

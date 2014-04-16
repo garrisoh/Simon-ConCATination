@@ -1,24 +1,30 @@
 #include "simoncontroller.h"
 #include "../UI/passdialog.h"
+#include "simongame.h"
 
 void SimonController::start() {
+    currentGame = 0;
 	TrialData* td = TrialData::getCurrentTrial();
-    for (int i = 0; i < td->getNumberGames(); i++) {
-        startGame(td->getGame(i));
-	}
-        TrialData::getCurrentTrial->writeCSV();
-        donePrompt();
+    startGame(td->getGame(currentGame));
 }
 
 void SimonController::startGame(GameData* gameData) {
 	//Set variables in the UI
 	//Setup the state machine to run simon proper.
-    SimonGame simonGame(gameData);
+    SimonGame simonGame(gameData, this);
 	simonGame.start();
+}
 
-    // wait for game to finish
-    while (simonGame.getState() == SimonGame::GameStatePlaying || simonGame.getState() == SimonGame::GameStatePlayback) {
+void SimonController::nextGame()
+{
+    currentGame++;
+    TrialData* td = TrialData::getCurrentTrial();
+    if (td->getNumberGames() == currentGame) {
+        donePrompt();
+        return;
     }
+
+    startGame(td->getGame(currentGame));
 }
 
 void SimonController::donePrompt() {

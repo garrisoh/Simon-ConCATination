@@ -117,17 +117,12 @@
     <widget class="QComboBox" name="soundComboBox">
      <item>
       <property name="text">
-       <string>3D (Surround)</string>
+       <string>Stereo</string>
       </property>
      </item>
      <item>
       <property name="text">
        <string>No Sound</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Stereo</string>
       </property>
      </item>
     </widget>
@@ -207,6 +202,9 @@
      </property>
      <property name="midLineWidth">
       <number>9</number>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
      </property>
      <property name="showDropIndicator" stdset="0">
       <bool>false</bool>

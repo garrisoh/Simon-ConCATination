@@ -7,19 +7,17 @@ SimonUI::SimonUI(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::SimonUI)
 {
-	ui->setupUi(this);
+    ui->setupUi(this);
 
-	std::string path = "../Simon-ConCATination/UI/Images/FullImage/";
-
-	_normalImage = QPixmap::fromImage(QImage( std::string(path + "SimonNoneLit.png").c_str()));
-	_bottomLeftLit = QPixmap::fromImage(QImage( std::string(path + "SimonBottomLeftLit.png").c_str()));
-	_bottomLeftHover = QPixmap::fromImage(QImage( std::string(path + "SimonBottomLeftHover.png").c_str()));
-	_bottomRightLit = QPixmap::fromImage(QImage( std::string(path + "SimonBottomRightLit.png").c_str()));
-	_bottomRightHover = QPixmap::fromImage(QImage( std::string(path + "SimonBottomRightHover.png").c_str()));
-	_topLeftLit = QPixmap::fromImage(QImage( std::string(path + "SimonTopLeftLit.png").c_str()));
-	_topLeftHover = QPixmap::fromImage(QImage( std::string(path + "SimonTopLeftHover.png").c_str()));
-	_topRightLit = QPixmap::fromImage(QImage( std::string(path + "SimonTopRightLit.png").c_str()));
-	_topRightHover = QPixmap::fromImage(QImage( std::string(path + "SimonTopRightHover.png").c_str()));
+    _normalImage = QPixmap::fromImage(QImage(":Images/SimonNoneLit.png"));
+    _bottomLeftLit = QPixmap::fromImage(QImage(":Images/SimonBottomLeftLit.png"));
+    _bottomLeftHover = QPixmap::fromImage(QImage(":Images/SimonBottomLeftHover.png"));
+    _bottomRightLit = QPixmap::fromImage(QImage(":Images/SimonBottomRightLit.png"));
+    _bottomRightHover = QPixmap::fromImage(QImage(":Images/SimonBottomRightHover.png"));
+    _topLeftLit = QPixmap::fromImage(QImage(":Images/SimonTopLeftLit.png"));
+    _topLeftHover = QPixmap::fromImage(QImage(":Images/SimonTopLeftHover.png"));
+    _topRightLit = QPixmap::fromImage(QImage(":Images/SimonTopRightLit.png"));
+    _topRightHover = QPixmap::fromImage(QImage(":Images/SimonTopRightHover.png"));
 
 
 	_litImages = new QPixmap*[4];
@@ -53,55 +51,26 @@ SimonUI& SimonUI::getMainWindow()
 
 void SimonUI::onEvent(QuadrantID q, EventType e)
 {
-	// determine quadrant
-    QString s;
-	switch (q)
-	{
-	case QuadrantTopLeft:
-		s = "Top Left ";
-		break;
-	case QuadrantTopRight:
-		s = "Top Right ";
-		break;
-    case QuadrantBottomLeft:
-        s = "Bottom Left ";
-        break;
-    case QuadrantBottomRight:
-        s = "Bottom Right ";
-        break;
-    default:
-        break;
-    }
-
-	switch (e)
+    switch (e)
 	{
     case EventTypeHover:
-        // set top label on hover
 		if (q == QuadrantNone)
 		{
 			setImage(&_normalImage);
 			break;
-		}
-		ui->label->setText(s + "Hovered");
+        }
 		hoverQuadrant(q);
         break;
     case EventTypePressed:
-        // set bottom label on press
 		if (q == QuadrantNone)
-			break;
-		ui->label_2->setText(s + "Pressed");
+            break;
 		pressQuadrant(q);
         break;
-	case EventTypeRelease:
-        // set bottom label on release
-		ui->label_2->setText(s + "Released");
+    case EventTypeRelease:
 		setImage(&_normalImage);
 		break;
     case EventTypeClicked:
-        // set bottom label on click
-		ui->label_2->setText(s + "Clicked");
-		pressQuadrant(q);
-
+        pressQuadrant(q);
         break;
     default:
         break;
