@@ -10,7 +10,6 @@
 #include "../InterfaceManagers/leapmanager.h"
 
 #include <cstdlib>
-#include <QThread>
 #include <QMessageBox>
 #include <QApplication>
 #include <QTime>
@@ -118,11 +117,7 @@ void SimonGame::onEvent(QuadrantID q, EventType e)
     static time_t prevTime = time(NULL);
 
     if (gameData->getRecord()) {
-        // record elapsed time
-        time_t currTime = time(NULL);
-        gameData->addUserTime((float)(currTime - prevTime)/1000.0);
-        prevTime = currTime;
-
+        // TODO: Keep track of score?  Longest streak?
         // record quadrant pressed
         gameData->addUserQuadrant(q);
     }

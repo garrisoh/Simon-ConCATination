@@ -115,6 +115,7 @@ void SimonUI::playSound(QuadrantID q)
 void SimonUI::hoverQuadrant(QuadrantID q) {
     if (q == QuadrantNone) {
         setImage(&_normalImage);
+        return;
     }
 	setImage(_hoveredImages[q - QuadrantTopLeft]);
 }

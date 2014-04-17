@@ -37,7 +37,6 @@ bool MouseManager::eventFilter(QObject *target, QEvent *event)
 
     // get quadrant from coordinates
     QMouseEvent *me = (QMouseEvent *)event;
-    // TODO: Make sure quadrant handles touch up outside appropriately (release a different quadrant)
     QuadrantID q = findQuadrant(me->x(), me->y());
     notifyObservers(q, e);
     return true;
