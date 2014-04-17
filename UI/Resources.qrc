@@ -9,5 +9,9 @@
         <file>Images/SimonTopLeftLit.png</file>
         <file>Images/SimonTopRightHover.png</file>
         <file>Images/SimonTopRightLit.png</file>
+        <file>Sounds/blue.wav</file>
+        <file>Sounds/green.wav</file>
+        <file>Sounds/red.wav</file>
+        <file>Sounds/yellow.wav</file>
     </qresource>
 </RCC>

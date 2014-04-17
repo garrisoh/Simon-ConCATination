@@ -12,11 +12,10 @@
 #include <cstdlib>
 #include <QThread>
 #include <QMessageBox>
-#include <QSpacerItem>
-#include <QLayout>
+#include <QApplication>
+#include <QTime>
 
 #include <iostream>
-#include <QApplication>
 
 // speed in beeps per sec
 #define PLAYBACK_SPEED_INCREMENT    0.25
@@ -162,19 +161,34 @@ void SimonGame::playLights()
 {
     state = GameStatePlayback;
 
-    for (int i = 0; i < (int)gameData->getQuadrants().size(); i++) {
-        // Press quadrant
-        SimonUI::getMainWindow().pressQuadrant(gameData->getQuadrants()[i]);
+    // time for animating
+    QTime time;
+    time.start();
 
-        // tell qt to process queued events (ie, refresh the display) before this method finishes
-        // wait half the time before turning off quadrant (50:50 duty cycle)
+    // unhover all in case mouse accidentally moves, pause before playback
+    // qApp->processEvents() makes the loop non-blocking (image updates, sound plays)
+    SimonUI::getMainWindow().pressQuadrant(QuadrantNone);
+    while (!(time.elapsed() >= 1000)) {
         qApp->processEvents();
-        QThread::currentThread()->msleep(1000/(2*speed));
+    }
+
+    for (int i = 0; i < (int)gameData->getQuadrants().size(); i++) {
+        // play the quadrant
+        SimonUI::getMainWindow().pressQuadrant(gameData->getQuadrants()[i]);
+        time.restart();
+
+        // wait half the time before turning off quadrant (50:50 duty cycle)
+        while (!(time.elapsed() >= 1000/(2*speed))) {
+            qApp->processEvents();
+        }
+
+        // turn off quadrant for half the time
         SimonUI::getMainWindow().pressQuadrant(QuadrantNone);
 
-        // wait for next quadrant
-        qApp->processEvents();
-        QThread::currentThread()->msleep(1000/(2*speed));
+        time.restart();
+        while (!(time.elapsed() >= 1000/(2*speed))) {
+            qApp->processEvents();
+        }
     }
 
     state = GameStatePlaying;

@@ -1,7 +1,9 @@
 #include "simonui.h"
 #include "ui_simonui.h"
+#include "../DataModel/trialdata.h"
+#include "../DataModel/gamedata.h"
 #include <QString>
-
+#include <QSound>
 
 SimonUI::SimonUI(QWidget *parent) :
     QMainWindow(parent),
@@ -32,9 +34,7 @@ SimonUI::SimonUI(QWidget *parent) :
 	_hoveredImages[2] = &_bottomLeftHover;
 	_hoveredImages[3] = &_bottomRightHover;
 
-	setImage(&_normalImage);
-
-	update();
+    setImage(&_normalImage);
 }
 
 SimonUI::~SimonUI()
@@ -54,20 +54,13 @@ void SimonUI::onEvent(QuadrantID q, EventType e)
     switch (e)
 	{
     case EventTypeHover:
-		if (q == QuadrantNone)
-		{
-			setImage(&_normalImage);
-			break;
-        }
 		hoverQuadrant(q);
         break;
     case EventTypePressed:
-		if (q == QuadrantNone)
-            break;
 		pressQuadrant(q);
         break;
     case EventTypeRelease:
-		setImage(&_normalImage);
+        setImage(&_normalImage);
 		break;
     case EventTypeClicked:
         pressQuadrant(q);
@@ -84,27 +77,51 @@ void SimonUI::pressQuadrant(QuadrantID q) {
         setImage(&_normalImage);
         return;
     }
-	setImage(_litImages[q - QuadrantTopLeft]);
+
+    setImage(_litImages[q - QuadrantTopLeft]);
+
+    if (sound) {
+        playSound(q);
+    }
 }
 
-void SimonUI::unpressQuadrant(QuadrantID q) {
+void SimonUI::playSound(QuadrantID q)
+{
+    // initialize sounds, avoid reloading
+    static QSound yellow(":Sounds/yellow.wav");
+    static QSound blue(":Sounds/blue.wav");
+    static QSound red(":Sounds/red.wav");
+    static QSound green(":Sounds/green.wav");
+
+    // play sounds
+    switch (q) {
+    case QuadrantBottomLeft:
+        yellow.play();
+        break;
+    case QuadrantBottomRight:
+        blue.play();
+        break;
+    case QuadrantTopLeft:
+        green.play();
+        break;
+    case QuadrantTopRight:
+        red.play();
+        break;
+    default:
+        break;
+    }
 }
 
 void SimonUI::hoverQuadrant(QuadrantID q) {
+    if (q == QuadrantNone) {
+        setImage(&_normalImage);
+    }
 	setImage(_hoveredImages[q - QuadrantTopLeft]);
-}
-
-void SimonUI::unhoverQuadrant(QuadrantID q) {
 }
 
 void SimonUI::setVariables(ColorType color, SoundType sound)
 {
-
-}
-
-void SimonUI::releaseQuadrants() {
-	for (int i = 0; i < 4; i++) {
-	}
+    this->sound = sound;
 }
 
 void SimonUI::setImage(QPixmap* image)

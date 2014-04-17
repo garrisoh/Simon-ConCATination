@@ -17,6 +17,8 @@ int main(int argc, char *argv[])
     SimonUI &ui = SimonUI::getMainWindow();
     ui.show();
 
+    // TODO: This should come up when trial settings comes up if no password exists
+    // Use QSettings for storing config data?
     /*ChangePassDialog passNewDialog;
     passNewDialog.setTitle("Welcome");
     passNewDialog.setSubtitle("Please enter a new administrator password.");

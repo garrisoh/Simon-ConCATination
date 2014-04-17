@@ -30,10 +30,8 @@ public:
     void setVariables(ColorType color, SoundType sound);
 
 	// For playback
-	void pressQuadrant(QuadrantID q);
-	void unpressQuadrant(QuadrantID q);
-	void hoverQuadrant(QuadrantID q);
-    void unhoverQuadrant(QuadrantID q);
+    void pressQuadrant(QuadrantID q);
+    void hoverQuadrant(QuadrantID q);
 
 private:
 	Ui::SimonUI *ui;	/// Class created from simonui.ui
@@ -50,8 +48,10 @@ private:
 	QPixmap** _litImages;
 	QPixmap** _hoveredImages;
 
-	void releaseQuadrants();
+    SoundType sound; // for determining whether to play sound
+
     void setImage(QPixmap* image);
+    void playSound(QuadrantID q);
 };
 
 #endif // SIMONUI_H

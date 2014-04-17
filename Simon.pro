@@ -8,6 +8,7 @@
 #The last item it needs a backslash at the end, thanks!
 
 QT       += core gui
+QT       += multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
