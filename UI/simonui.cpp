@@ -1,13 +1,17 @@
 #include "simonui.h"
 #include "ui_simonui.h"
-#include "../DataModel/trialdata.h"
-#include "../DataModel/gamedata.h"
 #include <QString>
-#include <QSound>
+#include <QTime>
+#include <QApplication>
+#include <QThread>
 
 SimonUI::SimonUI(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::SimonUI)
+    ui(new Ui::SimonUI),
+    yellow(":Sounds/yellow.wav"),
+    blue(":Sounds/blue.wav"),
+    green(":Sounds/green.wav"),
+    red(":Sounds/red.wav")
 {
     ui->setupUi(this);
 
@@ -87,12 +91,6 @@ void SimonUI::pressQuadrant(QuadrantID q) {
 
 void SimonUI::playSound(QuadrantID q)
 {
-    // initialize sounds, avoid reloading
-    static QSound yellow(":Sounds/yellow.wav");
-    static QSound blue(":Sounds/blue.wav");
-    static QSound red(":Sounds/red.wav");
-    static QSound green(":Sounds/green.wav");
-
     // play sounds
     switch (q) {
     case QuadrantBottomLeft:

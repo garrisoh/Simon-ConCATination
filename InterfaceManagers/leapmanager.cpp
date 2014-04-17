@@ -1,4 +1,6 @@
 #include "leapmanager.h"
+#include <QApplication>
+#include <QTime>
 
 LeapManager::LeapManager()
 {
@@ -10,6 +12,11 @@ LeapManager::LeapManager()
     controller.config().setFloat("Gesture.ScreenTap.MinForwardVelocity", 10.0);
     controller.config().setFloat("Gesture.ScreenTap.HistorySeconds", 1.0);
     controller.config().save();
+
+    // weirdness here is to force notifyObservers to be called on the main queue through Qt signals + slots
+    // leap onFrame is completely asynchronous, so directly calling notifyObservers produces unusual results
+    // when trying to update the UI (all UI updates must be made on the main queue)
+    QObject::connect(this, SIGNAL(frameFinished(int,int)), this, SLOT(notifyOnMainQueue(int,int)));
 }
 
 LeapManager::~LeapManager()
@@ -25,7 +32,7 @@ void LeapManager::onFrame(const Leap::Controller &controller)
     Leap::Frame f = controller.frame();
     if (f.hands().count() == 0) {
         // unhover all
-        notifyObservers(QuadrantNone, EventTypeHover);
+        emit frameFinished((int)QuadrantNone, (int)EventTypeHover);
         return;
     }
 
@@ -39,14 +46,33 @@ void LeapManager::onFrame(const Leap::Controller &controller)
     for (int i=0; i < g.count(); i++) {
         // see if screen tap occurred on rightmost hand
         if (g[i].type() == Leap::Gesture::TYPE_SCREEN_TAP && g[i].hands().rightmost() == f.hands().rightmost()) {
-            // key pressed
-            e = EventTypeClicked;
-            break;
+
+            // animate press and release.  a non-blocking wait here prevents the leap's rapid frame rate from causing
+            // a hover event immediately after a click and leaves time for animation.
+            emit frameFinished((int)q, (int)EventTypePressed);
+
+            QTime t;
+            t.start();
+
+            // wait 0.25 secs.
+            while (!(t.elapsed() >= 250)) {
+                qApp->processEvents();
+            }
+
+            // release
+            emit frameFinished((int)q, (int)EventTypeRelease);
+            return;
         }
     }
 
     // notify observers
-    notifyObservers(q, e);
+    emit frameFinished((int)q, (int)e);
+}
+
+void LeapManager::notifyOnMainQueue(int q, int e)
+{
+    // qt calls this on the main queue when the signal is emitted
+    notifyObservers((QuadrantID)q, (EventType)e);
 }
 
 QuadrantID LeapManager::getQuadrant(const Leap::Frame &f)

@@ -114,8 +114,6 @@ void SimonGame::onEvent(QuadrantID q, EventType e)
 
     watchdog->stop();
 
-    static time_t prevTime = time(NULL);
-
     if (gameData->getRecord()) {
         // TODO: Keep track of score?  Longest streak?
         // record quadrant pressed
@@ -156,11 +154,14 @@ void SimonGame::playLights()
 {
     state = GameStatePlayback;
 
+    // remove UI as a listener to stop user input
+    device->removeObserver(&SimonUI::getMainWindow());
+
     // time for animating
     QTime time;
     time.start();
 
-    // unhover all in case mouse accidentally moves, pause before playback
+    // unhover all and pause before playing back
     // qApp->processEvents() makes the loop non-blocking (image updates, sound plays)
     SimonUI::getMainWindow().pressQuadrant(QuadrantNone);
     while (!(time.elapsed() >= 1000)) {
@@ -186,6 +187,8 @@ void SimonGame::playLights()
         }
     }
 
+    // add back the observer
+    device->addObserver(&SimonUI::getMainWindow());
     state = GameStatePlaying;
 
     // start timer

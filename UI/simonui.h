@@ -4,6 +4,7 @@
 #include "../InterfaceManagers/eventlistener.h"
 #include "../globals.h"
 #include <QMainWindow>
+#include <QSound>
 
 namespace Ui {
 	class SimonUI;	/// Class created from simonui.ui
@@ -47,6 +48,11 @@ private:
 
 	QPixmap** _litImages;
 	QPixmap** _hoveredImages;
+
+    QSound yellow;
+    QSound blue;
+    QSound green;
+    QSound red;
 
     SoundType sound; // for determining whether to play sound
 

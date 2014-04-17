@@ -22,10 +22,8 @@ public slots:
 	
 private:
     /**Keeps track of the current game index */
-    int currentGame;
+    int currentGameIndex;
 
-	/**Initializes a single Simon game*/
-	void startGame(GameData* gameData);
     /**Informs the user that they're done and locks, waiting for an admin password.
     TODO: Where do we store data like passwords and last set of games? A global config file to load on startup would be wise.*/
     void donePrompt();

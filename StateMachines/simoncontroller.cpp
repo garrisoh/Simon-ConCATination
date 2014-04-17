@@ -3,33 +3,24 @@
 #include "simongame.h"
 
 void SimonController::start() {
-    currentGame = 0;
-	TrialData* td = TrialData::getCurrentTrial();
-    startGame(td->getGame(currentGame));
-}
-
-void SimonController::startGame(GameData* gameData) {
-    //make current simon game static to prevent deallocation during asynchronous game play
-    static SimonGame *simonGame = NULL;
-
-    if (simonGame) {
-        delete simonGame;
-    }
-
-    simonGame = new SimonGame(gameData, this);
-    simonGame->start();
+    currentGameIndex = 0;
+    nextGame();
 }
 
 void SimonController::nextGame()
 {
-    currentGame++;
+    static SimonGame *currentGame = NULL;
+    if (currentGame) delete currentGame;
+
     TrialData* td = TrialData::getCurrentTrial();
-    if (td->getNumberGames() == currentGame) {
+    if (td->getNumberGames() <= currentGameIndex) {
         donePrompt();
         return;
     }
 
-    startGame(td->getGame(currentGame));
+    currentGame = new SimonGame(td->getGame(currentGameIndex), this);
+    currentGame->start();
+    currentGameIndex++;
 }
 
 void SimonController::donePrompt() {
