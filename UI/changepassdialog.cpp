@@ -2,6 +2,7 @@
 #include "ui_changepassdialog.h"
 #include <QMessageBox>
 #include <QCloseEvent>
+#include <QSettings>
 
 ChangePassDialog::ChangePassDialog(QWidget *parent) :
     QDialog(parent),
@@ -22,7 +23,9 @@ void ChangePassDialog::on_pushButton_clicked()
     } else if (ui->lineEdit->text().length() == 0){
         ui->label_3->setText("Enter a password to continue.");
     } else {
-        // TODO: Write to config file
+        // save new password and close
+        QSettings s;
+        s.setValue("simon/password", ui->lineEdit->text());
         accept();
     }
 }
@@ -37,9 +40,15 @@ void ChangePassDialog::setSubtitle(QString subtitle)
     ui->label_2->setText(subtitle);
 }
 
-// TODO: Only do this for first screen, not change pass screen
 void ChangePassDialog::closeEvent(QCloseEvent *event)
 {
+    // allow the user to close if we are not creating a new password
+    QSettings s;
+    if (s.contains("simon/password")) {
+        QDialog::closeEvent(event);
+        return;
+    }
+
     // display warning message
     QMessageBox msgBox;
     msgBox.setText("Closing this window will close the application\nAre you sure you want to continue?");

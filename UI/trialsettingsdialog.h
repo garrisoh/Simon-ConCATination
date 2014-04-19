@@ -5,6 +5,7 @@
 #include <QTableView>
 #include "../globals.h"
 #include "trialsettingsmodel.h"
+#include "../StateMachines/simoncontroller.h"
 
 namespace Ui {
 class TrialSettingsDialog;
@@ -40,6 +41,7 @@ public:
     void setColor(QString text);
     void setSound(QString text);
     void setInterface(QString text);
+    void setController(SimonController *controller);
 
 private slots:
     void on_addButton_2_clicked();
@@ -60,6 +62,7 @@ private slots:
 
 private:
     Ui::TrialSettingsDialog *ui;
+    SimonController *controller;
 };
 
 #endif // TRIALSETTINGSDIALOG_H

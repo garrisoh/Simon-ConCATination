@@ -1,5 +1,6 @@
 #include "simoncontroller.h"
 #include "../UI/passdialog.h"
+#include "../UI/trialsettingsdialog.h"
 #include "simongame.h"
 
 SimonController::SimonController()
@@ -48,4 +49,8 @@ void SimonController::donePrompt() {
     dialog.setTitle("Trial finished.");
     dialog.setSubtitle("Enter administrator password to continue.");
     dialog.exec();
+
+    TrialSettingsDialog settings;
+    settings.setController(this);
+    settings.exec();
 }

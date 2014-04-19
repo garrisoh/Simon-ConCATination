@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Simon</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Resources.qrc">
+    <normaloff>:/Images/SimonNoneLit.png</normaloff>:/Images/SimonNoneLit.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -36,9 +40,29 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_Trial"/>
+    <addaction name="actionChange_Password"/>
+   </widget>
+   <addaction name="menuFile"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionChange_Password">
+   <property name="text">
+    <string>Change Password</string>
+   </property>
+  </action>
+  <action name="actionNew_Trial">
+   <property name="text">
+    <string>New Trial</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

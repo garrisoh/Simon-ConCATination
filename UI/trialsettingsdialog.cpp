@@ -122,6 +122,11 @@ void TrialSettingsDialog::setInterface(QString text)
 
 }
 
+void TrialSettingsDialog::setController(SimonController *controller)
+{
+    this->controller = controller;
+}
+
 //called when add button is clicked
 void TrialSettingsDialog::on_addButton_2_clicked()
 {
@@ -177,6 +182,8 @@ void TrialSettingsDialog::on_startButton_2_clicked()
 
         //close
         accept();
+
+        controller->start();
     }
 
 }
@@ -220,7 +227,6 @@ void TrialSettingsDialog::on_checkBox_stateChanged(int arg1)
 
         //set models demoMode to false
         model->setDemoMode(false);
-        std::cout << "demo mode is a myth" << std::endl;
 
     }
     //checkbox is checked
@@ -228,7 +234,6 @@ void TrialSettingsDialog::on_checkBox_stateChanged(int arg1)
     {
 
         model->setDemoMode(true);
-        std::cout << "demo mode is a fact" << std::endl;
 
     }
 
@@ -238,9 +243,8 @@ void TrialSettingsDialog::on_checkBox_stateChanged(int arg1)
 //called when save
 void TrialSettingsDialog::on_pushButton_clicked()
 {
-
     QString fileName = QFileDialog::getSaveFileName(this,
-        tr("Save CSV File As..."), "", tr("Comma Delimited Files (*.csv *.txt)"));
+        tr("Save CSV File As..."), "~/", tr("Comma Delimited Files (*.csv *.txt)"), 0, QFileDialog::DontConfirmOverwrite);
     model->setSaveLocation(fileName.toStdString());
 
 }

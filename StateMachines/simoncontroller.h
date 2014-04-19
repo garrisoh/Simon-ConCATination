@@ -30,8 +30,7 @@ private:
     /**Keeps track of the current game index */
     int currentGameIndex;
 
-    /**Informs the user that they're done and locks, waiting for an admin password.
-    TODO: Where do we store data like passwords and last set of games? A global config file to load on startup would be wise.*/
+    /**Informs the user that they're done and locks, waiting for an admin password.*/
     void donePrompt();
 };
 

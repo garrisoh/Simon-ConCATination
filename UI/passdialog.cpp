@@ -1,6 +1,7 @@
 #include "passdialog.h"
 #include "ui_passdialog.h"
 #include <QMessageBox>
+#include <QSettings>
 
 PassDialog::PassDialog(QWidget *parent) :
     QDialog(parent),
@@ -35,8 +36,9 @@ void PassDialog::on_pushButton_clicked()
 
 bool PassDialog::verifyPassword()
 {
-    // TODO: Read from config file -> where is the file?
-    return ui->lineEdit->text() == "hi";
+    // Check against password in QSettings
+    QSettings s;
+    return ui->lineEdit->text() == s.value("simon/password");
 }
 
 void PassDialog::closeEvent(QCloseEvent *event)

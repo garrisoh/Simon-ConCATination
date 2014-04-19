@@ -155,7 +155,6 @@ void TrialSettingsModel::start(std::string pid, std::string ag, std::string gndr
 
         //now create gamedata object
         GameData tempGameData(ct, st, it, true);
-        std::cout << "Created GameData Object" << std::endl;
 
         if (demoMode) {
             tempGameData.setRecord(false);
@@ -201,7 +200,8 @@ int TrialSettingsModel::getRowCount()
 void TrialSettingsModel::writeGames(std::string pid, std::string age, std::string gender)
 {
 
-    //make the file
+    // TODO: Use QSettings to store persistent config data.  don't store password, that is handled by the password dialog
+    /*//make the file
     std::ofstream myfile;
     myfile.open (".settings.config");
 
@@ -218,7 +218,7 @@ void TrialSettingsModel::writeGames(std::string pid, std::string age, std::strin
     }
 
     //close the file
-    myfile.close();
+    myfile.close();*/
 
 }
 
@@ -293,7 +293,6 @@ void TrialSettingsModel::setSaveLocation(std::string loc)
 {
 
     saveLocation = loc;
-    std::cout << saveLocation << std::endl;
 
 }
 

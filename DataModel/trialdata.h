@@ -16,7 +16,7 @@ private:
     float age;
 
     std::vector<GameData> games;
-    std::string outFile; //TODO
+    std::string outFile;
 
     static TrialData* currentTrial;
 

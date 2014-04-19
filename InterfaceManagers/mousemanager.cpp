@@ -71,8 +71,6 @@ QuadrantID MouseManager::findQuadrant(int x, int y)
     bool left = x < centerX - lineWidth/2;
     bool right = x > centerX + lineWidth/2;
 
-    //std::cout << topLowerSemiCircEqn << std::endl;
-
     // return the appropriate quadrant
     if (top && right) {
         return QuadrantTopRight;

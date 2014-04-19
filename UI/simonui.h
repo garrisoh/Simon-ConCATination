@@ -34,6 +34,10 @@ public:
     void pressQuadrant(QuadrantID q);
     void hoverQuadrant(QuadrantID q);
 
+private slots:
+    void on_actionChange_Password_triggered();
+    void on_actionNew_Trial_triggered();
+
 private:
 	Ui::SimonUI *ui;	/// Class created from simonui.ui
 	QPixmap _normalImage;

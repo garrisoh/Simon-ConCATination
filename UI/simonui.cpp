@@ -1,5 +1,8 @@
 #include "simonui.h"
 #include "ui_simonui.h"
+#include "trialsettingsdialog.h"
+#include "passdialog.h"
+#include "changepassdialog.h"
 #include <QString>
 #include <QTime>
 #include <QApplication>
@@ -126,4 +129,27 @@ void SimonUI::setVariables(ColorType color, SoundType sound)
 void SimonUI::setImage(QPixmap* image)
 {
 	ui->image->setPixmap(*image);
+}
+
+void SimonUI::on_actionChange_Password_triggered()
+{
+    // prompt for old password
+    PassDialog pass;
+    pass.setTitle("Change Password");
+    pass.setSubtitle("Enter the existing password.");
+    pass.exec();
+
+    // prompt for new password
+    ChangePassDialog cpass;
+    cpass.exec();
+}
+
+void SimonUI::on_actionNew_Trial_triggered()
+{
+    PassDialog pass;
+    pass.setTitle("New Trial");
+    pass.exec();
+
+    TrialSettingsDialog settings;
+    settings.exec();
 }
