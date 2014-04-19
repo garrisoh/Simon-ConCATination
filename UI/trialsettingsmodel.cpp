@@ -157,10 +157,16 @@ void TrialSettingsModel::start(std::string pid, std::string ag, std::string gndr
         GameData tempGameData(ct, st, it, true);
         std::cout << "Created GameData Object" << std::endl;
 
+        if (demoMode) {
+            tempGameData.setRecord(false);
+        }
+
         //add game to trial
         data->addGame(tempGameData);
 
     }
+
+    TrialData::getCurrentTrial()->setOutFile(saveLocation);
 
     //now write games to file
     writeGames(pid, ag, gndr);
@@ -276,6 +282,11 @@ void TrialSettingsModel::setDemoMode(bool md)
 
     demoMode = md;
 
+}
+
+bool TrialSettingsModel::getDemoMode()
+{
+    return demoMode;
 }
 
 void TrialSettingsModel::setSaveLocation(std::string loc)

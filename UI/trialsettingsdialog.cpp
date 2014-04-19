@@ -158,8 +158,7 @@ void TrialSettingsDialog::on_startButton_2_clicked()
 {
 
     //check if all fields are filled in
-    QString compareTo = QString("");
-    if(getParticipantID() == compareTo || getAge() == compareTo || model->getSaveLocation() == "")
+    if(getParticipantID() == "" || getAge() == "" || (model->getSaveLocation() == "" && !model->getDemoMode()))
     {
 
         //not all fields are filled in

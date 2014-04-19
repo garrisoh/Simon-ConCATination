@@ -13,8 +13,6 @@ const char* description(int identifier)
         return "sound off";
     case SoundTypeRegular:
         return "sound on";
-    case SoundType3D:
-        return "enhanced sound";
     case ColorTypeOn:
         return "color on";
     case ColorTypeGrayscale:

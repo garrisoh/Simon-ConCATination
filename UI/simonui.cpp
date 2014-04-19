@@ -46,8 +46,6 @@ SimonUI::~SimonUI()
     delete ui;
     delete[] _litImages;
     delete[] _hoveredImages;
-    // TODO: Segfault 11 occurs after this point
-    // Qt says QThread was destroyed while still executing
 }
 
 SimonUI* SimonUI::getMainWindow()
@@ -69,9 +67,6 @@ void SimonUI::onEvent(QuadrantID q, EventType e)
         break;
     case EventTypeRelease:
         setImage(&_normalImage);
-		break;
-    case EventTypeClicked:
-        pressQuadrant(q);
         break;
     default:
         break;
@@ -88,7 +83,7 @@ void SimonUI::pressQuadrant(QuadrantID q) {
 
     setImage(_litImages[q - QuadrantTopLeft]);
 
-    if (sound) {
+    if (sound != SoundTypeOff) {
         playSound(q);
     }
 }
@@ -109,6 +104,7 @@ void SimonUI::playSound(QuadrantID q)
     case QuadrantTopRight:
         red.play();
         break;
+    case QuadrantNone:
     default:
         break;
     }

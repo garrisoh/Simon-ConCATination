@@ -11,8 +11,7 @@ typedef enum {
 /** Sound type identifiers */
 typedef enum {
     SoundTypeOff = 10,
-    SoundTypeRegular,
-    SoundType3D
+    SoundTypeRegular
 }  SoundType;
 
 /** Color type identifiers */
@@ -36,8 +35,7 @@ typedef enum {
 typedef enum {
     EventTypeHover = 40,
     EventTypePressed,
-    EventTypeRelease,
-    EventTypeClicked
+    EventTypeRelease
 } EventType;
 
 /** Error type identifiers */

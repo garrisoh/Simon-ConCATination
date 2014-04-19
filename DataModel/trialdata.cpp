@@ -141,8 +141,8 @@ ErrorType TrialData::writeCSV() {
         return ErrorTypeFileNotFound; 
 
     //Print header
-    if (fileExists) { //Write header if file doesn't yet exist.
-        writer << "Participant ID, Age, Gender, Score, Quadrants";
+    if (!fileExists) { //Write header if file doesn't yet exist.
+        writer << "Participant ID, Age, Gender, Color, Sound, Interface, Score, Quadrants" << std::endl;
     }
 
     //Write the games to disk.

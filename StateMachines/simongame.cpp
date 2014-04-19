@@ -101,8 +101,8 @@ void SimonGame::onEvent(QuadrantID q, EventType e)
     if (q == QuadrantNone)
         return;
 
-    // only respond to clicks or key releases
-    if (!(e == EventTypeClicked || e == EventTypeRelease))
+    // only respond to key releases
+    if (!(e == EventTypeRelease))
         return;
 
     watchdog->stop();

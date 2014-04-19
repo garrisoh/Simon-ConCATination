@@ -28,6 +28,7 @@ public:
     void writeGames(std::string pid, std::string age, std::string gender); //writes games and password to config
     void readGames(); //reads games in from config file and sets password
     void setDemoMode(bool md); //setter for private demomode variable
+    bool getDemoMode(); // getter for demo mode
     void setSaveLocation(std::string loc); //setter
     int getRowCount(); //returns number of rows in the table view
     std::vector<std::string> &split(const std::string &s, char delim, std::vector<std::string> &elems); //helper for split

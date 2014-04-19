@@ -87,14 +87,18 @@ std::string GameData::toCSV() {
      * @return CSV string representing the GameData
      */
     std::string csv = "";
-    csv += quadrants.size();
-    csv += ',';
-    for (int i = 0; i<quadrants.size(); i++) {
+    csv += std::string(description(color)) + ",";
+    csv += std::string(description(sound)) + ",";
+    csv += std::string(description(interface)) + ",";
+    csv += std::to_string((int)quadrants.size()) + ",";
+    for (int i = 0; i<(int)quadrants.size(); i++) {
        switch (quadrants[i]) {
-           case (QuadrantTopLeft):     csv += "0"; break;
-           case (QuadrantTopRight):    csv += "1"; break;
-           case (QuadrantBottomLeft):  csv += "2"; break;
-           case (QuadrantBottomRight): csv += "3"; break;
+           case (QuadrantTopLeft):     csv += "G"; break;
+           case (QuadrantTopRight):    csv += "R"; break;
+           case (QuadrantBottomLeft):  csv += "Y"; break;
+           case (QuadrantBottomRight): csv += "B"; break;
+           case (QuadrantNone):
+           default:                                break;
        }
     }
     csv += "\r\n";
