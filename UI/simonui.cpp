@@ -44,12 +44,16 @@ SimonUI::SimonUI(QWidget *parent) :
 SimonUI::~SimonUI()
 {
     delete ui;
+    delete[] _litImages;
+    delete[] _hoveredImages;
+    // TODO: Segfault 11 occurs after this point
+    // Qt says QThread was destroyed while still executing
 }
 
-SimonUI& SimonUI::getMainWindow()
+SimonUI* SimonUI::getMainWindow()
 {
     // return the singleton
-    static SimonUI w;
+    static SimonUI *w = new SimonUI();
     return w;
 }
 

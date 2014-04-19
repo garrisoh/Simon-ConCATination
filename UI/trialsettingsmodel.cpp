@@ -35,7 +35,6 @@ TrialSettingsModel::~TrialSettingsModel()
 {
 
     delete tableModel;
-    delete tableView;
 
 }
 

@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    SimonUI &ui = SimonUI::getMainWindow();
-    ui.show();
+    SimonUI *ui = SimonUI::getMainWindow();
+    ui->show();
 
     // TODO: This should come up when trial settings comes up if no password exists
     // Use QSettings for storing config data?
@@ -30,5 +30,6 @@ int main(int argc, char *argv[])
     SimonController c;
     c.start();
 
-    return a.exec();
+    a.exec();
+    return 0;
 }

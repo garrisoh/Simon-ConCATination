@@ -6,13 +6,13 @@
 KeyboardManager::KeyboardManager()
 {
     // set this as an event filter for the main ui
-    SimonUI::getMainWindow().installEventFilter(this);
+    SimonUI::getMainWindow()->installEventFilter(this);
 }
 
 KeyboardManager::~KeyboardManager()
 {
     // remove as an event filter
-    SimonUI::getMainWindow().removeEventFilter(this);
+    SimonUI::getMainWindow()->removeEventFilter(this);
 }
 
 bool KeyboardManager::eventFilter(QObject*, QEvent *event)

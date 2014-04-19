@@ -22,7 +22,7 @@ public:
     ~SimonUI();
 
     /** Static method, returns the singleton instance */
-    static SimonUI& getMainWindow();
+    static SimonUI* getMainWindow();
 
     /** Implements EventListener.  Called on input events */
 	void onEvent(QuadrantID q, EventType e);

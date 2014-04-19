@@ -12,8 +12,6 @@
 #include <QApplication>
 #include <QTime>
 
-#include <iostream>
-
 // speed in beeps per sec
 #define PLAYBACK_SPEED_INCREMENT    0.25
 #define PLAYBACK_SPEED_INITIAL      0.25
@@ -50,11 +48,11 @@ SimonGame::SimonGame(GameData *gameData)
     }
 
     // Configure SimonUI (color, sound)
-    SimonUI::getMainWindow().setVariables(gameData->getColor(), gameData->getSound());
+    SimonUI::getMainWindow()->setVariables(gameData->getColor(), gameData->getSound());
 
     // add this and the ui as observers
     device->addObserver(this);
-    device->addObserver(&SimonUI::getMainWindow());
+    device->addObserver(SimonUI::getMainWindow());
 
     // seed random
     srand(time(NULL));
@@ -64,7 +62,7 @@ SimonGame::~SimonGame()
 {
     // remove event listeners, delete device
     device->removeObserver(this);
-    device->removeObserver(&SimonUI::getMainWindow());
+    device->removeObserver(SimonUI::getMainWindow());
     watchdog->stop();
     delete device;
     delete watchdog;
@@ -149,7 +147,7 @@ void SimonGame::playLights()
     state = GameStatePlayback;
 
     // remove UI as a listener to stop user input
-    device->removeObserver(&SimonUI::getMainWindow());
+    device->removeObserver(SimonUI::getMainWindow());
 
     // time for animating
     QTime time;
@@ -157,14 +155,14 @@ void SimonGame::playLights()
 
     // unhover all and pause before playing back
     // qApp->processEvents() makes the loop non-blocking (image updates, sound plays)
-    SimonUI::getMainWindow().pressQuadrant(QuadrantNone);
+    SimonUI::getMainWindow()->pressQuadrant(QuadrantNone);
     while (!(time.elapsed() >= 1000)) {
         qApp->processEvents();
     }
 
     for (int i = 0; i < (int)gameData->getQuadrants().size(); i++) {
         // play the quadrant
-        SimonUI::getMainWindow().pressQuadrant(gameData->getQuadrants()[i]);
+        SimonUI::getMainWindow()->pressQuadrant(gameData->getQuadrants()[i]);
         time.restart();
 
         // wait half the time before turning off quadrant (50:50 duty cycle)
@@ -173,7 +171,7 @@ void SimonGame::playLights()
         }
 
         // turn off quadrant for half the time
-        SimonUI::getMainWindow().pressQuadrant(QuadrantNone);
+        SimonUI::getMainWindow()->pressQuadrant(QuadrantNone);
 
         time.restart();
         while (!(time.elapsed() >= 1000/(2*speed))) {
@@ -182,11 +180,8 @@ void SimonGame::playLights()
     }
 
     // add back the observer
-    device->addObserver(&SimonUI::getMainWindow());
+    device->addObserver(SimonUI::getMainWindow());
     state = GameStatePlaying;
-
-    std::cerr << "Game data quadrants size: " << gameData->getQuadrants().size() << std::endl;
-    std::cerr << "Current index: " << currQuadrantIndex << std::endl;
 
     // start timer
     watchdog->start(TIMEOUT_DURATION * 1000);

@@ -26,12 +26,14 @@ void SimonController::nextGame()
         currentGame = NULL;
     }
 
+    // check if done
     TrialData* td = TrialData::getCurrentTrial();
     if (td->getNumberGames() <= currentGameIndex) {
         donePrompt();
         return;
     }
 
+    // start a new game, connect signal
     currentGame = new SimonGame(td->getGame(currentGameIndex));
     QObject::connect(currentGame, SIGNAL(gameOver()), this, SLOT(nextGame()));
 

@@ -14,7 +14,9 @@ class SimonController : public QObject {
     Q_OBJECT
 
 public:
+    /**Constructor*/
     SimonController();
+    /**Destructor*/
     ~SimonController();
 	/**Starts running through the games listed in TrialData*/
 	void start();

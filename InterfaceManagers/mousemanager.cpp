@@ -8,13 +8,13 @@
 MouseManager::MouseManager()
 {
     // add this as an event listener on main ui
-    SimonUI::getMainWindow().installEventFilter(this);
+    SimonUI::getMainWindow()->installEventFilter(this);
 }
 
 MouseManager::~MouseManager()
 {
     // remove as an event listener
-    SimonUI::getMainWindow().removeEventFilter(this);
+    SimonUI::getMainWindow()->removeEventFilter(this);
 }
 
 bool MouseManager::eventFilter(QObject *target, QEvent *event)
@@ -50,8 +50,8 @@ QuadrantID MouseManager::findQuadrant(int x, int y)
     static const int lineWidth = 16;
 
     // get center of the image
-    int centerX = SimonUI::getMainWindow().geometry().width()/2;
-    int centerY = SimonUI::getMainWindow().height()/2;
+    int centerX = SimonUI::getMainWindow()->geometry().width()/2;
+    int centerY = SimonUI::getMainWindow()->height()/2;
 
     // equations for each of the semi circles (r^2 = x^2 + y^2 => y = +/-sqrt(r^2 - x^2))
     // multiply each by -1 to flip coord system (+y is down) and add centerY as offset to center vertically on screen
