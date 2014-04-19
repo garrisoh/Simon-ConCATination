@@ -12,6 +12,7 @@ TrialSettingsDialog::TrialSettingsDialog(QWidget *parent) :
 {
 
     ui->setupUi(this);
+    TrialData::newTrial();
 
     // make the last column expand to fit
     ui->gameTableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Interactive);

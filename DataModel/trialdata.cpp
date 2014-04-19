@@ -26,16 +26,8 @@ void TrialData::newTrial() {
     /**
      * @brief Resets all gathered data: user metrics, times, quadrants, and so on.
      */
-    TrialData* td = new TrialData();
-
-    //Rebuild game listing using copy constructors.
-    std::vector<GameData>::iterator game;
-    std::vector<GameData> games = TrialData::currentTrial->games;
-    for (game = games.begin(); game != games.end(); game++) {
-        td->games.push_back(GameData(*game));
-    }
     delete TrialData::currentTrial;
-    TrialData::currentTrial = td;
+    TrialData::currentTrial = new TrialData();
 }
 
 GameData* TrialData::getGame(int index) {
