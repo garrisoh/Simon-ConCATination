@@ -18,30 +18,9 @@ SimonUI::SimonUI(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    _normalImage = QPixmap::fromImage(QImage(":Images/SimonNoneLit.png"));
-    _bottomLeftLit = QPixmap::fromImage(QImage(":Images/SimonBottomLeftLit.png"));
-    _bottomLeftHover = QPixmap::fromImage(QImage(":Images/SimonBottomLeftHover.png"));
-    _bottomRightLit = QPixmap::fromImage(QImage(":Images/SimonBottomRightLit.png"));
-    _bottomRightHover = QPixmap::fromImage(QImage(":Images/SimonBottomRightHover.png"));
-    _topLeftLit = QPixmap::fromImage(QImage(":Images/SimonTopLeftLit.png"));
-    _topLeftHover = QPixmap::fromImage(QImage(":Images/SimonTopLeftHover.png"));
-    _topRightLit = QPixmap::fromImage(QImage(":Images/SimonTopRightLit.png"));
-    _topRightHover = QPixmap::fromImage(QImage(":Images/SimonTopRightHover.png"));
-
-
-	_litImages = new QPixmap*[4];
-	_litImages[0] = &_topLeftLit;
-	_litImages[1] = &_topRightLit;
-	_litImages[2] = &_bottomLeftLit;
-	_litImages[3] = &_bottomRightLit;
-
-	_hoveredImages = new QPixmap*[4];
-	_hoveredImages[0] = &_topLeftHover;
-	_hoveredImages[1] = &_topRightHover;
-	_hoveredImages[2] = &_bottomLeftHover;
-	_hoveredImages[3] = &_bottomRightHover;
-
-    setImage(&_normalImage);
+    _litImages = NULL;
+    _hoveredImages = NULL;
+    setVariables(ColorTypeOn, SoundTypeRegular);
 }
 
 SimonUI::~SimonUI()
@@ -124,6 +103,57 @@ void SimonUI::hoverQuadrant(QuadrantID q) {
 void SimonUI::setVariables(ColorType color, SoundType sound)
 {
     this->sound = sound;
+
+    if (_litImages)
+        delete[] _litImages;
+    if (_hoveredImages)
+        delete[] _hoveredImages;
+
+    if (color == ColorTypeOn) {
+        _normalImage = QPixmap::fromImage(QImage(":Images/Color/SimonNoneLit.png"));
+        _bottomLeftLit = QPixmap::fromImage(QImage(":Images/Color/SimonBottomLeftLit.png"));
+        _bottomLeftHover = QPixmap::fromImage(QImage(":Images/Color/SimonBottomLeftHover.png"));
+        _bottomRightLit = QPixmap::fromImage(QImage(":Images/Color/SimonBottomRightLit.png"));
+        _bottomRightHover = QPixmap::fromImage(QImage(":Images/Color/SimonBottomRightHover.png"));
+        _topLeftLit = QPixmap::fromImage(QImage(":Images/Color/SimonTopLeftLit.png"));
+        _topLeftHover = QPixmap::fromImage(QImage(":Images/Color/SimonTopLeftHover.png"));
+        _topRightLit = QPixmap::fromImage(QImage(":Images/Color/SimonTopRightLit.png"));
+        _topRightHover = QPixmap::fromImage(QImage(":Images/Color/SimonTopRightHover.png"));
+    } else if (color == ColorTypeGrayscale) {
+        _normalImage = QPixmap::fromImage(QImage(":Images/Gray/SimonNoneLit.png"));
+        _bottomLeftLit = QPixmap::fromImage(QImage(":Images/Gray/SimonBottomLeftLit.png"));
+        _bottomLeftHover = QPixmap::fromImage(QImage(":Images/Gray/SimonBottomLeftHover.png"));
+        _bottomRightLit = QPixmap::fromImage(QImage(":Images/Gray/SimonBottomRightLit.png"));
+        _bottomRightHover = QPixmap::fromImage(QImage(":Images/Gray/SimonBottomRightHover.png"));
+        _topLeftLit = QPixmap::fromImage(QImage(":Images/Gray/SimonTopLeftLit.png"));
+        _topLeftHover = QPixmap::fromImage(QImage(":Images/Gray/SimonTopLeftHover.png"));
+        _topRightLit = QPixmap::fromImage(QImage(":Images/Gray/SimonTopRightLit.png"));
+        _topRightHover = QPixmap::fromImage(QImage(":Images/Gray/SimonTopRightHover.png"));
+    } else {
+        _normalImage = QPixmap::fromImage(QImage(":Images/Mono/SimonNoneLit.png"));
+        _bottomLeftLit = QPixmap::fromImage(QImage(":Images/Mono/SimonBottomLeftLit.png"));
+        _bottomLeftHover = QPixmap::fromImage(QImage(":Images/Mono/SimonBottomLeftHover.png"));
+        _bottomRightLit = QPixmap::fromImage(QImage(":Images/Mono/SimonBottomRightLit.png"));
+        _bottomRightHover = QPixmap::fromImage(QImage(":Images/Mono/SimonBottomRightHover.png"));
+        _topLeftLit = QPixmap::fromImage(QImage(":Images/Mono/SimonTopLeftLit.png"));
+        _topLeftHover = QPixmap::fromImage(QImage(":Images/Mono/SimonTopLeftHover.png"));
+        _topRightLit = QPixmap::fromImage(QImage(":Images/Mono/SimonTopRightLit.png"));
+        _topRightHover = QPixmap::fromImage(QImage(":Images/Mono/SimonTopRightHover.png"));
+    }
+
+    _litImages = new QPixmap*[4];
+    _litImages[0] = &_topLeftLit;
+    _litImages[1] = &_topRightLit;
+    _litImages[2] = &_bottomLeftLit;
+    _litImages[3] = &_bottomRightLit;
+
+    _hoveredImages = new QPixmap*[4];
+    _hoveredImages[0] = &_topLeftHover;
+    _hoveredImages[1] = &_topRightHover;
+    _hoveredImages[2] = &_bottomLeftHover;
+    _hoveredImages[3] = &_bottomRightHover;
+
+    setImage(&_normalImage);
 }
 
 void SimonUI::setImage(QPixmap* image)

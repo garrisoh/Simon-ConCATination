@@ -1,17 +1,35 @@
 <RCC>
     <qresource prefix="/">
-        <file>Images/SimonBottomLeftHover.png</file>
-        <file>Images/SimonBottomLeftLit.png</file>
-        <file>Images/SimonBottomRightHover.png</file>
-        <file>Images/SimonBottomRightLit.png</file>
-        <file>Images/SimonNoneLit.png</file>
-        <file>Images/SimonTopLeftHover.png</file>
-        <file>Images/SimonTopLeftLit.png</file>
-        <file>Images/SimonTopRightHover.png</file>
-        <file>Images/SimonTopRightLit.png</file>
         <file>Sounds/blue.wav</file>
         <file>Sounds/green.wav</file>
         <file>Sounds/red.wav</file>
         <file>Sounds/yellow.wav</file>
+        <file>Images/Color/SimonBottomLeftHover.png</file>
+        <file>Images/Color/SimonBottomLeftLit.png</file>
+        <file>Images/Color/SimonBottomRightHover.png</file>
+        <file>Images/Color/SimonBottomRightLit.png</file>
+        <file>Images/Color/SimonNoneLit.png</file>
+        <file>Images/Color/SimonTopLeftHover.png</file>
+        <file>Images/Color/SimonTopLeftLit.png</file>
+        <file>Images/Color/SimonTopRightHover.png</file>
+        <file>Images/Color/SimonTopRightLit.png</file>
+        <file>Images/Gray/SimonBottomLeftHover.png</file>
+        <file>Images/Gray/SimonBottomLeftLit.png</file>
+        <file>Images/Gray/SimonBottomRightHover.png</file>
+        <file>Images/Gray/SimonBottomRightLit.png</file>
+        <file>Images/Gray/SimonNoneLit.png</file>
+        <file>Images/Gray/SimonTopLeftHover.png</file>
+        <file>Images/Gray/SimonTopLeftLit.png</file>
+        <file>Images/Gray/SimonTopRightHover.png</file>
+        <file>Images/Gray/SimonTopRightLit.png</file>
+        <file>Images/Mono/SimonBottomLeftHover.png</file>
+        <file>Images/Mono/SimonBottomLeftLit.png</file>
+        <file>Images/Mono/SimonBottomRightHover.png</file>
+        <file>Images/Mono/SimonBottomRightLit.png</file>
+        <file>Images/Mono/SimonNoneLit.png</file>
+        <file>Images/Mono/SimonTopLeftHover.png</file>
+        <file>Images/Mono/SimonTopLeftLit.png</file>
+        <file>Images/Mono/SimonTopRightHover.png</file>
+        <file>Images/Mono/SimonTopRightLit.png</file>
     </qresource>
 </RCC>
