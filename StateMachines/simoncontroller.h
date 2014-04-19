@@ -4,6 +4,7 @@
 #include "../DataModel/trialdata.h"
 #include "../DataModel/gamedata.h"
 #include "../UI/simonui.h"
+#include "simongame.h"
 #include <QObject>
 
 /** A state machine class that manages simon games. This guy does little more than calling the individual games. Each game handles its own setup and destruction.
@@ -13,6 +14,8 @@ class SimonController : public QObject {
     Q_OBJECT
 
 public:
+    SimonController();
+    ~SimonController();
 	/**Starts running through the games listed in TrialData*/
 	void start();
 
@@ -21,6 +24,7 @@ public slots:
     void nextGame();
 	
 private:
+    SimonGame *currentGame;
     /**Keeps track of the current game index */
     int currentGameIndex;
 

@@ -2,6 +2,17 @@
 #include "../UI/passdialog.h"
 #include "simongame.h"
 
+SimonController::SimonController()
+{
+    currentGame = NULL;
+}
+
+SimonController::~SimonController()
+{
+    if (currentGame)
+        delete currentGame;
+}
+
 void SimonController::start() {
     currentGameIndex = 0;
     nextGame();
@@ -9,8 +20,11 @@ void SimonController::start() {
 
 void SimonController::nextGame()
 {
-    static SimonGame *currentGame = NULL;
-    if (currentGame) delete currentGame;
+    if (currentGame) {
+        // delete when this signal/slot ends (can't delete the object in a slot that it called)
+        currentGame->deleteLater();
+        currentGame = NULL;
+    }
 
     TrialData* td = TrialData::getCurrentTrial();
     if (td->getNumberGames() <= currentGameIndex) {
@@ -18,7 +32,9 @@ void SimonController::nextGame()
         return;
     }
 
-    currentGame = new SimonGame(td->getGame(currentGameIndex), this);
+    currentGame = new SimonGame(td->getGame(currentGameIndex));
+    QObject::connect(currentGame, SIGNAL(gameOver()), this, SLOT(nextGame()));
+
     currentGame->start();
     currentGameIndex++;
 }

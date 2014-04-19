@@ -2,8 +2,6 @@
 
 #include "../globals.h"
 #include "../UI/simonui.h"
-#include "./simongame.h"
-
 // interface managers
 #include "../InterfaceManagers/keyboardmanager.h"
 #include "../InterfaceManagers/mousemanager.h"
@@ -23,10 +21,9 @@
 // length of timeout in seconds
 #define TIMEOUT_DURATION            5
 
-SimonGame::SimonGame(GameData *gameData, SimonController *controller)
+SimonGame::SimonGame(GameData *gameData)
 {
     // initialize ivars
-    this->controller = controller;
     this->gameData = gameData;
     speed = 1;
     currQuadrantIndex = 0;
@@ -36,9 +33,6 @@ SimonGame::SimonGame(GameData *gameData, SimonController *controller)
 
     // connect timeout slot
     QObject::connect(watchdog, SIGNAL(timeout()), this, SLOT(onTimeout()));
-
-    // connect next game slot
-    QObject::connect(this, SIGNAL(gameOver()), this->controller, SLOT(nextGame()));
 	
     // create the appropriate interface manager
     switch (gameData->getInterface()) {
@@ -71,6 +65,7 @@ SimonGame::~SimonGame()
     // remove event listeners, delete device
     device->removeObserver(this);
     device->removeObserver(&SimonUI::getMainWindow());
+    watchdog->stop();
     delete device;
     delete watchdog;
 }
@@ -115,7 +110,6 @@ void SimonGame::onEvent(QuadrantID q, EventType e)
     watchdog->stop();
 
     if (gameData->getRecord()) {
-        // TODO: Keep track of score?  Longest streak?
         // record quadrant pressed
         gameData->addUserQuadrant(q);
     }
@@ -191,6 +185,9 @@ void SimonGame::playLights()
     device->addObserver(&SimonUI::getMainWindow());
     state = GameStatePlaying;
 
+    std::cerr << "Game data quadrants size: " << gameData->getQuadrants().size() << std::endl;
+    std::cerr << "Current index: " << currQuadrantIndex << std::endl;
+
     // start timer
     watchdog->start(TIMEOUT_DURATION * 1000);
 }
@@ -198,6 +195,8 @@ void SimonGame::playLights()
 void SimonGame::onTimeout()
 {
     state = GameStateTimeout;
+
+    watchdog->stop();
 
     // display timout prompt
     QMessageBox message;
@@ -211,6 +210,8 @@ void SimonGame::onTimeout()
 void SimonGame::wrongQuadrant()
 {
     state = GameStateError;
+
+    watchdog->stop();
 
     // display "try again" prompt
     QMessageBox message;

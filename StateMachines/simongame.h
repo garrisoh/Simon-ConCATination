@@ -4,7 +4,6 @@
 #include "../DataModel/gamedata.h"
 #include "../InterfaceManagers/eventlistener.h"
 #include "../InterfaceManagers/inputmanager.h"
-#include "simoncontroller.h"
 
 #include <QTimer>
 #include <QObject>
@@ -28,7 +27,7 @@ public:
     /** Constructor - takes a GameData instance
      *  representing the current game configuration
      */
-    SimonGame(GameData *gameData, SimonController *controller);
+    SimonGame(GameData *gameData);
     /** Destructor - removes eventlisteners, cleanup */
     ~SimonGame();
     /** Start the loop */
@@ -45,8 +44,6 @@ signals:
     void gameOver();
 
 private:
-    /** The current trial controller */
-    SimonController *controller;
     /** The game data instance */
     GameData *gameData;
     /** Input device */
