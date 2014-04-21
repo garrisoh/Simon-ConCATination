@@ -1,5 +1,7 @@
 #include "gamedata.h"
 
+#include <stdio.h>
+
 GameData::GameData(ColorType color, SoundType sound, InterfaceType interface, bool record)
 {
     this->color = color;
@@ -89,8 +91,10 @@ std::string GameData::toCSV() {
     std::string csv = "";
     csv += std::string(description(color)) + ",";
     csv += std::string(description(sound)) + ",";
-    csv += std::string(description(interface)) + ",";
-    csv += std::to_string((int)quadrants.size()) + ",";
+	csv += std::string(description(interface)) + ",";
+	//csv += std::to_string((int)quadrants.size()) + ",";
+	char buffer[10];
+	sprintf(buffer, "%d,", quadrants.size());
     for (int i = 0; i<(int)quadrants.size(); i++) {
        switch (quadrants[i]) {
            case (QuadrantTopLeft):     csv += "G"; break;
