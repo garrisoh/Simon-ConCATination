@@ -13,7 +13,9 @@ class ChangePassDialog : public QDialog
     Q_OBJECT
 
 public:
+    /** Constructor */
     explicit ChangePassDialog(QWidget *parent = 0);
+    /** Destructor */
     ~ChangePassDialog();
     /** Set dialog title */
     void setTitle(QString title);
@@ -25,6 +27,7 @@ protected:
     void closeEvent(QCloseEvent *event);
 
 private slots:
+    /** Verify when ok button clicked */
     void on_pushButton_clicked();
 
 private:
