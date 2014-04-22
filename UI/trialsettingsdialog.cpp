@@ -5,6 +5,7 @@
 #include <QFileDialog>
 #include "trialsettingsdialog.h"
 #include "ui_trialsettingsdialog.h"
+#include "simonui.h"
 
 TrialSettingsDialog::TrialSettingsDialog(QWidget *parent) :
     QDialog(parent),
@@ -12,6 +13,7 @@ TrialSettingsDialog::TrialSettingsDialog(QWidget *parent) :
 {
 
     ui->setupUi(this);
+    controller = NULL;
     TrialData::newTrial();
 
     // make the last column expand to fit
@@ -20,6 +22,8 @@ TrialSettingsDialog::TrialSettingsDialog(QWidget *parent) :
 
     model = new TrialSettingsModel(ui->gameTableView);
 
+
+    SimonUI::getMainWindow()->enableMenu(false);
 }
 
 TrialSettingsDialog::~TrialSettingsDialog()
@@ -135,6 +139,12 @@ void TrialSettingsDialog::on_addButton_2_clicked()
     //let the model do the work
     model->addGame(getSoundString(), getColorString(), getInterfaceString());
 
+}
+
+void TrialSettingsDialog::closeEvent(QCloseEvent *event)
+{
+    SimonUI::getMainWindow()->enableMenu(true);
+    event->accept();
 }
 
 //called when remove button is clicked

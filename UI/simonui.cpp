@@ -161,6 +161,12 @@ void SimonUI::setImage(QPixmap* image)
 	ui->image->setPixmap(*image);
 }
 
+void SimonUI::enableMenu(bool enable)
+{
+    ui->actionNew_Trial->setEnabled(enable);
+    ui->actionChange_Password->setEnabled(enable);
+}
+
 void SimonUI::on_actionChange_Password_triggered()
 {
     // prompt for old password
@@ -180,6 +186,15 @@ void SimonUI::on_actionNew_Trial_triggered()
     pass.setTitle("New Trial");
     pass.exec();
 
+    static SimonController *controller = NULL;
+    if (controller) {
+        delete controller;
+        controller = NULL;
+    }
+
+    controller = new SimonController();
+
     TrialSettingsDialog settings;
+    settings.setController(controller);
     settings.exec();
 }

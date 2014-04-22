@@ -19,7 +19,7 @@ public:
     /**Destructor*/
     ~SimonController();
 	/**Starts running through the games listed in TrialData*/
-	void start();
+    void start();
 
 public slots:
     /**Goes to the next game*/

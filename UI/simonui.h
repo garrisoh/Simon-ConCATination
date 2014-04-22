@@ -30,6 +30,9 @@ public:
     // Discard current quadrants, create new ones
     void setVariables(ColorType color, SoundType sound);
 
+    /** Used to disable menu during gameplay */
+    void enableMenu(bool enable);
+
 	// For playback
     void pressQuadrant(QuadrantID q);
     void hoverQuadrant(QuadrantID q);

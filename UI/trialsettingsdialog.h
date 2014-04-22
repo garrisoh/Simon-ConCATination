@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QTableView>
+#include <QCloseEvent>
 #include "../globals.h"
 #include "trialsettingsmodel.h"
 #include "../StateMachines/simoncontroller.h"
@@ -42,6 +43,8 @@ public:
     void setSound(QString text);
     void setInterface(QString text);
     void setController(SimonController *controller);
+
+    void closeEvent(QCloseEvent *event);
 
 private slots:
     void on_addButton_2_clicked();

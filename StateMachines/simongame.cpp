@@ -2,6 +2,7 @@
 
 #include "../globals.h"
 #include "../UI/simonui.h"
+
 // interface managers
 #include "../InterfaceManagers/keyboardmanager.h"
 #include "../InterfaceManagers/mousemanager.h"
@@ -73,11 +74,15 @@ void SimonGame::start()
     // alert user to what variables are on/off
     QMessageBox message;
 
-    message.setText("              New Game              ");
+    message.setText("                          New Game                          ");
     QString text = tr("This game will use the %0 as input, with %1 and %2.\n");
     text = text.arg(description(gameData->getInterface()));
     text = text.arg(description(gameData->getColor()));
     text = text.arg(description(gameData->getSound()));
+
+    if (gameData->getInterface() == InterfaceKeyboard) {
+        text.append("\nKeys:\nGreen - 'u'\nRed - 'i'\nYellow - 'j'\nBlue - 'k'\n");
+    }
 
     if (!gameData->getRecord()) {
         text.append("\nThis game is a demo.\n");
@@ -180,8 +185,8 @@ void SimonGame::playLights()
     }
 
     // add back the observer
-    device->addObserver(SimonUI::getMainWindow());
     state = GameStatePlaying;
+    device->addObserver(SimonUI::getMainWindow());
 
     // start timer
     watchdog->start(TIMEOUT_DURATION * 1000);
@@ -192,6 +197,8 @@ void SimonGame::onTimeout()
     state = GameStateTimeout;
 
     watchdog->stop();
+    device->removeObserver(SimonUI::getMainWindow());
+    SimonUI::getMainWindow()->pressQuadrant(QuadrantNone);
 
     // display timout prompt
     QMessageBox message;
@@ -207,6 +214,8 @@ void SimonGame::wrongQuadrant()
     state = GameStateError;
 
     watchdog->stop();
+    device->removeObserver(SimonUI::getMainWindow());
+    SimonUI::getMainWindow()->pressQuadrant(QuadrantNone);
 
     // display "try again" prompt
     QMessageBox message;

@@ -244,7 +244,7 @@
      <item>
       <widget class="QPushButton" name="pushButton">
        <property name="text">
-        <string>Save...</string>
+        <string>Choose CSV Location...</string>
        </property>
       </widget>
      </item>
