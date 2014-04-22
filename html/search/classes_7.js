@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['leapmanager',['LeapManager',['../class_leap_manager.html',1,'']]],
-  ['listbaseimplementation',['ListBaseImplementation',['../class_leap_1_1_list_base_implementation.html',1,'Leap']]],
-  ['listener',['Listener',['../class_leap_1_1_listener.html',1,'Leap']]]
+  ['keyboardmanager',['KeyboardManager',['../class_keyboard_manager.html',1,'']]],
+  ['keytapgesture',['KeyTapGesture',['../class_leap_1_1_key_tap_gesture.html',1,'Leap']]]
 ];

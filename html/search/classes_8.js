@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['matrix',['Matrix',['../struct_leap_1_1_matrix.html',1,'Leap']]]
+  ['leapmanager',['LeapManager',['../class_leap_manager.html',1,'']]],
+  ['listbaseimplementation',['ListBaseImplementation',['../class_leap_1_1_list_base_implementation.html',1,'Leap']]],
+  ['listener',['Listener',['../class_leap_1_1_listener.html',1,'Leap']]]
 ];

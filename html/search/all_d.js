@@ -2,7 +2,7 @@ var searchData=
 [
   ['onconnect',['onConnect',['../class_leap_1_1_listener.html#adfef79f9a03b342384aaa17f3a8ebf15',1,'Leap::Listener']]],
   ['ondisconnect',['onDisconnect',['../class_leap_1_1_listener.html#ac031e2d95b530097e2060518a9190f5e',1,'Leap::Listener']]],
-  ['onevent',['onEvent',['../class_simon_game.html#a35dc2ba138666e626ef663ef6b954f4b',1,'SimonGame::onEvent()'],['../class_simon_u_i.html#a9a8de04376322efe03495a873d8e08d9',1,'SimonUI::onEvent()']]],
+  ['onevent',['onEvent',['../class_event_listener.html#a19232875c793366beb4d8edb0cc89164',1,'EventListener::onEvent()'],['../class_simon_game.html#a35dc2ba138666e626ef663ef6b954f4b',1,'SimonGame::onEvent()'],['../class_simon_u_i.html#a9a8de04376322efe03495a873d8e08d9',1,'SimonUI::onEvent()']]],
   ['onexit',['onExit',['../class_leap_1_1_listener.html#ac8f779a9208101f0084953560923f88c',1,'Leap::Listener']]],
   ['onfocusgained',['onFocusGained',['../class_leap_1_1_listener.html#ab52aa99ad9e8fd0f35d9dffc3ef9f027',1,'Leap::Listener']]],
   ['onfocuslost',['onFocusLost',['../class_leap_1_1_listener.html#a7bcae44a40674c3f1e367b911201d252',1,'Leap::Listener']]],

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['passdialog',['PassDialog',['../class_pass_dialog.html',1,'']]],
-  ['pointable',['Pointable',['../class_leap_1_1_pointable.html',1,'Leap']]],
-  ['pointablelist',['PointableList',['../class_leap_1_1_pointable_list.html',1,'Leap']]]
+  ['matrix',['Matrix',['../struct_leap_1_1_matrix.html',1,'Leap']]],
+  ['mousemanager',['MouseManager',['../class_mouse_manager.html',1,'']]]
 ];

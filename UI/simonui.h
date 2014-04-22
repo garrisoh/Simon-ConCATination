@@ -10,7 +10,7 @@ namespace Ui {
     class SimonUI;
 }
 
-/** A driver class to be used for testing the input managers */
+/** The main window of the game. Displays the simon board. */
 class SimonUI : public QMainWindow, public EventListener
 {
 	Q_OBJECT

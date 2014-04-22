@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['gamedata',['GameData',['../class_game_data.html',1,'']]],
-  ['gesture',['Gesture',['../class_leap_1_1_gesture.html',1,'Leap']]],
-  ['gesturelist',['GestureList',['../class_leap_1_1_gesture_list.html',1,'Leap']]]
+  ['finger',['Finger',['../class_leap_1_1_finger.html',1,'Leap']]],
+  ['fingerlist',['FingerList',['../class_leap_1_1_finger_list.html',1,'Leap']]],
+  ['floatarray',['FloatArray',['../struct_leap_1_1_float_array.html',1,'Leap']]],
+  ['frame',['Frame',['../class_leap_1_1_frame.html',1,'Leap']]]
 ];
