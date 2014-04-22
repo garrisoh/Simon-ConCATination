@@ -1,0 +1,261 @@
+\hypertarget{class_leap_1_1_interaction_box}{\section{Leap\+:\+:Interaction\+Box Class Reference}
+\label{class_leap_1_1_interaction_box}\index{Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}}
+}
+
+
+{\ttfamily \#include $<$Leap.\+h$>$}
+
+Inheritance diagram for Leap\+:\+:Interaction\+Box\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_leap_1_1_interaction_box}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_leap_1_1_interaction_box_a4762a10792e968f9d8fb02c8a79d6597}{{\bfseries Interaction\+Box} (Interaction\+Box\+Implementation $\ast$)}\label{class_leap_1_1_interaction_box_a4762a10792e968f9d8fb02c8a79d6597}
+
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_interaction_box_a66ff2e3d02ae3d54ec1b93223c7b9ece}{normalize\+Point} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&position, bool clamp=true) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_interaction_box_aa53fc603462adb3008bf7ed795029adb}{denormalize\+Point} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&normalized\+Position) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_interaction_box_a674a8aa6308b32b1c85b2d39ee55875d}{center} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float \hyperlink{class_leap_1_1_interaction_box_ab373a1adbabe141c0171f3dfa03085f3}{width} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float \hyperlink{class_leap_1_1_interaction_box_afdde2aec9590e627e6a16a443ec4f4b7}{height} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float \hyperlink{class_leap_1_1_interaction_box_afc9c1a582acba924f97504661ab2cbe3}{depth} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_interaction_box_a3c2a351d3fc38aebdc630fdb5a6cb846}{is\+Valid} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_interaction_box_a8d574045866dc11f571efc26cb93347a}{operator==} (const \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} \&) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_interaction_box_a1614fb599e63a9639d2ba54dbcf6f3d2}{operator!=} (const \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} \&) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T std\+::string \hyperlink{class_leap_1_1_interaction_box_abcd2e64f3ada1678c1de02db9dbba368}{to\+String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T const \\*
+\hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} \& \hyperlink{class_leap_1_1_interaction_box_af3d181a4077f0b7e7334e3eb4db4b019}{invalid} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T friend std\+::ostream \& \hyperlink{class_leap_1_1_interaction_box_a35cb230346cbaebc7c2a7dca7917c89e}{operator$<$$<$} (std\+::ostream \&, const \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} \&)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} class represents a box-\/shaped region completely within the field of view of the Leap Motion controller.
+
+The interaction box is an axis-\/aligned rectangular prism and provides normalized coordinates for hands, fingers, and tools within this box. The \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} class can make it easier to map positions in the Leap Motion coordinate system to 2\+D or 3\+D coordinate systems used for application drawing.
+
+
+
+The \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} region is defined by a center and dimensions along the x, y, and z axes.
+
+Get an \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} object from a \hyperlink{class_leap_1_1_frame}{Frame} object. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leap_1_1_interaction_box_a674a8aa6308b32b1c85b2d39ee55875d}{\index{Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}!center@{center}}
+\index{center@{center}!Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}}
+\subsubsection[{center}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Interaction\+Box\+::center (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_interaction_box_a674a8aa6308b32b1c85b2d39ee55875d}
+The center of the \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} in device coordinates (millimeters). This point is equidistant from all sides of the box.
+
+\begin{DoxyReturn}{Returns}
+The \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} center in device coordinates. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_interaction_box_aa53fc603462adb3008bf7ed795029adb}{\index{Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}!denormalize\+Point@{denormalize\+Point}}
+\index{denormalize\+Point@{denormalize\+Point}!Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}}
+\subsubsection[{denormalize\+Point}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Interaction\+Box\+::denormalize\+Point (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{normalized\+Position}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_interaction_box_aa53fc603462adb3008bf7ed795029adb}
+Converts a position defined by normalized \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} coordinates into device coordinates in millimeters.
+
+This function performs the inverse of \hyperlink{class_leap_1_1_interaction_box_a66ff2e3d02ae3d54ec1b93223c7b9ece}{normalize\+Point()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em normalized\+Position} & The input position in \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding denormalized position in device coordinates. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_interaction_box_afc9c1a582acba924f97504661ab2cbe3}{\index{Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}!depth@{depth}}
+\index{depth@{depth}!Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}}
+\subsubsection[{depth}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float Leap\+::\+Interaction\+Box\+::depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_interaction_box_afc9c1a582acba924f97504661ab2cbe3}
+The depth of the \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} in millimeters, measured along the z-\/axis.
+
+\begin{DoxyReturn}{Returns}
+The \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} depth in millimeters. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_interaction_box_afdde2aec9590e627e6a16a443ec4f4b7}{\index{Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}!height@{height}}
+\index{height@{height}!Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float Leap\+::\+Interaction\+Box\+::height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_interaction_box_afdde2aec9590e627e6a16a443ec4f4b7}
+The height of the \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} in millimeters, measured along the y-\/axis.
+
+\begin{DoxyReturn}{Returns}
+The \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} height in millimeters. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_interaction_box_af3d181a4077f0b7e7334e3eb4db4b019}{\index{Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}!invalid@{invalid}}
+\index{invalid@{invalid}!Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}}
+\subsubsection[{invalid}]{\setlength{\rightskip}{0pt plus 5cm}static L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T const {\bf Interaction\+Box}\& Leap\+::\+Interaction\+Box\+::invalid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_leap_1_1_interaction_box_af3d181a4077f0b7e7334e3eb4db4b019}
+Returns an invalid \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} object.
+
+You can use the instance returned by this function in comparisons testing whether a given \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} instance is valid or invalid. (You can also use the \hyperlink{class_leap_1_1_interaction_box_a3c2a351d3fc38aebdc630fdb5a6cb846}{Interaction\+Box\+::is\+Valid()} function.)
+
+\begin{DoxyReturn}{Returns}
+The invalid \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} instance. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_interaction_box_a3c2a351d3fc38aebdc630fdb5a6cb846}{\index{Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}}
+\subsubsection[{is\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Interaction\+Box\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_interaction_box_a3c2a351d3fc38aebdc630fdb5a6cb846}
+Reports whether this is a valid \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} object.
+
+\begin{DoxyReturn}{Returns}
+True, if this \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} object contains valid data. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_interaction_box_a66ff2e3d02ae3d54ec1b93223c7b9ece}{\index{Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}!normalize\+Point@{normalize\+Point}}
+\index{normalize\+Point@{normalize\+Point}!Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}}
+\subsubsection[{normalize\+Point}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Interaction\+Box\+::normalize\+Point (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{position, }
+\item[{bool}]{clamp = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_interaction_box_a66ff2e3d02ae3d54ec1b93223c7b9ece}
+Normalizes the coordinates of a point using the interaction box.
+
+Coordinates from the Leap Motion frame of reference (millimeters) are converted to a range of \mbox{[}0..1\mbox{]} such that the minimum value of the \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} maps to 0 and the maximum value of the \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} maps to 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The input position in device coordinates. \\
+\hline
+{\em clamp} & Whether or not to limit the output value to the range \mbox{[}0,1\mbox{]} when the input position is outside the \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box}. Defaults to true. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The normalized position. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_interaction_box_a1614fb599e63a9639d2ba54dbcf6f3d2}{\index{Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}}
+\subsubsection[{operator"!=}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Interaction\+Box\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interaction\+Box} \&}]{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_interaction_box_a1614fb599e63a9639d2ba54dbcf6f3d2}
+Compare \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} object inequality. Two \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} objects are equal if and only if both \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} objects represent the exact same \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} and both Interaction\+Boxes are valid. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_interaction_box_a8d574045866dc11f571efc26cb93347a}{\index{Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}!operator==@{operator==}}
+\index{operator==@{operator==}!Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Interaction\+Box\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interaction\+Box} \&}]{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_interaction_box_a8d574045866dc11f571efc26cb93347a}
+Compare \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} object equality. Two \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} objects are equal if and only if both \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} objects represent the exact same \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} and both Interaction\+Boxes are valid. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_interaction_box_abcd2e64f3ada1678c1de02db9dbba368}{\index{Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T std\+::string Leap\+::\+Interaction\+Box\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_interaction_box_abcd2e64f3ada1678c1de02db9dbba368}
+A string containing a brief, human readable description of the \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} object.
+
+\begin{DoxyReturn}{Returns}
+A description of the \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} as a string. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_interaction_box_ab373a1adbabe141c0171f3dfa03085f3}{\index{Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}!width@{width}}
+\index{width@{width}!Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float Leap\+::\+Interaction\+Box\+::width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_interaction_box_ab373a1adbabe141c0171f3dfa03085f3}
+The width of the \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} in millimeters, measured along the x-\/axis.
+
+\begin{DoxyReturn}{Returns}
+The \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} width in millimeters. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_leap_1_1_interaction_box_a35cb230346cbaebc7c2a7dca7917c89e}{\index{Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Leap\+::\+Interaction\+Box@{Leap\+::\+Interaction\+Box}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T friend std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{, }
+\item[{const {\bf Interaction\+Box} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_leap_1_1_interaction_box_a35cb230346cbaebc7c2a7dca7917c89e}
+Writes a brief, human readable description of the \hyperlink{class_leap_1_1_interaction_box}{Interaction\+Box} object. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/Leap.\+h\end{DoxyCompactItemize}

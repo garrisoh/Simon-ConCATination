@@ -1,0 +1,92 @@
+\hypertarget{class_simon_game}{\section{Simon\+Game Class Reference}
+\label{class_simon_game}\index{Simon\+Game@{Simon\+Game}}
+}
+
+
+{\ttfamily \#include $<$simongame.\+h$>$}
+
+Inheritance diagram for Simon\+Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_simon_game}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simon_game_a675881171d32be130c1eaba36b7c56d8}{on\+Timeout} ()
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simon_game_a6d13e176d256c18c5e00d8cac979b239}{game\+Over} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simon_game_abb9ef25e4158c51128d4b5b9214d0547}{Simon\+Game} (\hyperlink{class_game_data}{Game\+Data} $\ast$game\+Data)
+\item 
+\hyperlink{class_simon_game_a36ec045acaa79798534b781c554a8df8}{$\sim$\+Simon\+Game} ()
+\item 
+void \hyperlink{class_simon_game_a3195d192b13c7ee5eba290e4d265427a}{start} ()
+\item 
+void \hyperlink{class_simon_game_a35dc2ba138666e626ef663ef6b954f4b}{on\+Event} (Quadrant\+I\+D q, Event\+Type e)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A state machine class that manages the run loop for a single game. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simon_game_abb9ef25e4158c51128d4b5b9214d0547}{\index{Simon\+Game@{Simon\+Game}!Simon\+Game@{Simon\+Game}}
+\index{Simon\+Game@{Simon\+Game}!Simon\+Game@{Simon\+Game}}
+\subsubsection[{Simon\+Game}]{\setlength{\rightskip}{0pt plus 5cm}Simon\+Game\+::\+Simon\+Game (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Data} $\ast$}]{game\+Data}
+\end{DoxyParamCaption}
+)}}\label{class_simon_game_abb9ef25e4158c51128d4b5b9214d0547}
+Constructor -\/ takes a \hyperlink{class_game_data}{Game\+Data} instance representing the current game configuration \hypertarget{class_simon_game_a36ec045acaa79798534b781c554a8df8}{\index{Simon\+Game@{Simon\+Game}!````~Simon\+Game@{$\sim$\+Simon\+Game}}
+\index{````~Simon\+Game@{$\sim$\+Simon\+Game}!Simon\+Game@{Simon\+Game}}
+\subsubsection[{$\sim$\+Simon\+Game}]{\setlength{\rightskip}{0pt plus 5cm}Simon\+Game\+::$\sim$\+Simon\+Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simon_game_a36ec045acaa79798534b781c554a8df8}
+Destructor -\/ removes eventlisteners, cleanup 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simon_game_a6d13e176d256c18c5e00d8cac979b239}{\index{Simon\+Game@{Simon\+Game}!game\+Over@{game\+Over}}
+\index{game\+Over@{game\+Over}!Simon\+Game@{Simon\+Game}}
+\subsubsection[{game\+Over}]{\setlength{\rightskip}{0pt plus 5cm}void Simon\+Game\+::game\+Over (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_simon_game_a6d13e176d256c18c5e00d8cac979b239}
+Signal the end of this game \hypertarget{class_simon_game_a35dc2ba138666e626ef663ef6b954f4b}{\index{Simon\+Game@{Simon\+Game}!on\+Event@{on\+Event}}
+\index{on\+Event@{on\+Event}!Simon\+Game@{Simon\+Game}}
+\subsubsection[{on\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void Simon\+Game\+::on\+Event (
+\begin{DoxyParamCaption}
+\item[{Quadrant\+I\+D}]{q, }
+\item[{Event\+Type}]{e}
+\end{DoxyParamCaption}
+)}}\label{class_simon_game_a35dc2ba138666e626ef663ef6b954f4b}
+Respond to an Event\+Listener event \hypertarget{class_simon_game_a675881171d32be130c1eaba36b7c56d8}{\index{Simon\+Game@{Simon\+Game}!on\+Timeout@{on\+Timeout}}
+\index{on\+Timeout@{on\+Timeout}!Simon\+Game@{Simon\+Game}}
+\subsubsection[{on\+Timeout}]{\setlength{\rightskip}{0pt plus 5cm}void Simon\+Game\+::on\+Timeout (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_simon_game_a675881171d32be130c1eaba36b7c56d8}
+Called when time is up \hypertarget{class_simon_game_a3195d192b13c7ee5eba290e4d265427a}{\index{Simon\+Game@{Simon\+Game}!start@{start}}
+\index{start@{start}!Simon\+Game@{Simon\+Game}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void Simon\+Game\+::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simon_game_a3195d192b13c7ee5eba290e4d265427a}
+Start the loop 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+State\+Machines/simongame.\+h\item 
+State\+Machines/simongame.\+cpp\end{DoxyCompactItemize}

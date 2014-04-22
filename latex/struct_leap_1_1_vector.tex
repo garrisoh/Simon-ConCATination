@@ -1,0 +1,855 @@
+\hypertarget{struct_leap_1_1_vector}{\section{Leap\+:\+:Vector Struct Reference}
+\label{struct_leap_1_1_vector}\index{Leap\+::\+Vector@{Leap\+::\+Vector}}
+}
+
+
+{\ttfamily \#include $<$Leap\+Math.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_leap_1_1_vector_a0d7a6417136be2cde1ddd56c39244929}{Vector} ()
+\item 
+\hyperlink{struct_leap_1_1_vector_a58bde18133811a15d122a785f0b36b80}{Vector} (float \+\_\+x, float \+\_\+y, float \+\_\+z)
+\item 
+\hyperlink{struct_leap_1_1_vector_a2b271c5d88e466f17771e62bd8faea94}{Vector} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&vector)
+\item 
+float \hyperlink{struct_leap_1_1_vector_ab7955521f3b80e2b2ad9b67330345476}{magnitude} () const 
+\item 
+float \hyperlink{struct_leap_1_1_vector_a81226e9b68a8ee06124237145d16b77c}{magnitude\+Squared} () const 
+\item 
+float \hyperlink{struct_leap_1_1_vector_adfda206e0659c44a2eb632bc2a8cd82a}{distance\+To} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&other) const 
+\item 
+float \hyperlink{struct_leap_1_1_vector_ac8db3180325f86971f1089ef17808c24}{angle\+To} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&other) const 
+\item 
+float \hyperlink{struct_leap_1_1_vector_a206cee5e82cc8f860edae69c4f101a49}{pitch} () const 
+\item 
+float \hyperlink{struct_leap_1_1_vector_aa4bdfa69695be1e5a6db629685538239}{yaw} () const 
+\item 
+float \hyperlink{struct_leap_1_1_vector_a11dc02be2e993142ac422b7b3a7428c1}{roll} () const 
+\item 
+float \hyperlink{struct_leap_1_1_vector_a80f93cc43a55259acd366ecefcb3766a}{dot} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&other) const 
+\item 
+\hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{struct_leap_1_1_vector_ad67607a021ae7e8913efea37aac55087}{cross} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&other) const 
+\item 
+\hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{struct_leap_1_1_vector_a23d7640c4797fb84367272d4ebd88e8a}{normalized} () const 
+\item 
+\hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{struct_leap_1_1_vector_a05564e30c0301990e6f5ecea81fc0f4a}{operator-\/} () const 
+\item 
+\hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{struct_leap_1_1_vector_ae5f8d3473a15cff36a610e3f339c7423}{operator+} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&other) const 
+\item 
+\hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{struct_leap_1_1_vector_a4a729e5a27fe13d3c71a7a9fd3e234e3}{operator-\/} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&other) const 
+\item 
+\hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{struct_leap_1_1_vector_adfac06b2c9a9936f62da4b293ef98db3}{operator$\ast$} (float scalar) const 
+\item 
+\hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{struct_leap_1_1_vector_a23a7ee5a8da0f282e51628ac3fc59f70}{operator/} (float scalar) const 
+\item 
+\hyperlink{struct_leap_1_1_vector}{Vector} \& \hyperlink{struct_leap_1_1_vector_ac2dbd10e09399bc5679ceee380cff2cc}{operator+=} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&other)
+\item 
+\hyperlink{struct_leap_1_1_vector}{Vector} \& \hyperlink{struct_leap_1_1_vector_a71f56cf12c752f001d44c6a9ed3c15db}{operator-\/=} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&other)
+\item 
+\hyperlink{struct_leap_1_1_vector}{Vector} \& \hyperlink{struct_leap_1_1_vector_a3c07a9eb80762ca448a78650500f06a8}{operator$\ast$=} (float scalar)
+\item 
+\hyperlink{struct_leap_1_1_vector}{Vector} \& \hyperlink{struct_leap_1_1_vector_a0c83e9d07018bdb3b3404088939a050d}{operator/=} (float scalar)
+\item 
+std\+::string \hyperlink{struct_leap_1_1_vector_a06f42a3c10c886b449e6db32a565099c}{to\+String} () const 
+\item 
+bool \hyperlink{struct_leap_1_1_vector_a3055b0255b5d4af0a51ceacd93187218}{operator==} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&other) const 
+\item 
+bool \hyperlink{struct_leap_1_1_vector_abf6930c4b2ed673408d86194626577b0}{operator!=} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&other) const 
+\item 
+bool \hyperlink{struct_leap_1_1_vector_ae8f445cd11ba6bd4a45de05551277a45}{is\+Valid} () const 
+\item 
+float \hyperlink{struct_leap_1_1_vector_a45db0a2e00a86c1b9bf7e68ae6b9a20e}{operator\mbox{[}$\,$\mbox{]}} (unsigned int index) const 
+\item 
+const float $\ast$ \hyperlink{struct_leap_1_1_vector_ad41fdd88c7097efb13b3cb34e2752777}{to\+Float\+Pointer} () const 
+\item 
+{\footnotesize template$<$typename Vector3\+Type $>$ }\\const Vector3\+Type \hyperlink{struct_leap_1_1_vector_a55fc5ddc43e74988d48797d31a0849f4}{to\+Vector3} () const 
+\item 
+{\footnotesize template$<$typename Vector4\+Type $>$ }\\const Vector4\+Type \hyperlink{struct_leap_1_1_vector_a2adaf93670f1069e40532d39eb974b3f}{to\+Vector4} (float w=0.\+0f) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{struct_leap_1_1_vector}{Vector} \& \hyperlink{struct_leap_1_1_vector_a743b469003fa6622a00ff277d2481da9}{zero} ()
+\item 
+static const \hyperlink{struct_leap_1_1_vector}{Vector} \& \hyperlink{struct_leap_1_1_vector_a0d90c96672e7ee90fb510d7b96c32861}{x\+Axis} ()
+\item 
+static const \hyperlink{struct_leap_1_1_vector}{Vector} \& \hyperlink{struct_leap_1_1_vector_a9a387eb8ab05e55708542c031c641f31}{y\+Axis} ()
+\item 
+static const \hyperlink{struct_leap_1_1_vector}{Vector} \& \hyperlink{struct_leap_1_1_vector_a6ec3652d02a9599bc2a00411a1e05501}{z\+Axis} ()
+\item 
+static const \hyperlink{struct_leap_1_1_vector}{Vector} \& \hyperlink{struct_leap_1_1_vector_a315ffbbd7f686e1d93bffc6beb11f89d}{left} ()
+\item 
+static const \hyperlink{struct_leap_1_1_vector}{Vector} \& \hyperlink{struct_leap_1_1_vector_aa4d509a1640d9aa270d095c9ae8e44f2}{right} ()
+\item 
+static const \hyperlink{struct_leap_1_1_vector}{Vector} \& \hyperlink{struct_leap_1_1_vector_ac1c62a2d280d7a7c67e99f1996076b58}{down} ()
+\item 
+static const \hyperlink{struct_leap_1_1_vector}{Vector} \& \hyperlink{struct_leap_1_1_vector_a0a38a683c0224b38b75d58db24f51adf}{up} ()
+\item 
+static const \hyperlink{struct_leap_1_1_vector}{Vector} \& \hyperlink{struct_leap_1_1_vector_a79b32a38e4c99b6ddbf94ac22680d405}{forward} ()
+\item 
+static const \hyperlink{struct_leap_1_1_vector}{Vector} \& \hyperlink{struct_leap_1_1_vector_a82ea3abc8ae6bb144a5946836fce88ad}{backward} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{struct_leap_1_1_vector_a58ab75fe089da2070f5dcef82c9a578a}{x}
+\item 
+float \hyperlink{struct_leap_1_1_vector_abfff2f5b5c10d58a43cf377fc4cb9951}{y}
+\item 
+float \hyperlink{struct_leap_1_1_vector_aa44971ce01ce035e78ea557bc1e983a4}{z}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{struct_leap_1_1_vector_a90f989718db5a1be59eb472f30e61472}{operator$\ast$} (float scalar, const \hyperlink{struct_leap_1_1_vector}{Vector} \&vector)
+\item 
+std\+::ostream \& \hyperlink{struct_leap_1_1_vector_ae295e87eb813266c27e75d2809df2acc}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{struct_leap_1_1_vector}{Vector} \&vector)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{struct_leap_1_1_vector}{Vector} struct represents a three-\/component mathematical vector or point such as a direction or position in three-\/dimensional space.
+
+The Leap Motion software employs a right-\/handed Cartesian coordinate system. Values given are in units of real-\/world millimeters. The origin is centered at the center of the Leap Motion \hyperlink{class_leap_1_1_controller}{Controller}. The x-\/ and z-\/axes lie in the horizontal plane, with the x-\/axis running parallel to the long edge of the device. The y-\/axis is vertical, with positive values increasing upwards (in contrast to the downward orientation of most computer graphics coordinate systems). The z-\/axis has positive values increasing away from the computer screen.
+
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_leap_1_1_vector_a0d7a6417136be2cde1ddd56c39244929}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!Vector@{Vector}}
+\index{Vector@{Vector}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{Vector}]{\setlength{\rightskip}{0pt plus 5cm}Leap\+::\+Vector\+::\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a0d7a6417136be2cde1ddd56c39244929}
+Creates a new \hyperlink{struct_leap_1_1_vector}{Vector} with all components set to zero. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a58bde18133811a15d122a785f0b36b80}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!Vector@{Vector}}
+\index{Vector@{Vector}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{Vector}]{\setlength{\rightskip}{0pt plus 5cm}Leap\+::\+Vector\+::\+Vector (
+\begin{DoxyParamCaption}
+\item[{float}]{\+\_\+x, }
+\item[{float}]{\+\_\+y, }
+\item[{float}]{\+\_\+z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a58bde18133811a15d122a785f0b36b80}
+Creates a new \hyperlink{struct_leap_1_1_vector}{Vector} with the specified component values.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a2b271c5d88e466f17771e62bd8faea94}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!Vector@{Vector}}
+\index{Vector@{Vector}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{Vector}]{\setlength{\rightskip}{0pt plus 5cm}Leap\+::\+Vector\+::\+Vector (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a2b271c5d88e466f17771e62bd8faea94}
+Copies the specified \hyperlink{struct_leap_1_1_vector}{Vector}.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_leap_1_1_vector_ac8db3180325f86971f1089ef17808c24}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!angle\+To@{angle\+To}}
+\index{angle\+To@{angle\+To}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{angle\+To}]{\setlength{\rightskip}{0pt plus 5cm}float Leap\+::\+Vector\+::angle\+To (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_ac8db3180325f86971f1089ef17808c24}
+The angle between this vector and the specified vector in radians.
+
+The angle is measured in the plane formed by the two vectors. The angle returned is always the smaller of the two conjugate angles. Thus {\ttfamily A.\+angle\+To(\+B) == B.\+angle\+To(\+A)} and is always a positive value less than or equal to pi radians (180 degrees).
+
+If either vector has zero length, then this function returns zero.
+
+
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & A \hyperlink{struct_leap_1_1_vector}{Vector} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The angle between this vector and the specified vector in radians. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a82ea3abc8ae6bb144a5946836fce88ad}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!backward@{backward}}
+\index{backward@{backward}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{backward}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf Vector}\& Leap\+::\+Vector\+::backward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_leap_1_1_vector_a82ea3abc8ae6bb144a5946836fce88ad}
+The unit vector pointing backward along the positive z-\/axis\+: (0, 0, 1)
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_ad67607a021ae7e8913efea37aac55087}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!cross@{cross}}
+\index{cross@{cross}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{cross}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} Leap\+::\+Vector\+::cross (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_ad67607a021ae7e8913efea37aac55087}
+The cross product of this vector and the specified vector.
+
+The cross product is a vector orthogonal to both original vectors. It has a magnitude equal to the area of a parallelogram having the two vectors as sides. The direction of the returned vector is determined by the right-\/hand rule. Thus {\ttfamily A.\+cross(\+B) == -\/\+B.\+cross(A).}
+
+
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & A \hyperlink{struct_leap_1_1_vector}{Vector} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cross product of this vector and the specified vector. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_adfda206e0659c44a2eb632bc2a8cd82a}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!distance\+To@{distance\+To}}
+\index{distance\+To@{distance\+To}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{distance\+To}]{\setlength{\rightskip}{0pt plus 5cm}float Leap\+::\+Vector\+::distance\+To (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_adfda206e0659c44a2eb632bc2a8cd82a}
+The distance between the point represented by this \hyperlink{struct_leap_1_1_vector}{Vector} object and a point represented by the specified \hyperlink{struct_leap_1_1_vector}{Vector} object.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & A \hyperlink{struct_leap_1_1_vector}{Vector} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance from this point to the specified point. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a80f93cc43a55259acd366ecefcb3766a}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!dot@{dot}}
+\index{dot@{dot}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{dot}]{\setlength{\rightskip}{0pt plus 5cm}float Leap\+::\+Vector\+::dot (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a80f93cc43a55259acd366ecefcb3766a}
+The dot product of this vector with another vector.
+
+The dot product is the magnitude of the projection of this vector onto the specified vector.
+
+
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & A \hyperlink{struct_leap_1_1_vector}{Vector} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The dot product of this vector and the specified vector. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_ac1c62a2d280d7a7c67e99f1996076b58}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!down@{down}}
+\index{down@{down}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{down}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf Vector}\& Leap\+::\+Vector\+::down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_leap_1_1_vector_ac1c62a2d280d7a7c67e99f1996076b58}
+The unit vector pointing down along the negative y-\/axis\+: (0, -\/1, 0)
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a79b32a38e4c99b6ddbf94ac22680d405}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!forward@{forward}}
+\index{forward@{forward}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{forward}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf Vector}\& Leap\+::\+Vector\+::forward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_leap_1_1_vector_a79b32a38e4c99b6ddbf94ac22680d405}
+The unit vector pointing forward along the negative z-\/axis\+: (0, 0, -\/1)
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_ae8f445cd11ba6bd4a45de05551277a45}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{is\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool Leap\+::\+Vector\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_ae8f445cd11ba6bd4a45de05551277a45}
+Returns true if all of the vector's components are finite. If any component is Na\+N or infinite, then this returns false.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a315ffbbd7f686e1d93bffc6beb11f89d}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!left@{left}}
+\index{left@{left}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{left}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf Vector}\& Leap\+::\+Vector\+::left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_leap_1_1_vector_a315ffbbd7f686e1d93bffc6beb11f89d}
+The unit vector pointing left along the negative x-\/axis\+: (-\/1, 0, 0)
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_ab7955521f3b80e2b2ad9b67330345476}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!magnitude@{magnitude}}
+\index{magnitude@{magnitude}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{magnitude}]{\setlength{\rightskip}{0pt plus 5cm}float Leap\+::\+Vector\+::magnitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_ab7955521f3b80e2b2ad9b67330345476}
+The magnitude, or length, of this vector.
+
+The magnitude is the L2 norm, or Euclidean distance between the origin and the point represented by the (x, y, z) components of this \hyperlink{struct_leap_1_1_vector}{Vector} object.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+\begin{DoxyReturn}{Returns}
+The length of this vector. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a81226e9b68a8ee06124237145d16b77c}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!magnitude\+Squared@{magnitude\+Squared}}
+\index{magnitude\+Squared@{magnitude\+Squared}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{magnitude\+Squared}]{\setlength{\rightskip}{0pt plus 5cm}float Leap\+::\+Vector\+::magnitude\+Squared (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a81226e9b68a8ee06124237145d16b77c}
+The square of the magnitude, or length, of this vector.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+\begin{DoxyReturn}{Returns}
+The square of the length of this vector. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a23d7640c4797fb84367272d4ebd88e8a}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!normalized@{normalized}}
+\index{normalized@{normalized}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{normalized}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} Leap\+::\+Vector\+::normalized (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a23d7640c4797fb84367272d4ebd88e8a}
+A normalized copy of this vector.
+
+A normalized vector has the same direction as the original vector, but with a length of one.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+\begin{DoxyReturn}{Returns}
+A \hyperlink{struct_leap_1_1_vector}{Vector} object with a length of one, pointing in the same direction as this \hyperlink{struct_leap_1_1_vector}{Vector} object. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_abf6930c4b2ed673408d86194626577b0}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{operator"!=}]{\setlength{\rightskip}{0pt plus 5cm}bool Leap\+::\+Vector\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_abf6930c4b2ed673408d86194626577b0}
+Compare \hyperlink{struct_leap_1_1_vector}{Vector} inequality component-\/wise.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_adfac06b2c9a9936f62da4b293ef98db3}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} Leap\+::\+Vector\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{float}]{scalar}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_adfac06b2c9a9936f62da4b293ef98db3}
+Multiply vector by a scalar.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a3c07a9eb80762ca448a78650500f06a8}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}\& Leap\+::\+Vector\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{float}]{scalar}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a3c07a9eb80762ca448a78650500f06a8}
+Multiply vector by a scalar and assign the product. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_ae5f8d3473a15cff36a610e3f339c7423}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!operator+@{operator+}}
+\index{operator+@{operator+}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} Leap\+::\+Vector\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_ae5f8d3473a15cff36a610e3f339c7423}
+Add vectors component-\/wise.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_ac2dbd10e09399bc5679ceee380cff2cc}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}\& Leap\+::\+Vector\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_ac2dbd10e09399bc5679ceee380cff2cc}
+Add vectors component-\/wise and assign the sum. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a05564e30c0301990e6f5ecea81fc0f4a}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} Leap\+::\+Vector\+::operator-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a05564e30c0301990e6f5ecea81fc0f4a}
+A copy of this vector pointing in the opposite direction.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+\begin{DoxyReturn}{Returns}
+A \hyperlink{struct_leap_1_1_vector}{Vector} object with all components negated. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a4a729e5a27fe13d3c71a7a9fd3e234e3}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} Leap\+::\+Vector\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a4a729e5a27fe13d3c71a7a9fd3e234e3}
+Subtract vectors component-\/wise.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a71f56cf12c752f001d44c6a9ed3c15db}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}\& Leap\+::\+Vector\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a71f56cf12c752f001d44c6a9ed3c15db}
+Subtract vectors component-\/wise and assign the difference. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a23a7ee5a8da0f282e51628ac3fc59f70}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!operator/@{operator/}}
+\index{operator/@{operator/}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} Leap\+::\+Vector\+::operator/ (
+\begin{DoxyParamCaption}
+\item[{float}]{scalar}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a23a7ee5a8da0f282e51628ac3fc59f70}
+Divide vector by a scalar.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a0c83e9d07018bdb3b3404088939a050d}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}\& Leap\+::\+Vector\+::operator/= (
+\begin{DoxyParamCaption}
+\item[{float}]{scalar}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a0c83e9d07018bdb3b3404088939a050d}
+Divide vector by a scalar and assign the quotient. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a3055b0255b5d4af0a51ceacd93187218}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!operator==@{operator==}}
+\index{operator==@{operator==}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Leap\+::\+Vector\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a3055b0255b5d4af0a51ceacd93187218}
+Compare \hyperlink{struct_leap_1_1_vector}{Vector} equality component-\/wise.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a45db0a2e00a86c1b9bf7e68ae6b9a20e}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}float Leap\+::\+Vector\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a45db0a2e00a86c1b9bf7e68ae6b9a20e}
+Index vector components numerically. Index 0 is x, index 1 is y, and index 2 is z. \begin{DoxyReturn}{Returns}
+The x, y, or z component of this \hyperlink{struct_leap_1_1_vector}{Vector}, if the specified index value is at least 0 and at most 2; otherwise, returns zero.
+\end{DoxyReturn}
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a206cee5e82cc8f860edae69c4f101a49}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!pitch@{pitch}}
+\index{pitch@{pitch}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{pitch}]{\setlength{\rightskip}{0pt plus 5cm}float Leap\+::\+Vector\+::pitch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a206cee5e82cc8f860edae69c4f101a49}
+The pitch angle in radians.
+
+Pitch is the angle between the negative z-\/axis and the projection of the vector onto the y-\/z plane. In other words, pitch represents rotation around the x-\/axis. If the vector points upward, the returned angle is between 0 and pi radians (180 degrees); if it points downward, the angle is between 0 and -\/pi radians.
+
+
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+\begin{DoxyReturn}{Returns}
+The angle of this vector above or below the horizon (x-\/z plane). 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_aa4d509a1640d9aa270d095c9ae8e44f2}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!right@{right}}
+\index{right@{right}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{right}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf Vector}\& Leap\+::\+Vector\+::right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_leap_1_1_vector_aa4d509a1640d9aa270d095c9ae8e44f2}
+The unit vector pointing right along the positive x-\/axis\+: (1, 0, 0)
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a11dc02be2e993142ac422b7b3a7428c1}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!roll@{roll}}
+\index{roll@{roll}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{roll}]{\setlength{\rightskip}{0pt plus 5cm}float Leap\+::\+Vector\+::roll (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a11dc02be2e993142ac422b7b3a7428c1}
+The roll angle in radians.
+
+Roll is the angle between the y-\/axis and the projection of the vector onto the x-\/y plane. In other words, roll represents rotation around the z-\/axis. If the vector points to the left of the y-\/axis, then the returned angle is between 0 and pi radians (180 degrees); if it points to the right, the angle is between 0 and -\/pi radians.
+
+
+
+Use this function to get roll angle of the plane to which this vector is a normal. For example, if this vector represents the normal to the palm, then this function returns the tilt or roll of the palm plane compared to the horizontal (x-\/z) plane.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+\begin{DoxyReturn}{Returns}
+The angle of this vector to the right or left of the y-\/axis. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_ad41fdd88c7097efb13b3cb34e2752777}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!to\+Float\+Pointer@{to\+Float\+Pointer}}
+\index{to\+Float\+Pointer@{to\+Float\+Pointer}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{to\+Float\+Pointer}]{\setlength{\rightskip}{0pt plus 5cm}const float$\ast$ Leap\+::\+Vector\+::to\+Float\+Pointer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_ad41fdd88c7097efb13b3cb34e2752777}
+Cast the vector to a float array.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a06f42a3c10c886b449e6db32a565099c}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Leap\+::\+Vector\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a06f42a3c10c886b449e6db32a565099c}
+Returns a string containing this vector in a human readable format\+: (x, y, z). \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a55fc5ddc43e74988d48797d31a0849f4}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!to\+Vector3@{to\+Vector3}}
+\index{to\+Vector3@{to\+Vector3}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{to\+Vector3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vector3\+Type $>$ const Vector3\+Type Leap\+::\+Vector\+::to\+Vector3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a55fc5ddc43e74988d48797d31a0849f4}
+Convert a \hyperlink{struct_leap_1_1_vector}{Leap\+::\+Vector} to another 3-\/component \hyperlink{struct_leap_1_1_vector}{Vector} type.
+
+The specified type must define a constructor that takes the x, y, and z components as separate parameters. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a2adaf93670f1069e40532d39eb974b3f}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!to\+Vector4@{to\+Vector4}}
+\index{to\+Vector4@{to\+Vector4}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{to\+Vector4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vector4\+Type $>$ const Vector4\+Type Leap\+::\+Vector\+::to\+Vector4 (
+\begin{DoxyParamCaption}
+\item[{float}]{w = {\ttfamily 0.0f}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_a2adaf93670f1069e40532d39eb974b3f}
+Convert a \hyperlink{struct_leap_1_1_vector}{Leap\+::\+Vector} to another 4-\/component \hyperlink{struct_leap_1_1_vector}{Vector} type.
+
+The specified type must define a constructor that takes the x, y, z, and w components as separate parameters. (The homogeneous coordinate, w, is set to zero by default, but you should typically set it to one for vectors representing a position.) \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a0a38a683c0224b38b75d58db24f51adf}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!up@{up}}
+\index{up@{up}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{up}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf Vector}\& Leap\+::\+Vector\+::up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_leap_1_1_vector_a0a38a683c0224b38b75d58db24f51adf}
+The unit vector pointing up along the positive y-\/axis\+: (0, 1, 0)
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a0d90c96672e7ee90fb510d7b96c32861}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!x\+Axis@{x\+Axis}}
+\index{x\+Axis@{x\+Axis}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{x\+Axis}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf Vector}\& Leap\+::\+Vector\+::x\+Axis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_leap_1_1_vector_a0d90c96672e7ee90fb510d7b96c32861}
+The x-\/axis unit vector\+: (1, 0, 0)
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_aa4bdfa69695be1e5a6db629685538239}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!yaw@{yaw}}
+\index{yaw@{yaw}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{yaw}]{\setlength{\rightskip}{0pt plus 5cm}float Leap\+::\+Vector\+::yaw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_leap_1_1_vector_aa4bdfa69695be1e5a6db629685538239}
+The yaw angle in radians.
+
+Yaw is the angle between the negative z-\/axis and the projection of the vector onto the x-\/z plane. In other words, yaw represents rotation around the y-\/axis. If the vector points to the right of the negative z-\/axis, then the returned angle is between 0 and pi radians (180 degrees); if it points to the left, the angle is between 0 and -\/pi radians.
+
+
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+\begin{DoxyReturn}{Returns}
+The angle of this vector to the right or left of the negative z-\/axis. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a9a387eb8ab05e55708542c031c641f31}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!y\+Axis@{y\+Axis}}
+\index{y\+Axis@{y\+Axis}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{y\+Axis}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf Vector}\& Leap\+::\+Vector\+::y\+Axis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_leap_1_1_vector_a9a387eb8ab05e55708542c031c641f31}
+The y-\/axis unit vector\+: (0, 1, 0)
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a6ec3652d02a9599bc2a00411a1e05501}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!z\+Axis@{z\+Axis}}
+\index{z\+Axis@{z\+Axis}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{z\+Axis}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf Vector}\& Leap\+::\+Vector\+::z\+Axis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_leap_1_1_vector_a6ec3652d02a9599bc2a00411a1e05501}
+The z-\/axis unit vector\+: (0, 0, 1)
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_a743b469003fa6622a00ff277d2481da9}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!zero@{zero}}
+\index{zero@{zero}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{zero}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf Vector}\& Leap\+::\+Vector\+::zero (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_leap_1_1_vector_a743b469003fa6622a00ff277d2481da9}
+The zero vector\+: (0, 0, 0)
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{struct_leap_1_1_vector_a90f989718db5a1be59eb472f30e61472}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{float}]{scalar, }
+\item[{const {\bf Vector} \&}]{vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{struct_leap_1_1_vector_a90f989718db5a1be59eb472f30e61472}
+Multiply vector by a scalar on the left-\/hand side (C++ only).
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_ae295e87eb813266c27e75d2809df2acc}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const {\bf Vector} \&}]{vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{struct_leap_1_1_vector_ae295e87eb813266c27e75d2809df2acc}
+Writes the vector to the output stream using a human readable format\+: (x, y, z). \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_leap_1_1_vector_a58ab75fe089da2070f5dcef82c9a578a}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!x@{x}}
+\index{x@{x}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}float Leap\+::\+Vector\+::x}}\label{struct_leap_1_1_vector_a58ab75fe089da2070f5dcef82c9a578a}
+The horizontal component. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_abfff2f5b5c10d58a43cf377fc4cb9951}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!y@{y}}
+\index{y@{y}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}float Leap\+::\+Vector\+::y}}\label{struct_leap_1_1_vector_abfff2f5b5c10d58a43cf377fc4cb9951}
+The vertical component. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{struct_leap_1_1_vector_aa44971ce01ce035e78ea557bc1e983a4}{\index{Leap\+::\+Vector@{Leap\+::\+Vector}!z@{z}}
+\index{z@{z}!Leap\+::\+Vector@{Leap\+::\+Vector}}
+\subsubsection[{z}]{\setlength{\rightskip}{0pt plus 5cm}float Leap\+::\+Vector\+::z}}\label{struct_leap_1_1_vector_aa44971ce01ce035e78ea557bc1e983a4}
+The depth component. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/Leap\+Math.\+h\end{DoxyCompactItemize}

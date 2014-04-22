@@ -1,0 +1,186 @@
+\hypertarget{class_leap_1_1_swipe_gesture}{\section{Leap\+:\+:Swipe\+Gesture Class Reference}
+\label{class_leap_1_1_swipe_gesture}\index{Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}}
+}
+
+
+{\ttfamily \#include $<$Leap.\+h$>$}
+
+Inheritance diagram for Leap\+:\+:Swipe\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_leap_1_1_swipe_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_swipe_gesture_ac4698d7bf0a8ef15a92b00866a31fb7f}{Swipe\+Gesture} (const \hyperlink{class_leap_1_1_gesture}{Gesture} \&rhs)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_swipe_gesture_a273bcdcb7e67cdb1c35fc0a80c7dfabc}{start\+Position} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_swipe_gesture_a14e074dad90fc86eec1144edce20c4bb}{position} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_swipe_gesture_ab9fe4410a8bb19a993a514115a8fb161}{direction} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float \hyperlink{class_leap_1_1_swipe_gesture_a8da056c9faa0a941f43d34f3a489ecc7}{speed} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_pointable}{Pointable} \hyperlink{class_leap_1_1_swipe_gesture_a51712b0e742448e3f51549e5300aceee}{pointable} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1}{Type} \hyperlink{class_leap_1_1_swipe_gesture_a0dac022eaf599cf5393af9456cb9896e}{class\+Type} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_leap_1_1_swipe_gesture}{Swipe\+Gesture} class represents a swiping motion of a finger or tool.
+
+
+
+{\bfseries Important\+:} To use swipe gestures in your application, you must enable recognition of the swipe gesture. You can enable recognition with\+:
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+Swipe gestures are continuous.
+
+You can set the minimum length and velocity required for a movement to be recognized as a swipe using the config attribute of a connected \hyperlink{class_leap_1_1_controller}{Controller} object. Use the following keys to configure swipe recognition\+:
+
+\begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Key string }&{\bf Value type }&{\bf Default value }&{\bf Units  }\\\cline{1-4}
+Gesture.\+Swipe.\+Min\+Length &float &150 &mm \\\cline{1-4}
+Gesture.\+Swipe.\+Min\+Velocity &float &1000 &mm/s \\\cline{1-4}
+\end{TabularC}
+The following example demonstrates how to set the swipe configuration parameters\+:
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_leap_1_1_swipe_gesture_ac4698d7bf0a8ef15a92b00866a31fb7f}{\index{Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}!Swipe\+Gesture@{Swipe\+Gesture}}
+\index{Swipe\+Gesture@{Swipe\+Gesture}!Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}}
+\subsubsection[{Swipe\+Gesture}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Swipe\+Gesture\+::\+Swipe\+Gesture (
+\begin{DoxyParamCaption}
+\item[{const {\bf Gesture} \&}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_swipe_gesture_ac4698d7bf0a8ef15a92b00866a31fb7f}
+Constructs a \hyperlink{class_leap_1_1_swipe_gesture}{Swipe\+Gesture} object from an instance of the \hyperlink{class_leap_1_1_gesture}{Gesture} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \hyperlink{class_leap_1_1_gesture}{Gesture} instance to specialize. This \hyperlink{class_leap_1_1_gesture}{Gesture} instance must be a \hyperlink{class_leap_1_1_swipe_gesture}{Swipe\+Gesture} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leap_1_1_swipe_gesture_a0dac022eaf599cf5393af9456cb9896e}{\index{Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}!class\+Type@{class\+Type}}
+\index{class\+Type@{class\+Type}!Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}}
+\subsubsection[{class\+Type}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Type} Leap\+::\+Swipe\+Gesture\+::class\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_leap_1_1_swipe_gesture_a0dac022eaf599cf5393af9456cb9896e}
+The swipe gesture type.
+
+\begin{DoxyReturn}{Returns}
+Type The type value designating a swipe gesture. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_swipe_gesture_ab9fe4410a8bb19a993a514115a8fb161}{\index{Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}!direction@{direction}}
+\index{direction@{direction}!Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}}
+\subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Swipe\+Gesture\+::direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_swipe_gesture_ab9fe4410a8bb19a993a514115a8fb161}
+The unit direction vector parallel to the swipe motion.
+
+You can compare the components of the vector to classify the swipe as appropriate for your application. For example, if you are using swipes for two dimensional scrolling, you can compare the x and y values to determine if the swipe is primarily horizontal or vertical.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_leap_1_1_vector}{Vector} The unit direction vector representing the swipe motion. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_swipe_gesture_a51712b0e742448e3f51549e5300aceee}{\index{Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}!pointable@{pointable}}
+\index{pointable@{pointable}!Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}}
+\subsubsection[{pointable}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Pointable} Leap\+::\+Swipe\+Gesture\+::pointable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_swipe_gesture_a51712b0e742448e3f51549e5300aceee}
+The finger performing the swipe gesture.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_leap_1_1_pointable}{Pointable} A \hyperlink{class_leap_1_1_pointable}{Pointable} object representing the swiping finger. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_swipe_gesture_a14e074dad90fc86eec1144edce20c4bb}{\index{Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}!position@{position}}
+\index{position@{position}!Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Swipe\+Gesture\+::position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_swipe_gesture_a14e074dad90fc86eec1144edce20c4bb}
+The current position of the swipe.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_leap_1_1_vector}{Vector} The current swipe position within the Leap Motion frame of reference, in mm. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_swipe_gesture_a8da056c9faa0a941f43d34f3a489ecc7}{\index{Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}!speed@{speed}}
+\index{speed@{speed}!Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}}
+\subsubsection[{speed}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float Leap\+::\+Swipe\+Gesture\+::speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_swipe_gesture_a8da056c9faa0a941f43d34f3a489ecc7}
+The swipe speed in mm/second.
+
+\begin{DoxyReturn}{Returns}
+float The speed of the finger performing the swipe gesture in millimeters per second. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_swipe_gesture_a273bcdcb7e67cdb1c35fc0a80c7dfabc}{\index{Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}!start\+Position@{start\+Position}}
+\index{start\+Position@{start\+Position}!Leap\+::\+Swipe\+Gesture@{Leap\+::\+Swipe\+Gesture}}
+\subsubsection[{start\+Position}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Swipe\+Gesture\+::start\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_swipe_gesture_a273bcdcb7e67cdb1c35fc0a80c7dfabc}
+The position where the swipe began.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_leap_1_1_vector}{Vector} The starting position within the Leap Motion frame of reference, in mm. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/Leap.\+h\end{DoxyCompactItemize}

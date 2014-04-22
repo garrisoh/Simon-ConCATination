@@ -1,0 +1,108 @@
+\hypertarget{class_leap_1_1_finger}{\section{Leap\+:\+:Finger Class Reference}
+\label{class_leap_1_1_finger}\index{Leap\+::\+Finger@{Leap\+::\+Finger}}
+}
+
+
+{\ttfamily \#include $<$Leap.\+h$>$}
+
+Inheritance diagram for Leap\+:\+:Finger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_leap_1_1_finger}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_leap_1_1_finger_ac393e4d718a2163fabd65b85d5c09267}{{\bfseries Finger} (Finger\+Implementation $\ast$)}\label{class_leap_1_1_finger_ac393e4d718a2163fabd65b85d5c09267}
+
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_finger_aed76c909a2904029d313538e01604c88}{Finger} ()
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_finger_a864d7de003b2d5b6d738c67da322e702}{Finger} (const \hyperlink{class_leap_1_1_pointable}{Pointable} \&)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T std\+::string \hyperlink{class_leap_1_1_finger_a2641934432be97ad3c33c8dbe287a7b9}{to\+String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T const \hyperlink{class_leap_1_1_finger}{Finger} \& \hyperlink{class_leap_1_1_finger_a2dec17262f38e1bb548da99086c5e8e3}{invalid} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_leap_1_1_finger}{Finger} class represents a tracked finger.
+
+Fingers are \hyperlink{class_leap_1_1_pointable}{Pointable} objects that the Leap Motion software has classified as a finger. Get valid \hyperlink{class_leap_1_1_finger}{Finger} objects from a \hyperlink{class_leap_1_1_frame}{Frame} or a \hyperlink{class_leap_1_1_hand}{Hand} object.
+
+Fingers may be permanently associated to a hand. In this case the angular order of the finger I\+Ds will be invariant. As fingers move in and out of view it is possible for the guessed I\+D of a finger to be incorrect. Consequently, it may be necessary for finger I\+Ds to be exchanged. All tracked properties, such as velocity, will remain continuous in the A\+P\+I. However, quantities that are derived from the A\+P\+I output (such as a history of positions) will be discontinuous unless they have a corresponding I\+D exchange.
+
+Note that \hyperlink{class_leap_1_1_finger}{Finger} objects can be invalid, which means that they do not contain valid tracking data and do not correspond to a physical finger. Invalid \hyperlink{class_leap_1_1_finger}{Finger} objects can be the result of asking for a \hyperlink{class_leap_1_1_finger}{Finger} object using an I\+D from an earlier frame when no \hyperlink{class_leap_1_1_finger}{Finger} objects with that I\+D exist in the current frame. A \hyperlink{class_leap_1_1_finger}{Finger} object created from the \hyperlink{class_leap_1_1_finger}{Finger} constructor is also invalid. Test for validity with the \hyperlink{class_leap_1_1_pointable_a124f21a619df4fb338d1ce8a7a6d3341}{Finger\+::is\+Valid()} function. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_leap_1_1_finger_aed76c909a2904029d313538e01604c88}{\index{Leap\+::\+Finger@{Leap\+::\+Finger}!Finger@{Finger}}
+\index{Finger@{Finger}!Leap\+::\+Finger@{Leap\+::\+Finger}}
+\subsubsection[{Finger}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Finger\+::\+Finger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_finger_aed76c909a2904029d313538e01604c88}
+Constructs a \hyperlink{class_leap_1_1_finger}{Finger} object.
+
+An uninitialized finger is considered invalid. Get valid \hyperlink{class_leap_1_1_finger}{Finger} objects from a \hyperlink{class_leap_1_1_frame}{Frame} or a \hyperlink{class_leap_1_1_hand}{Hand} object. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_finger_a864d7de003b2d5b6d738c67da322e702}{\index{Leap\+::\+Finger@{Leap\+::\+Finger}!Finger@{Finger}}
+\index{Finger@{Finger}!Leap\+::\+Finger@{Leap\+::\+Finger}}
+\subsubsection[{Finger}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Finger\+::\+Finger (
+\begin{DoxyParamCaption}
+\item[{const {\bf Pointable} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_leap_1_1_finger_a864d7de003b2d5b6d738c67da322e702}
+If the specified \hyperlink{class_leap_1_1_pointable}{Pointable} object represents a finger, creates a copy of it as a \hyperlink{class_leap_1_1_finger}{Finger} object; otherwise, creates an invalid \hyperlink{class_leap_1_1_finger}{Finger} object. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leap_1_1_finger_a2dec17262f38e1bb548da99086c5e8e3}{\index{Leap\+::\+Finger@{Leap\+::\+Finger}!invalid@{invalid}}
+\index{invalid@{invalid}!Leap\+::\+Finger@{Leap\+::\+Finger}}
+\subsubsection[{invalid}]{\setlength{\rightskip}{0pt plus 5cm}static L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T const {\bf Finger}\& Leap\+::\+Finger\+::invalid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_leap_1_1_finger_a2dec17262f38e1bb548da99086c5e8e3}
+Returns an invalid \hyperlink{class_leap_1_1_finger}{Finger} object.
+
+You can use the instance returned by this function in comparisons testing whether a given \hyperlink{class_leap_1_1_finger}{Finger} instance is valid or invalid. (You can also use the \hyperlink{class_leap_1_1_pointable_a124f21a619df4fb338d1ce8a7a6d3341}{Finger\+::is\+Valid()} function.)
+
+\begin{DoxyReturn}{Returns}
+The invalid \hyperlink{class_leap_1_1_finger}{Finger} instance. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_finger_a2641934432be97ad3c33c8dbe287a7b9}{\index{Leap\+::\+Finger@{Leap\+::\+Finger}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Leap\+::\+Finger@{Leap\+::\+Finger}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T std\+::string Leap\+::\+Finger\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_finger_a2641934432be97ad3c33c8dbe287a7b9}
+A string containing a brief, human readable description of the \hyperlink{class_leap_1_1_finger}{Finger} object.
+
+\begin{DoxyReturn}{Returns}
+A description of the \hyperlink{class_leap_1_1_finger}{Finger} object as a string. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/Leap.\+h\end{DoxyCompactItemize}

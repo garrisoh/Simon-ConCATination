@@ -1,0 +1,245 @@
+\hypertarget{class_leap_1_1_screen_list}{\section{Leap\+:\+:Screen\+List Class Reference}
+\label{class_leap_1_1_screen_list}\index{Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}}
+}
+
+
+{\ttfamily \#include $<$Leap.\+h$>$}
+
+Inheritance diagram for Leap\+:\+:Screen\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_leap_1_1_screen_list}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_leap_1_1_const_list_iterator}{Const\+List\+Iterator}\\*
+$<$ \hyperlink{class_leap_1_1_screen_list}{Screen\+List}, \hyperlink{class_leap_1_1_screen}{Screen} $>$ \hyperlink{class_leap_1_1_screen_list_aa5375d780cb454e661f94096dcefd431}{const\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_leap_1_1_screen_list_a7ce73ebf3b8f5d85f456417a3fd5227c}{{\bfseries Screen\+List} (const \hyperlink{class_leap_1_1_list_base_implementation}{List\+Base\+Implementation}$<$ \hyperlink{class_leap_1_1_screen}{Screen} $>$ \&)}\label{class_leap_1_1_screen_list_a7ce73ebf3b8f5d85f456417a3fd5227c}
+
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_screen_list_ac105715f15a022ea47767c548722812d}{Screen\+List} ()
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int \hyperlink{class_leap_1_1_screen_list_a1c290cc967c6158f15f2ad3fa15a44e9}{count} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_screen_list_a589cfc780096be2e41b3e9576ac9cd9c}{is\+Empty} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_screen}{Screen} \hyperlink{class_leap_1_1_screen_list_aa20953716738fcdb48d457b0a9bfe308}{operator\mbox{[}$\,$\mbox{]}} (int index) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_screen_list_aa5375d780cb454e661f94096dcefd431}{const\+\_\+iterator} \hyperlink{class_leap_1_1_screen_list_acfff13c200a11512118532f40e187248}{begin} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_screen_list_aa5375d780cb454e661f94096dcefd431}{const\+\_\+iterator} \hyperlink{class_leap_1_1_screen_list_a6cebbd92a467aec867535e5ec5f98de1}{end} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_screen}{Screen} \hyperlink{class_leap_1_1_screen_list_a3bee50c85325a4935fd6be400a943338}{closest\+Screen\+Hit} (const \hyperlink{class_leap_1_1_pointable}{Pointable} \&pointable) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_screen}{Screen} \hyperlink{class_leap_1_1_screen_list_aa96701f5c1394f2a386db5e719ca2553}{closest\+Screen\+Hit} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&position, const \hyperlink{struct_leap_1_1_vector}{Vector} \&direction) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_screen}{Screen} \hyperlink{class_leap_1_1_screen_list_ad5d7a0cc4ddba08e7fcf5d54bfe94255}{closest\+Screen} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&position) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_leap_1_1_screen_list}{Screen\+List} class represents a list of \hyperlink{class_leap_1_1_screen}{Screen} objects.
+
+The list always contains at least one entry representing the default screen. If the user has not registered the location of this default screen, then the coordinates, directions, and other values reported by the functions in its \hyperlink{class_leap_1_1_screen}{Screen} object will not be accurate. Other monitor screens only appear in the list if their positions have been registered using the Leap Motion \hyperlink{class_leap_1_1_screen}{Screen} Locator.
+
+Get a \hyperlink{class_leap_1_1_screen_list}{Screen\+List} object by calling \hyperlink{class_leap_1_1_controller_ab6cf5b48ef434b3d58cf8962451f4df3}{Controller\+::located\+Screens()}.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_leap_1_1_screen_list_aa5375d780cb454e661f94096dcefd431}{\index{Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}!const\+\_\+iterator@{const\+\_\+iterator}}
+\index{const\+\_\+iterator@{const\+\_\+iterator}!Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}}
+\subsubsection[{const\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Const\+List\+Iterator}$<${\bf Screen\+List}, {\bf Screen}$>$ {\bf Leap\+::\+Screen\+List\+::const\+\_\+iterator}}}\label{class_leap_1_1_screen_list_aa5375d780cb454e661f94096dcefd431}
+A C++ iterator type for this \hyperlink{class_leap_1_1_screen_list}{Screen\+List} objects. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_leap_1_1_screen_list_ac105715f15a022ea47767c548722812d}{\index{Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}!Screen\+List@{Screen\+List}}
+\index{Screen\+List@{Screen\+List}!Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}}
+\subsubsection[{Screen\+List}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Screen\+List\+::\+Screen\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_screen_list_ac105715f15a022ea47767c548722812d}
+Constructs an empty list of screens. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leap_1_1_screen_list_acfff13c200a11512118532f40e187248}{\index{Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}!begin@{begin}}
+\index{begin@{begin}!Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf const\+\_\+iterator} Leap\+::\+Screen\+List\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_list_acfff13c200a11512118532f40e187248}
+The C++ iterator set to the beginning of this \hyperlink{class_leap_1_1_screen_list}{Screen\+List}. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_list_ad5d7a0cc4ddba08e7fcf5d54bfe94255}{\index{Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}!closest\+Screen@{closest\+Screen}}
+\index{closest\+Screen@{closest\+Screen}!Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}}
+\subsubsection[{closest\+Screen}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Screen} Leap\+::\+Screen\+List\+::closest\+Screen (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{position}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_list_ad5d7a0cc4ddba08e7fcf5d54bfe94255}
+Gets the \hyperlink{class_leap_1_1_screen}{Screen} closest to the specified position.
+
+The specified position is projected along each screen's normal vector onto the screen's plane. The screen whose projected point is closest to the specified position is returned. Call Screen\+::project(position) on the returned \hyperlink{class_leap_1_1_screen}{Screen} object to find the projected point.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position from which to check for screen projection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The closest \hyperlink{class_leap_1_1_screen}{Screen} onto which the specified position is projected. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_list_a3bee50c85325a4935fd6be400a943338}{\index{Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}!closest\+Screen\+Hit@{closest\+Screen\+Hit}}
+\index{closest\+Screen\+Hit@{closest\+Screen\+Hit}!Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}}
+\subsubsection[{closest\+Screen\+Hit}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Screen} Leap\+::\+Screen\+List\+::closest\+Screen\+Hit (
+\begin{DoxyParamCaption}
+\item[{const {\bf Pointable} \&}]{pointable}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_list_a3bee50c85325a4935fd6be400a943338}
+Gets the closest \hyperlink{class_leap_1_1_screen}{Screen} intercepting a ray projecting from the specified \hyperlink{class_leap_1_1_pointable}{Pointable} object.
+
+The projected ray emanates from the \hyperlink{class_leap_1_1_pointable}{Pointable} tip\+Position along the \hyperlink{class_leap_1_1_pointable}{Pointable}'s direction vector. If the projected ray does not intersect any screen surface directly, then the Leap Motion software checks for intersection with the planes extending from the surfaces of the known screens and returns the \hyperlink{class_leap_1_1_screen}{Screen} with the closest intersection.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+If no intersections are found (i.\+e. the ray is directed parallel to or away from all known screens), then an invalid \hyperlink{class_leap_1_1_screen}{Screen} object is returned.
+
+{\itshape Note\+:} Be sure to test whether the \hyperlink{class_leap_1_1_screen}{Screen} object returned by this method is valid. Attempting to use an invalid \hyperlink{class_leap_1_1_screen}{Screen} object will lead to incorrect results.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointable} & The \hyperlink{class_leap_1_1_pointable}{Pointable} object to check for screen intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The closest \hyperlink{class_leap_1_1_screen}{Screen} toward which the specified \hyperlink{class_leap_1_1_pointable}{Pointable} object is pointing, or, if the pointable is not pointing in the direction of any known screen, an invalid \hyperlink{class_leap_1_1_screen}{Screen} object. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_list_aa96701f5c1394f2a386db5e719ca2553}{\index{Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}!closest\+Screen\+Hit@{closest\+Screen\+Hit}}
+\index{closest\+Screen\+Hit@{closest\+Screen\+Hit}!Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}}
+\subsubsection[{closest\+Screen\+Hit}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Screen} Leap\+::\+Screen\+List\+::closest\+Screen\+Hit (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{position, }
+\item[{const {\bf Vector} \&}]{direction}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_list_aa96701f5c1394f2a386db5e719ca2553}
+Gets the closest \hyperlink{class_leap_1_1_screen}{Screen} intercepting a ray projecting from the specified position in the specified direction.
+
+The projected ray emanates from the position along the direction vector. If the projected ray does not intersect any screen surface directly, then the Leap Motion software checks for intersection with the planes extending from the surfaces of the known screens and returns the \hyperlink{class_leap_1_1_screen}{Screen} with the closest intersection.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+If no intersections are found (i.\+e. the ray is directed parallel to or away from all known screens), then an invalid \hyperlink{class_leap_1_1_screen}{Screen} object is returned.
+
+{\itshape Note\+:} Be sure to test whether the \hyperlink{class_leap_1_1_screen}{Screen} object returned by this method is valid. Attempting to use an invalid \hyperlink{class_leap_1_1_screen}{Screen} object will lead to incorrect results.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position from which to check for screen intersection. \\
+\hline
+{\em direction} & The direction in which to check for screen intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The closest \hyperlink{class_leap_1_1_screen}{Screen} toward which the specified ray is pointing, or, if the ray is not pointing in the direction of any known screen, an invalid \hyperlink{class_leap_1_1_screen}{Screen} object. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_list_a1c290cc967c6158f15f2ad3fa15a44e9}{\index{Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}!count@{count}}
+\index{count@{count}!Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int Leap\+::\+Screen\+List\+::count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_list_a1c290cc967c6158f15f2ad3fa15a44e9}
+Returns the number of screens in this list. \begin{DoxyReturn}{Returns}
+The number of screens in this list. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_list_a6cebbd92a467aec867535e5ec5f98de1}{\index{Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}!end@{end}}
+\index{end@{end}!Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf const\+\_\+iterator} Leap\+::\+Screen\+List\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_list_a6cebbd92a467aec867535e5ec5f98de1}
+The C++ iterator set to the end of this \hyperlink{class_leap_1_1_screen_list}{Screen\+List}. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_list_a589cfc780096be2e41b3e9576ac9cd9c}{\index{Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}}
+\subsubsection[{is\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Screen\+List\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_list_a589cfc780096be2e41b3e9576ac9cd9c}
+Reports whether the list is empty. \begin{DoxyReturn}{Returns}
+True, if the list has no members. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_list_aa20953716738fcdb48d457b0a9bfe308}{\index{Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Leap\+::\+Screen\+List@{Leap\+::\+Screen\+List}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Screen} Leap\+::\+Screen\+List\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_list_aa20953716738fcdb48d457b0a9bfe308}
+Access a list member by its position in the list. 
+\begin{DoxyParams}{Parameters}
+{\em index} & The zero-\/based list position index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{class_leap_1_1_screen}{Screen} object at the specified index. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/Leap.\+h\end{DoxyCompactItemize}

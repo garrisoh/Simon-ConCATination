@@ -1,0 +1,208 @@
+\hypertarget{class_leap_1_1_tool_list}{\section{Leap\+:\+:Tool\+List Class Reference}
+\label{class_leap_1_1_tool_list}\index{Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}}
+}
+
+
+{\ttfamily \#include $<$Leap.\+h$>$}
+
+Inheritance diagram for Leap\+:\+:Tool\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_leap_1_1_tool_list}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_leap_1_1_const_list_iterator}{Const\+List\+Iterator}\\*
+$<$ \hyperlink{class_leap_1_1_tool_list}{Tool\+List}, \hyperlink{class_leap_1_1_tool}{Tool} $>$ \hyperlink{class_leap_1_1_tool_list_a7f52ee5561016e8d42512e2adbc820de}{const\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_leap_1_1_tool_list_a28459f829ceca1ac6edfe5dd5f0a73d5}{{\bfseries Tool\+List} (const \hyperlink{class_leap_1_1_list_base_implementation}{List\+Base\+Implementation}$<$ \hyperlink{class_leap_1_1_tool}{Tool} $>$ \&)}\label{class_leap_1_1_tool_list_a28459f829ceca1ac6edfe5dd5f0a73d5}
+
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_tool_list_a3ee8e7e7b50f92b9d31ad31e7fd55c2e}{Tool\+List} ()
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int \hyperlink{class_leap_1_1_tool_list_a385325630ca55bfcad1e5b06237fbcbb}{count} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_tool_list_a96832d98859addb02813fcba73cd1d2e}{is\+Empty} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_tool}{Tool} \hyperlink{class_leap_1_1_tool_list_ad9cb174832fe6d8a10592bced6ea2cb1}{operator\mbox{[}$\,$\mbox{]}} (int index) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_tool_list}{Tool\+List} \& \hyperlink{class_leap_1_1_tool_list_a384adf507eeb1cfacc5aaa71a38ca452}{append} (const \hyperlink{class_leap_1_1_tool_list}{Tool\+List} \&other)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_tool}{Tool} \hyperlink{class_leap_1_1_tool_list_ac22bad454f5086fcea7cc75de2a2cb7c}{leftmost} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_tool}{Tool} \hyperlink{class_leap_1_1_tool_list_abdd27a1e89f90a33af077f8827210487}{rightmost} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_tool}{Tool} \hyperlink{class_leap_1_1_tool_list_a6641d8cba062215cbf38982015145ffe}{frontmost} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_tool_list_a7f52ee5561016e8d42512e2adbc820de}{const\+\_\+iterator} \hyperlink{class_leap_1_1_tool_list_abf5d56a04145998fc85a7be12898f210}{begin} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_tool_list_a7f52ee5561016e8d42512e2adbc820de}{const\+\_\+iterator} \hyperlink{class_leap_1_1_tool_list_a42a50495878c9c4824f78391f6de637c}{end} () const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_leap_1_1_tool_list}{Tool\+List} class represents a list of \hyperlink{class_leap_1_1_tool}{Tool} objects.
+
+Get a \hyperlink{class_leap_1_1_tool_list}{Tool\+List} object by calling \hyperlink{class_leap_1_1_frame_abf81ff857abdd1cc9c2ccb889eb1c6e3}{Frame\+::tools()}. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_leap_1_1_tool_list_a7f52ee5561016e8d42512e2adbc820de}{\index{Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}!const\+\_\+iterator@{const\+\_\+iterator}}
+\index{const\+\_\+iterator@{const\+\_\+iterator}!Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}}
+\subsubsection[{const\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Const\+List\+Iterator}$<${\bf Tool\+List}, {\bf Tool}$>$ {\bf Leap\+::\+Tool\+List\+::const\+\_\+iterator}}}\label{class_leap_1_1_tool_list_a7f52ee5561016e8d42512e2adbc820de}
+A C++ iterator type for \hyperlink{class_leap_1_1_tool_list}{Tool\+List} objects. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_leap_1_1_tool_list_a3ee8e7e7b50f92b9d31ad31e7fd55c2e}{\index{Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}!Tool\+List@{Tool\+List}}
+\index{Tool\+List@{Tool\+List}!Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}}
+\subsubsection[{Tool\+List}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Tool\+List\+::\+Tool\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_tool_list_a3ee8e7e7b50f92b9d31ad31e7fd55c2e}
+Constructs an empty list of tools. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leap_1_1_tool_list_a384adf507eeb1cfacc5aaa71a38ca452}{\index{Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}!append@{append}}
+\index{append@{append}!Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Tool\+List}\& Leap\+::\+Tool\+List\+::append (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tool\+List} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_tool_list_a384adf507eeb1cfacc5aaa71a38ca452}
+Appends the members of the specifed \hyperlink{class_leap_1_1_tool_list}{Tool\+List} to this \hyperlink{class_leap_1_1_tool_list}{Tool\+List}. 
+\begin{DoxyParams}{Parameters}
+{\em other} & A \hyperlink{class_leap_1_1_tool_list}{Tool\+List} object containing \hyperlink{class_leap_1_1_tool}{Tool} objects to append to the end of this \hyperlink{class_leap_1_1_tool_list}{Tool\+List}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_tool_list_abf5d56a04145998fc85a7be12898f210}{\index{Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}!begin@{begin}}
+\index{begin@{begin}!Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf const\+\_\+iterator} Leap\+::\+Tool\+List\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_tool_list_abf5d56a04145998fc85a7be12898f210}
+The C++ iterator set to the beginning of this \hyperlink{class_leap_1_1_tool_list}{Tool\+List}. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_tool_list_a385325630ca55bfcad1e5b06237fbcbb}{\index{Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}!count@{count}}
+\index{count@{count}!Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int Leap\+::\+Tool\+List\+::count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_tool_list_a385325630ca55bfcad1e5b06237fbcbb}
+Returns the number of tools in this list. \begin{DoxyReturn}{Returns}
+The number of tools in this list. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_tool_list_a42a50495878c9c4824f78391f6de637c}{\index{Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}!end@{end}}
+\index{end@{end}!Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf const\+\_\+iterator} Leap\+::\+Tool\+List\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_tool_list_a42a50495878c9c4824f78391f6de637c}
+The C++ iterator set to the end of this \hyperlink{class_leap_1_1_tool_list}{Tool\+List}. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_tool_list_a6641d8cba062215cbf38982015145ffe}{\index{Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}!frontmost@{frontmost}}
+\index{frontmost@{frontmost}!Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}}
+\subsubsection[{frontmost}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Tool} Leap\+::\+Tool\+List\+::frontmost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_tool_list_a6641d8cba062215cbf38982015145ffe}
+The member of the list that is farthest to the front within the standard Leap Motion frame of reference (i.\+e has the smallest Z coordinate).
+
+\begin{DoxyReturn}{Returns}
+The frontmost tool, or invalid if list is empty. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_tool_list_a96832d98859addb02813fcba73cd1d2e}{\index{Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}}
+\subsubsection[{is\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Tool\+List\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_tool_list_a96832d98859addb02813fcba73cd1d2e}
+Reports whether the list is empty. \begin{DoxyReturn}{Returns}
+True, if the list has no members. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_tool_list_ac22bad454f5086fcea7cc75de2a2cb7c}{\index{Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}!leftmost@{leftmost}}
+\index{leftmost@{leftmost}!Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}}
+\subsubsection[{leftmost}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Tool} Leap\+::\+Tool\+List\+::leftmost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_tool_list_ac22bad454f5086fcea7cc75de2a2cb7c}
+The member of the list that is farthest to the left within the standard Leap Motion frame of reference (i.\+e has the smallest X coordinate).
+
+\begin{DoxyReturn}{Returns}
+The leftmost tool, or invalid if list is empty. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_tool_list_ad9cb174832fe6d8a10592bced6ea2cb1}{\index{Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Tool} Leap\+::\+Tool\+List\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_tool_list_ad9cb174832fe6d8a10592bced6ea2cb1}
+Access a list member by its position in the list. 
+\begin{DoxyParams}{Parameters}
+{\em index} & The zero-\/based list position index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{class_leap_1_1_tool}{Tool} object at the specified index. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_tool_list_abdd27a1e89f90a33af077f8827210487}{\index{Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}!rightmost@{rightmost}}
+\index{rightmost@{rightmost}!Leap\+::\+Tool\+List@{Leap\+::\+Tool\+List}}
+\subsubsection[{rightmost}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Tool} Leap\+::\+Tool\+List\+::rightmost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_tool_list_abdd27a1e89f90a33af077f8827210487}
+The member of the list that is farthest to the right within the standard Leap Motion frame of reference (i.\+e has the largest X coordinate).
+
+\begin{DoxyReturn}{Returns}
+The rightmost tool, or invalid if list is empty. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/Leap.\+h\end{DoxyCompactItemize}

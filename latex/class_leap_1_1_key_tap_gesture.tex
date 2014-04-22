@@ -1,0 +1,184 @@
+\hypertarget{class_leap_1_1_key_tap_gesture}{\section{Leap\+:\+:Key\+Tap\+Gesture Class Reference}
+\label{class_leap_1_1_key_tap_gesture}\index{Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}}
+}
+
+
+{\ttfamily \#include $<$Leap.\+h$>$}
+
+Inheritance diagram for Leap\+:\+:Key\+Tap\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_leap_1_1_key_tap_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_key_tap_gesture_a916eb2060586a29c499b0201cef9b203}{Key\+Tap\+Gesture} ()
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_key_tap_gesture_a701172268caa05b6c05bf3cd8578bde5}{Key\+Tap\+Gesture} (const \hyperlink{class_leap_1_1_gesture}{Gesture} \&rhs)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_key_tap_gesture_a2f9de1992ab50eeaa0cbfaa0499420bd}{position} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_key_tap_gesture_ab8bad7448409ee1f69548a3351303125}{direction} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float \hyperlink{class_leap_1_1_key_tap_gesture_a1bd7863f9c3b70b8312cf0946bbb1569}{progress} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_pointable}{Pointable} \hyperlink{class_leap_1_1_key_tap_gesture_a2f1392201385cb36a84e6a3ff4152305}{pointable} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1}{Type} \hyperlink{class_leap_1_1_key_tap_gesture_a674173890d1f8b1b2d2cee98245b65f2}{class\+Type} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_leap_1_1_key_tap_gesture}{Key\+Tap\+Gesture} class represents a tapping gesture by a finger or tool.
+
+A key tap gesture is recognized when the tip of a finger rotates down toward the palm and then springs back to approximately the original postion, as if tapping. The tapping finger must pause briefly before beginning the tap.
+
+
+
+{\bfseries Important\+:} To use key tap gestures in your application, you must enable recognition of the key tap gesture. You can enable recognition with\+:
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+Key tap gestures are discrete. The \hyperlink{class_leap_1_1_key_tap_gesture}{Key\+Tap\+Gesture} object representing a tap always has the state, S\+T\+A\+T\+E\+\_\+\+S\+T\+O\+P. Only one \hyperlink{class_leap_1_1_key_tap_gesture}{Key\+Tap\+Gesture} object is created for each key tap gesture recognized.
+
+You can set the minimum finger movement and velocity required for a movement to be recognized as a key tap as well as adjust the detection window for evaluating the movement using the config attribute of a connected \hyperlink{class_leap_1_1_controller}{Controller} object. Use the following configuration keys to configure key tap recognition\+:
+
+\begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Key string }&{\bf Value type }&{\bf Default value }&{\bf Units  }\\\cline{1-4}
+Gesture.\+Key\+Tap.\+Min\+Down\+Velocity &float &50 &mm/s \\\cline{1-4}
+Gesture.\+Key\+Tap.\+History\+Seconds &float &0.\+1 &s \\\cline{1-4}
+Gesture.\+Key\+Tap.\+Min\+Distance &float &5.\+0 &mm \\\cline{1-4}
+\end{TabularC}
+The following example demonstrates how to set the key tap configuration parameters\+:
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_leap_1_1_key_tap_gesture_a916eb2060586a29c499b0201cef9b203}{\index{Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}!Key\+Tap\+Gesture@{Key\+Tap\+Gesture}}
+\index{Key\+Tap\+Gesture@{Key\+Tap\+Gesture}!Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}}
+\subsubsection[{Key\+Tap\+Gesture}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Key\+Tap\+Gesture\+::\+Key\+Tap\+Gesture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_key_tap_gesture_a916eb2060586a29c499b0201cef9b203}
+Constructs a new \hyperlink{class_leap_1_1_key_tap_gesture}{Key\+Tap\+Gesture} object.
+
+An uninitialized \hyperlink{class_leap_1_1_key_tap_gesture}{Key\+Tap\+Gesture} object is considered invalid. Get valid instances of the \hyperlink{class_leap_1_1_key_tap_gesture}{Key\+Tap\+Gesture} class from a \hyperlink{class_leap_1_1_frame}{Frame} object. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_key_tap_gesture_a701172268caa05b6c05bf3cd8578bde5}{\index{Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}!Key\+Tap\+Gesture@{Key\+Tap\+Gesture}}
+\index{Key\+Tap\+Gesture@{Key\+Tap\+Gesture}!Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}}
+\subsubsection[{Key\+Tap\+Gesture}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Key\+Tap\+Gesture\+::\+Key\+Tap\+Gesture (
+\begin{DoxyParamCaption}
+\item[{const {\bf Gesture} \&}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_key_tap_gesture_a701172268caa05b6c05bf3cd8578bde5}
+Constructs a \hyperlink{class_leap_1_1_key_tap_gesture}{Key\+Tap\+Gesture} object from an instance of the \hyperlink{class_leap_1_1_gesture}{Gesture} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \hyperlink{class_leap_1_1_gesture}{Gesture} instance to specialize. This \hyperlink{class_leap_1_1_gesture}{Gesture} instance must be a \hyperlink{class_leap_1_1_key_tap_gesture}{Key\+Tap\+Gesture} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leap_1_1_key_tap_gesture_a674173890d1f8b1b2d2cee98245b65f2}{\index{Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}!class\+Type@{class\+Type}}
+\index{class\+Type@{class\+Type}!Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}}
+\subsubsection[{class\+Type}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Type} Leap\+::\+Key\+Tap\+Gesture\+::class\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_leap_1_1_key_tap_gesture_a674173890d1f8b1b2d2cee98245b65f2}
+The key tap gesture type.
+
+\begin{DoxyReturn}{Returns}
+Type The type value designating a key tap gesture. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_key_tap_gesture_ab8bad7448409ee1f69548a3351303125}{\index{Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}!direction@{direction}}
+\index{direction@{direction}!Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}}
+\subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Key\+Tap\+Gesture\+::direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_key_tap_gesture_ab8bad7448409ee1f69548a3351303125}
+The direction of finger tip motion.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_leap_1_1_vector}{Vector} A unit direction vector if the finger tip is moving; otherwise, a zero-\/vector. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_key_tap_gesture_a2f1392201385cb36a84e6a3ff4152305}{\index{Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}!pointable@{pointable}}
+\index{pointable@{pointable}!Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}}
+\subsubsection[{pointable}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Pointable} Leap\+::\+Key\+Tap\+Gesture\+::pointable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_key_tap_gesture_a2f1392201385cb36a84e6a3ff4152305}
+The finger performing the key tap gesture.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_leap_1_1_pointable}{Pointable} A \hyperlink{class_leap_1_1_pointable}{Pointable} object representing the tapping finger. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_key_tap_gesture_a2f9de1992ab50eeaa0cbfaa0499420bd}{\index{Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}!position@{position}}
+\index{position@{position}!Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Key\+Tap\+Gesture\+::position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_key_tap_gesture_a2f9de1992ab50eeaa0cbfaa0499420bd}
+The position where the key tap is registered.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_leap_1_1_vector}{Vector} A \hyperlink{struct_leap_1_1_vector}{Vector} containing the coordinates of tap location. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_key_tap_gesture_a1bd7863f9c3b70b8312cf0946bbb1569}{\index{Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}!progress@{progress}}
+\index{progress@{progress}!Leap\+::\+Key\+Tap\+Gesture@{Leap\+::\+Key\+Tap\+Gesture}}
+\subsubsection[{progress}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float Leap\+::\+Key\+Tap\+Gesture\+::progress (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_key_tap_gesture_a1bd7863f9c3b70b8312cf0946bbb1569}
+The progess value is always 1.\+0 for a key tap gesture.
+
+\begin{DoxyReturn}{Returns}
+float The value 1.\+0. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/Leap.\+h\end{DoxyCompactItemize}

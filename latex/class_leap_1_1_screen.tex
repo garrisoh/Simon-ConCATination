@@ -1,0 +1,425 @@
+\hypertarget{class_leap_1_1_screen}{\section{Leap\+:\+:Screen Class Reference}
+\label{class_leap_1_1_screen}\index{Leap\+::\+Screen@{Leap\+::\+Screen}}
+}
+
+
+{\ttfamily \#include $<$Leap.\+h$>$}
+
+Inheritance diagram for Leap\+:\+:Screen\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_leap_1_1_screen}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_leap_1_1_screen_ae4bacceec22fd48fa983f863854a1442}{{\bfseries Screen} (Screen\+Implementation $\ast$)}\label{class_leap_1_1_screen_ae4bacceec22fd48fa983f863854a1442}
+
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_screen_a65dcdd83ed5edb4f6e19a9a40edcb96f}{Screen} ()
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int32\+\_\+t \hyperlink{class_leap_1_1_screen_ae209881171841c1c172b582640e5c31c}{id} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_screen_a4264a354488a387ab5657c73d594b41a}{intersect} (const \hyperlink{class_leap_1_1_pointable}{Pointable} \&pointable, bool normalize, float clamp\+Ratio=1.\+0f) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_screen_af7f4942267686be891f371feff54edd2}{intersect} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&position, const \hyperlink{struct_leap_1_1_vector}{Vector} \&direction, bool normalize, float clamp\+Ratio=1.\+0f) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_screen_a5ac637faf6b1c296ce3289265ecb359d}{project} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&position, bool normalize, float clamp\+Ratio=1.\+0f) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_screen_aa6007a37823a83b7620256037337e7f3}{horizontal\+Axis} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_screen_a195e300396f259a01a9115ce18bf66da}{vertical\+Axis} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_screen_a617b14ae37341969a59a5f99cae61ac4}{bottom\+Left\+Corner} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_screen_a3cf3c55d32dc11b097d1dbdd14e1ee1d}{normal} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int \hyperlink{class_leap_1_1_screen_a183e75cf160db9dfa9653c0f128adac0}{width\+Pixels} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int \hyperlink{class_leap_1_1_screen_a73ec00f33fe7aee01e2a63de06311d79}{height\+Pixels} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float \hyperlink{class_leap_1_1_screen_a0eeef9ff9931be5d9d9b34f0b0068e40}{distance\+To\+Point} (const \hyperlink{struct_leap_1_1_vector}{Vector} \&point) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_screen_aebb6c054d2b35e27b8991618945ec614}{is\+Valid} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_screen_a874b0b7326974a98d832a368cf9d815a}{operator==} (const \hyperlink{class_leap_1_1_screen}{Screen} \&) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_screen_a7767f6df72c0ab3daecdef5960061ad8}{operator!=} (const \hyperlink{class_leap_1_1_screen}{Screen} \&) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T std\+::string \hyperlink{class_leap_1_1_screen_a6215a10c9948f75522d2932b6b91b35c}{to\+String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T const \hyperlink{class_leap_1_1_screen}{Screen} \& \hyperlink{class_leap_1_1_screen_a380e39a87c63fd4915f1f5e5c5db0c3c}{invalid} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T friend std\+::ostream \& \hyperlink{class_leap_1_1_screen_a9d392849d557b2c5107a836a227d63a6}{operator$<$$<$} (std\+::ostream \&, const \hyperlink{class_leap_1_1_screen}{Screen} \&)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_leap_1_1_screen}{Screen} class represents a computer monitor screen.
+
+The \hyperlink{class_leap_1_1_screen}{Screen} class reports characteristics describing the position and orientation of the monitor screen within the Leap Motion coordinate system. These characteristics include the bottom-\/left corner position of the screen, direction vectors for the horizontal and vertical axes of the screen, and the screen's normal vector. The screen must be properly registered with the \hyperlink{class_leap_1_1_screen}{Screen} Locator for the Leap Motion software to report these characteristics accurately. The \hyperlink{class_leap_1_1_screen}{Screen} class also reports the size of the screen in pixels, using information obtained from the operating system. (Run the \hyperlink{class_leap_1_1_screen}{Screen} Locator from the Leap Motion Settings dialog, on the \hyperlink{class_leap_1_1_screen}{Screen} page.)
+
+You can get the point of intersection between the screen and a ray projected from a \hyperlink{class_leap_1_1_pointable}{Pointable} object using the \hyperlink{class_leap_1_1_screen_a4264a354488a387ab5657c73d594b41a}{Screen\+::intersect()} function. Likewise, you can get the closest point on the screen to a point in space using the \hyperlink{class_leap_1_1_screen_a5ac637faf6b1c296ce3289265ecb359d}{Screen\+::project()} function. Again, the screen location must be registered with the \hyperlink{class_leap_1_1_screen}{Screen} Locator for these functions to return accurate values.
+
+Note that \hyperlink{class_leap_1_1_screen}{Screen} objects can be invalid, which means that they do not contain valid screen coordinate data and do not correspond to a physical entity. Test for validity with the \hyperlink{class_leap_1_1_screen_aebb6c054d2b35e27b8991618945ec614}{Screen\+::is\+Valid()} function. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_leap_1_1_screen_a65dcdd83ed5edb4f6e19a9a40edcb96f}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!Screen@{Screen}}
+\index{Screen@{Screen}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{Screen}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Screen\+::\+Screen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_screen_a65dcdd83ed5edb4f6e19a9a40edcb96f}
+Constructs a \hyperlink{class_leap_1_1_screen}{Screen} object.
+
+An uninitialized screen is considered invalid. Get valid \hyperlink{class_leap_1_1_screen}{Screen} objects from a \hyperlink{class_leap_1_1_screen_list}{Screen\+List} object obtained using the \hyperlink{class_leap_1_1_controller_ab6cf5b48ef434b3d58cf8962451f4df3}{Controller\+::located\+Screens()} method. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leap_1_1_screen_a617b14ae37341969a59a5f99cae61ac4}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!bottom\+Left\+Corner@{bottom\+Left\+Corner}}
+\index{bottom\+Left\+Corner@{bottom\+Left\+Corner}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{bottom\+Left\+Corner}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Screen\+::bottom\+Left\+Corner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_a617b14ae37341969a59a5f99cae61ac4}
+A \hyperlink{struct_leap_1_1_vector}{Vector} representing the bottom left corner of this \hyperlink{class_leap_1_1_screen}{Screen} within the Leap Motion coordinate system.
+
+The point represented by this vector defines the origin of the screen in the Leap Motion coordinate system.
+
+Together, \hyperlink{class_leap_1_1_screen_aa6007a37823a83b7620256037337e7f3}{horizontal\+Axis()}, \hyperlink{class_leap_1_1_screen_a195e300396f259a01a9115ce18bf66da}{vertical\+Axis()}, and \hyperlink{class_leap_1_1_screen_a617b14ae37341969a59a5f99cae61ac4}{bottom\+Left\+Corner()} describe the physical position, size and orientation of this \hyperlink{class_leap_1_1_screen}{Screen}.
+
+\begin{DoxyReturn}{Returns}
+A \hyperlink{struct_leap_1_1_vector}{Vector} containing the coordinates of the bottom-\/left corner of this \hyperlink{class_leap_1_1_screen}{Screen}. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_a0eeef9ff9931be5d9d9b34f0b0068e40}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!distance\+To\+Point@{distance\+To\+Point}}
+\index{distance\+To\+Point@{distance\+To\+Point}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{distance\+To\+Point}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float Leap\+::\+Screen\+::distance\+To\+Point (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{point}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_a0eeef9ff9931be5d9d9b34f0b0068e40}
+The shortest distance from the specified point to the plane in which this \hyperlink{class_leap_1_1_screen}{Screen} lies.
+
+\begin{DoxyReturn}{Returns}
+The length of the perpendicular line segment extending from the plane this \hyperlink{class_leap_1_1_screen}{Screen} lies in to the specified point. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_a73ec00f33fe7aee01e2a63de06311d79}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!height\+Pixels@{height\+Pixels}}
+\index{height\+Pixels@{height\+Pixels}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{height\+Pixels}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int Leap\+::\+Screen\+::height\+Pixels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_a73ec00f33fe7aee01e2a63de06311d79}
+The vertical resolution of this screen, in pixels.
+
+\begin{DoxyReturn}{Returns}
+The height of this \hyperlink{class_leap_1_1_screen}{Screen} in pixels. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_aa6007a37823a83b7620256037337e7f3}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!horizontal\+Axis@{horizontal\+Axis}}
+\index{horizontal\+Axis@{horizontal\+Axis}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{horizontal\+Axis}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Screen\+::horizontal\+Axis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_aa6007a37823a83b7620256037337e7f3}
+A \hyperlink{struct_leap_1_1_vector}{Vector} representing the horizontal axis of this \hyperlink{class_leap_1_1_screen}{Screen} within the Leap Motion coordinate system.
+
+The magnitude of this vector estimates the physical width of this \hyperlink{class_leap_1_1_screen}{Screen} in millimeters. The direction of this vector is parallel to the bottom edge of the screen and points toward the right edge of the screen.
+
+Together, \hyperlink{class_leap_1_1_screen_aa6007a37823a83b7620256037337e7f3}{horizontal\+Axis()}, \hyperlink{class_leap_1_1_screen_a195e300396f259a01a9115ce18bf66da}{vertical\+Axis()}, and \hyperlink{class_leap_1_1_screen_a617b14ae37341969a59a5f99cae61ac4}{bottom\+Left\+Corner()} describe the physical position, size and orientation of this \hyperlink{class_leap_1_1_screen}{Screen}.
+
+\begin{DoxyReturn}{Returns}
+A \hyperlink{struct_leap_1_1_vector}{Vector} representing the bottom, horizontal edge of this \hyperlink{class_leap_1_1_screen}{Screen}. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_ae209881171841c1c172b582640e5c31c}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!id@{id}}
+\index{id@{id}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int32\+\_\+t Leap\+::\+Screen\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_ae209881171841c1c172b582640e5c31c}
+A unique identifier for this screen based on the screen information in the configuration. A default screen with I\+D, {\itshape 0}, always exists and contains default characteristics, even if no screens have been located. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_a4264a354488a387ab5657c73d594b41a}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!intersect@{intersect}}
+\index{intersect@{intersect}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Screen\+::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Pointable} \&}]{pointable, }
+\item[{bool}]{normalize, }
+\item[{float}]{clamp\+Ratio = {\ttfamily 1.0f}}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_a4264a354488a387ab5657c73d594b41a}
+Returns the intersection between this screen and a ray projecting from a \hyperlink{class_leap_1_1_pointable}{Pointable} object.
+
+The projected ray emanates from the \hyperlink{class_leap_1_1_pointable}{Pointable} tip\+Position along the \hyperlink{class_leap_1_1_pointable}{Pointable}'s direction vector.
+
+Set the normalize parameter to true to request the intersection point in normalized screen coordinates. Normalized screen coordinates are usually values between 0 and 1, where 0 represents the screen's origin at the bottom-\/left corner and 1 represents the opposite edge (either top or right). When you request normalized coordinates, the z-\/component of the returned vector is zero. Multiply a normalized coordinate by the values returned by \hyperlink{class_leap_1_1_screen_a183e75cf160db9dfa9653c0f128adac0}{Screen\+::width\+Pixels()} or \hyperlink{class_leap_1_1_screen_a73ec00f33fe7aee01e2a63de06311d79}{Screen\+::height\+Pixels()} to calculate the screen position in pixels (remembering that many other computer graphics coordinate systems place the origin in the top-\/left corner).
+
+Set the normalize parameter to false to request the intersection point in Leap Motion coordinates (millimeters from the Leap Motion origin).
+
+If the \hyperlink{class_leap_1_1_pointable}{Pointable} object points outside the screen's border (but still intersects the plane in which the screen lies), the returned intersection point is clamped to the nearest point on the edge of the screen.
+
+You can use the clamp\+Ratio parameter to contract or expand the area in which you can point. For example, if you set the clamp\+Ratio parameter to 0.\+5, then the positions reported for intersection points outside the central 50\% of the screen are moved to the border of this smaller area. If, on the other hand, you expanded the area by setting clamp\+Ratio to a value such as 3.\+0, then you could point well outside screen's physical boundary before the intersection points would be clamped. The positions for any points clamped would also be placed on this larger outer border. The positions reported for any intersection points inside the clamping border are unaffected by clamping.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+If the \hyperlink{class_leap_1_1_pointable}{Pointable} object does not point toward the plane of the screen (i.\+e. it is pointing parallel to or away from the screen), then the components of the returned vector are all set to Na\+N (not-\/a-\/number).
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointable} & The \hyperlink{class_leap_1_1_pointable}{Pointable} object to check for screen intersection.\\
+\hline
+{\em normalize} & If true, return normalized coordinates representing the intersection point as a percentage of the screen's width and height. If false, return Leap Motion coordinates (millimeters from the Leap Motion origin, which is located at the center of the top surface of the Leap Motion \hyperlink{class_leap_1_1_controller}{Controller}). If true and the clamp\+Ratio parameter is set to 1.\+0, coordinates will be of the form (0..1, 0..1, 0). Setting the clamp\+Ratio to a different value changes the range for normalized coordinates. For example, a clamp\+Ratio of 5.\+0 changes the range of values to be of the form (-\/2..3, -\/2..3, 0).\\
+\hline
+{\em clamp\+Ratio} & Adjusts the clamping border around this screen. By default this ratio is 1.\+0, and the border corresponds to the actual boundaries of the screen. Setting clamp\+Ratio to 0.\+5 would reduce the interaction area. Likewise, setting the ratio to 2.\+0 would increase the interaction area, adding 50\% around each edge of the physical monitor. Intersection points outside the interaction area are repositioned to the closest point on the clamping border before the vector is returned.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{struct_leap_1_1_vector}{Vector} containing the coordinates of the intersection between this screen and a ray projecting from the specified \hyperlink{class_leap_1_1_pointable}{Pointable} object. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_af7f4942267686be891f371feff54edd2}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!intersect@{intersect}}
+\index{intersect@{intersect}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Screen\+::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{position, }
+\item[{const {\bf Vector} \&}]{direction, }
+\item[{bool}]{normalize, }
+\item[{float}]{clamp\+Ratio = {\ttfamily 1.0f}}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_af7f4942267686be891f371feff54edd2}
+Returns the intersection between this screen and a ray projecting from the specified position along the specified direction.
+
+Set the normalize parameter to true to request the intersection point in normalized screen coordinates. Normalized screen coordinates are usually values between 0 and 1, where 0 represents the screen's origin at the bottom-\/left corner and 1 represents the opposite edge (either top or right). When you request normalized coordinates, the z-\/component of the returned vector is zero. Multiply a normalized coordinate by the values returned by \hyperlink{class_leap_1_1_screen_a183e75cf160db9dfa9653c0f128adac0}{Screen\+::width\+Pixels()} or \hyperlink{class_leap_1_1_screen_a73ec00f33fe7aee01e2a63de06311d79}{Screen\+::height\+Pixels()} to calculate the screen position in pixels (remembering that many other computer graphics coordinate systems place the origin in the top-\/left corner).
+
+Set the normalize parameter to false to request the intersection point in Leap Motion coordinates (millimeters from the Leap Motion origin).
+
+If the specified ray points outside the screen's border (but still intersects the plane in which the screen lies), the returned intersection point is clamped to the nearest point on the edge of the screen.
+
+You can use the clamp\+Ratio parameter to contract or expand the area in which you can point. For example, if you set the clamp\+Ratio parameter to 0.\+5, then the positions reported for intersection points outside the central 50\% of the screen are moved to the border of this smaller area. If, on the other hand, you expanded the area by setting clamp\+Ratio to a value such as 3.\+0, then you could point well outside screen's physical boundary before the intersection points would be clamped. The positions for any points clamped would also be placed on this larger outer border. The positions reported for any intersection points inside the clamping border are unaffected by clamping.
+
+If the specified ray does not point toward the plane of the screen (i.\+e. it is pointing parallel to or away from the screen), then the components of the returned vector are all set to Na\+N (not-\/a-\/number).
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position from which to check for screen intersection. \\
+\hline
+{\em direction} & The direction in which to check for screen intersection.\\
+\hline
+{\em normalize} & If true, return normalized coordinates representing the intersection point as a percentage of the screen's width and height. If false, return Leap Motion coordinates (millimeters from the Leap Motion origin, which is located at the center of the top surface of the Leap Motion \hyperlink{class_leap_1_1_controller}{Controller}). If true and the clamp\+Ratio parameter is set to 1.\+0, coordinates will be of the form (0..1, 0..1, 0). Setting the clamp\+Ratio to a different value changes the range for normalized coordinates. For example, a clamp\+Ratio of 5.\+0 changes the range of values to be of the form (-\/2..3, -\/2..3, 0).\\
+\hline
+{\em clamp\+Ratio} & Adjusts the clamping border around this screen. By default this ratio is 1.\+0, and the border corresponds to the actual boundaries of the screen. Setting clamp\+Ratio to 0.\+5 would reduce the interaction area. Likewise, setting the ratio to 2.\+0 would increase the interaction area, adding 50\% around each edge of the physical monitor. Intersection points outside the interaction area are repositioned to the closest point on the clamping border before the vector is returned.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{struct_leap_1_1_vector}{Vector} containing the coordinates of the intersection between this screen and a ray projecting from the specified position in the specified direction. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_a380e39a87c63fd4915f1f5e5c5db0c3c}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!invalid@{invalid}}
+\index{invalid@{invalid}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{invalid}]{\setlength{\rightskip}{0pt plus 5cm}static L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T const {\bf Screen}\& Leap\+::\+Screen\+::invalid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_leap_1_1_screen_a380e39a87c63fd4915f1f5e5c5db0c3c}
+Returns an invalid \hyperlink{class_leap_1_1_screen}{Screen} object.
+
+You can use the instance returned by this function in comparisons testing whether a given \hyperlink{class_leap_1_1_screen}{Screen} instance is valid or invalid. (You can also use the \hyperlink{class_leap_1_1_screen_aebb6c054d2b35e27b8991618945ec614}{Screen\+::is\+Valid()} function.)
+
+\begin{DoxyReturn}{Returns}
+The invalid \hyperlink{class_leap_1_1_screen}{Screen} instance. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_aebb6c054d2b35e27b8991618945ec614}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{is\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Screen\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_aebb6c054d2b35e27b8991618945ec614}
+Reports whether this is a valid \hyperlink{class_leap_1_1_screen}{Screen} object.
+
+{\bfseries Important\+:} A valid \hyperlink{class_leap_1_1_screen}{Screen} object does not necessarily contain up-\/to-\/date screen location information. Location information is only accurate until the Leap Motion \hyperlink{class_leap_1_1_controller}{Controller} or the monitor are moved. In addition, the primary screen always contains default location information even if the user has never run the screen location utility. This default location information will not return accurate results.
+
+\begin{DoxyReturn}{Returns}
+True, if this \hyperlink{class_leap_1_1_screen}{Screen} object contains valid data. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_a3cf3c55d32dc11b097d1dbdd14e1ee1d}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!normal@{normal}}
+\index{normal@{normal}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{normal}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Screen\+::normal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_a3cf3c55d32dc11b097d1dbdd14e1ee1d}
+A \hyperlink{struct_leap_1_1_vector}{Vector} normal to the plane in which this \hyperlink{class_leap_1_1_screen}{Screen} lies.
+
+The normal vector is a unit direction vector orthogonal to the screen's surface plane. It points toward a viewer positioned for typical use of the monitor.
+
+\begin{DoxyReturn}{Returns}
+A \hyperlink{struct_leap_1_1_vector}{Vector} representing this \hyperlink{class_leap_1_1_screen}{Screen}'s normal vector. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_a7767f6df72c0ab3daecdef5960061ad8}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{operator"!=}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Screen\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Screen} \&}]{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_a7767f6df72c0ab3daecdef5960061ad8}
+Compare \hyperlink{class_leap_1_1_screen}{Screen} object inequality. Two \hyperlink{class_leap_1_1_screen}{Screen} objects are equal if and only if both \hyperlink{class_leap_1_1_screen}{Screen} objects represent the exact same Screens and both Screens are valid. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_a874b0b7326974a98d832a368cf9d815a}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!operator==@{operator==}}
+\index{operator==@{operator==}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Screen\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Screen} \&}]{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_a874b0b7326974a98d832a368cf9d815a}
+Compare \hyperlink{class_leap_1_1_screen}{Screen} object equality. Two \hyperlink{class_leap_1_1_screen}{Screen} objects are equal if and only if both \hyperlink{class_leap_1_1_screen}{Screen} objects represent the exact same Screens and both Screens are valid. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_a5ac637faf6b1c296ce3289265ecb359d}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!project@{project}}
+\index{project@{project}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{project}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Screen\+::project (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{position, }
+\item[{bool}]{normalize, }
+\item[{float}]{clamp\+Ratio = {\ttfamily 1.0f}}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_a5ac637faf6b1c296ce3289265ecb359d}
+Returns the projection from the specified position onto this screen.
+
+Set the normalize parameter to true to request the projection point in normalized screen coordinates. Normalized screen coordinates are usually values between 0 and 1, where 0 represents the screen's origin at the bottom-\/left corner and 1 represents the opposite edge (either top or right). When you request normalized coordinates, the z-\/component of the returned vector is zero. Multiply a normalized coordinate by the values returned by \hyperlink{class_leap_1_1_screen_a183e75cf160db9dfa9653c0f128adac0}{Screen\+::width\+Pixels()} or \hyperlink{class_leap_1_1_screen_a73ec00f33fe7aee01e2a63de06311d79}{Screen\+::height\+Pixels()} to calculate the screen position in pixels (remembering that many other computer graphics coordinate systems place the origin in the top-\/left corner).
+
+Set the normalize parameter to false to request the projection point in Leap Motion coordinates (millimeters from the Leap Motion origin).
+
+If the specified point projects outside the screen's border, the returned projection point is clamped to the nearest point on the edge of the screen.
+
+You can use the clamp\+Ratio parameter to contract or expand the area in which you can point. For example, if you set the clamp\+Ratio parameter to 0.\+5, then the positions reported for projection points outside the central 50\% of the screen are moved to the border of this smaller area. If, on the other hand, you expanded the area by setting clamp\+Ratio to a value such as 3.\+0, then you could point well outside screen's physical boundary before the projection points would be clamped. The positions for any points clamped would also be placed on this larger outer border. The positions reported for any projection points inside the clamping border are unaffected by clamping.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position from which to project onto this screen.\\
+\hline
+{\em normalize} & If true, return normalized coordinates representing the projection point as a percentage of the screen's width and height. If false, return Leap Motion coordinates (millimeters from the Leap Motion origin, which is located at the center of the top surface of the Leap Motion \hyperlink{class_leap_1_1_controller}{Controller}). If true and the clamp\+Ratio parameter is set to 1.\+0, coordinates will be of the form (0..1, 0..1, 0). Setting the clamp\+Ratio to a different value changes the range for normalized coordinates. For example, a clamp\+Ratio of 5.\+0 changes the range of values to be of the form (-\/2..3, -\/2..3, 0).\\
+\hline
+{\em clamp\+Ratio} & Adjusts the clamping border around this screen. By default this ratio is 1.\+0, and the border corresponds to the actual boundaries of the screen. Setting clamp\+Ratio to 0.\+5 would reduce the interaction area. Likewise, setting the ratio to 2.\+0 would increase the interaction area, adding 50\% around each edge of the physical monitor. Projection points outside the interaction area are repositioned to the closest point on the clamping border before the vector is returned.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{struct_leap_1_1_vector}{Vector} containing the coordinates of the projection between this screen and a ray projecting from the specified position onto the screen along its normal vector. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_a6215a10c9948f75522d2932b6b91b35c}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T std\+::string Leap\+::\+Screen\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_a6215a10c9948f75522d2932b6b91b35c}
+A string containing a brief, human readable description of the \hyperlink{class_leap_1_1_screen}{Screen} object.
+
+\begin{DoxyReturn}{Returns}
+A description of the \hyperlink{class_leap_1_1_screen}{Screen} as a string. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_a195e300396f259a01a9115ce18bf66da}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!vertical\+Axis@{vertical\+Axis}}
+\index{vertical\+Axis@{vertical\+Axis}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{vertical\+Axis}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Screen\+::vertical\+Axis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_a195e300396f259a01a9115ce18bf66da}
+A \hyperlink{struct_leap_1_1_vector}{Vector} representing the vertical axis of this \hyperlink{class_leap_1_1_screen}{Screen} within the Leap Motion coordinate system.
+
+The magnitude of this vector estimates the physical height of this \hyperlink{class_leap_1_1_screen}{Screen} in millimeters. The direction of this vector is parallel to the left edge of the screen and points toward the top edge of the screen.
+
+Together, \hyperlink{class_leap_1_1_screen_aa6007a37823a83b7620256037337e7f3}{horizontal\+Axis()}, \hyperlink{class_leap_1_1_screen_a195e300396f259a01a9115ce18bf66da}{vertical\+Axis()}, and \hyperlink{class_leap_1_1_screen_a617b14ae37341969a59a5f99cae61ac4}{bottom\+Left\+Corner()} describe the physical position, size and orientation of this screen.
+
+\begin{DoxyReturn}{Returns}
+A \hyperlink{struct_leap_1_1_vector}{Vector} representing the left, vertical edge of this \hyperlink{class_leap_1_1_screen}{Screen}. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_a183e75cf160db9dfa9653c0f128adac0}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!width\+Pixels@{width\+Pixels}}
+\index{width\+Pixels@{width\+Pixels}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{width\+Pixels}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int Leap\+::\+Screen\+::width\+Pixels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_a183e75cf160db9dfa9653c0f128adac0}
+The horizontal resolution of this screen, in pixels.
+
+\begin{DoxyReturn}{Returns}
+The width of this \hyperlink{class_leap_1_1_screen}{Screen} in pixels. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_leap_1_1_screen_a9d392849d557b2c5107a836a227d63a6}{\index{Leap\+::\+Screen@{Leap\+::\+Screen}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Leap\+::\+Screen@{Leap\+::\+Screen}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T friend std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{, }
+\item[{const {\bf Screen} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_leap_1_1_screen_a9d392849d557b2c5107a836a227d63a6}
+Writes a brief, human readable description of the \hyperlink{class_leap_1_1_screen}{Screen} object. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/Leap.\+h\end{DoxyCompactItemize}

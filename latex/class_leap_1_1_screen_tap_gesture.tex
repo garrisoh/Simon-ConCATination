@@ -1,0 +1,184 @@
+\hypertarget{class_leap_1_1_screen_tap_gesture}{\section{Leap\+:\+:Screen\+Tap\+Gesture Class Reference}
+\label{class_leap_1_1_screen_tap_gesture}\index{Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}}
+}
+
+
+{\ttfamily \#include $<$Leap.\+h$>$}
+
+Inheritance diagram for Leap\+:\+:Screen\+Tap\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_leap_1_1_screen_tap_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_screen_tap_gesture_a9c58b16806da33ae61a090f16eb0f750}{Screen\+Tap\+Gesture} ()
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_screen_tap_gesture_a1f433e04b2e6adb7a95811c496397ab6}{Screen\+Tap\+Gesture} (const \hyperlink{class_leap_1_1_gesture}{Gesture} \&rhs)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_screen_tap_gesture_aec0c63617e76ed0826cc8276190bc21d}{position} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_screen_tap_gesture_aadee36938c5dc63e26143c116ea130c4}{direction} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float \hyperlink{class_leap_1_1_screen_tap_gesture_a08d454596c4b6d944bcdbef61f42249f}{progress} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_pointable}{Pointable} \hyperlink{class_leap_1_1_screen_tap_gesture_ab1b2c4ffac3fca7cf5710fa3a84773b4}{pointable} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1}{Type} \hyperlink{class_leap_1_1_screen_tap_gesture_ae967e0ad37fc48faa25044b4a9977f25}{class\+Type} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_leap_1_1_screen_tap_gesture}{Screen\+Tap\+Gesture} class represents a tapping gesture by a finger or tool.
+
+A screen tap gesture is recognized when the tip of a finger pokes forward and then springs back to approximately the original postion, as if tapping a vertical screen. The tapping finger must pause briefly before beginning the tap.
+
+
+
+{\bfseries Important\+:} To use screen tap gestures in your application, you must enable recognition of the screen tap gesture. You can enable recognition with\+:
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+Screen\+Tap gestures are discrete. The \hyperlink{class_leap_1_1_screen_tap_gesture}{Screen\+Tap\+Gesture} object representing a tap always has the state, S\+T\+A\+T\+E\+\_\+\+S\+T\+O\+P. Only one \hyperlink{class_leap_1_1_screen_tap_gesture}{Screen\+Tap\+Gesture} object is created for each screen tap gesture recognized.
+
+You can set the minimum finger movement and velocity required for a movement to be recognized as a screen tap as well as adjust the detection window for evaluating the movement using the config attribute of a connected \hyperlink{class_leap_1_1_controller}{Controller} object. Use the following keys to configure screen tap recognition\+:
+
+\begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Key string }&{\bf Value type }&{\bf Default value }&{\bf Units  }\\\cline{1-4}
+Gesture.\+Screen\+Tap.\+Min\+Forward\+Velocity &float &50 &mm/s \\\cline{1-4}
+Gesture.\+Screen\+Tap.\+History\+Seconds &float &0.\+1 &s \\\cline{1-4}
+Gesture.\+Screen\+Tap.\+Min\+Distance &float &3.\+0 &mm \\\cline{1-4}
+\end{TabularC}
+The following example demonstrates how to set the screen tap configuration parameters\+:
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_leap_1_1_screen_tap_gesture_a9c58b16806da33ae61a090f16eb0f750}{\index{Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}!Screen\+Tap\+Gesture@{Screen\+Tap\+Gesture}}
+\index{Screen\+Tap\+Gesture@{Screen\+Tap\+Gesture}!Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}}
+\subsubsection[{Screen\+Tap\+Gesture}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Screen\+Tap\+Gesture\+::\+Screen\+Tap\+Gesture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_screen_tap_gesture_a9c58b16806da33ae61a090f16eb0f750}
+Constructs a new \hyperlink{class_leap_1_1_screen_tap_gesture}{Screen\+Tap\+Gesture} object.
+
+An uninitialized \hyperlink{class_leap_1_1_screen_tap_gesture}{Screen\+Tap\+Gesture} object is considered invalid. Get valid instances of the \hyperlink{class_leap_1_1_screen_tap_gesture}{Screen\+Tap\+Gesture} class from a \hyperlink{class_leap_1_1_frame}{Frame} object. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_tap_gesture_a1f433e04b2e6adb7a95811c496397ab6}{\index{Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}!Screen\+Tap\+Gesture@{Screen\+Tap\+Gesture}}
+\index{Screen\+Tap\+Gesture@{Screen\+Tap\+Gesture}!Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}}
+\subsubsection[{Screen\+Tap\+Gesture}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Screen\+Tap\+Gesture\+::\+Screen\+Tap\+Gesture (
+\begin{DoxyParamCaption}
+\item[{const {\bf Gesture} \&}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_screen_tap_gesture_a1f433e04b2e6adb7a95811c496397ab6}
+Constructs a \hyperlink{class_leap_1_1_screen_tap_gesture}{Screen\+Tap\+Gesture} object from an instance of the \hyperlink{class_leap_1_1_gesture}{Gesture} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \hyperlink{class_leap_1_1_gesture}{Gesture} instance to specialize. This \hyperlink{class_leap_1_1_gesture}{Gesture} instance must be a \hyperlink{class_leap_1_1_screen_tap_gesture}{Screen\+Tap\+Gesture} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leap_1_1_screen_tap_gesture_ae967e0ad37fc48faa25044b4a9977f25}{\index{Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}!class\+Type@{class\+Type}}
+\index{class\+Type@{class\+Type}!Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}}
+\subsubsection[{class\+Type}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Type} Leap\+::\+Screen\+Tap\+Gesture\+::class\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_leap_1_1_screen_tap_gesture_ae967e0ad37fc48faa25044b4a9977f25}
+The screen tap gesture type.
+
+\begin{DoxyReturn}{Returns}
+Type The type value designating a screen tap gesture. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_tap_gesture_aadee36938c5dc63e26143c116ea130c4}{\index{Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}!direction@{direction}}
+\index{direction@{direction}!Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}}
+\subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Screen\+Tap\+Gesture\+::direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_tap_gesture_aadee36938c5dc63e26143c116ea130c4}
+The direction of finger tip motion.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_leap_1_1_vector}{Vector} A unit direction vector. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_tap_gesture_ab1b2c4ffac3fca7cf5710fa3a84773b4}{\index{Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}!pointable@{pointable}}
+\index{pointable@{pointable}!Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}}
+\subsubsection[{pointable}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Pointable} Leap\+::\+Screen\+Tap\+Gesture\+::pointable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_tap_gesture_ab1b2c4ffac3fca7cf5710fa3a84773b4}
+The finger performing the screen tap gesture.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_leap_1_1_pointable}{Pointable} A \hyperlink{class_leap_1_1_pointable}{Pointable} object representing the tapping finger. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_tap_gesture_aec0c63617e76ed0826cc8276190bc21d}{\index{Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}!position@{position}}
+\index{position@{position}!Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Screen\+Tap\+Gesture\+::position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_tap_gesture_aec0c63617e76ed0826cc8276190bc21d}
+The position where the screen tap is registered.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_leap_1_1_vector}{Vector} A \hyperlink{struct_leap_1_1_vector}{Vector} containing the coordinates of screen tap location. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_screen_tap_gesture_a08d454596c4b6d944bcdbef61f42249f}{\index{Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}!progress@{progress}}
+\index{progress@{progress}!Leap\+::\+Screen\+Tap\+Gesture@{Leap\+::\+Screen\+Tap\+Gesture}}
+\subsubsection[{progress}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float Leap\+::\+Screen\+Tap\+Gesture\+::progress (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_screen_tap_gesture_a08d454596c4b6d944bcdbef61f42249f}
+The progess value is always 1.\+0 for a screen tap gesture.
+
+\begin{DoxyReturn}{Returns}
+float The value 1.\+0. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/Leap.\+h\end{DoxyCompactItemize}
