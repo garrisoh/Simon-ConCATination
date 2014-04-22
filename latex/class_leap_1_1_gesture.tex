@@ -1,0 +1,423 @@
+\hypertarget{class_leap_1_1_gesture}{\section{Leap\+:\+:Gesture Class Reference}
+\label{class_leap_1_1_gesture}\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+}
+
+
+{\ttfamily \#include $<$Leap.\+h$>$}
+
+Inheritance diagram for Leap\+:\+:Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.625000cm]{class_leap_1_1_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1}{Type} \{ \\*
+\hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1a743fdf6ff0a893a5b7bf6a56739af618}{T\+Y\+P\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D} = -\/1, 
+\hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1a0845a054bc76e298900d3bd735d26c9c}{T\+Y\+P\+E\+\_\+\+S\+W\+I\+P\+E} = 1, 
+\hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1a32c2a26d674d97f9c9b2e72569ff6869}{T\+Y\+P\+E\+\_\+\+C\+I\+R\+C\+L\+E} = 4, 
+\hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1aa099d1aa238c369e5b2519f2aaca2218}{T\+Y\+P\+E\+\_\+\+S\+C\+R\+E\+E\+N\+\_\+\+T\+A\+P} = 5, 
+\\*
+\hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1a4db232d45dfde82ff0c319f623cc3471}{T\+Y\+P\+E\+\_\+\+K\+E\+Y\+\_\+\+T\+A\+P} = 6
+ \}
+\item 
+enum \hyperlink{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578}{State} \{ \hyperlink{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578a6a15c3a18402c69bd711b58e6dea5d93}{S\+T\+A\+T\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D} = -\/1, 
+\hyperlink{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578aae7d6cacedcd2850cdea7d9f2dfd33a4}{S\+T\+A\+T\+E\+\_\+\+S\+T\+A\+R\+T} = 1, 
+\hyperlink{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578ac8600576e553a806c9c4a337e5cee473}{S\+T\+A\+T\+E\+\_\+\+U\+P\+D\+A\+T\+E} = 2, 
+\hyperlink{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578a4cfb4482ef179e4527c15188328b894f}{S\+T\+A\+T\+E\+\_\+\+S\+T\+O\+P} = 3
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_leap_1_1_gesture_a5050476dcb08d43618d82aabdf8d95f3}{{\bfseries Gesture} (Gesture\+Implementation $\ast$)}\label{class_leap_1_1_gesture_a5050476dcb08d43618d82aabdf8d95f3}
+
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_gesture_a703b6671d33d74dd5669b38e9c2edb15}{Gesture} ()
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_gesture_a958edec008098eabcd1dc93208136c5f}{Gesture} (const \hyperlink{class_leap_1_1_gesture}{Gesture} \&rhs)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1}{Type} \hyperlink{class_leap_1_1_gesture_a961ded36b3f4f72eff342283808c70d5}{type} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578}{State} \hyperlink{class_leap_1_1_gesture_ae4e9f9b9fcbbe4b8a165009596efa8a0}{state} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int32\+\_\+t \hyperlink{class_leap_1_1_gesture_acac877f9c2803f7d7d03107be9348471}{id} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int64\+\_\+t \hyperlink{class_leap_1_1_gesture_a9ed79a136da6a2fd65447228274175f3}{duration} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float \hyperlink{class_leap_1_1_gesture_a98cf1c2bf86396ec665a652097e61c4f}{duration\+Seconds} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_frame}{Frame} \hyperlink{class_leap_1_1_gesture_a44512b16e2d227b9173250c0b1211851}{frame} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_hand_list}{Hand\+List} \hyperlink{class_leap_1_1_gesture_a9f8b5383c27efedbc3e47856d865bf21}{hands} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_pointable_list}{Pointable\+List} \hyperlink{class_leap_1_1_gesture_a45d8fc212a0b6abfdf05be409b2ba09f}{pointables} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_gesture_afc32b33f86e676ef854d5298be4f56bd}{is\+Valid} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_gesture_a13725877525e73592601bd85091cdccb}{operator==} (const \hyperlink{class_leap_1_1_gesture}{Gesture} \&rhs) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_gesture_a795392baacac8bba8661d9487727e547}{operator!=} (const \hyperlink{class_leap_1_1_gesture}{Gesture} \&rhs) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T std\+::string \hyperlink{class_leap_1_1_gesture_a00a3b12d834ce58c004282076cc3ea72}{to\+String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T const \hyperlink{class_leap_1_1_gesture}{Gesture} \& \hyperlink{class_leap_1_1_gesture_a76cbf3abfeb8c1b4fb6faed4483bb185}{invalid} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_leap_1_1_gesture}{Gesture} class represents a recognized movement by the user.
+
+The Leap Motion \hyperlink{class_leap_1_1_controller}{Controller} watches the activity within its field of view for certain movement patterns typical of a user gesture or command. For example, a movement from side to side with the hand can indicate a swipe gesture, while a finger poking forward can indicate a screen tap gesture.
+
+When the Leap Motion software recognizes a gesture, it assigns an I\+D and adds a \hyperlink{class_leap_1_1_gesture}{Gesture} object to the frame gesture list. For continuous gestures, which occur over many frames, the Leap Motion software updates the gesture by adding a \hyperlink{class_leap_1_1_gesture}{Gesture} object having the same I\+D and updated properties in each subsequent frame.
+
+{\bfseries Important\+:} Recognition for each type of gesture must be enabled using the \hyperlink{class_leap_1_1_controller_ad24410dee9de51b16ceb6b8c97fe5a36}{Controller\+::enable\+Gesture()} function; otherwise {\bfseries no gestures are recognized or reported}.
+
+Subclasses of \hyperlink{class_leap_1_1_gesture}{Gesture} define the properties for the specific movement patterns recognized by the Leap Motion software.
+
+The \hyperlink{class_leap_1_1_gesture}{Gesture} subclasses for include\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{class_leap_1_1_circle_gesture}{Circle\+Gesture} -- A circular movement by a finger.
+\item \hyperlink{class_leap_1_1_swipe_gesture}{Swipe\+Gesture} -- A straight line movement by the hand with fingers extended.
+\item \hyperlink{class_leap_1_1_screen_tap_gesture}{Screen\+Tap\+Gesture} -- A forward tapping movement by a finger.
+\item \hyperlink{class_leap_1_1_key_tap_gesture}{Key\+Tap\+Gesture} -- A downward tapping movement by a finger.
+\end{DoxyItemize}
+
+Circle and swipe gestures are continuous and these objects can have a state of start, update, and stop.
+
+The screen tap gesture is a discrete gesture. The Leap Motion software only creates a single \hyperlink{class_leap_1_1_screen_tap_gesture}{Screen\+Tap\+Gesture} object for each tap and it always has a stop state.
+
+Get valid \hyperlink{class_leap_1_1_gesture}{Gesture} instances from a \hyperlink{class_leap_1_1_frame}{Frame} object. You can get a list of gestures with the \hyperlink{class_leap_1_1_frame_a4e4dfb7dbe7796d836fdbec255909379}{Frame\+::gestures()} method. You can get a list of gestures since a specified frame with the {\ttfamily Frame\+::gestures(const Frame\&)} method. You can also use the {\ttfamily \hyperlink{class_leap_1_1_frame_afb0577b99e3bc259c4e20a710062c926}{Frame\+::gesture()}} method to find a gesture in the current frame using an I\+D value obtained in a previous frame.
+
+\hyperlink{class_leap_1_1_gesture}{Gesture} objects can be invalid. For example, when you get a gesture by I\+D using {\ttfamily \hyperlink{class_leap_1_1_frame_afb0577b99e3bc259c4e20a710062c926}{Frame\+::gesture()}}, and there is no gesture with that I\+D in the current frame, then {\ttfamily gesture()} returns an Invalid \hyperlink{class_leap_1_1_gesture}{Gesture} object (rather than a null value). Always check object validity in situations where a gesture might be invalid.
+
+The following keys can be used with the \hyperlink{class_leap_1_1_config}{Config} class to configure the gesture recognizer\+:
+
+\begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Key string }&{\bf Value type }&{\bf Default value }&{\bf Units  }\\\cline{1-4}
+Gesture.\+Circle.\+Min\+Radius &float &5.\+0 &mm \\\cline{1-4}
+Gesture.\+Circle.\+Min\+Arc &float &1.\+5$\ast$pi &radians \\\cline{1-4}
+Gesture.\+Swipe.\+Min\+Length &float &150 &mm \\\cline{1-4}
+Gesture.\+Swipe.\+Min\+Velocity &float &1000 &mm/s \\\cline{1-4}
+Gesture.\+Key\+Tap.\+Min\+Down\+Velocity &float &50 &mm/s \\\cline{1-4}
+Gesture.\+Key\+Tap.\+History\+Seconds &float &0.\+1 &s \\\cline{1-4}
+Gesture.\+Key\+Tap.\+Min\+Distance &float &5.\+0 &mm \\\cline{1-4}
+Gesture.\+Screen\+Tap.\+Min\+Forward\+Velocity &float &50 &mm/s \\\cline{1-4}
+Gesture.\+Screen\+Tap.\+History\+Seconds &float &0.\+1 &s \\\cline{1-4}
+Gesture.\+Screen\+Tap.\+Min\+Distance &float &3.\+0 &mm \\\cline{1-4}
+\end{TabularC}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!State@{State}}
+\index{State@{State}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Leap\+::\+Gesture\+::\+State}}}\label{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578}
+The possible gesture states. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+T\+A\+T\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D@{S\+T\+A\+T\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!S\+T\+A\+T\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D@{S\+T\+A\+T\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D}}\item[{\em 
+\hypertarget{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578a6a15c3a18402c69bd711b58e6dea5d93}{S\+T\+A\+T\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D}\label{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578a6a15c3a18402c69bd711b58e6dea5d93}
+}]An invalid state \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\index{S\+T\+A\+T\+E\+\_\+\+S\+T\+A\+R\+T@{S\+T\+A\+T\+E\+\_\+\+S\+T\+A\+R\+T}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!S\+T\+A\+T\+E\+\_\+\+S\+T\+A\+R\+T@{S\+T\+A\+T\+E\+\_\+\+S\+T\+A\+R\+T}}\item[{\em 
+\hypertarget{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578aae7d6cacedcd2850cdea7d9f2dfd33a4}{S\+T\+A\+T\+E\+\_\+\+S\+T\+A\+R\+T}\label{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578aae7d6cacedcd2850cdea7d9f2dfd33a4}
+}]The gesture is starting. Just enough has happened to recognize it. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\index{S\+T\+A\+T\+E\+\_\+\+U\+P\+D\+A\+T\+E@{S\+T\+A\+T\+E\+\_\+\+U\+P\+D\+A\+T\+E}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!S\+T\+A\+T\+E\+\_\+\+U\+P\+D\+A\+T\+E@{S\+T\+A\+T\+E\+\_\+\+U\+P\+D\+A\+T\+E}}\item[{\em 
+\hypertarget{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578ac8600576e553a806c9c4a337e5cee473}{S\+T\+A\+T\+E\+\_\+\+U\+P\+D\+A\+T\+E}\label{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578ac8600576e553a806c9c4a337e5cee473}
+}]The gesture is in progress. (Note\+: not all gestures have updates). \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\index{S\+T\+A\+T\+E\+\_\+\+S\+T\+O\+P@{S\+T\+A\+T\+E\+\_\+\+S\+T\+O\+P}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!S\+T\+A\+T\+E\+\_\+\+S\+T\+O\+P@{S\+T\+A\+T\+E\+\_\+\+S\+T\+O\+P}}\item[{\em 
+\hypertarget{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578a4cfb4482ef179e4527c15188328b894f}{S\+T\+A\+T\+E\+\_\+\+S\+T\+O\+P}\label{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578a4cfb4482ef179e4527c15188328b894f}
+}]The gesture has completed or stopped. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\end{description}
+\end{Desc}
+\hypertarget{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!Type@{Type}}
+\index{Type@{Type}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Leap\+::\+Gesture\+::\+Type}}}\label{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1}
+The supported types of gestures. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{T\+Y\+P\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D@{T\+Y\+P\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!T\+Y\+P\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D@{T\+Y\+P\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D}}\item[{\em 
+\hypertarget{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1a743fdf6ff0a893a5b7bf6a56739af618}{T\+Y\+P\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D}\label{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1a743fdf6ff0a893a5b7bf6a56739af618}
+}]An invalid type. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\index{T\+Y\+P\+E\+\_\+\+S\+W\+I\+P\+E@{T\+Y\+P\+E\+\_\+\+S\+W\+I\+P\+E}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!T\+Y\+P\+E\+\_\+\+S\+W\+I\+P\+E@{T\+Y\+P\+E\+\_\+\+S\+W\+I\+P\+E}}\item[{\em 
+\hypertarget{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1a0845a054bc76e298900d3bd735d26c9c}{T\+Y\+P\+E\+\_\+\+S\+W\+I\+P\+E}\label{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1a0845a054bc76e298900d3bd735d26c9c}
+}]A straight line movement by the hand with fingers extended. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\index{T\+Y\+P\+E\+\_\+\+C\+I\+R\+C\+L\+E@{T\+Y\+P\+E\+\_\+\+C\+I\+R\+C\+L\+E}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!T\+Y\+P\+E\+\_\+\+C\+I\+R\+C\+L\+E@{T\+Y\+P\+E\+\_\+\+C\+I\+R\+C\+L\+E}}\item[{\em 
+\hypertarget{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1a32c2a26d674d97f9c9b2e72569ff6869}{T\+Y\+P\+E\+\_\+\+C\+I\+R\+C\+L\+E}\label{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1a32c2a26d674d97f9c9b2e72569ff6869}
+}]A circular movement by a finger. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\index{T\+Y\+P\+E\+\_\+\+S\+C\+R\+E\+E\+N\+\_\+\+T\+A\+P@{T\+Y\+P\+E\+\_\+\+S\+C\+R\+E\+E\+N\+\_\+\+T\+A\+P}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!T\+Y\+P\+E\+\_\+\+S\+C\+R\+E\+E\+N\+\_\+\+T\+A\+P@{T\+Y\+P\+E\+\_\+\+S\+C\+R\+E\+E\+N\+\_\+\+T\+A\+P}}\item[{\em 
+\hypertarget{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1aa099d1aa238c369e5b2519f2aaca2218}{T\+Y\+P\+E\+\_\+\+S\+C\+R\+E\+E\+N\+\_\+\+T\+A\+P}\label{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1aa099d1aa238c369e5b2519f2aaca2218}
+}]A forward tapping movement by a finger. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\index{T\+Y\+P\+E\+\_\+\+K\+E\+Y\+\_\+\+T\+A\+P@{T\+Y\+P\+E\+\_\+\+K\+E\+Y\+\_\+\+T\+A\+P}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!T\+Y\+P\+E\+\_\+\+K\+E\+Y\+\_\+\+T\+A\+P@{T\+Y\+P\+E\+\_\+\+K\+E\+Y\+\_\+\+T\+A\+P}}\item[{\em 
+\hypertarget{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1a4db232d45dfde82ff0c319f623cc3471}{T\+Y\+P\+E\+\_\+\+K\+E\+Y\+\_\+\+T\+A\+P}\label{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1a4db232d45dfde82ff0c319f623cc3471}
+}]A downward tapping movement by a finger. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_leap_1_1_gesture_a703b6671d33d74dd5669b38e9c2edb15}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!Gesture@{Gesture}}
+\index{Gesture@{Gesture}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{Gesture}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Gesture\+::\+Gesture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_gesture_a703b6671d33d74dd5669b38e9c2edb15}
+Constructs a new \hyperlink{class_leap_1_1_gesture}{Gesture} object.
+
+An uninitialized \hyperlink{class_leap_1_1_gesture}{Gesture} object is considered invalid. Get valid instances of the \hyperlink{class_leap_1_1_gesture}{Gesture} class, which will be one of the \hyperlink{class_leap_1_1_gesture}{Gesture} subclasses, from a \hyperlink{class_leap_1_1_frame}{Frame} object. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_gesture_a958edec008098eabcd1dc93208136c5f}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!Gesture@{Gesture}}
+\index{Gesture@{Gesture}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{Gesture}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Gesture\+::\+Gesture (
+\begin{DoxyParamCaption}
+\item[{const {\bf Gesture} \&}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_gesture_a958edec008098eabcd1dc93208136c5f}
+Constructs a new copy of an \hyperlink{class_leap_1_1_gesture}{Gesture} object. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leap_1_1_gesture_a9ed79a136da6a2fd65447228274175f3}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!duration@{duration}}
+\index{duration@{duration}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{duration}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int64\+\_\+t Leap\+::\+Gesture\+::duration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_gesture_a9ed79a136da6a2fd65447228274175f3}
+The elapsed duration of the recognized movement up to the frame containing this \hyperlink{class_leap_1_1_gesture}{Gesture} object, in microseconds.
+
+The duration reported for the first \hyperlink{class_leap_1_1_gesture}{Gesture} in the sequence (with the S\+T\+A\+T\+E\+\_\+\+S\+T\+A\+R\+T state) will typically be a small positive number since the movement must progress far enough for the Leap Motion software to recognize it as an intentional gesture.
+
+\begin{DoxyReturn}{Returns}
+int64\+\_\+t the elapsed duration in microseconds. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_gesture_a98cf1c2bf86396ec665a652097e61c4f}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!duration\+Seconds@{duration\+Seconds}}
+\index{duration\+Seconds@{duration\+Seconds}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{duration\+Seconds}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float Leap\+::\+Gesture\+::duration\+Seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_gesture_a98cf1c2bf86396ec665a652097e61c4f}
+The elapsed duration in seconds. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_leap_1_1_gesture_a9ed79a136da6a2fd65447228274175f3}{duration()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+float the elapsed duration in seconds. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_gesture_a44512b16e2d227b9173250c0b1211851}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!frame@{frame}}
+\index{frame@{frame}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{frame}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Frame} Leap\+::\+Gesture\+::frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_gesture_a44512b16e2d227b9173250c0b1211851}
+The \hyperlink{class_leap_1_1_frame}{Frame} containing this \hyperlink{class_leap_1_1_gesture}{Gesture} instance.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_leap_1_1_frame}{Frame} The parent \hyperlink{class_leap_1_1_frame}{Frame} object. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_gesture_a9f8b5383c27efedbc3e47856d865bf21}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!hands@{hands}}
+\index{hands@{hands}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{hands}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Hand\+List} Leap\+::\+Gesture\+::hands (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_gesture_a9f8b5383c27efedbc3e47856d865bf21}
+The list of hands associated with this \hyperlink{class_leap_1_1_gesture}{Gesture}, if any.
+
+If no hands are related to this gesture, the list is empty.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_leap_1_1_hand_list}{Hand\+List} the list of related \hyperlink{class_leap_1_1_hand}{Hand} objects. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_gesture_acac877f9c2803f7d7d03107be9348471}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!id@{id}}
+\index{id@{id}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int32\+\_\+t Leap\+::\+Gesture\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_gesture_acac877f9c2803f7d7d03107be9348471}
+The gesture I\+D.
+
+All \hyperlink{class_leap_1_1_gesture}{Gesture} objects belonging to the same recognized movement share the same I\+D value. Use the I\+D value with the \hyperlink{class_leap_1_1_frame_afb0577b99e3bc259c4e20a710062c926}{Frame\+::gesture()} method to find updates related to this \hyperlink{class_leap_1_1_gesture}{Gesture} object in subsequent frames.
+
+\begin{DoxyReturn}{Returns}
+int32\+\_\+t the I\+D of this \hyperlink{class_leap_1_1_gesture}{Gesture}. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_gesture_a76cbf3abfeb8c1b4fb6faed4483bb185}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!invalid@{invalid}}
+\index{invalid@{invalid}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{invalid}]{\setlength{\rightskip}{0pt plus 5cm}static L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T const {\bf Gesture}\& Leap\+::\+Gesture\+::invalid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_leap_1_1_gesture_a76cbf3abfeb8c1b4fb6faed4483bb185}
+Returns an invalid \hyperlink{class_leap_1_1_gesture}{Gesture} object.
+
+You can use the instance returned by this function in comparisons testing whether a given \hyperlink{class_leap_1_1_gesture}{Gesture} instance is valid or invalid. (You can also use the \hyperlink{class_leap_1_1_gesture_afc32b33f86e676ef854d5298be4f56bd}{Gesture\+::is\+Valid()} function.)
+
+\begin{DoxyReturn}{Returns}
+The invalid \hyperlink{class_leap_1_1_gesture}{Gesture} instance. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_gesture_afc32b33f86e676ef854d5298be4f56bd}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{is\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Gesture\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_gesture_afc32b33f86e676ef854d5298be4f56bd}
+Reports whether this \hyperlink{class_leap_1_1_gesture}{Gesture} instance represents a valid \hyperlink{class_leap_1_1_gesture}{Gesture}.
+
+An invalid \hyperlink{class_leap_1_1_gesture}{Gesture} object does not represent a snapshot of a recognized movement. Invalid \hyperlink{class_leap_1_1_gesture}{Gesture} objects are returned when a valid object cannot be provided. For example, when you get an gesture by I\+D using \hyperlink{class_leap_1_1_frame_afb0577b99e3bc259c4e20a710062c926}{Frame\+::gesture()}, and there is no gesture with that I\+D in the current frame, then gesture() returns an Invalid \hyperlink{class_leap_1_1_gesture}{Gesture} object (rather than a null value). Always check object validity in situations where an gesture might be invalid.
+
+\begin{DoxyReturn}{Returns}
+bool True, if this is a valid \hyperlink{class_leap_1_1_gesture}{Gesture} instance; false, otherwise. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_gesture_a795392baacac8bba8661d9487727e547}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{operator"!=}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Gesture\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Gesture} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_gesture_a795392baacac8bba8661d9487727e547}
+Compare \hyperlink{class_leap_1_1_gesture}{Gesture} object inequality.
+
+Two Gestures are equal only if they represent the same snapshot of the same recognized movement. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_gesture_a13725877525e73592601bd85091cdccb}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!operator==@{operator==}}
+\index{operator==@{operator==}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Gesture\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Gesture} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_gesture_a13725877525e73592601bd85091cdccb}
+Compare \hyperlink{class_leap_1_1_gesture}{Gesture} object equality.
+
+Two Gestures are equal if they represent the same snapshot of the same recognized movement. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_gesture_a45d8fc212a0b6abfdf05be409b2ba09f}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!pointables@{pointables}}
+\index{pointables@{pointables}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{pointables}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Pointable\+List} Leap\+::\+Gesture\+::pointables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_gesture_a45d8fc212a0b6abfdf05be409b2ba09f}
+The list of fingers and tools associated with this \hyperlink{class_leap_1_1_gesture}{Gesture}, if any.
+
+If no \hyperlink{class_leap_1_1_pointable}{Pointable} objects are related to this gesture, the list is empty.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_leap_1_1_pointable_list}{Pointable\+List} the list of related \hyperlink{class_leap_1_1_pointable}{Pointable} objects. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_gesture_ae4e9f9b9fcbbe4b8a165009596efa8a0}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!state@{state}}
+\index{state@{state}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf State} Leap\+::\+Gesture\+::state (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_gesture_ae4e9f9b9fcbbe4b8a165009596efa8a0}
+The gesture state.
+
+Recognized movements occur over time and have a beginning, a middle, and an end. The '\hyperlink{class_leap_1_1_gesture_ae4e9f9b9fcbbe4b8a165009596efa8a0}{state()}' attribute reports where in that sequence this \hyperlink{class_leap_1_1_gesture}{Gesture} object falls.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578}{Gesture\+::\+State} A value from the \hyperlink{class_leap_1_1_gesture_a068c6f3ba05970dc557b62a366073578}{Gesture\+::\+State} enumeration. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_gesture_a00a3b12d834ce58c004282076cc3ea72}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T std\+::string Leap\+::\+Gesture\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_gesture_a00a3b12d834ce58c004282076cc3ea72}
+A string containing a brief, human-\/readable description of this \hyperlink{class_leap_1_1_gesture}{Gesture}. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_gesture_a961ded36b3f4f72eff342283808c70d5}{\index{Leap\+::\+Gesture@{Leap\+::\+Gesture}!type@{type}}
+\index{type@{type}!Leap\+::\+Gesture@{Leap\+::\+Gesture}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Type} Leap\+::\+Gesture\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_gesture_a961ded36b3f4f72eff342283808c70d5}
+The gesture type.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1}{Gesture\+::\+Type} A value from the \hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1}{Gesture\+::\+Type} enumeration. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/Leap.\+h\end{DoxyCompactItemize}

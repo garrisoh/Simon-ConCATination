@@ -1,0 +1,285 @@
+\hypertarget{class_game_data}{\section{Game\+Data Class Reference}
+\label{class_game_data}\index{Game\+Data@{Game\+Data}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_data_a8c73a044b7ba43644537c4cb35467cc1}{Game\+Data} (Color\+Type color, Sound\+Type sound, Interface\+Type interface, bool record)
+\begin{DoxyCompactList}\small\item\em Constructor for a \hyperlink{class_game_data}{Game\+Data} object. \end{DoxyCompactList}\item 
+\hyperlink{class_game_data_ade80a231566a4b58f92f827a1e58adb3}{Game\+Data} (const \hyperlink{class_game_data}{Game\+Data} \&copy)
+\begin{DoxyCompactList}\small\item\em Copy constructor for game\+Data. \end{DoxyCompactList}\item 
+std\+::vector$<$ Quadrant\+I\+D $>$ \hyperlink{class_game_data_a317328ad1f60e9dd77eedf17286a675d}{get\+Quadrants} ()
+\begin{DoxyCompactList}\small\item\em Returns the list of computer-\/generated quadrants, for lighting up the board. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_data_a9150480b6cc0e21a903bcb3495e2a7c6}{set\+Color} (Color\+Type color)
+\begin{DoxyCompactList}\small\item\em Sets the color mode. \end{DoxyCompactList}\item 
+Color\+Type \hyperlink{class_game_data_a89dd07232c691ff7c78389cb723ac1f3}{get\+Color} ()
+\begin{DoxyCompactList}\small\item\em Returns the color mode. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_data_a3952832c1ddaa86eca0aee1945e4b69d}{set\+Sound} (Sound\+Type sound)
+\begin{DoxyCompactList}\small\item\em Sets the sound mode. \end{DoxyCompactList}\item 
+Sound\+Type \hyperlink{class_game_data_ae434640dd532efa32cbe97c1e2bc66ac}{get\+Sound} ()
+\begin{DoxyCompactList}\small\item\em Returns the sound mode. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_data_a3d9b18923e64c7f4344f261964d1d77d}{set\+Interface\+Type} (Interface\+Type interface)
+\begin{DoxyCompactList}\small\item\em Sets the interface type Availiable interfaces are keyboard, mouse, and leap. See \hyperlink{globals_8h_source}{globals.\+h} for a listing of enums. \end{DoxyCompactList}\item 
+Interface\+Type \hyperlink{class_game_data_a50833d359fd21bfdb518ba97ea35c4a0}{get\+Interface} ()
+\begin{DoxyCompactList}\small\item\em Gets the current interface. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_data_a7db8e414a611835d5fe4d5e71d468fd5}{set\+Record} (bool record)
+\begin{DoxyCompactList}\small\item\em Sets whether to record this trial. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_data_a2945d5a0239b23f3d7ef2cd0b93bda89}{get\+Record} ()
+\begin{DoxyCompactList}\small\item\em Returns the current record mode. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_game_data_ab3507672642ad7aba4daa1f95da4e075}{to\+C\+S\+V} ()
+\begin{DoxyCompactList}\small\item\em Exports all collected data as a C\+S\+V string. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_data_a25d7626676d03bfd09dc1e2000697633}{add\+Quadrant} (Quadrant\+I\+D quadrant)
+\begin{DoxyCompactList}\small\item\em Adds a quadrant to the computer-\/generated list. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_data_a9a9b2ac0afbc06457a51c53bce912fd0}{add\+User\+Quadrant} (Quadrant\+I\+D quadrant)
+\begin{DoxyCompactList}\small\item\em Adds a quadrant to the user-\/generated list. This is compared to the computer one and reported to Nees. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_data_a8c9c58b792c8652f907c99d682b2b4dd}{add\+User\+Time} (float time)
+\begin{DoxyCompactList}\small\item\em Adds a time to the user-\/generated list, to be paired with quadrant presses. This is compared to the computer one and reported to Nees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_data_a8c73a044b7ba43644537c4cb35467cc1}{\index{Game\+Data@{Game\+Data}!Game\+Data@{Game\+Data}}
+\index{Game\+Data@{Game\+Data}!Game\+Data@{Game\+Data}}
+\subsubsection[{Game\+Data}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Data\+::\+Game\+Data (
+\begin{DoxyParamCaption}
+\item[{Color\+Type}]{color, }
+\item[{Sound\+Type}]{sound, }
+\item[{Interface\+Type}]{interface, }
+\item[{bool}]{record}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_a8c73a044b7ba43644537c4cb35467cc1}
+
+
+Constructor for a \hyperlink{class_game_data}{Game\+Data} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color\+Type to use \\
+\hline
+{\em sound} & The sound\+Type to use \\
+\hline
+{\em interface} & The interface\+Type to use \\
+\hline
+{\em record} & Whether or not to record this trial (false==demo mode) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_data_ade80a231566a4b58f92f827a1e58adb3}{\index{Game\+Data@{Game\+Data}!Game\+Data@{Game\+Data}}
+\index{Game\+Data@{Game\+Data}!Game\+Data@{Game\+Data}}
+\subsubsection[{Game\+Data}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Data\+::\+Game\+Data (
+\begin{DoxyParamCaption}
+\item[{const {\bf Game\+Data} \&}]{copy}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_ade80a231566a4b58f92f827a1e58adb3}
+
+
+Copy constructor for game\+Data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em copy} & A reference to a game\+Data to clone. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_data_a25d7626676d03bfd09dc1e2000697633}{\index{Game\+Data@{Game\+Data}!add\+Quadrant@{add\+Quadrant}}
+\index{add\+Quadrant@{add\+Quadrant}!Game\+Data@{Game\+Data}}
+\subsubsection[{add\+Quadrant}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Data\+::add\+Quadrant (
+\begin{DoxyParamCaption}
+\item[{Quadrant\+I\+D}]{quadrant}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_a25d7626676d03bfd09dc1e2000697633}
+
+
+Adds a quadrant to the computer-\/generated list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quadrant} & Quadrant I\+D \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_data_a9a9b2ac0afbc06457a51c53bce912fd0}{\index{Game\+Data@{Game\+Data}!add\+User\+Quadrant@{add\+User\+Quadrant}}
+\index{add\+User\+Quadrant@{add\+User\+Quadrant}!Game\+Data@{Game\+Data}}
+\subsubsection[{add\+User\+Quadrant}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Data\+::add\+User\+Quadrant (
+\begin{DoxyParamCaption}
+\item[{Quadrant\+I\+D}]{quadrant}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_a9a9b2ac0afbc06457a51c53bce912fd0}
+
+
+Adds a quadrant to the user-\/generated list. This is compared to the computer one and reported to Nees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quadrant} & Quadrant I\+D \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_data_a8c9c58b792c8652f907c99d682b2b4dd}{\index{Game\+Data@{Game\+Data}!add\+User\+Time@{add\+User\+Time}}
+\index{add\+User\+Time@{add\+User\+Time}!Game\+Data@{Game\+Data}}
+\subsubsection[{add\+User\+Time}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Data\+::add\+User\+Time (
+\begin{DoxyParamCaption}
+\item[{float}]{time}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_a8c9c58b792c8652f907c99d682b2b4dd}
+
+
+Adds a time to the user-\/generated list, to be paired with quadrant presses. This is compared to the computer one and reported to Nees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & When the user clicked. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_data_a89dd07232c691ff7c78389cb723ac1f3}{\index{Game\+Data@{Game\+Data}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Game\+Data@{Game\+Data}}
+\subsubsection[{get\+Color}]{\setlength{\rightskip}{0pt plus 5cm}Color\+Type Game\+Data\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_a89dd07232c691ff7c78389cb723ac1f3}
+
+
+Returns the color mode. 
+
+\begin{DoxyReturn}{Returns}
+The current color mode 
+\end{DoxyReturn}
+\hypertarget{class_game_data_a50833d359fd21bfdb518ba97ea35c4a0}{\index{Game\+Data@{Game\+Data}!get\+Interface@{get\+Interface}}
+\index{get\+Interface@{get\+Interface}!Game\+Data@{Game\+Data}}
+\subsubsection[{get\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}Interface\+Type Game\+Data\+::get\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_a50833d359fd21bfdb518ba97ea35c4a0}
+
+
+Gets the current interface. 
+
+\begin{DoxyReturn}{Returns}
+The interface in use. Lookup interfaces in \hyperlink{globals_8h_source}{globals.\+h} 
+\end{DoxyReturn}
+\hypertarget{class_game_data_a317328ad1f60e9dd77eedf17286a675d}{\index{Game\+Data@{Game\+Data}!get\+Quadrants@{get\+Quadrants}}
+\index{get\+Quadrants@{get\+Quadrants}!Game\+Data@{Game\+Data}}
+\subsubsection[{get\+Quadrants}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ Quadrant\+I\+D $>$ Game\+Data\+::get\+Quadrants (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_a317328ad1f60e9dd77eedf17286a675d}
+
+
+Returns the list of computer-\/generated quadrants, for lighting up the board. 
+
+\begin{DoxyReturn}{Returns}
+Complete quadrant list 
+\end{DoxyReturn}
+\hypertarget{class_game_data_a2945d5a0239b23f3d7ef2cd0b93bda89}{\index{Game\+Data@{Game\+Data}!get\+Record@{get\+Record}}
+\index{get\+Record@{get\+Record}!Game\+Data@{Game\+Data}}
+\subsubsection[{get\+Record}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+Data\+::get\+Record (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_a2945d5a0239b23f3d7ef2cd0b93bda89}
+
+
+Returns the current record mode. 
+
+\begin{DoxyReturn}{Returns}
+Whether this trial will be committed to C\+S\+V 
+\end{DoxyReturn}
+\hypertarget{class_game_data_ae434640dd532efa32cbe97c1e2bc66ac}{\index{Game\+Data@{Game\+Data}!get\+Sound@{get\+Sound}}
+\index{get\+Sound@{get\+Sound}!Game\+Data@{Game\+Data}}
+\subsubsection[{get\+Sound}]{\setlength{\rightskip}{0pt plus 5cm}Sound\+Type Game\+Data\+::get\+Sound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_ae434640dd532efa32cbe97c1e2bc66ac}
+
+
+Returns the sound mode. 
+
+\begin{DoxyReturn}{Returns}
+The current sound mode 
+\end{DoxyReturn}
+\hypertarget{class_game_data_a9150480b6cc0e21a903bcb3495e2a7c6}{\index{Game\+Data@{Game\+Data}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!Game\+Data@{Game\+Data}}
+\subsubsection[{set\+Color}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Data\+::set\+Color (
+\begin{DoxyParamCaption}
+\item[{Color\+Type}]{color}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_a9150480b6cc0e21a903bcb3495e2a7c6}
+
+
+Sets the color mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & Color mode, from enum \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_data_a3d9b18923e64c7f4344f261964d1d77d}{\index{Game\+Data@{Game\+Data}!set\+Interface\+Type@{set\+Interface\+Type}}
+\index{set\+Interface\+Type@{set\+Interface\+Type}!Game\+Data@{Game\+Data}}
+\subsubsection[{set\+Interface\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Data\+::set\+Interface\+Type (
+\begin{DoxyParamCaption}
+\item[{Interface\+Type}]{interface}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_a3d9b18923e64c7f4344f261964d1d77d}
+
+
+Sets the interface type Availiable interfaces are keyboard, mouse, and leap. See \hyperlink{globals_8h_source}{globals.\+h} for a listing of enums. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interface} & The interface to use. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_data_a7db8e414a611835d5fe4d5e71d468fd5}{\index{Game\+Data@{Game\+Data}!set\+Record@{set\+Record}}
+\index{set\+Record@{set\+Record}!Game\+Data@{Game\+Data}}
+\subsubsection[{set\+Record}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Data\+::set\+Record (
+\begin{DoxyParamCaption}
+\item[{bool}]{record}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_a7db8e414a611835d5fe4d5e71d468fd5}
+
+
+Sets whether to record this trial. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em record} & Whether this trial will be committed to C\+S\+V \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_data_a3952832c1ddaa86eca0aee1945e4b69d}{\index{Game\+Data@{Game\+Data}!set\+Sound@{set\+Sound}}
+\index{set\+Sound@{set\+Sound}!Game\+Data@{Game\+Data}}
+\subsubsection[{set\+Sound}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Data\+::set\+Sound (
+\begin{DoxyParamCaption}
+\item[{Sound\+Type}]{sound}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_a3952832c1ddaa86eca0aee1945e4b69d}
+
+
+Sets the sound mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sound} & Sound mode, from enum \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_data_ab3507672642ad7aba4daa1f95da4e075}{\index{Game\+Data@{Game\+Data}!to\+C\+S\+V@{to\+C\+S\+V}}
+\index{to\+C\+S\+V@{to\+C\+S\+V}!Game\+Data@{Game\+Data}}
+\subsubsection[{to\+C\+S\+V}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Game\+Data\+::to\+C\+S\+V (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_data_ab3507672642ad7aba4daa1f95da4e075}
+
+
+Exports all collected data as a C\+S\+V string. 
+
+\begin{DoxyReturn}{Returns}
+C\+S\+V string representing the \hyperlink{class_game_data}{Game\+Data} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Data\+Model/gamedata.\+h\item 
+Data\+Model/gamedata.\+cpp\end{DoxyCompactItemize}

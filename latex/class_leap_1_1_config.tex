@@ -1,0 +1,281 @@
+\hypertarget{class_leap_1_1_config}{\section{Leap\+:\+:Config Class Reference}
+\label{class_leap_1_1_config}\index{Leap\+::\+Config@{Leap\+::\+Config}}
+}
+
+
+{\ttfamily \#include $<$Leap.\+h$>$}
+
+Inheritance diagram for Leap\+:\+:Config\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_leap_1_1_config}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8}{Value\+Type} \{ \\*
+\hyperlink{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8a61027e87139ecf1153e7b7f41fd9adfa}{T\+Y\+P\+E\+\_\+\+U\+N\+K\+N\+O\+W\+N} = 0, 
+\hyperlink{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8a592e8eabddb7d95b192fee923c423760}{T\+Y\+P\+E\+\_\+\+B\+O\+O\+L\+E\+A\+N} = 1, 
+\hyperlink{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8af552faf6063e26e0b5a995c344cfaebd}{T\+Y\+P\+E\+\_\+\+I\+N\+T32} = 2, 
+\hyperlink{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8a85ccbf5a55972697b350b394f7d87cfa}{T\+Y\+P\+E\+\_\+\+F\+L\+O\+A\+T} = 6, 
+\\*
+\hyperlink{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8a312ad72cfe51163b2817732f7530e04e}{T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+N\+G} = 8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_config_aee58922e575e3e59ddf8da5af4f07878}{Config} ()
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8}{Value\+Type} \hyperlink{class_leap_1_1_config_ac5ed7b7b0562cc4dae2d0b4ab8187b12}{type} (const std\+::string \&key) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_config_a52200e2fe5473caf1c0dbc91e0733c0c}{get\+Bool} (const std\+::string \&key) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_config_ac6a084454142d87f1662b3b279dfe9e9}{set\+Bool} (const std\+::string \&key, bool value)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int32\+\_\+t \hyperlink{class_leap_1_1_config_a135ebf47e6a3a803527a7cc035029cb0}{get\+Int32} (const std\+::string \&key) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_config_a47d811c2727695ecd1916e313b54736c}{set\+Int32} (const std\+::string \&key, int32\+\_\+t value)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float \hyperlink{class_leap_1_1_config_ace93b634211d8cf237c9d40a2e497b44}{get\+Float} (const std\+::string \&key) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_config_a6d9442a88f622b00f9c432c4ac9b7c35}{set\+Float} (const std\+::string \&key, float value)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T std\+::string \hyperlink{class_leap_1_1_config_a4b408ca65a8b7064733e26be93af3f2d}{get\+String} (const std\+::string \&key) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_config_a5cd3b0eaf702cc304071c244a52b3bed}{set\+String} (const std\+::string \&key, const std\+::string \&value)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_config_ae1187e2b9992706d2a3eb071cc2f71c4}{save} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_leap_1_1_config}{Config} class provides access to Leap Motion system configuration information.
+
+You can get and set gesture configuration parameters using the \hyperlink{class_leap_1_1_config}{Config} object obtained from a connected \hyperlink{class_leap_1_1_controller}{Controller} object. The key strings required to identify a configuration parameter include\+:
+
+\begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Key string }&{\bf Value type }&{\bf Default value }&{\bf Units  }\\\cline{1-4}
+Gesture.\+Circle.\+Min\+Radius &float &5.\+0 &mm \\\cline{1-4}
+Gesture.\+Circle.\+Min\+Arc &float &1.\+5$\ast$pi &radians \\\cline{1-4}
+Gesture.\+Swipe.\+Min\+Length &float &150 &mm \\\cline{1-4}
+Gesture.\+Swipe.\+Min\+Velocity &float &1000 &mm/s \\\cline{1-4}
+Gesture.\+Key\+Tap.\+Min\+Down\+Velocity &float &50 &mm/s \\\cline{1-4}
+Gesture.\+Key\+Tap.\+History\+Seconds &float &0.\+1 &s \\\cline{1-4}
+Gesture.\+Key\+Tap.\+Min\+Distance &float &3.\+0 &mm \\\cline{1-4}
+Gesture.\+Screen\+Tap.\+Min\+Forward\+Velocity &float &50 &mm/s \\\cline{1-4}
+Gesture.\+Screen\+Tap.\+History\+Seconds &float &0.\+1 &s \\\cline{1-4}
+Gesture.\+Screen\+Tap.\+Min\+Distance &float &5.\+0 &mm \\\cline{1-4}
+\end{TabularC}
+After setting a configuration value, you must call the \hyperlink{class_leap_1_1_config_ae1187e2b9992706d2a3eb071cc2f71c4}{Config\+::save} method to commit the changes. The configuration value changes are not persistent; your application needs to set the values everytime it runs.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_leap_1_1_circle_gesture}{Circle\+Gesture} 
+
+\hyperlink{class_leap_1_1_key_tap_gesture}{Key\+Tap\+Gesture} 
+
+\hyperlink{class_leap_1_1_screen_tap_gesture}{Screen\+Tap\+Gesture} 
+
+\hyperlink{class_leap_1_1_swipe_gesture}{Swipe\+Gesture} 
+\end{DoxySeeAlso}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8}{\index{Leap\+::\+Config@{Leap\+::\+Config}!Value\+Type@{Value\+Type}}
+\index{Value\+Type@{Value\+Type}!Leap\+::\+Config@{Leap\+::\+Config}}
+\subsubsection[{Value\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Leap\+::\+Config\+::\+Value\+Type}}}\label{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8}
+Enumerates the possible data types for configuration values.
+
+The \hyperlink{class_leap_1_1_config_ac5ed7b7b0562cc4dae2d0b4ab8187b12}{Config\+::type()} function returns an item from the Value\+Type enumeration. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{T\+Y\+P\+E\+\_\+\+U\+N\+K\+N\+O\+W\+N@{T\+Y\+P\+E\+\_\+\+U\+N\+K\+N\+O\+W\+N}!Leap\+::\+Config@{Leap\+::\+Config}}\index{Leap\+::\+Config@{Leap\+::\+Config}!T\+Y\+P\+E\+\_\+\+U\+N\+K\+N\+O\+W\+N@{T\+Y\+P\+E\+\_\+\+U\+N\+K\+N\+O\+W\+N}}\item[{\em 
+\hypertarget{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8a61027e87139ecf1153e7b7f41fd9adfa}{T\+Y\+P\+E\+\_\+\+U\+N\+K\+N\+O\+W\+N}\label{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8a61027e87139ecf1153e7b7f41fd9adfa}
+}]The data type is unknown. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\index{T\+Y\+P\+E\+\_\+\+B\+O\+O\+L\+E\+A\+N@{T\+Y\+P\+E\+\_\+\+B\+O\+O\+L\+E\+A\+N}!Leap\+::\+Config@{Leap\+::\+Config}}\index{Leap\+::\+Config@{Leap\+::\+Config}!T\+Y\+P\+E\+\_\+\+B\+O\+O\+L\+E\+A\+N@{T\+Y\+P\+E\+\_\+\+B\+O\+O\+L\+E\+A\+N}}\item[{\em 
+\hypertarget{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8a592e8eabddb7d95b192fee923c423760}{T\+Y\+P\+E\+\_\+\+B\+O\+O\+L\+E\+A\+N}\label{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8a592e8eabddb7d95b192fee923c423760}
+}]A boolean value. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\index{T\+Y\+P\+E\+\_\+\+I\+N\+T32@{T\+Y\+P\+E\+\_\+\+I\+N\+T32}!Leap\+::\+Config@{Leap\+::\+Config}}\index{Leap\+::\+Config@{Leap\+::\+Config}!T\+Y\+P\+E\+\_\+\+I\+N\+T32@{T\+Y\+P\+E\+\_\+\+I\+N\+T32}}\item[{\em 
+\hypertarget{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8af552faf6063e26e0b5a995c344cfaebd}{T\+Y\+P\+E\+\_\+\+I\+N\+T32}\label{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8af552faf6063e26e0b5a995c344cfaebd}
+}]A 32-\/bit integer. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\index{T\+Y\+P\+E\+\_\+\+F\+L\+O\+A\+T@{T\+Y\+P\+E\+\_\+\+F\+L\+O\+A\+T}!Leap\+::\+Config@{Leap\+::\+Config}}\index{Leap\+::\+Config@{Leap\+::\+Config}!T\+Y\+P\+E\+\_\+\+F\+L\+O\+A\+T@{T\+Y\+P\+E\+\_\+\+F\+L\+O\+A\+T}}\item[{\em 
+\hypertarget{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8a85ccbf5a55972697b350b394f7d87cfa}{T\+Y\+P\+E\+\_\+\+F\+L\+O\+A\+T}\label{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8a85ccbf5a55972697b350b394f7d87cfa}
+}]A floating-\/point number. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\index{T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+N\+G@{T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+N\+G}!Leap\+::\+Config@{Leap\+::\+Config}}\index{Leap\+::\+Config@{Leap\+::\+Config}!T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+N\+G@{T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+N\+G}}\item[{\em 
+\hypertarget{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8a312ad72cfe51163b2817732f7530e04e}{T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+N\+G}\label{class_leap_1_1_config_aee9819af7eacacc324aa72619310a9d8a312ad72cfe51163b2817732f7530e04e}
+}]A string of characters. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_leap_1_1_config_aee58922e575e3e59ddf8da5af4f07878}{\index{Leap\+::\+Config@{Leap\+::\+Config}!Config@{Config}}
+\index{Config@{Config}!Leap\+::\+Config@{Leap\+::\+Config}}
+\subsubsection[{Config}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Config\+::\+Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_config_aee58922e575e3e59ddf8da5af4f07878}
+Constructs a \hyperlink{class_leap_1_1_config}{Config} object. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leap_1_1_config_a52200e2fe5473caf1c0dbc91e0733c0c}{\index{Leap\+::\+Config@{Leap\+::\+Config}!get\+Bool@{get\+Bool}}
+\index{get\+Bool@{get\+Bool}!Leap\+::\+Config@{Leap\+::\+Config}}
+\subsubsection[{get\+Bool}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Config\+::get\+Bool (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_config_a52200e2fe5473caf1c0dbc91e0733c0c}
+Gets the boolean representation for the specified key. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_config_ace93b634211d8cf237c9d40a2e497b44}{\index{Leap\+::\+Config@{Leap\+::\+Config}!get\+Float@{get\+Float}}
+\index{get\+Float@{get\+Float}!Leap\+::\+Config@{Leap\+::\+Config}}
+\subsubsection[{get\+Float}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float Leap\+::\+Config\+::get\+Float (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_config_ace93b634211d8cf237c9d40a2e497b44}
+Gets the floating point representation for the specified key. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_config_a135ebf47e6a3a803527a7cc035029cb0}{\index{Leap\+::\+Config@{Leap\+::\+Config}!get\+Int32@{get\+Int32}}
+\index{get\+Int32@{get\+Int32}!Leap\+::\+Config@{Leap\+::\+Config}}
+\subsubsection[{get\+Int32}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T int32\+\_\+t Leap\+::\+Config\+::get\+Int32 (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_config_a135ebf47e6a3a803527a7cc035029cb0}
+Gets the 32-\/bit integer representation for the specified key. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_config_a4b408ca65a8b7064733e26be93af3f2d}{\index{Leap\+::\+Config@{Leap\+::\+Config}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!Leap\+::\+Config@{Leap\+::\+Config}}
+\subsubsection[{get\+String}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T std\+::string Leap\+::\+Config\+::get\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_config_a4b408ca65a8b7064733e26be93af3f2d}
+Gets the string representation for the specified key. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_config_ae1187e2b9992706d2a3eb071cc2f71c4}{\index{Leap\+::\+Config@{Leap\+::\+Config}!save@{save}}
+\index{save@{save}!Leap\+::\+Config@{Leap\+::\+Config}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Config\+::save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_config_ae1187e2b9992706d2a3eb071cc2f71c4}
+Saves the current state of the config.
+
+Call {\ttfamily \hyperlink{class_leap_1_1_config_ae1187e2b9992706d2a3eb071cc2f71c4}{save()}} after making a set of configuration changes. The {\ttfamily \hyperlink{class_leap_1_1_config_ae1187e2b9992706d2a3eb071cc2f71c4}{save()}} function transfers the configuration changes to the Leap Motion service. The configuration value changes are not persistent; your application must set the values everytime it runs.
+
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_config_ac6a084454142d87f1662b3b279dfe9e9}{\index{Leap\+::\+Config@{Leap\+::\+Config}!set\+Bool@{set\+Bool}}
+\index{set\+Bool@{set\+Bool}!Leap\+::\+Config@{Leap\+::\+Config}}
+\subsubsection[{set\+Bool}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Config\+::set\+Bool (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key, }
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_config_ac6a084454142d87f1662b3b279dfe9e9}
+Sets the boolean representation for the specified key. \begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_config_a6d9442a88f622b00f9c432c4ac9b7c35}{\index{Leap\+::\+Config@{Leap\+::\+Config}!set\+Float@{set\+Float}}
+\index{set\+Float@{set\+Float}!Leap\+::\+Config@{Leap\+::\+Config}}
+\subsubsection[{set\+Float}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Config\+::set\+Float (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key, }
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_config_a6d9442a88f622b00f9c432c4ac9b7c35}
+Sets the floating point representation for the specified key. \begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_config_a47d811c2727695ecd1916e313b54736c}{\index{Leap\+::\+Config@{Leap\+::\+Config}!set\+Int32@{set\+Int32}}
+\index{set\+Int32@{set\+Int32}!Leap\+::\+Config@{Leap\+::\+Config}}
+\subsubsection[{set\+Int32}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Config\+::set\+Int32 (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key, }
+\item[{int32\+\_\+t}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_config_a47d811c2727695ecd1916e313b54736c}
+Sets the 32-\/bit integer representation for the specified key. \begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_config_a5cd3b0eaf702cc304071c244a52b3bed}{\index{Leap\+::\+Config@{Leap\+::\+Config}!set\+String@{set\+String}}
+\index{set\+String@{set\+String}!Leap\+::\+Config@{Leap\+::\+Config}}
+\subsubsection[{set\+String}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Config\+::set\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key, }
+\item[{const std\+::string \&}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_config_a5cd3b0eaf702cc304071c244a52b3bed}
+Sets the string representation for the specified key. \begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_config_ac5ed7b7b0562cc4dae2d0b4ab8187b12}{\index{Leap\+::\+Config@{Leap\+::\+Config}!type@{type}}
+\index{type@{type}!Leap\+::\+Config@{Leap\+::\+Config}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Value\+Type} Leap\+::\+Config\+::type (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_config_ac5ed7b7b0562cc4dae2d0b4ab8187b12}
+Reports the natural data type for the value related to the specified key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key for the looking up the value in the configuration dictionary. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The native data type of the value, that is, the type that does not require a data conversion. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/Leap.\+h\end{DoxyCompactItemize}

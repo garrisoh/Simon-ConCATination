@@ -1,0 +1,71 @@
+\hypertarget{class_input_manager}{\section{Input\+Manager Class Reference}
+\label{class_input_manager}\index{Input\+Manager@{Input\+Manager}}
+}
+
+
+{\ttfamily \#include $<$inputmanager.\+h$>$}
+
+Inheritance diagram for Input\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_input_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_input_manager_adf6f0d9103512c1bd7d89c54ddd299fe}{$\sim$\+Input\+Manager} ()
+\item 
+virtual void \hyperlink{class_input_manager_a9e689d7906407b5c0de0d384d457dbd6}{add\+Observer} (Event\+Listener $\ast$observer)
+\item 
+virtual void \hyperlink{class_input_manager_a35582c7c194fb8af1c649556e4935d08}{remove\+Observer} (Event\+Listener $\ast$observer)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_input_manager_a4040fa67ecc810c5da6110ecf42b8bc7}{notify\+Observers} (Quadrant\+I\+D q, Event\+Type e)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract class for input devices 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_input_manager_adf6f0d9103512c1bd7d89c54ddd299fe}{\index{Input\+Manager@{Input\+Manager}!````~Input\+Manager@{$\sim$\+Input\+Manager}}
+\index{````~Input\+Manager@{$\sim$\+Input\+Manager}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{$\sim$\+Input\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}virtual Input\+Manager\+::$\sim$\+Input\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_input_manager_adf6f0d9103512c1bd7d89c54ddd299fe}
+Virtual destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_input_manager_a9e689d7906407b5c0de0d384d457dbd6}{\index{Input\+Manager@{Input\+Manager}!add\+Observer@{add\+Observer}}
+\index{add\+Observer@{add\+Observer}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{add\+Observer}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Manager\+::add\+Observer (
+\begin{DoxyParamCaption}
+\item[{Event\+Listener $\ast$}]{observer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_input_manager_a9e689d7906407b5c0de0d384d457dbd6}
+Add an Event\+Listener as an observer \hypertarget{class_input_manager_a4040fa67ecc810c5da6110ecf42b8bc7}{\index{Input\+Manager@{Input\+Manager}!notify\+Observers@{notify\+Observers}}
+\index{notify\+Observers@{notify\+Observers}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{notify\+Observers}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Manager\+::notify\+Observers (
+\begin{DoxyParamCaption}
+\item[{Quadrant\+I\+D}]{q, }
+\item[{Event\+Type}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_input_manager_a4040fa67ecc810c5da6110ecf42b8bc7}
+Notify all observers of an event \hypertarget{class_input_manager_a35582c7c194fb8af1c649556e4935d08}{\index{Input\+Manager@{Input\+Manager}!remove\+Observer@{remove\+Observer}}
+\index{remove\+Observer@{remove\+Observer}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{remove\+Observer}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Manager\+::remove\+Observer (
+\begin{DoxyParamCaption}
+\item[{Event\+Listener $\ast$}]{observer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_input_manager_a35582c7c194fb8af1c649556e4935d08}
+Remove an Event\+Listener as an observer 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/inputmanager.\+h\item 
+Interface\+Managers/inputmanager.\+cpp\end{DoxyCompactItemize}

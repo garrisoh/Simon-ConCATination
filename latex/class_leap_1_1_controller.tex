@@ -1,0 +1,388 @@
+\hypertarget{class_leap_1_1_controller}{\section{Leap\+:\+:Controller Class Reference}
+\label{class_leap_1_1_controller}\index{Leap\+::\+Controller@{Leap\+::\+Controller}}
+}
+
+
+{\ttfamily \#include $<$Leap.\+h$>$}
+
+Inheritance diagram for Leap\+:\+:Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_leap_1_1_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_leap_1_1_controller_a0bdb49fa94aa2da8b098c1ac296528d6}{Policy\+Flag} \{ \hyperlink{class_leap_1_1_controller_a0bdb49fa94aa2da8b098c1ac296528d6a94886192cfa6f6f94cd2e20b68aeca97}{P\+O\+L\+I\+C\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T} = 0, 
+\hyperlink{class_leap_1_1_controller_a0bdb49fa94aa2da8b098c1ac296528d6a1e34f1992444deee3b4c905d2a765329}{P\+O\+L\+I\+C\+Y\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+F\+R\+A\+M\+E\+S} = (1 $<$$<$ 0)
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_leap_1_1_controller_a356eee86e8cd232b3f6829986a64add5}{{\bfseries Controller} (Controller\+Implementation $\ast$)}\label{class_leap_1_1_controller_a356eee86e8cd232b3f6829986a64add5}
+
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_controller_af5867527cc80ad805597a285eaf3d406}{Controller} ()
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_controller_a046b09a621c480a46b3783551191abbb}{Controller} (\hyperlink{class_leap_1_1_listener}{Listener} \&listener)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_controller_a1d7190d58adb6907d0e7c14d1ed595b4}{is\+Connected} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_controller_ab57ca1cb5b3278ff7016fa53028a1441}{has\+Focus} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_controller_a0bdb49fa94aa2da8b098c1ac296528d6}{Policy\+Flag} \hyperlink{class_leap_1_1_controller_af777725d8ab0793a03b5a9cee6e33480}{policy\+Flags} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T void \hyperlink{class_leap_1_1_controller_a9830f0a63b393ce83f3147101452d028}{set\+Policy\+Flags} (\hyperlink{class_leap_1_1_controller_a0bdb49fa94aa2da8b098c1ac296528d6}{Policy\+Flag} flags) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_controller_a9b6318221593be63a0385748ca66974f}{add\+Listener} (\hyperlink{class_leap_1_1_listener}{Listener} \&listener)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_controller_a1a48d46f317f0368cc8f7b0ebfd77728}{remove\+Listener} (\hyperlink{class_leap_1_1_listener}{Listener} \&listener)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_frame}{Frame} \hyperlink{class_leap_1_1_controller_a5796b988806ea9fd94e2d987e0e24b32}{frame} (int history=0) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_config}{Config} \hyperlink{class_leap_1_1_controller_abbb48ad47a8d0859a6a98f48c3d0a322}{config} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_device_list}{Device\+List} \hyperlink{class_leap_1_1_controller_a5dc199cb8f41cf07724c494107744251}{devices} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_screen_list}{Screen\+List} \hyperlink{class_leap_1_1_controller_ab6cf5b48ef434b3d58cf8962451f4df3}{located\+Screens} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T void \hyperlink{class_leap_1_1_controller_ad24410dee9de51b16ceb6b8c97fe5a36}{enable\+Gesture} (\hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1}{Gesture\+::\+Type} type, bool enable=true) const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool \hyperlink{class_leap_1_1_controller_a8b3f3853d8cf1f805542006182c99729}{is\+Gesture\+Enabled} (\hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1}{Gesture\+::\+Type} type) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_leap_1_1_controller}{Controller} class is your main interface to the Leap Motion \hyperlink{class_leap_1_1_controller}{Controller}.
+
+Create an instance of this \hyperlink{class_leap_1_1_controller}{Controller} class to access frames of tracking data and configuration information. \hyperlink{class_leap_1_1_frame}{Frame} data can be polled at any time using the \hyperlink{class_leap_1_1_controller_a5796b988806ea9fd94e2d987e0e24b32}{Controller\+::frame()} function. Call \hyperlink{class_leap_1_1_controller_a5796b988806ea9fd94e2d987e0e24b32}{frame()} or frame(0) to get the most recent frame. Set the history parameter to a positive integer to access previous frames. A controller stores up to 60 frames in its frame history.
+
+Polling is an appropriate strategy for applications which already have an intrinsic update loop, such as a game. You can also add an instance of a subclass of \hyperlink{class_leap_1_1_listener}{Leap\+::\+Listener} to the controller to handle events as they occur. The \hyperlink{class_leap_1_1_controller}{Controller} dispatches events to the listener upon initialization and exiting, on connection changes, when the application gains and loses the O\+S input focus, and when a new frame of tracking data is available. When these events occur, the controller object invokes the appropriate callback function defined in your subclass of \hyperlink{class_leap_1_1_listener}{Listener}.
+
+To access frames of tracking data as they become available\+:
+
+
+\begin{DoxyEnumerate}
+\item Implement a subclass of the \hyperlink{class_leap_1_1_listener}{Listener} class and override the \hyperlink{class_leap_1_1_listener_ab600421108bbc952d8f0f144384ca30f}{Listener\+::on\+Frame()} function.
+\item In your \hyperlink{class_leap_1_1_listener_ab600421108bbc952d8f0f144384ca30f}{Listener\+::on\+Frame()} function, call the \hyperlink{class_leap_1_1_controller_a5796b988806ea9fd94e2d987e0e24b32}{Controller\+::frame()} function to access the newest frame of tracking data.
+\item To start receiving frames, create a \hyperlink{class_leap_1_1_controller}{Controller} object and add an instance of the \hyperlink{class_leap_1_1_listener}{Listener} subclass to the \hyperlink{class_leap_1_1_controller_a9b6318221593be63a0385748ca66974f}{Controller\+::add\+Listener()} function.
+\end{DoxyEnumerate}
+
+When an instance of a \hyperlink{class_leap_1_1_listener}{Listener} subclass is added to a \hyperlink{class_leap_1_1_controller}{Controller} object, it calls the \hyperlink{class_leap_1_1_listener_a180d621ad08afa5851d03d3546a82bbf}{Listener\+::on\+Init()} function when the listener is ready for use. When a connection is established between the controller and the Leap Motion software, the controller calls the \hyperlink{class_leap_1_1_listener_adfef79f9a03b342384aaa17f3a8ebf15}{Listener\+::on\+Connect()} function. At this point, your application will start receiving frames of data. The controller calls the \hyperlink{class_leap_1_1_listener_ab600421108bbc952d8f0f144384ca30f}{Listener\+::on\+Frame()} function each time a new frame is available. If the controller loses its connection with the Leap Motion software or device for any reason, it calls the \hyperlink{class_leap_1_1_listener_ac031e2d95b530097e2060518a9190f5e}{Listener\+::on\+Disconnect()} function. If the listener is removed from the controller or the controller is destroyed, it calls the \hyperlink{class_leap_1_1_listener_ac8f779a9208101f0084953560923f88c}{Listener\+::on\+Exit()} function. At that point, unless the listener is added to another controller again, it will no longer receive frames of tracking data.
+
+The \hyperlink{class_leap_1_1_controller}{Controller} object is multithreaded and calls the \hyperlink{class_leap_1_1_listener}{Listener} functions on its own thread, not on an application thread. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_leap_1_1_controller_a0bdb49fa94aa2da8b098c1ac296528d6}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!Policy\+Flag@{Policy\+Flag}}
+\index{Policy\+Flag@{Policy\+Flag}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{Policy\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Leap\+::\+Controller\+::\+Policy\+Flag}}}\label{class_leap_1_1_controller_a0bdb49fa94aa2da8b098c1ac296528d6}
+The supported controller policies.
+
+Currently, the only supported policy is the background frames policy, which determines whether your application receives frames of tracking data when it is not the focused, foreground application. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+O\+L\+I\+C\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T@{P\+O\+L\+I\+C\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T}!Leap\+::\+Controller@{Leap\+::\+Controller}}\index{Leap\+::\+Controller@{Leap\+::\+Controller}!P\+O\+L\+I\+C\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T@{P\+O\+L\+I\+C\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T}}\item[{\em 
+\hypertarget{class_leap_1_1_controller_a0bdb49fa94aa2da8b098c1ac296528d6a94886192cfa6f6f94cd2e20b68aeca97}{P\+O\+L\+I\+C\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T}\label{class_leap_1_1_controller_a0bdb49fa94aa2da8b098c1ac296528d6a94886192cfa6f6f94cd2e20b68aeca97}
+}]The default policy. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\index{P\+O\+L\+I\+C\+Y\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+F\+R\+A\+M\+E\+S@{P\+O\+L\+I\+C\+Y\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+F\+R\+A\+M\+E\+S}!Leap\+::\+Controller@{Leap\+::\+Controller}}\index{Leap\+::\+Controller@{Leap\+::\+Controller}!P\+O\+L\+I\+C\+Y\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+F\+R\+A\+M\+E\+S@{P\+O\+L\+I\+C\+Y\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+F\+R\+A\+M\+E\+S}}\item[{\em 
+\hypertarget{class_leap_1_1_controller_a0bdb49fa94aa2da8b098c1ac296528d6a1e34f1992444deee3b4c905d2a765329}{P\+O\+L\+I\+C\+Y\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+F\+R\+A\+M\+E\+S}\label{class_leap_1_1_controller_a0bdb49fa94aa2da8b098c1ac296528d6a1e34f1992444deee3b4c905d2a765329}
+}]Receive background frames. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_leap_1_1_controller_af5867527cc80ad805597a285eaf3d406}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!Controller@{Controller}}
+\index{Controller@{Controller}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{Controller}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Controller\+::\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_controller_af5867527cc80ad805597a285eaf3d406}
+Constructs a \hyperlink{class_leap_1_1_controller}{Controller} object.
+
+When creating a \hyperlink{class_leap_1_1_controller}{Controller} object, you may optionally pass in a reference to an instance of a subclass of \hyperlink{class_leap_1_1_listener}{Leap\+::\+Listener}. Alternatively, you may add a listener using the \hyperlink{class_leap_1_1_controller_a9b6318221593be63a0385748ca66974f}{Controller\+::add\+Listener()} function. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_controller_a046b09a621c480a46b3783551191abbb}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!Controller@{Controller}}
+\index{Controller@{Controller}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{Controller}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Controller\+::\+Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf Listener} \&}]{listener}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_controller_a046b09a621c480a46b3783551191abbb}
+Constructs a \hyperlink{class_leap_1_1_controller}{Controller} object.
+
+When creating a \hyperlink{class_leap_1_1_controller}{Controller} object, you may optionally pass in a reference to an instance of a subclass of \hyperlink{class_leap_1_1_listener}{Leap\+::\+Listener}. Alternatively, you may add a listener using the \hyperlink{class_leap_1_1_controller_a9b6318221593be63a0385748ca66974f}{Controller\+::add\+Listener()} function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & An instance of \hyperlink{class_leap_1_1_listener}{Leap\+::\+Listener} implementing the callback functions for the Leap Motion events you want to handle in your application. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leap_1_1_controller_a9b6318221593be63a0385748ca66974f}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!add\+Listener@{add\+Listener}}
+\index{add\+Listener@{add\+Listener}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{add\+Listener}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Controller\+::add\+Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf Listener} \&}]{listener}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_controller_a9b6318221593be63a0385748ca66974f}
+Adds a listener to this \hyperlink{class_leap_1_1_controller}{Controller}.
+
+The \hyperlink{class_leap_1_1_controller}{Controller} dispatches Leap Motion events to each associated listener. The order in which listener callback functions are invoked is arbitrary. If you pass a listener to the \hyperlink{class_leap_1_1_controller}{Controller}'s constructor function, it is automatically added to the list and can be removed with the \hyperlink{class_leap_1_1_controller_a1a48d46f317f0368cc8f7b0ebfd77728}{Controller\+::remove\+Listener()} function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & A subclass of \hyperlink{class_leap_1_1_listener}{Leap\+::\+Listener} implementing the callback functions for the Leap Motion events you want to handle in your application. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the listener was successfully added to the list of listeners. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_controller_abbb48ad47a8d0859a6a98f48c3d0a322}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!config@{config}}
+\index{config@{config}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{config}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Config} Leap\+::\+Controller\+::config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_controller_abbb48ad47a8d0859a6a98f48c3d0a322}
+Returns a \hyperlink{class_leap_1_1_config}{Config} object, which you can use to query the Leap Motion system for configuration information. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_controller_a5dc199cb8f41cf07724c494107744251}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!devices@{devices}}
+\index{devices@{devices}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{devices}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Device\+List} Leap\+::\+Controller\+::devices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_controller_a5dc199cb8f41cf07724c494107744251}
+The list of currently attached and recognized Leap Motion controller devices.
+
+The \hyperlink{class_leap_1_1_device}{Device} objects in the list describe information such as the range and tracking volume.
+
+Currently, the Leap Motion \hyperlink{class_leap_1_1_controller}{Controller} only recognizes a single device at a time. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_controller_ad24410dee9de51b16ceb6b8c97fe5a36}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!enable\+Gesture@{enable\+Gesture}}
+\index{enable\+Gesture@{enable\+Gesture}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{enable\+Gesture}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T void Leap\+::\+Controller\+::enable\+Gesture (
+\begin{DoxyParamCaption}
+\item[{{\bf Gesture\+::\+Type}}]{type, }
+\item[{bool}]{enable = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_controller_ad24410dee9de51b16ceb6b8c97fe5a36}
+Enables or disables reporting of a specified gesture type.
+
+By default, all gesture types are disabled. When disabled, gestures of the disabled type are never reported and will not appear in the frame gesture list.
+
+As a performance optimization, only enable recognition for the types of movements that you use in your application.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of gesture to enable or disable. Must be a member of the \hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1}{Gesture\+::\+Type} enumeration. \\
+\hline
+{\em enable} & True, to enable the specified gesture type; False, to disable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_leap_1_1_controller_a8b3f3853d8cf1f805542006182c99729}{Controller\+::is\+Gesture\+Enabled()} 
+\end{DoxySeeAlso}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_controller_a5796b988806ea9fd94e2d987e0e24b32}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!frame@{frame}}
+\index{frame@{frame}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{frame}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Frame} Leap\+::\+Controller\+::frame (
+\begin{DoxyParamCaption}
+\item[{int}]{history = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_controller_a5796b988806ea9fd94e2d987e0e24b32}
+Returns a frame of tracking data from the Leap Motion software. Use the optional history parameter to specify which frame to retrieve. Call \hyperlink{class_leap_1_1_controller_a5796b988806ea9fd94e2d987e0e24b32}{frame()} or frame(0) to access the most recent frame; call frame(1) to access the previous frame, and so on. If you use a history value greater than the number of stored frames, then the controller returns an invalid frame.
+
+
+\begin{DoxyParams}{Parameters}
+{\em history} & The age of the frame to return, counting backwards from the most recent frame (0) into the past and up to the maximum age (59). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The specified frame; or, if no history parameter is specified, the newest frame. If a frame is not available at the specified history position, an invalid \hyperlink{class_leap_1_1_frame}{Frame} is returned. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_controller_ab57ca1cb5b3278ff7016fa53028a1441}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!has\+Focus@{has\+Focus}}
+\index{has\+Focus@{has\+Focus}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{has\+Focus}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Controller\+::has\+Focus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_controller_ab57ca1cb5b3278ff7016fa53028a1441}
+Reports whether this application is the focused, foreground application.
+
+By default, your application only receives tracking information from the Leap Motion controller when it has the operating system input focus. To receive tracking data when your application is in the background, the background frames policy flag must be set.
+
+\begin{DoxyReturn}{Returns}
+True, if application has focus; false otherwise.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_leap_1_1_controller_a9830f0a63b393ce83f3147101452d028}{Controller\+::set\+Policy\+Flags()} 
+\end{DoxySeeAlso}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_controller_a1d7190d58adb6907d0e7c14d1ed595b4}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!is\+Connected@{is\+Connected}}
+\index{is\+Connected@{is\+Connected}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{is\+Connected}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Controller\+::is\+Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_controller_a1d7190d58adb6907d0e7c14d1ed595b4}
+Reports whether this \hyperlink{class_leap_1_1_controller}{Controller} is connected to the Leap Motion \hyperlink{class_leap_1_1_controller}{Controller}.
+
+When you first create a \hyperlink{class_leap_1_1_controller}{Controller} object, \hyperlink{class_leap_1_1_controller_a1d7190d58adb6907d0e7c14d1ed595b4}{is\+Connected()} returns false. After the controller finishes initializing and connects to the Leap Motion software, \hyperlink{class_leap_1_1_controller_a1d7190d58adb6907d0e7c14d1ed595b4}{is\+Connected()} will return true.
+
+You can either handle the on\+Connect event using a \hyperlink{class_leap_1_1_listener}{Listener} instance or poll the \hyperlink{class_leap_1_1_controller_a1d7190d58adb6907d0e7c14d1ed595b4}{is\+Connected()} function if you need to wait for your application to be connected to the Leap Motion software before performing some other operation.
+
+\begin{DoxyReturn}{Returns}
+True, if connected; false otherwise. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_controller_a8b3f3853d8cf1f805542006182c99729}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!is\+Gesture\+Enabled@{is\+Gesture\+Enabled}}
+\index{is\+Gesture\+Enabled@{is\+Gesture\+Enabled}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{is\+Gesture\+Enabled}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Controller\+::is\+Gesture\+Enabled (
+\begin{DoxyParamCaption}
+\item[{{\bf Gesture\+::\+Type}}]{type}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_controller_a8b3f3853d8cf1f805542006182c99729}
+Reports whether the specified gesture type is enabled.
+
+\begin{DoxyReturn}{Returns}
+True, if the specified type is enabled; false, otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_leap_1_1_controller_ad24410dee9de51b16ceb6b8c97fe5a36}{Controller\+::enable\+Gesture()} 
+\end{DoxySeeAlso}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_controller_ab6cf5b48ef434b3d58cf8962451f4df3}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!located\+Screens@{located\+Screens}}
+\index{located\+Screens@{located\+Screens}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{located\+Screens}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Screen\+List} Leap\+::\+Controller\+::located\+Screens (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_controller_ab6cf5b48ef434b3d58cf8962451f4df3}
+The list of screens whose positions have been identified by using the Leap Motion \hyperlink{class_leap_1_1_screen}{Screen} Locator.
+
+The list always contains at least one entry representing the default screen. If the user has not registered the location of this default screen, then the coordinates, directions, and other values reported by the functions in its \hyperlink{class_leap_1_1_screen}{Screen} object will not be accurate. Other monitor screens only appear in the list if their positions have been registered using the Leap Motion \hyperlink{class_leap_1_1_screen}{Screen} Locator.
+
+A \hyperlink{class_leap_1_1_screen}{Screen} object represents the position and orientation of a display monitor screen within the Leap Motion coordinate system. For example, if the screen location is known, you can get Leap Motion coordinates for the bottom-\/left corner of the screen. Registering the screen location also allows the Leap Motion software to calculate the point on the screen at which a finger or tool is pointing.
+
+A user can run the \hyperlink{class_leap_1_1_screen}{Screen} Locator tool from the Leap Motion Settings dialog. Avoid assuming that a screen location is known or that an existing position is still correct. The registered position is only valid as long as the relative position of the Leap Motion \hyperlink{class_leap_1_1_controller}{Controller} and the monitor screen remain constant.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_leap_1_1_screen_list}{Screen\+List} A list containing the screens whose positions have been registered by the user using the \hyperlink{class_leap_1_1_screen}{Screen} Locator tool. The list always contains at least one entry representing the default monitor. If the user has not run the \hyperlink{class_leap_1_1_screen}{Screen} Locator or has moved the Leap Motion device or screen since running it, the \hyperlink{class_leap_1_1_screen}{Screen} object for this entry only contains default values. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_controller_af777725d8ab0793a03b5a9cee6e33480}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!policy\+Flags@{policy\+Flags}}
+\index{policy\+Flags@{policy\+Flags}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{policy\+Flags}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Policy\+Flag} Leap\+::\+Controller\+::policy\+Flags (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_controller_af777725d8ab0793a03b5a9cee6e33480}
+Gets the active policy settings.
+
+Use this function to determine the current policy state. Keep in mind that setting a policy flag is asynchronous, so changes are not effective immediately after calling set\+Policy\+Flag(). In addition, a policy request can be declined by the user. You should always set the policy flags required by your application at startup and check that the policy change request was successful after an appropriate interval.
+
+If the controller object is not connected to the Leap Motion software, then the default policy state is returned.
+
+\begin{DoxyReturn}{Returns}
+The current policy flags. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_controller_a1a48d46f317f0368cc8f7b0ebfd77728}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!remove\+Listener@{remove\+Listener}}
+\index{remove\+Listener@{remove\+Listener}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{remove\+Listener}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T bool Leap\+::\+Controller\+::remove\+Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf Listener} \&}]{listener}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_controller_a1a48d46f317f0368cc8f7b0ebfd77728}
+Remove a listener from the list of listeners that will receive Leap Motion events. A listener must be removed if its lifetime is shorter than the controller to which it is listening.
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & The listener to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the listener was successfully removed from the list of listeners. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_controller_a9830f0a63b393ce83f3147101452d028}{\index{Leap\+::\+Controller@{Leap\+::\+Controller}!set\+Policy\+Flags@{set\+Policy\+Flags}}
+\index{set\+Policy\+Flags@{set\+Policy\+Flags}!Leap\+::\+Controller@{Leap\+::\+Controller}}
+\subsubsection[{set\+Policy\+Flags}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T void Leap\+::\+Controller\+::set\+Policy\+Flags (
+\begin{DoxyParamCaption}
+\item[{{\bf Policy\+Flag}}]{flags}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_controller_a9830f0a63b393ce83f3147101452d028}
+Requests a change in policy.
+
+A request to change a policy is subject to user approval and a policy can be changed by the user at any time (using the Leap Motion settings dialog). The desired policy flags must be set every time an application runs.
+
+Policy changes are completed asynchronously and, because they are subject to user approval, may not complete successfully. Call \hyperlink{class_leap_1_1_controller_af777725d8ab0793a03b5a9cee6e33480}{Controller\+::policy\+Flags()} after a suitable interval to test whether the change was accepted.
+
+Currently, the background frames policy is the only policy supported. The background frames policy determines whether an application receives frames of tracking data while in the background. By default, the Leap Motion software only sends tracking data to the foreground application. Only applications that need this ability should request the background frames policy.
+
+At this time, you can use the Leap Motion Settings dialog to globally enable or disable the background frames policy. However, each application that needs tracking data while in the background must also set the policy flag using this function.
+
+This function can be called before the \hyperlink{class_leap_1_1_controller}{Controller} object is connected, but the request will be sent to the Leap Motion software after the \hyperlink{class_leap_1_1_controller}{Controller} connects.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & A Policy\+Flag value indicating the policies to request. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/Leap.\+h\end{DoxyCompactItemize}

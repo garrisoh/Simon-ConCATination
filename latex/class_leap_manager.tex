@@ -1,0 +1,89 @@
+\hypertarget{class_leap_manager}{\section{Leap\+Manager Class Reference}
+\label{class_leap_manager}\index{Leap\+Manager@{Leap\+Manager}}
+}
+
+
+{\ttfamily \#include $<$leapmanager.\+h$>$}
+
+Inheritance diagram for Leap\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_leap_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_leap_manager_a5d50198b53659afa29f93ab38d6f730a}{notify\+On\+Main\+Queue} (int q, int e)
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_leap_manager_aaf97456260cb9f139ff7bf3771877b0a}{frame\+Finished} (int q, int e)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_leap_manager_a5b784234d2e338255e7a32c1cb40c535}{Leap\+Manager} ()
+\item 
+\hyperlink{class_leap_manager_ae6740e093904a960b0ac200e66596625}{$\sim$\+Leap\+Manager} ()
+\item 
+void \hyperlink{class_leap_manager_ad50649a573f5176b9bfcb4407ea7efd3}{on\+Frame} (const \hyperlink{class_leap_1_1_controller}{Leap\+::\+Controller} \&controller)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Leap listener class for handling input from leap sensor 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_leap_manager_a5b784234d2e338255e7a32c1cb40c535}{\index{Leap\+Manager@{Leap\+Manager}!Leap\+Manager@{Leap\+Manager}}
+\index{Leap\+Manager@{Leap\+Manager}!Leap\+Manager@{Leap\+Manager}}
+\subsubsection[{Leap\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Leap\+Manager\+::\+Leap\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_leap_manager_a5b784234d2e338255e7a32c1cb40c535}
+Constructor -\/ sets up leap controller \hypertarget{class_leap_manager_ae6740e093904a960b0ac200e66596625}{\index{Leap\+Manager@{Leap\+Manager}!````~Leap\+Manager@{$\sim$\+Leap\+Manager}}
+\index{````~Leap\+Manager@{$\sim$\+Leap\+Manager}!Leap\+Manager@{Leap\+Manager}}
+\subsubsection[{$\sim$\+Leap\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Leap\+Manager\+::$\sim$\+Leap\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_leap_manager_ae6740e093904a960b0ac200e66596625}
+Destructor -\/ removes as a listener 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leap_manager_aaf97456260cb9f139ff7bf3771877b0a}{\index{Leap\+Manager@{Leap\+Manager}!frame\+Finished@{frame\+Finished}}
+\index{frame\+Finished@{frame\+Finished}!Leap\+Manager@{Leap\+Manager}}
+\subsubsection[{frame\+Finished}]{\setlength{\rightskip}{0pt plus 5cm}void Leap\+Manager\+::frame\+Finished (
+\begin{DoxyParamCaption}
+\item[{int}]{q, }
+\item[{int}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_leap_manager_aaf97456260cb9f139ff7bf3771877b0a}
+Signal for when frame is done \hypertarget{class_leap_manager_a5d50198b53659afa29f93ab38d6f730a}{\index{Leap\+Manager@{Leap\+Manager}!notify\+On\+Main\+Queue@{notify\+On\+Main\+Queue}}
+\index{notify\+On\+Main\+Queue@{notify\+On\+Main\+Queue}!Leap\+Manager@{Leap\+Manager}}
+\subsubsection[{notify\+On\+Main\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}void Leap\+Manager\+::notify\+On\+Main\+Queue (
+\begin{DoxyParamCaption}
+\item[{int}]{q, }
+\item[{int}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_leap_manager_a5d50198b53659afa29f93ab38d6f730a}
+Called on main thread after frame is processed \hypertarget{class_leap_manager_ad50649a573f5176b9bfcb4407ea7efd3}{\index{Leap\+Manager@{Leap\+Manager}!on\+Frame@{on\+Frame}}
+\index{on\+Frame@{on\+Frame}!Leap\+Manager@{Leap\+Manager}}
+\subsubsection[{on\+Frame}]{\setlength{\rightskip}{0pt plus 5cm}void Leap\+Manager\+::on\+Frame (
+\begin{DoxyParamCaption}
+\item[{const {\bf Leap\+::\+Controller} \&}]{controller}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_leap_manager_ad50649a573f5176b9bfcb4407ea7efd3}
+Called by the controller on each frame 
+
+Reimplemented from \hyperlink{class_leap_1_1_listener_ab600421108bbc952d8f0f144384ca30f}{Leap\+::\+Listener}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/leapmanager.\+h\item 
+Interface\+Managers/leapmanager.\+cpp\end{DoxyCompactItemize}

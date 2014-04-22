@@ -1,0 +1,110 @@
+\hypertarget{class_leap_1_1_tool}{\section{Leap\+:\+:Tool Class Reference}
+\label{class_leap_1_1_tool}\index{Leap\+::\+Tool@{Leap\+::\+Tool}}
+}
+
+
+{\ttfamily \#include $<$Leap.\+h$>$}
+
+Inheritance diagram for Leap\+:\+:Tool\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_leap_1_1_tool}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_leap_1_1_tool_a856522513b4dbf3ef4e2a9a9667f5735}{{\bfseries Tool} (Tool\+Implementation $\ast$)}\label{class_leap_1_1_tool_a856522513b4dbf3ef4e2a9a9667f5735}
+
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_tool_a6debbdfc14096362bf32228ba3e5c72f}{Tool} ()
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_tool_a6dfea4c318389bcc6d1ef373d7a4432e}{Tool} (const \hyperlink{class_leap_1_1_pointable}{Pointable} \&)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T std\+::string \hyperlink{class_leap_1_1_tool_ad3dbe186886683f46996fd0c8ca5a940}{to\+String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T const \hyperlink{class_leap_1_1_tool}{Tool} \& \hyperlink{class_leap_1_1_tool_af47b7fe3674536f265470e7ab3467ef1}{invalid} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_leap_1_1_tool}{Tool} class represents a tracked tool.
+
+Tools are \hyperlink{class_leap_1_1_pointable}{Pointable} objects that the Leap Motion software has classified as a tool. Tools are longer, thinner, and straighter than a typical finger. Get valid \hyperlink{class_leap_1_1_tool}{Tool} objects from a \hyperlink{class_leap_1_1_frame}{Frame} or a \hyperlink{class_leap_1_1_hand}{Hand} object.
+
+Tools may reference a hand, but unlike fingers they are not permanently associated. Instead, a tool can be transferred between hands while keeping the same I\+D.
+
+
+
+Note that \hyperlink{class_leap_1_1_tool}{Tool} objects can be invalid, which means that they do not contain valid tracking data and do not correspond to a physical tool. Invalid \hyperlink{class_leap_1_1_tool}{Tool} objects can be the result of asking for a \hyperlink{class_leap_1_1_tool}{Tool} object using an I\+D from an earlier frame when no \hyperlink{class_leap_1_1_tool}{Tool} objects with that I\+D exist in the current frame. A \hyperlink{class_leap_1_1_tool}{Tool} object created from the \hyperlink{class_leap_1_1_tool}{Tool} constructor is also invalid. Test for validity with the \hyperlink{class_leap_1_1_pointable_a124f21a619df4fb338d1ce8a7a6d3341}{Tool\+::is\+Valid()} function. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_leap_1_1_tool_a6debbdfc14096362bf32228ba3e5c72f}{\index{Leap\+::\+Tool@{Leap\+::\+Tool}!Tool@{Tool}}
+\index{Tool@{Tool}!Leap\+::\+Tool@{Leap\+::\+Tool}}
+\subsubsection[{Tool}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Tool\+::\+Tool (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_tool_a6debbdfc14096362bf32228ba3e5c72f}
+Constructs a \hyperlink{class_leap_1_1_tool}{Tool} object.
+
+An uninitialized tool is considered invalid. Get valid \hyperlink{class_leap_1_1_tool}{Tool} objects from a \hyperlink{class_leap_1_1_frame}{Frame} or a \hyperlink{class_leap_1_1_hand}{Hand} object. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_tool_a6dfea4c318389bcc6d1ef373d7a4432e}{\index{Leap\+::\+Tool@{Leap\+::\+Tool}!Tool@{Tool}}
+\index{Tool@{Tool}!Leap\+::\+Tool@{Leap\+::\+Tool}}
+\subsubsection[{Tool}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Tool\+::\+Tool (
+\begin{DoxyParamCaption}
+\item[{const {\bf Pointable} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_leap_1_1_tool_a6dfea4c318389bcc6d1ef373d7a4432e}
+If the specified \hyperlink{class_leap_1_1_pointable}{Pointable} object represents a tool, creates a copy of it as a \hyperlink{class_leap_1_1_tool}{Tool} object; otherwise, creates an invalid \hyperlink{class_leap_1_1_tool}{Tool} object. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leap_1_1_tool_af47b7fe3674536f265470e7ab3467ef1}{\index{Leap\+::\+Tool@{Leap\+::\+Tool}!invalid@{invalid}}
+\index{invalid@{invalid}!Leap\+::\+Tool@{Leap\+::\+Tool}}
+\subsubsection[{invalid}]{\setlength{\rightskip}{0pt plus 5cm}static L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T const {\bf Tool}\& Leap\+::\+Tool\+::invalid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_leap_1_1_tool_af47b7fe3674536f265470e7ab3467ef1}
+Returns an invalid \hyperlink{class_leap_1_1_tool}{Tool} object.
+
+You can use the instance returned by this function in comparisons testing whether a given \hyperlink{class_leap_1_1_tool}{Tool} instance is valid or invalid. (You can also use the \hyperlink{class_leap_1_1_pointable_a124f21a619df4fb338d1ce8a7a6d3341}{Tool\+::is\+Valid()} function.)
+
+\begin{DoxyReturn}{Returns}
+The invalid \hyperlink{class_leap_1_1_tool}{Tool} instance. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_tool_ad3dbe186886683f46996fd0c8ca5a940}{\index{Leap\+::\+Tool@{Leap\+::\+Tool}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Leap\+::\+Tool@{Leap\+::\+Tool}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T std\+::string Leap\+::\+Tool\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_tool_ad3dbe186886683f46996fd0c8ca5a940}
+A string containing a brief, human readable description of the \hyperlink{class_leap_1_1_tool}{Tool} object.
+
+\begin{DoxyReturn}{Returns}
+A description of the \hyperlink{class_leap_1_1_tool}{Tool} object as a string. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/Leap.\+h\end{DoxyCompactItemize}

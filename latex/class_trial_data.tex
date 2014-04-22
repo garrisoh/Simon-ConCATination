@@ -1,0 +1,225 @@
+\hypertarget{class_trial_data}{\section{Trial\+Data Class Reference}
+\label{class_trial_data}\index{Trial\+Data@{Trial\+Data}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_trial_data_ab61aef92abe489ef01ad048417d357af}{\hyperlink{class_trial_data_ab61aef92abe489ef01ad048417d357af}{Trial\+Data} ()}\label{class_trial_data_ab61aef92abe489ef01ad048417d357af}
+
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{class_trial_data}{Trial\+Data} object \hyperlink{class_trial_data}{Trial\+Data} holds all data for the entire trial of Simon. It's flushed and reinitialized before each trial. \end{DoxyCompactList}\item 
+\hyperlink{class_game_data}{Game\+Data} $\ast$ \hyperlink{class_trial_data_ab82ebe277cd6251973fa9efdd09b063d}{get\+Game} (int index)
+\begin{DoxyCompactList}\small\item\em Fetch a game from the internal list. \end{DoxyCompactList}\item 
+int \hyperlink{class_trial_data_aa66d11b4deef49c0abb14b13047663a9}{get\+Number\+Games} ()
+\begin{DoxyCompactList}\small\item\em The number of games in the internal game array. \end{DoxyCompactList}\item 
+void \hyperlink{class_trial_data_a813986c375dabdbf0efa382213604e84}{set\+P\+I\+D} (std\+::string pid)
+\begin{DoxyCompactList}\small\item\em Sets the subject's participant I\+D in the record. \end{DoxyCompactList}\item 
+void \hyperlink{class_trial_data_accfa4cd37e47a847562793831e7db5a7}{set\+Gender} (bool gender)
+\begin{DoxyCompactList}\small\item\em Sets the subject's gender in the record. \end{DoxyCompactList}\item 
+void \hyperlink{class_trial_data_acd2c2aedea1718872165ce0bf0df6029}{set\+Age} (int age)
+\begin{DoxyCompactList}\small\item\em Sets the subject's age in the record. \end{DoxyCompactList}\item 
+void \hyperlink{class_trial_data_afdedfaa564bfe3ca1529614c32acef37}{set\+Out\+File} (std\+::string out\+File)
+\begin{DoxyCompactList}\small\item\em Sets the destanation location for the session report. No access testing is performed. \end{DoxyCompactList}\item 
+\hypertarget{class_trial_data_ac0a8256a5f04818711c72ff88223839c}{void \hyperlink{class_trial_data_ac0a8256a5f04818711c72ff88223839c}{add\+Game} ()}\label{class_trial_data_ac0a8256a5f04818711c72ff88223839c}
+
+\begin{DoxyCompactList}\small\item\em Appends a game to the list of games to be played. \end{DoxyCompactList}\item 
+void \hyperlink{class_trial_data_af3a0f221160d45fd6d28168235ed3d5a}{add\+Game} (\hyperlink{class_game_data}{Game\+Data} gd)
+\begin{DoxyCompactList}\small\item\em Appends a C\+U\+S\+T\+O\+M game to the list of games to be played. \end{DoxyCompactList}\item 
+void \hyperlink{class_trial_data_a2af0b8b20496f6daf919e52e103da7de}{swap\+Games} (int index1, int index2)
+\begin{DoxyCompactList}\small\item\em Swap Games in a list by index. \end{DoxyCompactList}\item 
+void \hyperlink{class_trial_data_a0c941bb4edc8d98ed0883650a1d7f502}{remove\+Game} (int index)
+\begin{DoxyCompactList}\small\item\em Removes a game from the running list. \end{DoxyCompactList}\item 
+Error\+Type \hyperlink{class_trial_data_aa18ad64f9b9b6b980fec9ab3e1455559}{write\+C\+S\+V} ()
+\begin{DoxyCompactList}\small\item\em Writes all current games out to memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_trial_data}{Trial\+Data} $\ast$ \hyperlink{class_trial_data_a86a08d5deb1ae938e007667b8cd4a167}{get\+Current\+Trial} ()
+\begin{DoxyCompactList}\small\item\em Grabs a copy of the currently active trial\+Data. \end{DoxyCompactList}\item 
+\hypertarget{class_trial_data_a51db8ba5ec8a1e8f0107166db54dac18}{static void \hyperlink{class_trial_data_a51db8ba5ec8a1e8f0107166db54dac18}{new\+Trial} ()}\label{class_trial_data_a51db8ba5ec8a1e8f0107166db54dac18}
+
+\begin{DoxyCompactList}\small\item\em Resets all gathered data\+: user metrics, times, quadrants, and so on. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_trial_data_af3a0f221160d45fd6d28168235ed3d5a}{\index{Trial\+Data@{Trial\+Data}!add\+Game@{add\+Game}}
+\index{add\+Game@{add\+Game}!Trial\+Data@{Trial\+Data}}
+\subsubsection[{add\+Game}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Data\+::add\+Game (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Data}}]{gd}
+\end{DoxyParamCaption}
+)}}\label{class_trial_data_af3a0f221160d45fd6d28168235ed3d5a}
+
+
+Appends a C\+U\+S\+T\+O\+M game to the list of games to be played. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gd} & The game to append to the list of games. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_trial_data_a86a08d5deb1ae938e007667b8cd4a167}{\index{Trial\+Data@{Trial\+Data}!get\+Current\+Trial@{get\+Current\+Trial}}
+\index{get\+Current\+Trial@{get\+Current\+Trial}!Trial\+Data@{Trial\+Data}}
+\subsubsection[{get\+Current\+Trial}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Trial\+Data} $\ast$ Trial\+Data\+::get\+Current\+Trial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_trial_data_a86a08d5deb1ae938e007667b8cd4a167}
+
+
+Grabs a copy of the currently active trial\+Data. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the active \hyperlink{class_trial_data}{Trial\+Data} \hyperlink{class_trial_data}{Trial\+Data} is a singleton through the entire game. get\+Current\+Trial grabs a pointer to the singleton. 
+\end{DoxyReturn}
+\hypertarget{class_trial_data_ab82ebe277cd6251973fa9efdd09b063d}{\index{Trial\+Data@{Trial\+Data}!get\+Game@{get\+Game}}
+\index{get\+Game@{get\+Game}!Trial\+Data@{Trial\+Data}}
+\subsubsection[{get\+Game}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Data} $\ast$ Trial\+Data\+::get\+Game (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_trial_data_ab82ebe277cd6251973fa9efdd09b063d}
+
+
+Fetch a game from the internal list. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the game 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The array index of the game to fetch. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_trial_data_aa66d11b4deef49c0abb14b13047663a9}{\index{Trial\+Data@{Trial\+Data}!get\+Number\+Games@{get\+Number\+Games}}
+\index{get\+Number\+Games@{get\+Number\+Games}!Trial\+Data@{Trial\+Data}}
+\subsubsection[{get\+Number\+Games}]{\setlength{\rightskip}{0pt plus 5cm}int Trial\+Data\+::get\+Number\+Games (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_trial_data_aa66d11b4deef49c0abb14b13047663a9}
+
+
+The number of games in the internal game array. 
+
+\begin{DoxyReturn}{Returns}
+Number of games in the array. 
+\end{DoxyReturn}
+\hypertarget{class_trial_data_a0c941bb4edc8d98ed0883650a1d7f502}{\index{Trial\+Data@{Trial\+Data}!remove\+Game@{remove\+Game}}
+\index{remove\+Game@{remove\+Game}!Trial\+Data@{Trial\+Data}}
+\subsubsection[{remove\+Game}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Data\+::remove\+Game (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_trial_data_a0c941bb4edc8d98ed0883650a1d7f502}
+
+
+Removes a game from the running list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the game to remove \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_trial_data_acd2c2aedea1718872165ce0bf0df6029}{\index{Trial\+Data@{Trial\+Data}!set\+Age@{set\+Age}}
+\index{set\+Age@{set\+Age}!Trial\+Data@{Trial\+Data}}
+\subsubsection[{set\+Age}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Data\+::set\+Age (
+\begin{DoxyParamCaption}
+\item[{int}]{age}
+\end{DoxyParamCaption}
+)}}\label{class_trial_data_acd2c2aedea1718872165ce0bf0df6029}
+
+
+Sets the subject's age in the record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em age} & The subject's age \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_trial_data_accfa4cd37e47a847562793831e7db5a7}{\index{Trial\+Data@{Trial\+Data}!set\+Gender@{set\+Gender}}
+\index{set\+Gender@{set\+Gender}!Trial\+Data@{Trial\+Data}}
+\subsubsection[{set\+Gender}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Data\+::set\+Gender (
+\begin{DoxyParamCaption}
+\item[{bool}]{gender}
+\end{DoxyParamCaption}
+)}}\label{class_trial_data_accfa4cd37e47a847562793831e7db5a7}
+
+
+Sets the subject's gender in the record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gender} & The subject's gender \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_trial_data_afdedfaa564bfe3ca1529614c32acef37}{\index{Trial\+Data@{Trial\+Data}!set\+Out\+File@{set\+Out\+File}}
+\index{set\+Out\+File@{set\+Out\+File}!Trial\+Data@{Trial\+Data}}
+\subsubsection[{set\+Out\+File}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Data\+::set\+Out\+File (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{out\+File}
+\end{DoxyParamCaption}
+)}}\label{class_trial_data_afdedfaa564bfe3ca1529614c32acef37}
+
+
+Sets the destanation location for the session report. No access testing is performed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File} & The path to the file to write, as a string. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_trial_data_a813986c375dabdbf0efa382213604e84}{\index{Trial\+Data@{Trial\+Data}!set\+P\+I\+D@{set\+P\+I\+D}}
+\index{set\+P\+I\+D@{set\+P\+I\+D}!Trial\+Data@{Trial\+Data}}
+\subsubsection[{set\+P\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Data\+::set\+P\+I\+D (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{pid}
+\end{DoxyParamCaption}
+)}}\label{class_trial_data_a813986c375dabdbf0efa382213604e84}
+
+
+Sets the subject's participant I\+D in the record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The subject's participant I\+D \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_trial_data_a2af0b8b20496f6daf919e52e103da7de}{\index{Trial\+Data@{Trial\+Data}!swap\+Games@{swap\+Games}}
+\index{swap\+Games@{swap\+Games}!Trial\+Data@{Trial\+Data}}
+\subsubsection[{swap\+Games}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Data\+::swap\+Games (
+\begin{DoxyParamCaption}
+\item[{int}]{index1, }
+\item[{int}]{index2}
+\end{DoxyParamCaption}
+)}}\label{class_trial_data_a2af0b8b20496f6daf919e52e103da7de}
+
+
+Swap Games in a list by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index1} & The index of the first game \\
+\hline
+{\em index2} & The index of the second game \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_trial_data_aa18ad64f9b9b6b980fec9ab3e1455559}{\index{Trial\+Data@{Trial\+Data}!write\+C\+S\+V@{write\+C\+S\+V}}
+\index{write\+C\+S\+V@{write\+C\+S\+V}!Trial\+Data@{Trial\+Data}}
+\subsubsection[{write\+C\+S\+V}]{\setlength{\rightskip}{0pt plus 5cm}Error\+Type Trial\+Data\+::write\+C\+S\+V (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_trial_data_aa18ad64f9b9b6b980fec9ab3e1455559}
+
+
+Writes all current games out to memory. 
+
+\begin{DoxyReturn}{Returns}
+Whether the write was successful. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Data\+Model/trialdata.\+h\item 
+Data\+Model/trialdata.\+cpp\end{DoxyCompactItemize}

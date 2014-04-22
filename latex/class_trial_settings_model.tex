@@ -1,0 +1,155 @@
+\hypertarget{class_trial_settings_model}{\section{Trial\+Settings\+Model Class Reference}
+\label{class_trial_settings_model}\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_trial_settings_model_a836ff2525113e876c29dab1d18d1dfee}{{\bfseries Trial\+Settings\+Model} (Q\+Table\+View $\ast$view)}\label{class_trial_settings_model_a836ff2525113e876c29dab1d18d1dfee}
+
+\item 
+void \hyperlink{class_trial_settings_model_ac6a2badb080c001eee725731918e5940}{add\+Game} (Q\+String sound, Q\+String color, Q\+String input)
+\item 
+void \hyperlink{class_trial_settings_model_a82883567708811acae2e0413a398ece5}{remove\+Game} (int row)
+\item 
+void \hyperlink{class_trial_settings_model_acf267171c19583954808dfbbf4d139e7}{start} (std\+::string pid, std\+::string ag, std\+::string gndr)
+\item 
+void \hyperlink{class_trial_settings_model_aaaf0d85602754b9f965ae6b248f20c89}{swap\+Rows} (int index1, int index2)
+\item 
+void \hyperlink{class_trial_settings_model_a2a9886471e3a978847919261010981af}{write\+Games} (std\+::string pid, std\+::string age, std\+::string gender)
+\item 
+void \hyperlink{class_trial_settings_model_abf028c54c71fb236ab7bdbda5ec6220a}{read\+Games} ()
+\item 
+void \hyperlink{class_trial_settings_model_a0f3690db59a0789e3625f9214151b3d5}{set\+Demo\+Mode} (bool md)
+\item 
+bool \hyperlink{class_trial_settings_model_a7de1f33a75eb321142bf561d017fe3a7}{get\+Demo\+Mode} ()
+\item 
+void \hyperlink{class_trial_settings_model_af7b1c0b43e04534f000f09db43baa188}{set\+Save\+Location} (std\+::string loc)
+\item 
+int \hyperlink{class_trial_settings_model_a48d6c2b8c99a0b177f304f1330ec96a1}{get\+Row\+Count} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \& \hyperlink{class_trial_settings_model_ac3578447da475826046307ecbd92e0e0}{split} (const std\+::string \&s, char delim, std\+::vector$<$ std\+::string $>$ \&elems)
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{class_trial_settings_model_a283eb684102dedc1c82d36114e557481}{split} (const std\+::string \&s, char delim)
+\item 
+std\+::string \hyperlink{class_trial_settings_model_a02d6cb1012affee1bc4b5cc97c001268}{get\+Save\+Location} ()
+\item 
+Q\+String \hyperlink{class_trial_settings_model_a4da8630b29c5eedd094b5cf663890f9f}{get\+Item\+At} (int row, int col)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_trial_settings_model_ac6a2badb080c001eee725731918e5940}{\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}!add\+Game@{add\+Game}}
+\index{add\+Game@{add\+Game}!Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+\subsubsection[{add\+Game}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Settings\+Model\+::add\+Game (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{sound, }
+\item[{Q\+String}]{color, }
+\item[{Q\+String}]{input}
+\end{DoxyParamCaption}
+)}}\label{class_trial_settings_model_ac6a2badb080c001eee725731918e5940}
+Adds game to tableview and \hyperlink{class_trial_data}{Trial\+Data} \hypertarget{class_trial_settings_model_a7de1f33a75eb321142bf561d017fe3a7}{\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}!get\+Demo\+Mode@{get\+Demo\+Mode}}
+\index{get\+Demo\+Mode@{get\+Demo\+Mode}!Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+\subsubsection[{get\+Demo\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool Trial\+Settings\+Model\+::get\+Demo\+Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_trial_settings_model_a7de1f33a75eb321142bf561d017fe3a7}
+Getter for demo mode variable \hypertarget{class_trial_settings_model_a4da8630b29c5eedd094b5cf663890f9f}{\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}!get\+Item\+At@{get\+Item\+At}}
+\index{get\+Item\+At@{get\+Item\+At}!Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+\subsubsection[{get\+Item\+At}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Trial\+Settings\+Model\+::get\+Item\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}}\label{class_trial_settings_model_a4da8630b29c5eedd094b5cf663890f9f}
+Returns the text at the specified row and column of the tableview \hypertarget{class_trial_settings_model_a48d6c2b8c99a0b177f304f1330ec96a1}{\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}!get\+Row\+Count@{get\+Row\+Count}}
+\index{get\+Row\+Count@{get\+Row\+Count}!Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+\subsubsection[{get\+Row\+Count}]{\setlength{\rightskip}{0pt plus 5cm}int Trial\+Settings\+Model\+::get\+Row\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_trial_settings_model_a48d6c2b8c99a0b177f304f1330ec96a1}
+Gets the number of rows in the tableview. \hypertarget{class_trial_settings_model_a02d6cb1012affee1bc4b5cc97c001268}{\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}!get\+Save\+Location@{get\+Save\+Location}}
+\index{get\+Save\+Location@{get\+Save\+Location}!Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+\subsubsection[{get\+Save\+Location}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Trial\+Settings\+Model\+::get\+Save\+Location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_trial_settings_model_a02d6cb1012affee1bc4b5cc97c001268}
+Getter for save location variable \hypertarget{class_trial_settings_model_abf028c54c71fb236ab7bdbda5ec6220a}{\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}!read\+Games@{read\+Games}}
+\index{read\+Games@{read\+Games}!Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+\subsubsection[{read\+Games}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Settings\+Model\+::read\+Games (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_trial_settings_model_abf028c54c71fb236ab7bdbda5ec6220a}
+Read games from config file \hypertarget{class_trial_settings_model_a82883567708811acae2e0413a398ece5}{\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}!remove\+Game@{remove\+Game}}
+\index{remove\+Game@{remove\+Game}!Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+\subsubsection[{remove\+Game}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Settings\+Model\+::remove\+Game (
+\begin{DoxyParamCaption}
+\item[{int}]{row}
+\end{DoxyParamCaption}
+)}}\label{class_trial_settings_model_a82883567708811acae2e0413a398ece5}
+Deletes a row from the table. \hypertarget{class_trial_settings_model_a0f3690db59a0789e3625f9214151b3d5}{\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}!set\+Demo\+Mode@{set\+Demo\+Mode}}
+\index{set\+Demo\+Mode@{set\+Demo\+Mode}!Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+\subsubsection[{set\+Demo\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Settings\+Model\+::set\+Demo\+Mode (
+\begin{DoxyParamCaption}
+\item[{bool}]{md}
+\end{DoxyParamCaption}
+)}}\label{class_trial_settings_model_a0f3690db59a0789e3625f9214151b3d5}
+Setter for private demomode variable \hypertarget{class_trial_settings_model_af7b1c0b43e04534f000f09db43baa188}{\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}!set\+Save\+Location@{set\+Save\+Location}}
+\index{set\+Save\+Location@{set\+Save\+Location}!Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+\subsubsection[{set\+Save\+Location}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Settings\+Model\+::set\+Save\+Location (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{loc}
+\end{DoxyParamCaption}
+)}}\label{class_trial_settings_model_af7b1c0b43e04534f000f09db43baa188}
+Sets the C\+S\+V save location \hypertarget{class_trial_settings_model_ac3578447da475826046307ecbd92e0e0}{\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}!split@{split}}
+\index{split@{split}!Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ \& Trial\+Settings\+Model\+::split (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{s, }
+\item[{char}]{delim, }
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{elems}
+\end{DoxyParamCaption}
+)}}\label{class_trial_settings_model_ac3578447da475826046307ecbd92e0e0}
+Split helper function \hypertarget{class_trial_settings_model_a283eb684102dedc1c82d36114e557481}{\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}!split@{split}}
+\index{split@{split}!Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ Trial\+Settings\+Model\+::split (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{s, }
+\item[{char}]{delim}
+\end{DoxyParamCaption}
+)}}\label{class_trial_settings_model_a283eb684102dedc1c82d36114e557481}
+The same as Java String.\+split \hypertarget{class_trial_settings_model_acf267171c19583954808dfbbf4d139e7}{\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}!start@{start}}
+\index{start@{start}!Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Settings\+Model\+::start (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{pid, }
+\item[{std\+::string}]{ag, }
+\item[{std\+::string}]{gndr}
+\end{DoxyParamCaption}
+)}}\label{class_trial_settings_model_acf267171c19583954808dfbbf4d139e7}
+Start running the Simon game \hypertarget{class_trial_settings_model_aaaf0d85602754b9f965ae6b248f20c89}{\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}!swap\+Rows@{swap\+Rows}}
+\index{swap\+Rows@{swap\+Rows}!Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+\subsubsection[{swap\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Settings\+Model\+::swap\+Rows (
+\begin{DoxyParamCaption}
+\item[{int}]{index1, }
+\item[{int}]{index2}
+\end{DoxyParamCaption}
+)}}\label{class_trial_settings_model_aaaf0d85602754b9f965ae6b248f20c89}
+Swap two rows in the table. Used for moves and such. \hypertarget{class_trial_settings_model_a2a9886471e3a978847919261010981af}{\index{Trial\+Settings\+Model@{Trial\+Settings\+Model}!write\+Games@{write\+Games}}
+\index{write\+Games@{write\+Games}!Trial\+Settings\+Model@{Trial\+Settings\+Model}}
+\subsubsection[{write\+Games}]{\setlength{\rightskip}{0pt plus 5cm}void Trial\+Settings\+Model\+::write\+Games (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{pid, }
+\item[{std\+::string}]{age, }
+\item[{std\+::string}]{gender}
+\end{DoxyParamCaption}
+)}}\label{class_trial_settings_model_a2a9886471e3a978847919261010981af}
+Write game to config file 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+U\+I/trialsettingsmodel.\+h\item 
+U\+I/trialsettingsmodel.\+cpp\end{DoxyCompactItemize}

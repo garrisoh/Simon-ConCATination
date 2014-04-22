@@ -1,0 +1,218 @@
+\hypertarget{class_leap_1_1_circle_gesture}{\section{Leap\+:\+:Circle\+Gesture Class Reference}
+\label{class_leap_1_1_circle_gesture}\index{Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}}
+}
+
+
+{\ttfamily \#include $<$Leap.\+h$>$}
+
+Inheritance diagram for Leap\+:\+:Circle\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_leap_1_1_circle_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_circle_gesture_a67ac2907b68958693129eb7a6f731722}{Circle\+Gesture} ()
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_circle_gesture_a3a27444e1657e1ecf3e74bc9c7cad292}{Circle\+Gesture} (const \hyperlink{class_leap_1_1_gesture}{Gesture} \&rhs)
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_circle_gesture_aa6f358e771078c056dea579511707784}{center} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{struct_leap_1_1_vector}{Vector} \hyperlink{class_leap_1_1_circle_gesture_ae0fbdb4a8905e289afa885c2f304ae52}{normal} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float \hyperlink{class_leap_1_1_circle_gesture_a6117b3ab528b6af6ae2d76b1afa03110}{progress} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float \hyperlink{class_leap_1_1_circle_gesture_a25b6f377b953f82c4d0c2a7488c02253}{radius} () const 
+\item 
+L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T \hyperlink{class_leap_1_1_pointable}{Pointable} \hyperlink{class_leap_1_1_circle_gesture_adc211d647af2a5853773dbabf5deb1ab}{pointable} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_leap_1_1_gesture_a6fa6dd4f28c502f0d55abc6b71c6f9b1}{Type} \hyperlink{class_leap_1_1_circle_gesture_a8935a8a71b0a174a1656ff2caab80a06}{class\+Type} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_leap_1_1_circle_gesture}{Circle\+Gesture} classes represents a circular finger movement.
+
+A circle movement is recognized when the tip of a finger draws a circle within the Leap Motion \hyperlink{class_leap_1_1_controller}{Controller} field of view.
+
+
+
+{\bfseries Important\+:} To use circle gestures in your application, you must enable recognition of the circle gesture. You can enable recognition with\+:
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+Circle gestures are continuous. The \hyperlink{class_leap_1_1_circle_gesture}{Circle\+Gesture} objects for the gesture have three possible states\+:
+
+
+\begin{DoxyItemize}
+\item State\+::\+S\+T\+A\+T\+E\+\_\+\+S\+T\+A\+R\+T -- The circle gesture has just started. The movement has progressed far enough for the recognizer to classify it as a circle.
+\item State\+::\+S\+T\+A\+T\+E\+\_\+\+U\+P\+D\+A\+T\+E -- The circle gesture is continuing.
+\item State\+::\+S\+T\+A\+T\+E\+\_\+\+S\+T\+O\+P -- The circle gesture is finished.
+\end{DoxyItemize}
+
+You can set the minimum radius and minimum arc length required for a movement to be recognized as a circle using the config attribute of a connected \hyperlink{class_leap_1_1_controller}{Controller} object. Use the following keys to configure circle recognition\+:
+
+\begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Key string }&{\bf Value type }&{\bf Default value }&{\bf Units  }\\\cline{1-4}
+Gesture.\+Circle.\+Min\+Radius &float &5.\+0 &mm \\\cline{1-4}
+Gesture.\+Circle.\+Min\+Arc &float &1.\+5$\ast$pi &radians \\\cline{1-4}
+\end{TabularC}
+The following example demonstrates how to set the circle configuration parameters\+:
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_leap_1_1_circle_gesture_a67ac2907b68958693129eb7a6f731722}{\index{Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}!Circle\+Gesture@{Circle\+Gesture}}
+\index{Circle\+Gesture@{Circle\+Gesture}!Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}}
+\subsubsection[{Circle\+Gesture}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Circle\+Gesture\+::\+Circle\+Gesture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_circle_gesture_a67ac2907b68958693129eb7a6f731722}
+Constructs a new \hyperlink{class_leap_1_1_circle_gesture}{Circle\+Gesture} object.
+
+An uninitialized \hyperlink{class_leap_1_1_circle_gesture}{Circle\+Gesture} object is considered invalid. Get valid instances of the \hyperlink{class_leap_1_1_circle_gesture}{Circle\+Gesture} class from a \hyperlink{class_leap_1_1_frame}{Frame} object. \begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_circle_gesture_a3a27444e1657e1ecf3e74bc9c7cad292}{\index{Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}!Circle\+Gesture@{Circle\+Gesture}}
+\index{Circle\+Gesture@{Circle\+Gesture}!Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}}
+\subsubsection[{Circle\+Gesture}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T Leap\+::\+Circle\+Gesture\+::\+Circle\+Gesture (
+\begin{DoxyParamCaption}
+\item[{const {\bf Gesture} \&}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{class_leap_1_1_circle_gesture_a3a27444e1657e1ecf3e74bc9c7cad292}
+Constructs a \hyperlink{class_leap_1_1_circle_gesture}{Circle\+Gesture} object from an instance of the \hyperlink{class_leap_1_1_gesture}{Gesture} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \hyperlink{class_leap_1_1_gesture}{Gesture} instance to specialize. This \hyperlink{class_leap_1_1_gesture}{Gesture} instance must be a \hyperlink{class_leap_1_1_circle_gesture}{Circle\+Gesture} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leap_1_1_circle_gesture_aa6f358e771078c056dea579511707784}{\index{Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}!center@{center}}
+\index{center@{center}!Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}}
+\subsubsection[{center}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Circle\+Gesture\+::center (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_circle_gesture_aa6f358e771078c056dea579511707784}
+The center point of the circle within the Leap Motion frame of reference.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_leap_1_1_vector}{Vector} The center of the circle in mm from the Leap Motion origin. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_circle_gesture_a8935a8a71b0a174a1656ff2caab80a06}{\index{Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}!class\+Type@{class\+Type}}
+\index{class\+Type@{class\+Type}!Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}}
+\subsubsection[{class\+Type}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Type} Leap\+::\+Circle\+Gesture\+::class\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_leap_1_1_circle_gesture_a8935a8a71b0a174a1656ff2caab80a06}
+The circle gesture type.
+
+\begin{DoxyReturn}{Returns}
+Type The type value designating a circle gesture. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_circle_gesture_ae0fbdb4a8905e289afa885c2f304ae52}{\index{Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}!normal@{normal}}
+\index{normal@{normal}!Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}}
+\subsubsection[{normal}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Vector} Leap\+::\+Circle\+Gesture\+::normal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_circle_gesture_ae0fbdb4a8905e289afa885c2f304ae52}
+Returns the normal vector for the circle being traced.
+
+If you draw the circle clockwise, the normal vector points in the same general direction as the pointable object drawing the circle. If you draw the circle counterclockwise, the normal points back toward the pointable. If the angle between the normal and the pointable object drawing the circle is less than 90 degrees, then the circle is clockwise.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_leap_1_1_vector}{Vector} the normal vector for the circle being traced 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_circle_gesture_adc211d647af2a5853773dbabf5deb1ab}{\index{Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}!pointable@{pointable}}
+\index{pointable@{pointable}!Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}}
+\subsubsection[{pointable}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T {\bf Pointable} Leap\+::\+Circle\+Gesture\+::pointable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_circle_gesture_adc211d647af2a5853773dbabf5deb1ab}
+The finger performing the circle gesture.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_leap_1_1_pointable}{Pointable} A \hyperlink{class_leap_1_1_pointable}{Pointable} object representing the circling finger. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_circle_gesture_a6117b3ab528b6af6ae2d76b1afa03110}{\index{Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}!progress@{progress}}
+\index{progress@{progress}!Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}}
+\subsubsection[{progress}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float Leap\+::\+Circle\+Gesture\+::progress (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_circle_gesture_a6117b3ab528b6af6ae2d76b1afa03110}
+The number of times the finger tip has traversed the circle.
+
+Progress is reported as a positive number of the number. For example, a progress value of .5 indicates that the finger has gone halfway around, while a value of 3 indicates that the finger has gone around the the circle three times.
+
+Progress starts where the circle gesture began. Since the circle must be partially formed before the Leap Motion software can recognize it, progress will be greater than zero when a circle gesture first appears in the frame.
+
+\begin{DoxyReturn}{Returns}
+float A positive number indicating the gesture progress. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+\hypertarget{class_leap_1_1_circle_gesture_a25b6f377b953f82c4d0c2a7488c02253}{\index{Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}!radius@{radius}}
+\index{radius@{radius}!Leap\+::\+Circle\+Gesture@{Leap\+::\+Circle\+Gesture}}
+\subsubsection[{radius}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+A\+P\+\_\+\+E\+X\+P\+O\+R\+T float Leap\+::\+Circle\+Gesture\+::radius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_leap_1_1_circle_gesture_a25b6f377b953f82c4d0c2a7488c02253}
+The radius of the circle.
+
+\begin{DoxyReturn}{Returns}
+The circle radius in mm. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+0 
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Interface\+Managers/Leap.\+h\end{DoxyCompactItemize}
