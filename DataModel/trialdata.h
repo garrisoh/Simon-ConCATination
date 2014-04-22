@@ -1,9 +1,7 @@
 #ifndef TRIALDATA_H
 #define TRIALDATA_H
 
-#include <string>
 #include <vector>
-#include <fstream>
 #include <string>
 #include "gamedata.h"
 #include "../globals.h"

@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
         passDialog.exec();
     }
 
+    // start trial settings
     TrialSettingsDialog settingsDialog;
     SimonController *controller = new SimonController();
     settingsDialog.setController(controller);

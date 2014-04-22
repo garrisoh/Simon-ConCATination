@@ -4,6 +4,7 @@
 #include <iostream>
 #include <QAbstractItemView>
 #include <QList>
+#include <sstream>
 
 TrialSettingsModel::TrialSettingsModel(QTableView* view)
 {
@@ -26,9 +27,6 @@ TrialSettingsModel::TrialSettingsModel(QTableView* view)
 
     //get trialdata object
     data = TrialData::getCurrentTrial();
-
-    readGames();
-
 }
 
 TrialSettingsModel::~TrialSettingsModel()
@@ -166,10 +164,6 @@ void TrialSettingsModel::start(std::string pid, std::string ag, std::string gndr
     }
 
     TrialData::getCurrentTrial()->setOutFile(saveLocation);
-
-    //now write games to file
-    writeGames(pid, ag, gndr);
-
 }
 
 //gets text of item at row, col
@@ -194,66 +188,6 @@ int TrialSettingsModel::getRowCount()
 {
 
     return tableModel->rowCount();
-
-}
-
-void TrialSettingsModel::writeGames(std::string pid, std::string age, std::string gender)
-{
-
-    // TODO: Use QSettings to store persistent config data.  don't store password, that is handled by the password dialog
-    /*//make the file
-    std::ofstream myfile;
-    myfile.open (".settings.config");
-
-    //write password
-    myfile << "apricot" << std::endl;
-
-    //loop through and write to file
-    for(int i = 0; i < getRowCount(); i++)
-    {
-
-        myfile << tableModel->item(i, 0)->text().toStdString() << "," << tableModel->item(i, 1)->text().toStdString() << ","
-                  << tableModel->item(i, 2)->text().toStdString() << std::endl;
-
-    }
-
-    //close the file
-    myfile.close();*/
-
-}
-
-void TrialSettingsModel::readGames()
-{
-
-    //make input stream and setup variables
-    std::ifstream in_stream;
-    std::string line;
-    std::vector<std::string> tempDataVector;
-
-    //open input stream
-    in_stream.open(".settings.config");
-
-    //set password
-    std::getline(in_stream, line);
-    password = line;
-
-    //read in name date all that crap
-    while(std::getline(in_stream, line))
-    {
-
-        //split by comma delimiter
-        tempDataVector = split(line, ',');
-
-        //fill table view
-        QString qString1 = QString::fromStdString(tempDataVector[0]);
-        QString qString2 = QString::fromStdString(tempDataVector[1]);
-        QString qString3 = QString::fromStdString(tempDataVector[2]);
-        addGame(qString1, qString2, qString3);
-
-    }
-
-    //close input stream
-    in_stream.close();
 
 }
 

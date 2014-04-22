@@ -1,5 +1,4 @@
 #include "inputmanager.h"
-#include <algorithm>
 
 void InputManager::addObserver(EventListener *observer)
 {

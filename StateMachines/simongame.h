@@ -8,19 +8,12 @@
 #include <QTimer>
 #include <QObject>
 
-typedef enum {
-    GameStatePlayback, // when replaying quadrants
-    GameStatePlaying,  // when user is playing
-    GameStateError,    // user has made a mistake
-    GameStateTimeout   // user timeout
-} GameState;
-
-
 /** A state machine class that manages the run loop
  *  for a single game.
  */
 class SimonGame : public QObject, public EventListener
 {
+
     Q_OBJECT
 
 public:
@@ -44,6 +37,13 @@ signals:
     void gameOver();
 
 private:
+    typedef enum {
+        GameStatePlayback, // when replaying quadrants
+        GameStatePlaying,  // when user is playing
+        GameStateError,    // user has made a mistake
+        GameStateTimeout   // user timeout
+    } GameState;
+
     /** The game data instance */
     GameData *gameData;
     /** Input device */

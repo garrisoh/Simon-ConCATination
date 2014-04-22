@@ -8,7 +8,6 @@
 #include "../InterfaceManagers/mousemanager.h"
 #include "../InterfaceManagers/leapmanager.h"
 
-#include <cstdlib>
 #include <QMessageBox>
 #include <QApplication>
 #include <QTime>
@@ -81,7 +80,7 @@ void SimonGame::start()
     text = text.arg(description(gameData->getSound()));
 
     if (gameData->getInterface() == InterfaceKeyboard) {
-        text.append("\nKeys:\nGreen - 'u'\nRed - 'i'\nYellow - 'j'\nBlue - 'k'\n");
+        text.append("\nKeys:\nUpper Left - 'u'\nUpper Right - 'i'\nBottom Left - 'j'\nBottom Right - 'k'\n");
     }
 
     if (!gameData->getRecord()) {

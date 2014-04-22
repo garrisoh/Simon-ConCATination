@@ -15,7 +15,7 @@ public:
     /** Destructor */
     ~MouseManager();
     /** Called when an event occurs on the simon ui */
-    bool eventFilter(QObject *target, QEvent *event);
+    bool eventFilter(QObject *, QEvent *event);
 private:
     /** Helper method for determining the quadrant pressed */
 	QuadrantID findQuadrant(int x, int y);

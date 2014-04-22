@@ -1,7 +1,8 @@
 #include "simoncontroller.h"
+#include "../DataModel/trialdata.h"
+#include "../DataModel/gamedata.h"
 #include "../UI/passdialog.h"
 #include "../UI/trialsettingsdialog.h"
-#include "simongame.h"
 
 SimonController::SimonController()
 {

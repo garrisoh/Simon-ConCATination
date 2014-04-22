@@ -1,9 +1,6 @@
 #ifndef SIMONCONTROLLER_H
 #define SIMONCONTROLLER_H
 
-#include "../DataModel/trialdata.h"
-#include "../DataModel/gamedata.h"
-#include "../UI/simonui.h"
 #include "simongame.h"
 #include <QObject>
 

@@ -1,5 +1,7 @@
 #include "trialdata.h"
 
+#include <fstream>
+
 //Populate singleton
 TrialData* TrialData::currentTrial = new TrialData();
 

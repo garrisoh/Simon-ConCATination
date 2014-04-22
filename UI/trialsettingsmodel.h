@@ -5,12 +5,7 @@
 #include <QStandardItemModel>
 #include <QTableView>
 #include <string>
-#include <sstream>
 #include <vector>
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <algorithm>
 #include "../globals.h"
 #include "DataModel/trialdata.h"
 #include "DataModel/gamedata.h"
@@ -25,8 +20,6 @@ public:
     void removeGame(int row); //deletes a row
     void start(std::string pid, std::string ag, std::string gndr); //starts the game
     void swapRows(int index1, int index2); //swaps two rows
-    void writeGames(std::string pid, std::string age, std::string gender); //writes games and password to config
-    void readGames(); //reads games in from config file and sets password
     void setDemoMode(bool md); //setter for private demomode variable
     bool getDemoMode(); // getter for demo mode
     void setSaveLocation(std::string loc); //setter

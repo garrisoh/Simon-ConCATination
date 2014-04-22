@@ -7,7 +7,7 @@
 #include <QSound>
 
 namespace Ui {
-	class SimonUI;	/// Class created from simonui.ui
+    class SimonUI;
 }
 
 /** A driver class to be used for testing the input managers */
@@ -27,22 +27,29 @@ public:
     /** Implements EventListener.  Called on input events */
 	void onEvent(QuadrantID q, EventType e);
 
-    // Discard current quadrants, create new ones
+    /** Discard current quadrants, create new ones */
     void setVariables(ColorType color, SoundType sound);
 
     /** Used to disable menu during gameplay */
     void enableMenu(bool enable);
 
-	// For playback
+    /** For playback - press */
     void pressQuadrant(QuadrantID q);
+
+    /** For playback - hover */
     void hoverQuadrant(QuadrantID q);
 
 private slots:
+    /** Bring up change password dialog */
     void on_actionChange_Password_triggered();
+
+    /** Start a new trial */
     void on_actionNew_Trial_triggered();
 
 private:
-	Ui::SimonUI *ui;	/// Class created from simonui.ui
+    Ui::SimonUI *ui;
+
+    // images
 	QPixmap _normalImage;
 	QPixmap _bottomLeftLit;
 	QPixmap _bottomLeftHover;
@@ -53,9 +60,11 @@ private:
 	QPixmap _topRightLit;
 	QPixmap _topRightHover;
 
+    // image arrays
 	QPixmap** _litImages;
 	QPixmap** _hoveredImages;
 
+    // sounds
     QSound yellow;
     QSound blue;
     QSound green;
@@ -63,7 +72,10 @@ private:
 
     SoundType sound; // for determining whether to play sound
 
+    /** Set the current image */
     void setImage(QPixmap* image);
+
+    /** Play sound by quadrant */
     void playSound(QuadrantID q);
 };
 

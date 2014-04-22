@@ -17,7 +17,7 @@ MouseManager::~MouseManager()
     SimonUI::getMainWindow()->removeEventFilter(this);
 }
 
-bool MouseManager::eventFilter(QObject *target, QEvent *event)
+bool MouseManager::eventFilter(QObject *, QEvent *event)
 {
     // determine event type
     EventType e;

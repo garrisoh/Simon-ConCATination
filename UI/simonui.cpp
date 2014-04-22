@@ -3,10 +3,6 @@
 #include "trialsettingsdialog.h"
 #include "passdialog.h"
 #include "changepassdialog.h"
-#include <QString>
-#include <QTime>
-#include <QApplication>
-#include <QThread>
 
 SimonUI::SimonUI(QWidget *parent) :
     QMainWindow(parent),
@@ -20,6 +16,8 @@ SimonUI::SimonUI(QWidget *parent) :
 
     _litImages = NULL;
     _hoveredImages = NULL;
+
+    // default values
     setVariables(ColorTypeOn, SoundTypeRegular);
 }
 
@@ -48,7 +46,7 @@ void SimonUI::onEvent(QuadrantID q, EventType e)
 		pressQuadrant(q);
         break;
     case EventTypeRelease:
-        setImage(&_normalImage);
+        pressQuadrant(QuadrantNone);
         break;
     default:
         break;
@@ -72,6 +70,12 @@ void SimonUI::pressQuadrant(QuadrantID q) {
 
 void SimonUI::playSound(QuadrantID q)
 {
+    // stop all sounds first
+    yellow.stop();
+    blue.stop();
+    green.stop();
+    red.stop();
+
     // play sounds
     switch (q) {
     case QuadrantBottomLeft:
@@ -104,11 +108,13 @@ void SimonUI::setVariables(ColorType color, SoundType sound)
 {
     this->sound = sound;
 
+    // clean up old resources
     if (_litImages)
         delete[] _litImages;
     if (_hoveredImages)
         delete[] _hoveredImages;
 
+    // load in new resources
     if (color == ColorTypeOn) {
         _normalImage = QPixmap::fromImage(QImage(":Images/Color/SimonNoneLit.png"));
         _bottomLeftLit = QPixmap::fromImage(QImage(":Images/Color/SimonBottomLeftLit.png"));
@@ -141,6 +147,7 @@ void SimonUI::setVariables(ColorType color, SoundType sound)
         _topRightHover = QPixmap::fromImage(QImage(":Images/Mono/SimonTopRightHover.png"));
     }
 
+    // fill arrays
     _litImages = new QPixmap*[4];
     _litImages[0] = &_topLeftLit;
     _litImages[1] = &_topRightLit;
@@ -186,6 +193,7 @@ void SimonUI::on_actionNew_Trial_triggered()
     pass.setTitle("New Trial");
     pass.exec();
 
+    // make static so it doesn't get deallocated until the next game
     static SimonController *controller = NULL;
     if (controller) {
         delete controller;
@@ -194,6 +202,7 @@ void SimonUI::on_actionNew_Trial_triggered()
 
     controller = new SimonController();
 
+    // show settings screen
     TrialSettingsDialog settings;
     settings.setController(controller);
     settings.exec();
