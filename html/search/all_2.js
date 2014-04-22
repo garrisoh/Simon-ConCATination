@@ -1,7 +1,7 @@
 var searchData=
 [
   ['center',['center',['../class_leap_1_1_circle_gesture.html#aa6f358e771078c056dea579511707784',1,'Leap::CircleGesture::center()'],['../class_leap_1_1_interaction_box.html#a674a8aa6308b32b1c85b2d39ee55875d',1,'Leap::InteractionBox::center()']]],
-  ['changepassdialog',['ChangePassDialog',['../class_change_pass_dialog.html',1,'']]],
+  ['changepassdialog',['ChangePassDialog',['../class_change_pass_dialog.html',1,'ChangePassDialog'],['../class_change_pass_dialog.html#ad6f0b8725148486bd3d3240366d01333',1,'ChangePassDialog::ChangePassDialog()']]],
   ['circlegesture',['CircleGesture',['../class_leap_1_1_circle_gesture.html',1,'Leap']]],
   ['circlegesture',['CircleGesture',['../class_leap_1_1_circle_gesture.html#a67ac2907b68958693129eb7a6f731722',1,'Leap::CircleGesture::CircleGesture()'],['../class_leap_1_1_circle_gesture.html#a3a27444e1657e1ecf3e74bc9c7cad292',1,'Leap::CircleGesture::CircleGesture(const Gesture &amp;rhs)']]],
   ['classtype',['classType',['../class_leap_1_1_swipe_gesture.html#a0dac022eaf599cf5393af9456cb9896e',1,'Leap::SwipeGesture::classType()'],['../class_leap_1_1_circle_gesture.html#a8935a8a71b0a174a1656ff2caab80a06',1,'Leap::CircleGesture::classType()'],['../class_leap_1_1_screen_tap_gesture.html#ae967e0ad37fc48faa25044b4a9977f25',1,'Leap::ScreenTapGesture::classType()'],['../class_leap_1_1_key_tap_gesture.html#a674173890d1f8b1b2d2cee98245b65f2',1,'Leap::KeyTapGesture::classType()']]],

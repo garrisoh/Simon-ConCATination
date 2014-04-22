@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['simon_2c_20by_20concatenation',['Simon, by ConCATenation',['../index.html',1,'']]],
   ['simon_2dconcatination',['Simon-ConCATination',['../md__r_e_a_d_m_e.html',1,'']]],
   ['save',['save',['../class_leap_1_1_config.html#ae1187e2b9992706d2a3eb071cc2f71c4',1,'Leap::Config']]],
   ['scalefactor',['scaleFactor',['../class_leap_1_1_hand.html#a883f70b457f82c8aec98044f5d804e04',1,'Leap::Hand::scaleFactor()'],['../class_leap_1_1_frame.html#a8786d67154ab10f0b36f2b39c1e1541d',1,'Leap::Frame::scaleFactor()']]],
