@@ -60,99 +60,100 @@ void TrialSettingsModel::removeGame(int row)
 
     //make sure we have enteries in the table view
     if(currentRow < 0)
-    {
+      {
+        
+      currentRow = 0;
 
-        currentRow = 0;
-
-    } else
-    {
-
+      } else
+      
+      {
+	
         if(row == -1)
-        {
-
+	  {
+	    
             return;
-
-        } else
-        {
-
+	    
+	  } else
+	  {
+	    
             tableModel->removeRows(row, 1);
             currentRow--;
-
-        }
-
-    }
-
+	    
+	  }
+	
+      }
+    
 }
 
 //add games and then goodbye trial settings
 void TrialSettingsModel::start(std::string pid, std::string ag, std::string gndr)
 {
-
-    //set participant id
-    data->setPID(pid);
-
-    //set age
-    int value = atoi(ag.c_str());
-    data->setAge(value);
-
-    //set gender
-    bool gender = gndr == "Female" ? true : false;
-    data->setGender(gender);
-
-    //array to hold tableview data
-    QString (*tableData)[3] = new QString[currentRow + 1][3];
-
-    //fill array
-    for(int i = 0; i < currentRow; i++)
+  
+  //set participant id
+  data->setPID(pid);
+  
+  //set age
+  int value = atoi(ag.c_str());
+  data->setAge(value);
+  
+  //set gender
+  bool gender = gndr == "Female" ? true : false;
+  data->setGender(gender);
+  
+  //array to hold tableview data
+  QString (*tableData)[3] = new QString[currentRow + 1][3];
+  
+  //fill array
+  for(int i = 0; i < currentRow; i++)
     {
-        for(int j = 0; j < 3; j++)
+      for(int j = 0; j < 3; j++)
         {
-            tableData[i][j] = tableModel->item(i, j)->text();
+	  tableData[i][j] = tableModel->item(i, j)->text();
         }
     }
-
-    //create gamedata objects and add them to trialdata
-    for(int i = 0; i < currentRow; i++)
+  
+  //create gamedata objects and add them to trialdata
+  for(int i = 0; i < currentRow; i++)
     {
-
-        ColorType ct;
-        SoundType st;
-        InterfaceType it;
-
-        //figure out what color type
-        if(tableData[i][0] == QString("Color"))
+      
+      ColorType ct;
+      SoundType st;
+      InterfaceType it;
+      
+      //figure out what color type
+      if(tableData[i][0] == QString("Color"))
         {
-            ct = ColorTypeOn;
+	  ct = ColorTypeOn;
         } else if(tableData[i][0] == QString("Grayscale"))
         {
-            ct = ColorTypeGrayscale;
+	  ct = ColorTypeGrayscale;
         } else
         {
-            ct = ColorTypeBlackWhite;
+	  ct = ColorTypeBlackWhite;
         }
-
-        //figure out what sound type
-        if(tableData[i][1] == QString("No Sound"))
+      
+      //figure out what sound type
+      if(tableData[i][1] == QString("No Sound"))
         {
-            st = SoundTypeOff;
+	  st = SoundTypeOff;
         } else
         {
-            st = SoundTypeRegular;
+	  st = SoundTypeRegular;
         }
-
-        //figure out what interface
-        if(tableData[i][2] == QString("Leap Controller"))
+      
+      //figure out what interface
+      if(tableData[i][2] == QString("Leap Controller"))
         {
-            it = InterfaceLEAP;
+	  it = InterfaceLEAP;
         } else if(tableData[i][2] == QString("Keyboard"))
         {
-            it = InterfaceKeyboard;
+	  it = InterfaceKeyboard;
         } else
         {
-            it = InterfaceMouse;
+	  it = InterfaceMouse;
         }
-
-        //now create gamedata object
+      
+      //now create gamedata object
         GameData tempGameData(ct, st, it, true);
 
         if (demoMode) {
