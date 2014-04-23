@@ -23,6 +23,7 @@ void ChangePassDialog::on_pushButton_clicked()
     } else if (ui->lineEdit->text().length() == 0){
         ui->label_3->setText("Enter a password to continue.");
     } else {
+
         // save new password and close
         QSettings s;
         s.setValue("simon/password", ui->lineEdit->text());

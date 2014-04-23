@@ -23,7 +23,6 @@ public:
     //model
     TrialSettingsModel* model;
 
-    //int cuz i need it
     int selectedRow; //makes up and down buttons work
 
     //getters
@@ -44,23 +43,19 @@ public:
     void setInterface(QString text);
     void setController(SimonController *controller);
 
+    //called to close view
     void closeEvent(QCloseEvent *event);
 
 private slots:
+
+    //called when buttons clicked
     void on_addButton_2_clicked();
-
     void on_removeButton_2_clicked();
-
     void on_gameTableView_clicked(const QModelIndex &index);
-
     void on_startButton_2_clicked();
-
     void on_upButton_clicked();
-
     void on_downButton_clicked();
-
     void on_checkBox_stateChanged(int arg1);
-
     void on_pushButton_clicked();
 
 private:

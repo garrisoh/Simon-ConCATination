@@ -9,9 +9,11 @@
 
 TrialSettingsDialog::TrialSettingsDialog(QWidget *parent) :
     QDialog(parent),
+
     ui(new Ui::TrialSettingsDialog)
 {
 
+    //setup view
     ui->setupUi(this);
     controller = NULL;
     TrialData::newTrial();
@@ -20,12 +22,14 @@ TrialSettingsDialog::TrialSettingsDialog(QWidget *parent) :
     ui->gameTableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Interactive);
     ui->gameTableView->horizontalHeader()->setStretchLastSection(true);
 
+    //create model
     model = new TrialSettingsModel(ui->gameTableView);
 
-
     SimonUI::getMainWindow()->enableMenu(false);
+
 }
 
+//destructor
 TrialSettingsDialog::~TrialSettingsDialog()
 {
 
@@ -33,104 +37,51 @@ TrialSettingsDialog::~TrialSettingsDialog()
 
 }
 
-//getters
+/** Getters */
 QString TrialSettingsDialog::getParticipantID()
-{
-
-    return ui->pidEdit->text();
-
-}
+{ return ui->pidEdit->text(); }
 
 QString TrialSettingsDialog::getAge()
-{
-
-    return ui->ageEdit->text();
-
-}
+{ return ui->ageEdit->text(); }
 
 QString TrialSettingsDialog::getGender()
-{
-
-    return ui->genderComboBox->currentText();
-
-}
+{ return ui->genderComboBox->currentText(); }
 
 QString TrialSettingsDialog::getColorString()
-{
-
-    return ui->colorComboBox->currentText();
-
-}
+{ return ui->colorComboBox->currentText(); }
 
 QString TrialSettingsDialog::getSoundString()
-{
-
-    return ui->soundComboBox->currentText();
-
-}
+{ return ui->soundComboBox->currentText(); }
 
 QString TrialSettingsDialog::getInterfaceString()
-{
-
-    return ui->inputComboBox->currentText();
-
-}
+{ return ui->inputComboBox->currentText(); }
 
 QTableView* TrialSettingsDialog::getTableView()
-{
-
-    return ui->gameTableView;
-
-}
+{ return ui->gameTableView; }
 
 
-//setters
+/** Setters */
 void TrialSettingsDialog::setParticipantID(QString text)
-{
-
-    ui->pidEdit->setText(text);
-
-}
+{ ui->pidEdit->setText(text); }
 
 void TrialSettingsDialog::setAge(QString text)
-{
-
-    ui->ageEdit->setText(text);
-
-}
+{ ui->ageEdit->setText(text); }
 
 void TrialSettingsDialog::setGender(QString text)
-{
-
-    ui->genderComboBox->setCurrentText(text);
-
-}
+{ ui->genderComboBox->setCurrentText(text); }
 
 void TrialSettingsDialog::setColor(QString text)
-{
-
-    ui->colorComboBox->setCurrentText(text);
-
-}
+{ ui->colorComboBox->setCurrentText(text); }
 
 void TrialSettingsDialog::setSound(QString text)
-{
-
-    ui->soundComboBox->setCurrentText(text);
-
-}
+{ ui->soundComboBox->setCurrentText(text); }
 
 void TrialSettingsDialog::setInterface(QString text)
-{
-
-    ui->inputComboBox->setCurrentText(text);
-
-}
+{ ui->inputComboBox->setCurrentText(text); }
 
 void TrialSettingsDialog::setController(SimonController *controller)
-{
-    this->controller = controller;
-}
+{ this->controller = controller; }
+
 
 //called when add button is clicked
 void TrialSettingsDialog::on_addButton_2_clicked()
@@ -157,12 +108,14 @@ void TrialSettingsDialog::on_removeButton_2_clicked()
 
 }
 
-//called when item is clicked
+/** Called when item is clicked */
 void TrialSettingsDialog::on_gameTableView_clicked(const QModelIndex &index)
 {
 
+    //get curent row
     selectedRow = index.row();
 
+    //set data in GUI
     setColor(model->getItemAt(selectedRow, 0));
     setSound(model->getItemAt(selectedRow, 1));
     setInterface(model->getItemAt(selectedRow, 2));
@@ -173,7 +126,7 @@ void TrialSettingsDialog::on_gameTableView_clicked(const QModelIndex &index)
 void TrialSettingsDialog::on_startButton_2_clicked()
 {
 
-    //check if all fields are filled in
+    //check if all appropriate fields are filled in
     if(getParticipantID() == "" || getAge() == "" || (model->getSaveLocation() == "" && !model->getDemoMode()))
     {
 
@@ -184,6 +137,7 @@ void TrialSettingsDialog::on_startButton_2_clicked()
         delete msgBox;
         return;
 
+	//all fields are filled in
     } else
     {
 
@@ -193,8 +147,9 @@ void TrialSettingsDialog::on_startButton_2_clicked()
 
         //close
         accept();
-
+	
         controller->start();
+
     }
 
 }
@@ -249,7 +204,6 @@ void TrialSettingsDialog::on_checkBox_stateChanged(int arg1)
     }
 
 }
-
 
 //called when save
 void TrialSettingsDialog::on_pushButton_clicked()
