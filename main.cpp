@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
     ui->show();
 
     // set these up to access config data from QSettings
-    QCoreApplication::setOrganizationName("ConCATination");
-    QCoreApplication::setOrganizationDomain("com.concatination");
+    QCoreApplication::setOrganizationName("ConCATenation");
+    QCoreApplication::setOrganizationDomain("concatenation");
     QCoreApplication::setApplicationName("Simon");
 
     QSettings settings;
