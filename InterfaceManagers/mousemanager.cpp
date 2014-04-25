@@ -3,6 +3,13 @@
 #include <QMouseEvent>
 #include <math.h>
 
+#ifdef _MSC_VER
+#include <float.h>  // for _isnan() on VC++
+#define isnan(x) _isnan(x)  // VC++ uses _isnan() instead of isnan()
+//#else
+//#include <math.h>  // for isnan() everywhere else
+#endif
+
 #define SQR(x)  (x * x) // macro for squaring things
 
 MouseManager::MouseManager()

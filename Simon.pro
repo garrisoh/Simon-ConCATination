@@ -72,3 +72,27 @@ unix: LIBS += -L$$PWD/InterfaceManagers/ -lLeap
 
 INCLUDEPATH += $$PWD/
 DEPENDPATH += $$PWD/
+
+
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/InterfaceManagers/windows/ -lLeap
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/InterfaceManagers/windows/ -lLeapd
+
+INCLUDEPATH += $$PWD/InterfaceManagers/windows
+DEPENDPATH += $$PWD/InterfaceManagers/windows
+
+win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/InterfaceManagers/windows/libLeap.a
+else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/InterfaceManagers/windows/libLeapd.a
+else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/InterfaceManagers/windows/Leap.lib
+else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/InterfaceManagers/windows/Leapd.lib
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/InterfaceManagers/windows/ -lLeap
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/InterfaceManagers/windows/ -lLeapd
+
+INCLUDEPATH += $$PWD/InterfaceManagers/windows
+DEPENDPATH += $$PWD/InterfaceManagers/windows
+
+win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/InterfaceManagers/windows/libLeap.a
+else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/InterfaceManagers/windows/libLeapd.a
+else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/InterfaceManagers/windows/Leap.lib
+else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/InterfaceManagers/windows/Leapd.lib

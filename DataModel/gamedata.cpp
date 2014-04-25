@@ -59,7 +59,7 @@ std::string GameData::toCSV() {
     csv += std::string(description(sound)) + ",";
     csv += std::string(description(interface)) + ",";
 	char buffer[10];
-    sprintf(buffer, "%d,", (int)quadrants.size());
+    sprintf_s(buffer, "%d,", (int)quadrants.size());
     csv += std::string(buffer);
     for (int i = 0; i<(int)quadrants.size(); i++) {
        switch (quadrants[i]) {

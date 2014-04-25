@@ -11,6 +11,7 @@
 #include <QMessageBox>
 #include <QApplication>
 #include <QTime>
+#include <time.h>
 
 // speed in beeps per sec
 #define PLAYBACK_SPEED_INCREMENT    0.25
